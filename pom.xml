@@ -29,6 +29,10 @@
 	    <swagger.version>2.0.8</swagger.version>
 	    <swagger.ui.version>2.1.4</swagger.ui.version>
     </properties>
+    
+    <modules>
+        <module>nlg-service</module>
+    </modules>
 
     <distributionManagement>
         <repository>
@@ -258,7 +262,4 @@
         </plugins>
 
     </build>
-    <modules>
-        <module>nlg-service</module>
-    </modules>
 </project>
