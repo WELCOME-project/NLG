@@ -1,6 +1,6 @@
 package edu.upf.taln.welcome.nlg.service;
 
-import edu.upf.taln.welcome.nlg.commons.io.GenerationOutput;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 import java.util.ArrayList;
 import java.util.List;
 
