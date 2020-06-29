@@ -1,6 +1,5 @@
 package edu.upf.taln.welcome.nlg.service;
 
-import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,10 +21,11 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
+import edu.upf.taln.welcome.nlg.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
 import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
 import edu.upf.taln.welcome.nlg.commons.input.GenerationInput;
-import edu.upf.taln.welcome.nlg.commons.exceptions.WelcomeException;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
 
 /**
@@ -34,7 +34,7 @@ import edu.upf.taln.welcome.nlg.commons.exceptions.WelcomeException;
  * @author jens.grivolla
  * 
  */
-@Path("/")
+@Path("/nlg")
 @Produces(MediaType.APPLICATION_JSON)
 public class NLGService {
 
