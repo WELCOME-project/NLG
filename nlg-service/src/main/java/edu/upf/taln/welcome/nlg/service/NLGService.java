@@ -22,9 +22,9 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
-import edu.upf.taln.welcome.nlg.commons.io.LanguageConfiguration;
-import edu.upf.taln.welcome.nlg.commons.io.ServiceDescription;
-import edu.upf.taln.welcome.nlg.commons.io.GenerationInput;
+import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
+import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
+import edu.upf.taln.welcome.nlg.commons.input.GenerationInput;
 import edu.upf.taln.welcome.nlg.commons.exceptions.WelcomeException;
 
 

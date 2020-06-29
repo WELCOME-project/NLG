@@ -1,4 +1,4 @@
-package edu.upf.taln.welcome.nlg.commons.io;
+package edu.upf.taln.welcome.nlg.commons.input;
 
 import javax.validation.constraints.NotNull;
 
