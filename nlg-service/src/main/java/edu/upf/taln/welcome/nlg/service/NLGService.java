@@ -86,8 +86,21 @@ public class NLGService {
 	public GenerationOutput analyze(
 			@Parameter(description = "Container for analysis input data.", required = true) GenerationInput container) throws WelcomeException {
 
+        String conll = container.getData().getConll();
+        String[] lines = conll.split("\n");
+        
+        StringBuilder strBuilder = new StringBuilder();
+        for (String line : lines) {
+            if (!line.isBlank()) {
+                String[] pieces = line.split("\t");
+                strBuilder.append(pieces[1]);
+            }
+        }
+        
+        String text = strBuilder.toString();
+        
         GenerationOutput output = new GenerationOutput();
-        output.setConll(container.getData().getConll());
+        output.setText(text);
         
 		return output;
 	}
