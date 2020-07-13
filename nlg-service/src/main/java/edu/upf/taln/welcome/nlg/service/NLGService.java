@@ -1,5 +1,7 @@
 package edu.upf.taln.welcome.nlg.service;
 
+import edu.upf.taln.welcome.dms.commons.output.DMOutput;
+import edu.upf.taln.welcome.dms.commons.output.DMOutputData;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,21 +86,11 @@ public class NLGService {
 		        ))
 	})
 	public GenerationOutput analyze(
-			@Parameter(description = "Container for analysis input data.", required = true) GenerationInput container) throws WelcomeException {
+			@Parameter(description = "Container for analysis input data.", required = true) DMOutput container) throws WelcomeException {
 
-        String conll = container.getData().getConll();
-        String[] lines = conll.split("\n");
+        DMOutputData data = container.getData();
         
-        StringBuilder strBuilder = new StringBuilder();
-        for (String line : lines) {
-            if (!line.isBlank()) {
-                String[] pieces = line.split("\t");
-                strBuilder.append(pieces[1]);
-            }
-        }
-        
-        String text = strBuilder.toString();
-        
+        String text = "";
         GenerationOutput output = new GenerationOutput();
         output.setText(text);
         

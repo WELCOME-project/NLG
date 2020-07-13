@@ -1,8 +1,10 @@
 package edu.upf.taln.welcome.nlg.commons.input;
 
+import edu.upf.taln.welcome.dms.commons.output.DMOutput;
+
 public class GenerationInput {
     private InputMetadata metadata;
-    private InputData data;
+    private DMOutput data;
 
     public InputMetadata getMetadata() {
         return metadata;
@@ -12,11 +14,11 @@ public class GenerationInput {
         this.metadata = metadata;
     }
 
-    public InputData getData() {
+    public DMOutput getData() {
         return data;
     }
 
-    public void setData(InputData data) {
+    public void setData(DMOutput data) {
         this.data = data;
     }
 }
