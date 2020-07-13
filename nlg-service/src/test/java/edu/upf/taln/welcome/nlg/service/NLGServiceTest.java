@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
 
 import edu.upf.taln.welcome.dms.commons.output.DMOutput;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
 /**
  *
@@ -25,9 +26,8 @@ public class NLGServiceTest {
         ObjectMapper mapper = new ObjectMapper();
         NLGService instance = new NLGService();
         
-        System.out.println("realize_next_turn");
         String expResult = FileUtils.readFileToString(expected, "utf-8");
-        DMOutput output = instance.analyze(input);
+        GenerationOutput output = instance.analyze(input);
         String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
         assertEquals(expResult, result);
     }    
