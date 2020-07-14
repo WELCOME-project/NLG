@@ -105,16 +105,18 @@ public class NLGService {
                         text = "Hello.";
                     } else {
                         SpeechAct second = speechActs.get(1);
-                        switch(second.getTemplate()) {
+                        switch(second.getType()) {
+
                             case "Yes-no question":
                                 text = "Hi, I believe you’re speaking in English, is that correct?";
                                 break;
+
                             case "declarative wh-question":
                                 
                                 Map<String, TemplateData> saData = second.getData();
                                 TemplateData tData = saData.get("request_info");
                                 if (tData.getName() == null) {
-                                    text = "Ok. In this case, I first need some personal data from you."
+                                    text = "Ok. In this case, I first need some personal data from you. "
                                         + "Please tell me your name, age, country of origin, "
                                         + "since when you are here in Catalonia, and your official residence address.";
                                 } else {
@@ -133,7 +135,7 @@ public class NLGService {
                     
                     text = "Great! ";
                     text += "Karim, you need to register at the closest resident registration office using your current address in Terrassa. "
-                        + "When you have an apartment on your own, you will need to update your registration,\n";
+                        + "When you have an apartment on your own, you will need to update your registration.\n";
                     
                     text +="The registration office is in the Raval de Montserrat, 14 street. "
                         + "The opening hours are from 9:00 to 15:00. "
