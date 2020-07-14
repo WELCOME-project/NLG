@@ -69,11 +69,6 @@ public class NLGService {
 
 	private static final String SAMPLE_INPUT_TURN1 = "{\n" + 
 			"  \"data\" : {\n" + 
-			"    \"userId\" : 1,\n" + 
-			"    \"dialogueSession\" : 1,\n" + 
-			"    \"dialogueTurn\" : 2,\n" + 
-			"    \"language\" : \"en\",\n" + 
-			"    \"language_conf_score\" : 0.5,\n" + 
 			"    \"speechActs\" : [ {\n" + 
 			"      \"id\" : \"act_1\",\n" + 
 			"      \"type\" : \"conventional opening\",\n" + 
