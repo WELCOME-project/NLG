@@ -28,7 +28,7 @@ public class NLGServiceTest {
         NLGService instance = new NLGService();
         
         String expected = FileUtils.readFileToString(expectedFile, "utf-8");
-        GenerationOutput output = instance.analyze(input);
+        GenerationOutput output = instance.generate(input);
         String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
         assertEquals(expected, result);
     }
