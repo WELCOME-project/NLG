@@ -31,6 +31,7 @@ import edu.upf.taln.welcome.dms.commons.output.DMOutput;
 import edu.upf.taln.welcome.dms.commons.output.DMOutputData;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
 import edu.upf.taln.welcome.dms.commons.output.TemplateData;
+import edu.upf.taln.welcome.dms.commons.output.TemplatePersonalData;
 
 import java.util.Map;
 
@@ -181,7 +182,7 @@ public class NLGService {
                             case "declarative wh-question":
                                 
                                 Map<String, TemplateData> saData = second.getData();
-                                TemplateData tData = saData.get("request_info");
+                                TemplatePersonalData tData = (TemplatePersonalData) saData.get("request_info");
                                 if (tData.getName() == null) {
                                     text = "Ok. In this case, I first need some personal data from you. "
                                         + "Please tell me your name, age, country of origin, "
