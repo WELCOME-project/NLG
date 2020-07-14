@@ -1,10 +1,5 @@
 {
   "data" : {
-    "userId" : 1,
-    "dialogueSession" : 1,
-    "dialogueTurn" : 2,
-    "language" : "en",
-    "language_conf_score" : 0.5,
     "speechActs" : [ {
       "id" : "act_1",
       "type" : "conventional opening",
@@ -16,6 +11,7 @@
       "template" : null,
       "data" : {
         "request_info" : {
+          "type" : "TemplateRequestData",
           "name" : null,
           "age" : null,
           "country_of_origin" : null,

@@ -57,7 +57,8 @@ public class NLGService {
 			"      \"type\" : \"Yes-no question\",\n" + 
 			"      \"template\" : null,\n" + 
 			"      \"data\" : {\n" + 
-			"        \"handshake\" : {\n" + 
+			"        \"handshake\" : {\n" +
+            "          \"type\" : \"TemplateHandshakeData\",\n" +
 			"          \"language\": \"en\"\n" + 
 			"        }\n" + 
 			"      }\n" + 
@@ -84,6 +85,7 @@ public class NLGService {
 			"      \"template\" : null,\n" + 
 			"      \"data\" : {\n" + 
 			"        \"request_info\" : {\n" + 
+            "          \"type\" : \"TemplateRequestData\",\n" +
 			"          \"name\" : null,\n" + 
 			"          \"age\" : null,\n" + 
 			"          \"country_of_origin\" : null,\n" + 
