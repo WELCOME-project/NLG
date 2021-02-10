@@ -1,25 +1,25 @@
 package edu.upf.taln.welcome.nlg.service;
 
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import javax.servlet.ServletConfig;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Context;
-
-import org.glassfish.jersey.server.ResourceConfig;
-
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 import io.swagger.v3.oas.integration.SwaggerConfiguration;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.servers.Server;
+import org.glassfish.jersey.server.ResourceConfig;
+
+import javax.servlet.ServletConfig;
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Context;
+import java.util.logging.Logger;
 
 @ApplicationPath("api")
 public class ServiceApplication extends ResourceConfig {
-	
+
     public ServiceApplication(@Context ServletConfig servletConfig) {
         super();
+
+        Logger logger = Logger.getLogger(this.getClass().getName());
+        logger.info("Starting application...");
 
         OpenAPI oas = new OpenAPI();
         Info info = new Info()
@@ -47,6 +47,8 @@ public class ServiceApplication extends ResourceConfig {
         
         String packageName = this.getClass().getPackage().getName();
         packages(packageName);
+
+        logger.info("Application started successfully!");
     }	
 	
 }

@@ -32,6 +32,8 @@
     
     <modules>
         <module>nlg-service</module>
+        <module>nlg-core</module>
+        <module>nlg-commons</module>
     </modules>
 
     <distributionManagement>
