@@ -35,7 +35,8 @@ while true; do
     esac
 done
 
-mvn -U clean package -DskipTests
+mvn -U clean install package -DskipTests
 export TAG=$tag
 
 docker build -t registry.gitlab.com/talnupf/welcome/nlg:${TAG} . && docker push registry.gitlab.com/talnupf/welcome/nlg:${TAG}
+docker tag registry.gitlab.com/talnupf/welcome/nlg:${TAG} nexus-dockers.everis.com:10110/upf/nlg:${TAG} && docker push nexus-dockers.everis.com:10110/upf/nlg:${TAG}

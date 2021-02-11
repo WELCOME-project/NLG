@@ -1,20 +1,17 @@
 package edu.upf.taln.welcome.nlg.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.ServletConfig;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
+import com.apicatalog.jsonld.api.JsonLdError;
+import com.apicatalog.jsonld.document.Document;
+import com.apicatalog.jsonld.document.DocumentParser;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.icu.util.ULocale;
+import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
+import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
+import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
+import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
+import edu.upf.taln.welcome.nlg.core.LanguageGenerator;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -23,102 +20,86 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
-import edu.upf.taln.welcome.nlg.commons.exceptions.WelcomeException;
-import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
-import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
-import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
-import edu.upf.taln.welcome.dms.commons.output.DMOutput;
-import edu.upf.taln.welcome.dms.commons.output.DMOutputData;
-import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
-import edu.upf.taln.welcome.dms.commons.output.TemplateData;
-import edu.upf.taln.welcome.dms.commons.output.TemplatePersonalData;
-
-import java.util.Map;
+import javax.servlet.ServletConfig;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
  * Analyze text and return results in JSON format
- * 
- * 
+ *
+ *
  */
 @Path("/nlg")
 @Produces(MediaType.APPLICATION_JSON)
 public class NLGService {
 
-	private static final String SAMPLE_INPUT_TURN0 = "{\n" + 
-			"  \"data\" : {\n" + 
-			"    \"speechActs\" : [ {\n" + 
-			"      \"id\" : \"act_1\",\n" + 
-			"      \"type\" : \"conventional opening\",\n" + 
-			"      \"template\" : null,\n" + 
-			"      \"data\" : null\n" + 
-			"    }, {\n" + 
-			"      \"id\" : \"act_2\",\n" + 
-			"      \"type\" : \"Yes-no question\",\n" + 
-			"      \"template\" : null,\n" + 
-			"      \"data\" : {\n" + 
-			"        \"handshake\" : {\n" +
-            "          \"type\" : \"TemplateHandshakeData\",\n" +
-			"          \"language\": \"en\"\n" + 
-			"        }\n" + 
-			"      }\n" + 
-			"    } ]\n" + 
-			"  }\n" + 
+	private static final String SAMPLE_INPUT = "{\n" +
+			"  \"speechActs\" : [ {\n" +
+			"    \"@id\" : \"welcome:Open_Question_0\",\n" +
+			"    \"@type\" : \"welcome:SpeechAct\",\n" +
+			"    \"welcome:hasLabel\" : {\n" +
+			"      \"@id\" : \"welcome:Open_Question\",\n" +
+			"      \"@type\" : \"welcome:SpeechActLabel\"\n" +
+			"    },\n" +
+			"    \"welcome:hasSlot\" : {\n" +
+			"      \"@id\" : \"welcome:obtainRequest\",\n" +
+			"      \"@type\" : \"welcome:SystemDemand\",\n" +
+			"      \"welcome:hasTemplate\" : null,\n" +
+			"      \"welcome:hasInputRDFContents\" : \"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\",\n" +
+			"      \"welcome:hasStatus\" : [ {\n" +
+			"        \"@id\" : \"welcome:Pending\"\n" +
+			"      } ],\n" +
+			"      \"welcome:hasNumberAttemps\" : 0,\n" +
+			"      \"welcome:confidenceScore\" : 0.0,\n" +
+			"      \"welcome:isOptional\" : false\n" +
+			"    }\n" +
+			"  } ],\n" +
+			"  \"@id\" : \"welcome:move_0\",\n" +
+			"  \"@type\" : \"welcome:DialogueMove\"\n" +
 			"}";
 
-
-	private static final String SAMPLE_INPUT_TURN1 = "{\n" + 
-			"  \"data\" : {\n" + 
-			"    \"speechActs\" : [ {\n" + 
-			"      \"id\" : \"act_1\",\n" + 
-			"      \"type\" : \"conventional opening\",\n" + 
-			"      \"template\" : null,\n" + 
-			"      \"data\" : null\n" + 
-			"    }, {\n" + 
-			"      \"id\" : \"act_2\",\n" + 
-			"      \"type\" : \"declarative wh-question\",\n" + 
-			"      \"template\" : null,\n" + 
-			"      \"data\" : {\n" + 
-			"        \"request_info\" : {\n" + 
-            "          \"type\" : \"TemplateRequestData\",\n" +
-			"          \"name\" : null,\n" + 
-			"          \"age\" : null,\n" + 
-			"          \"country_of_origin\" : null,\n" + 
-			"          \"time_arrival_current_residence\" : null,\n" + 
-			"          \"address\" : {\n" + 
-			"            \"city\" : null,\n" + 
-			"            \"street\" : null,\n" + 
-			"            \"number\" : null\n" + 
-			"          }\n" + 
-			"        }\n" + 
-			"      }\n" + 
-			"    } ]\n" + 
-			"  }\n" + 
-			"}";
-
-	/**
-	 * Logger for this class and subclasses.
-	 */
-	protected final Log log = LogFactory.getLog(getClass());
+	private static final String SAMPLE_OUTPUT = "{\n" +
+				"	\"text\" : \"How can I help you?\"\n" +
+				"}";
+	private final LanguageGenerator generator = new LanguageGenerator(ULocale.ENGLISH); // only English for the time being
+	private final Document jsonldContextDoc;
+	private final Logger logger = Logger.getLogger(NLGService.class.getName());
 
 	@Context
 	ServletConfig config;
 
 	public NLGService() throws WelcomeException {
+		try {
+			Reader contextReader = new InputStreamReader(NLGService.class.getResourceAsStream("/welcome-context.jsonld"));
+			jsonldContextDoc = DocumentParser.parse(com.apicatalog.jsonld.http.media.MediaType.JSON_LD, contextReader);
+		} catch (Exception | JsonLdError ex) {
+			logger.log(Level.SEVERE, "Failed to initialize service", ex);
+			throw new WelcomeException(ex);
+		}
 	}
-	
+
 	@GET
 	@Path("/description")
 	@Operation(summary = "Retrieves the available configurations.",
-		description = "Returns the list of available configurations, it is, the list of languages and available analysis module for each one.",
-		responses = {
-		        @ApiResponse(description = "The available configurations",
-		        			content = @Content(schema = @Schema(implementation = ServiceDescription.class)
-		        ))
-	})
+			description = "Returns the list of available configurations, it is, the list of languages and available analysis module for each one.",
+			responses = {
+					@ApiResponse(description = "The available configurations",
+							content = @Content(schema = @Schema(implementation = ServiceDescription.class)
+							))
+			})
 	public ServiceDescription getAvailableConfigurations() throws WelcomeException {
 
-        LanguageConfiguration es_config = new LanguageConfiguration();
+		LanguageConfiguration es_config = new LanguageConfiguration();
 		es_config.setLanguage("es");
 
 		List<LanguageConfiguration> configList = new ArrayList<>();
@@ -126,107 +107,59 @@ public class NLGService {
 
 		ServiceDescription description = new ServiceDescription();
 		description.setConfigurations(configList);
-		
+
 		return description;
 	}
-	
-	
+
+
 	@POST
 	@Path("/generate")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Operation(summary = "Performs natural language generation from the input data generated by DMS.",
-		description = "Returns the text derived from the DMS output.",
-		requestBody = @RequestBody(
-				content = @Content(mediaType = "application/json",
-								schema = @Schema(implementation = DMOutput.class),
-								examples = {
-									@ExampleObject(name = "Turn 0",
-											value = SAMPLE_INPUT_TURN0),
-									@ExampleObject(name = "Turn 1",
-											value = SAMPLE_INPUT_TURN1)
-								}
-				)
+	@Operation(summary = "Performs natural language generation from the edu.upf.taln.welcome.nlg.commons.input data generated by DMS.",
+			description = "Returns the text derived from the DMS edu.upf.taln.welcome.nlg.commons.output.",
+			requestBody = @RequestBody(
+					content = @Content(mediaType = MediaType.APPLICATION_JSON,
+							schema = @Schema(implementation = DialogueMove.class),
+							examples = {
+									@ExampleObject(name = "Input example",
+											value = SAMPLE_INPUT)
+							}
+					)
 			),
-		responses = {
-		        @ApiResponse(description = "The deep analysis result.",
-		        			content = @Content(schema = @Schema(implementation = GenerationOutput.class)
-		        ))
-	})
+			responses = {
+					@ApiResponse(description = "JSON containing a single element corresponding to the generated natural language text.",
+							content = @Content(mediaType = MediaType.APPLICATION_JSON,
+									schema = @Schema(implementation = GenerationOutput.class),
+									examples = {
+										@ExampleObject(name = "Output example",
+												value = SAMPLE_OUTPUT)
+									}
+							))
+			})
+
+	/*
+	 * Unmarshalls JSON-LD edu.upf.taln.welcome.nlg.commons.input to POJO representations of dialogue moves, and passes it to the linguistic generator --if NLG is required.
+	 * The resulting texts is returned wrapped in a JSON message.
+	 */
 	public GenerationOutput generate(
-			@Parameter(description = "Generation input data.", required = true) DMOutput container) throws WelcomeException {
+			@Parameter(description = "Dialogue move used as generation edu.upf.taln.welcome.nlg.commons.input data.", required = true) JsonNode input) throws WelcomeException {
+		try
+		{
+			StringReader inputReader = new StringReader(input.toString());
+			Document inputDoc = DocumentParser.parse(com.apicatalog.jsonld.http.media.MediaType.JSON_LD, inputReader);
+			String json = inputDoc.getJsonContent().map(Object::toString).orElse("");
 
-        DMOutputData data = container.getData();
-        List<SpeechAct> speechActs = data.getSpeechActs();
-        
-        String text = "";
-        if (speechActs.isEmpty()) {
-            text = "[ERROR: No speech acts found!]";
-        } else {
-        
-            SpeechAct first = speechActs.get(0);
-            switch(first.getType()) {
-                case "conventional opening":
-                    if (speechActs.size() == 1) {
-                        text = "Hello.";
-                    } else {
-                        SpeechAct second = speechActs.get(1);
-                        switch(second.getType()) {
+			ObjectMapper mapper = new ObjectMapper();
+			DialogueMove move = mapper.readValue(json, DialogueMove.class);
+			final String text = generator.generate(move);
 
-                            case "Yes-no question":
-                                text = "Hi, I believe you’re speaking in English, is that correct?";
-                                break;
+			GenerationOutput output = new GenerationOutput();
+			output.setText(text);
 
-                            case "declarative wh-question":
-                                
-                                Map<String, TemplateData> saData = second.getData();
-                                TemplatePersonalData tData = (TemplatePersonalData) saData.get("request_info");
-                                if (tData.getName() == null) {
-                                    text = "Ok. In this case, I first need some personal data from you. "
-                                        + "Please tell me your name, age, country of origin, "
-                                        + "since when you are here in Catalonia, and your official residence address.";
-                                } else {
-                                    text = "I’ll also need the street name and number of your current address.";
-                                }
-                                break;
-
-
-                            default:
-                                break;
-                        }
-                    }
-                    break;
-                    
-                case "response acknowledgement":
-                    
-                    text = "Great! ";
-                    text += "Karim, you need to register at the closest resident registration office using your current address in Terrassa. "
-                        + "When you have an apartment on your own, you will need to update your registration.\n";
-                    
-                    text +="The registration office is in the Raval de Montserrat, 14 street. "
-                        + "The opening hours are from 9:00 to 15:00. "
-                        + "You will need to bring with you your passport. "
-                        + "Once you have registered, we will process your application.\n";
-                    
-                    text += "I can already give you some information on the First Reception Service. "
-                        + "It consists of three modules: the language module, the labour market information module, and the Catalan society module. "
-                        + "The language teaching module is a 90 hours course. "
-                        + "At Col·legi Sagrat Cor nearby a course is offered on Mondays and Fridays from 19:00 to 21:00. "
-                        + "The labour and Catalan society courses take place here at the City Council on Wednesdays from 19:00 to 21:00."
-                        + "I can already give you some information...\n";
-                    
-                    text += "Bye-bye. ";
-                    break;
-                    
-                default:
-                    text = "[ERROR: Unknown/Unsupported speech act type! (" + first.getType() +")]";
-                    break;
-            }
-        }
-        
-        GenerationOutput output = new GenerationOutput();
-        output.setText(text);
-        
-		return output;
+			return output;
+		} catch (JsonLdError | IOException | NullPointerException ex) {
+			logger.log(Level.SEVERE, "Failed to generate text", ex);
+			throw new WelcomeException(ex);
+		}
 	}
-
 }

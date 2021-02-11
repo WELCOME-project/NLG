@@ -1,5 +1,6 @@
 package edu.upf.taln.welcome.nlg.commons.output;
 
+
 import javax.validation.constraints.NotNull;
 
 /**
