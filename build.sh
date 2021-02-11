@@ -4,7 +4,7 @@ OPTIONS=t:l:
 LONGOPTS=tag:,langs:
 
 # -regarding ! and PIPESTATUS see above
-# -temporarily store edu.upf.taln.welcome.nlg.commons.output to be able to check for errors
+# -temporarily store output to be able to check for errors
 # -activate quoting/enhanced mode (e.g. by writing out “--options”)
 # -pass arguments only via   -- "$@"   to separate them correctly
 ! PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
@@ -13,7 +13,7 @@ if [[ ${PIPESTATUS[0]} -ne 0 ]]; then
     #  then getopt has complained about wrong arguments to stdout
     exit 2
 fi
-# read getopt’s edu.upf.taln.welcome.nlg.commons.output this way to handle the quoting right:
+# read getopt’s output this way to handle the quoting right:
 eval set -- "$PARSED"
 
 tag=$(date -I)
@@ -35,7 +35,8 @@ while true; do
     esac
 done
 
-mvn -U clean package -DskipTests
+mvn -U clean install package -DskipTests
 export TAG=$tag
 
 docker build -t registry.gitlab.com/talnupf/welcome/nlg:${TAG} . && docker push registry.gitlab.com/talnupf/welcome/nlg:${TAG}
+docker tag registry.gitlab.com/talnupf/welcome/nlg:${TAG} nexus-dockers.everis.com:10110/upf/nlg:${TAG} && docker push nexus-dockers.everis.com:10110/upf/nlg:${TAG}
