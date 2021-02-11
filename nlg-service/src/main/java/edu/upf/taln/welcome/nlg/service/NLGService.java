@@ -5,11 +5,13 @@ import com.apicatalog.jsonld.document.Document;
 import com.apicatalog.jsonld.document.DocumentParser;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.icu.util.ULocale;
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
 import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
+import edu.upf.taln.welcome.nlg.core.LanguageGenerator;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -66,6 +68,10 @@ public class NLGService {
 			"  \"@type\" : \"welcome:DialogueMove\"\n" +
 			"}";
 
+	private static final String SAMPLE_OUTPUT = "{\n" +
+				"	\"text\" : \"How can I help you?\"\n" +
+				"}";
+	private final LanguageGenerator generator = new LanguageGenerator(ULocale.ENGLISH); // only English for the time being
 	private final Document jsonldContextDoc;
 	private final Logger logger = Logger.getLogger(NLGService.class.getName());
 
@@ -115,7 +121,7 @@ public class NLGService {
 					content = @Content(mediaType = MediaType.APPLICATION_JSON,
 							schema = @Schema(implementation = DialogueMove.class),
 							examples = {
-									@ExampleObject(name = "Example",
+									@ExampleObject(name = "Input example",
 											value = SAMPLE_INPUT)
 							}
 					)
@@ -123,7 +129,11 @@ public class NLGService {
 			responses = {
 					@ApiResponse(description = "JSON containing a single element corresponding to the generated natural language text.",
 							content = @Content(mediaType = MediaType.APPLICATION_JSON,
-									schema = @Schema(implementation = GenerationOutput.class)
+									schema = @Schema(implementation = GenerationOutput.class),
+									examples = {
+										@ExampleObject(name = "Output example",
+												value = SAMPLE_OUTPUT)
+									}
 							))
 			})
 
@@ -140,9 +150,8 @@ public class NLGService {
 			String json = inputDoc.getJsonContent().map(Object::toString).orElse("");
 
 			ObjectMapper mapper = new ObjectMapper();
-			DialogueMove dip = mapper.readValue(json, DialogueMove.class);
-
-			final String text = "Hi, how can I help you?";
+			DialogueMove move = mapper.readValue(json, DialogueMove.class);
+			final String text = generator.generate(move);
 
 			GenerationOutput output = new GenerationOutput();
 			output.setText(text);

@@ -35,8 +35,8 @@ public class NLGServiceTest {
     @Test
     public void testSampleInitialExtrapolateTurn() throws Exception {
         
-        File inputFile0 = new File("src/test/resources/turn0_input.jsonld");
-        File expectedFile0= new File("src/test/resources/turn0_output.json");
+        File inputFile0 = new File("src/test/resources/OpeningDIP_input.jsonld");
+        File expectedFile0= new File("src/test/resources/OpeningDIP_output.json");
         testSample(inputFile0, expectedFile0);
 
 //        File inputFile1 = new File("src/test/resources/initial/turn1_input.json");
