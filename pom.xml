@@ -28,6 +28,8 @@
         
 	    <swagger.version>2.0.8</swagger.version>
 	    <swagger.ui.version>2.1.4</swagger.ui.version>
+
+        <dms.version>0.2.2</dms.version>
     </properties>
     
     <modules>
@@ -76,7 +78,12 @@
 
     <dependencyManagement>
         <dependencies>
-        
+          <dependency>
+            <groupId>edu.upf.taln.welcome</groupId>
+            <artifactId>dms-commons</artifactId>
+            <version>${dms.version}</version>
+          </dependency>
+
         <!-- VERSION FIXES -->
 			<dependency> 
 		        <groupId>org.apache.lucene</groupId> 

@@ -15,7 +15,6 @@
         <dependency>
             <groupId>edu.upf.taln.welcome</groupId>
             <artifactId>dms-commons</artifactId>
-            <version>0.2.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
