@@ -2,6 +2,7 @@ package edu.upf.taln.welcome.nlg.core;
 
 import com.ibm.icu.util.ULocale;
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
+import edu.upf.taln.welcome.dms.commons.input.Slot;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
 import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
@@ -22,15 +23,29 @@ public class LanguageGenerator {
     {
         return move.speechActs.stream()
                 .map(act -> {
-                    if (act.slot == null || (act.slot.template == null && (act.slot.rdf == null || act.slot.rdf.equals("\"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\""))))
+                    if (!hasTemplateId(act.slot) && !hasRDFContents(act.slot))
                         return getCannedText(act);
-                    else if (act.slot.template != null)
+                    else if (hasTemplateId(act.slot))
                         return getTemplateText(act);
                     else
                         return getGeneratedText(act);
 
                 }) // only canned text supported at the moment
                 .collect(Collectors.joining(". "));
+    }
+
+    private boolean hasTemplateId(Slot slot)
+    {
+        if (slot.template == null || slot.template.isEmpty())
+            return false;
+        else return slot.template.get(0) != null && !slot.template.get(0).id.isEmpty();
+    }
+
+    private boolean hasRDFContents(Slot slot)
+    {
+        if (slot.rdf == null || slot.rdf.isEmpty())
+            return false;
+        else return !slot.rdf.get(0).isEmpty() && !slot.rdf.get(0).contains("welcome:Unknown");
     }
 
     private String getCannedText(SpeechAct act)

@@ -25,8 +25,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +41,7 @@ import java.util.logging.Logger;
 @Produces(MediaType.APPLICATION_JSON)
 public class NLGService {
 
-	private static final String SAMPLE_INPUT = "{\n" +
+	private static final String OPENING_DIP_INPUT = "{\n" +
 			"  \"speechActs\" : [ {\n" +
 			"    \"@id\" : \"welcome:Open_Question_0\",\n" +
 			"    \"@type\" : \"welcome:SpeechAct\",\n" +
@@ -53,9 +51,9 @@ public class NLGService {
 			"    },\n" +
 			"    \"welcome:hasSlot\" : {\n" +
 			"      \"@id\" : \"welcome:obtainRequest\",\n" +
-			"      \"@type\" : \"welcome:SystemDemand\",\n" +
+			"      \"@type\" : [ \"welcome:SystemDemand\" ],\n" +
 			"      \"welcome:hasTemplate\" : null,\n" +
-			"      \"welcome:hasInputRDFContents\" : \"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\",\n" +
+			"      \"welcome:hasInputRDFContents\" : [ \"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\" ],\n" +
 			"      \"welcome:hasStatus\" : [ {\n" +
 			"        \"@id\" : \"welcome:Pending\"\n" +
 			"      } ],\n" +
@@ -68,25 +66,75 @@ public class NLGService {
 			"  \"@type\" : \"welcome:DialogueMove\"\n" +
 			"}";
 
-	private static final String SAMPLE_OUTPUT = "{\n" +
-				"	\"text\" : \"How can I help you?\"\n" +
-				"}";
+	private static final String OPENING_DIP_OUTPUT = "{\n" +
+			"  \"text\" : \"How can I help you?\"\n" +
+			"}";
+
+	private static final String OBTAIN_STATUS_DIP_INPUT = "{\n" +
+			"  \"speechActs\" : [ {\n" +
+			"    \"@id\" : \"welcome:Wh_Question_1\",\n" +
+			"    \"@type\" : \"welcome:SpeechAct\",\n" +
+			"    \"welcome:hasLabel\" : {\n" +
+			"      \"@id\" : \"welcome:Wh_Question\",\n" +
+			"      \"@type\" : \"welcome:SpeechActLabel\"\n" +
+			"    },\n" +
+			"    \"welcome:hasSlot\" : {\n" +
+			"      \"@id\" : \"welcome:obtainStatus\",\n" +
+			"      \"@type\" : [ \"welcome:SystemDemand\" ],\n" +
+			"      \"welcome:hasTemplate\" : null,\n" +
+			"      \"welcome:hasInputRDFContents\" : [ \"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\" ],\n" +
+			"      \"welcome:hasStatus\" : [ {\n" +
+			"        \"@id\" : \"welcome:Pending\"\n" +
+			"      } ],\n" +
+			"      \"welcome:hasNumberAttemps\" : 0,\n" +
+			"      \"welcome:confidenceScore\" : 0.0,\n" +
+			"      \"welcome:isOptional\" : false\n" +
+			"    }\n" +
+			"  } ],\n" +
+			"  \"@id\" : \"welcome:move_1\",\n" +
+			"  \"@type\" : \"welcome:DialogueMove\"\n" +
+			"}";
+
+	private static final String OBTAIN_STATUS_DIP_OUTPUT = "{\n" +
+			"  \"text\" : \"First of all, I need to know if you already registered\"\n" +
+			"}";
+
+	private static final String PROPOSE_SERVICE_DIP_INPUT = "{\n" +
+			"  \"speechActs\" : [ {\n" +
+			"    \"@id\" : \"welcome:Yes_No_Question_2\",\n" +
+			"    \"@type\" : \"welcome:SpeechAct\",\n" +
+			"    \"welcome:hasLabel\" : {\n" +
+			"      \"@id\" : \"welcome:Yes_No_Question\",\n" +
+			"      \"@type\" : \"welcome:SpeechActLabel\"\n" +
+			"    },\n" +
+			"    \"welcome:hasSlot\" : {\n" +
+			"      \"@id\" : \"welcome:obtainInterest\",\n" +
+			"      \"@type\" : [ \"welcome:SystemInfo\" ],\n" +
+			"      \"welcome:hasTemplate\" : null,\n" +
+			"      \"welcome:hasInputRDFContents\" : [ \"{\\\"@id\\\":\\\"welcome:Unknown\\\"}\" ],\n" +
+			"      \"welcome:hasStatus\" : [ {\n" +
+			"        \"@id\" : \"welcome:Pending\"\n" +
+			"      } ],\n" +
+			"      \"welcome:hasNumberAttemps\" : 0,\n" +
+			"      \"welcome:confidenceScore\" : 0.0,\n" +
+			"      \"welcome:isOptional\" : false\n" +
+			"    }\n" +
+			"  } ],\n" +
+			"  \"@id\" : \"welcome:move_2\",\n" +
+			"  \"@type\" : \"welcome:DialogueMove\"\n" +
+			"}";
+
+	private static final String PROPOSE_SERVICE_DIP_OUTPUT = "{\n" +
+			"  \"text\" : \"Do you want me to inform you on the First Reception Service?\"\n" +
+			"}";
+
 	private final LanguageGenerator generator = new LanguageGenerator(ULocale.ENGLISH); // only English for the time being
-	private final Document jsonldContextDoc;
 	private final Logger logger = Logger.getLogger(NLGService.class.getName());
 
 	@Context
 	ServletConfig config;
 
-	public NLGService() throws WelcomeException {
-		try {
-			Reader contextReader = new InputStreamReader(NLGService.class.getResourceAsStream("/welcome-context.jsonld"));
-			jsonldContextDoc = DocumentParser.parse(com.apicatalog.jsonld.http.media.MediaType.JSON_LD, contextReader);
-		} catch (Exception | JsonLdError ex) {
-			logger.log(Level.SEVERE, "Failed to initialize service", ex);
-			throw new WelcomeException(ex);
-		}
-	}
+	public NLGService() { }
 
 	@GET
 	@Path("/description")
@@ -121,8 +169,9 @@ public class NLGService {
 					content = @Content(mediaType = MediaType.APPLICATION_JSON,
 							schema = @Schema(implementation = DialogueMove.class),
 							examples = {
-									@ExampleObject(name = "Input example",
-											value = SAMPLE_INPUT)
+									@ExampleObject(name = "Example using Opening DIP", value = OPENING_DIP_INPUT),
+									@ExampleObject(name = "Example using Obtain Registration Status DIP", value = OBTAIN_STATUS_DIP_INPUT),
+									@ExampleObject(name = "Example using Propose First Reception Service DIP", value = PROPOSE_SERVICE_DIP_INPUT)
 							}
 					)
 			),
@@ -131,8 +180,9 @@ public class NLGService {
 							content = @Content(mediaType = MediaType.APPLICATION_JSON,
 									schema = @Schema(implementation = GenerationOutput.class),
 									examples = {
-										@ExampleObject(name = "Output example",
-												value = SAMPLE_OUTPUT)
+											@ExampleObject(name = "Example using Opening DIP", value = OPENING_DIP_OUTPUT),
+											@ExampleObject(name = "Example using Obtain Registration Status DIP", value = OBTAIN_STATUS_DIP_OUTPUT),
+											@ExampleObject(name = "Example using Propose First Reception Service DIP", value = PROPOSE_SERVICE_DIP_OUTPUT)
 									}
 							))
 			})

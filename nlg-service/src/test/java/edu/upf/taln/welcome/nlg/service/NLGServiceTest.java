@@ -39,14 +39,13 @@ public class NLGServiceTest {
         File expectedFile0= new File("src/test/resources/OpeningDIP_output.json");
         testSample(inputFile0, expectedFile0);
 
-//        File inputFile1 = new File("src/test/resources/initial/turn1_input.json");
-//        File expectedFile1 = new File("src/test/resources/initial/turn1_output.json");
-//        testSample(inputFile1, expectedFile1);
-//
-//
-//        File inputFile2 = new File("src/test/resources/initial/turn2_input.json");
-//        File expectedFile2 = new File("src/test/resources/initial/turn2_output.json");
-//        testSample(inputFile2, expectedFile2);
+        File inputFile1 = new File("src/test/resources/ObtainRegistrationStatus_input.jsonld");
+        File expectedFile1 = new File("src/test/resources/ObtainRegistrationStatus_output.json");
+        testSample(inputFile1, expectedFile1);
+
+        File inputFile2 = new File("src/test/resources/ProposeService_input.jsonld");
+        File expectedFile2 = new File("src/test/resources/ProposeService_output.json");
+        testSample(inputFile2, expectedFile2);
 //
 //        File inputFile3 = new File("src/test/resources/initial/turn3_input.json");
 //        File expectedFile3 = new File("src/test/resources/initial/turn3_output.json");
