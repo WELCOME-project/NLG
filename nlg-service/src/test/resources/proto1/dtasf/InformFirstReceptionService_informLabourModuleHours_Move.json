@@ -44,25 +44,34 @@
       "@container" : "@list"
     }
   },
-  "@id" : "move_75",
+  "@id" : "move_6",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_75",
+    "@id" : "Statement_non_opinion_6",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
       "@id" : "frs:informLabourModuleHours",
-      "@type" : null,
+      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
       "welcome:hasTemplateId" : "TInformModuleHours",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
         "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_labour_hours",
-        "rdf:predicate" : "schema:opens",
+        "rdf:subject" : "welcome:module_labour",
+        "rdf:predicate" : "welcome:moduleLabel",
         "rdf:object" : {
           "@id" : null,
           "@type" : null,
-          "@value" : "19:00"
+          "@value" : "B"
+        }
+      }, {
+        "@type" : "rdf:Statement",
+        "rdf:subject" : "welcome:module_labour_hours",
+        "rdf:predicate" : "schema:dayOfWeek",
+        "rdf:object" : {
+          "@id" : "schema:Wednesdays",
+          "@type" : null,
+          "@value" : null
         }
       }, {
         "@type" : "rdf:Statement",
@@ -76,20 +85,11 @@
       }, {
         "@type" : "rdf:Statement",
         "rdf:subject" : "welcome:module_labour_hours",
-        "rdf:predicate" : "schema:dayOfWeek",
-        "rdf:object" : {
-          "@id" : "schema:Wednesdays",
-          "@type" : null,
-          "@value" : null
-        }
-      }, {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_labour",
-        "rdf:predicate" : "welcome:moduleLabel",
+        "rdf:predicate" : "schema:opens",
         "rdf:object" : {
           "@id" : null,
           "@type" : null,
-          "@value" : "B"
+          "@value" : "19:00"
         }
       } ],
       "welcome:hasStatus" : "welcome:Pending",

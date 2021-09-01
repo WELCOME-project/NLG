@@ -28,7 +28,7 @@ public class ContentDBClientTest {
         ContentDBClient instance = new ContentDBClient(CONTENTDB_URL);
         
         List<String> expResult = new ArrayList<>();
-        expResult.add("It is very important, that you are in a place with very good internet connection, because you will need to do a video call so the <set><ServiceName> can make a picture of you.");
+        expResult.add("It is very important, that you are in a place with very good internet connection, because you will need to do a video call so the <hasTranslation><welcome:ServiceName:hasValue> can make a picture of you.");
         
         List<String> result = instance.getTemplate(collection, term, language);
         assertEquals(expResult, result);

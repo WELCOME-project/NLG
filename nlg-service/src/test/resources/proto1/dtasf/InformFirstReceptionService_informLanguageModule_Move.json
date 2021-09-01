@@ -44,27 +44,18 @@
       "@container" : "@list"
     }
   },
-  "@id" : "move_70",
+  "@id" : "move_1",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_70",
+    "@id" : "Statement_non_opinion_1",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
       "@id" : "frs:informLanguageModule",
-      "@type" : null,
+      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
       "welcome:hasTemplateId" : "TInformLanguageModule",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_language",
-        "rdf:predicate" : "welcome:moduleLabel",
-        "rdf:object" : {
-          "@id" : null,
-          "@type" : null,
-          "@value" : "A"
-        }
-      }, {
         "@type" : "rdf:Statement",
         "rdf:subject" : "welcome:course_catalanLanguage",
         "rdf:predicate" : "welcome:hasCourseName",
@@ -72,6 +63,15 @@
           "@id" : null,
           "@type" : null,
           "@value" : "Catalan"
+        }
+      }, {
+        "@type" : "rdf:Statement",
+        "rdf:subject" : "welcome:course_catalanLanguage",
+        "rdf:predicate" : "welcome:hasNumberHours",
+        "rdf:object" : {
+          "@id" : null,
+          "@type" : "w3c:integer",
+          "@value" : "90"
         }
       }, {
         "@type" : "rdf:Statement",
@@ -93,12 +93,12 @@
         }
       }, {
         "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:course_catalanLanguage",
-        "rdf:predicate" : "welcome:hasNumberHours",
+        "rdf:subject" : "welcome:module_language",
+        "rdf:predicate" : "welcome:moduleLabel",
         "rdf:object" : {
           "@id" : null,
-          "@type" : "w3c:integer",
-          "@value" : "90"
+          "@type" : null,
+          "@value" : "A"
         }
       }, {
         "@type" : "rdf:Statement",

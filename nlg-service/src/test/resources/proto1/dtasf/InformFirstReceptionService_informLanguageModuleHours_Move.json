@@ -44,15 +44,15 @@
       "@container" : "@list"
     }
   },
-  "@id" : "move_72",
+  "@id" : "move_3",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_72",
+    "@id" : "Statement_non_opinion_3",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
       "@id" : "frs:informLanguageModuleHours",
-      "@type" : null,
+      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
       "welcome:hasTemplateId" : "TInformModuleHours",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
@@ -63,24 +63,6 @@
           "@id" : null,
           "@type" : null,
           "@value" : "A"
-        }
-      }, {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_language_hours",
-        "rdf:predicate" : "schema:closes",
-        "rdf:object" : {
-          "@id" : null,
-          "@type" : null,
-          "@value" : "21:00"
-        }
-      }, {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_language_hours",
-        "rdf:predicate" : "schema:opens",
-        "rdf:object" : {
-          "@id" : null,
-          "@type" : null,
-          "@value" : "19:00"
         }
       }, {
         "@type" : "rdf:Statement",
@@ -99,6 +81,24 @@
           "@id" : "schema:Mondays",
           "@type" : null,
           "@value" : null
+        }
+      }, {
+        "@type" : "rdf:Statement",
+        "rdf:subject" : "welcome:module_language_hours",
+        "rdf:predicate" : "schema:closes",
+        "rdf:object" : {
+          "@id" : null,
+          "@type" : null,
+          "@value" : "21:00"
+        }
+      }, {
+        "@type" : "rdf:Statement",
+        "rdf:subject" : "welcome:module_language_hours",
+        "rdf:predicate" : "schema:opens",
+        "rdf:object" : {
+          "@id" : null,
+          "@type" : null,
+          "@value" : "19:00"
         }
       } ],
       "welcome:hasStatus" : "welcome:Pending",

@@ -44,27 +44,18 @@
       "@container" : "@list"
     }
   },
-  "@id" : "move_78",
+  "@id" : "move_9",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_78",
+    "@id" : "Statement_non_opinion_9",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
       "@id" : "frs:informSocietyModuleHours",
-      "@type" : null,
+      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
       "welcome:hasTemplateId" : "TInformModuleHours",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:module_society_hours",
-        "rdf:predicate" : "schema:dayOfWeek",
-        "rdf:object" : {
-          "@id" : "schema:Wednesdays",
-          "@type" : null,
-          "@value" : null
-        }
-      }, {
         "@type" : "rdf:Statement",
         "rdf:subject" : "welcome:module_society",
         "rdf:predicate" : "welcome:moduleLabel",
@@ -76,11 +67,11 @@
       }, {
         "@type" : "rdf:Statement",
         "rdf:subject" : "welcome:module_society_hours",
-        "rdf:predicate" : "schema:opens",
+        "rdf:predicate" : "schema:dayOfWeek",
         "rdf:object" : {
-          "@id" : null,
+          "@id" : "schema:Wednesdays",
           "@type" : null,
-          "@value" : "19:00"
+          "@value" : null
         }
       }, {
         "@type" : "rdf:Statement",
@@ -90,6 +81,15 @@
           "@id" : null,
           "@type" : null,
           "@value" : "21:00"
+        }
+      }, {
+        "@type" : "rdf:Statement",
+        "rdf:subject" : "welcome:module_society_hours",
+        "rdf:predicate" : "schema:opens",
+        "rdf:object" : {
+          "@id" : null,
+          "@type" : null,
+          "@value" : "19:00"
         }
       } ],
       "welcome:hasStatus" : "welcome:Pending",

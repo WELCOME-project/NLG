@@ -40,8 +40,7 @@ public class LanguageGeneratorTest {
     
     @Test
     public void testApplyTemplate() throws WelcomeException, IOException {
-        //String template = "Do you want me to inform you on the <hasTranslation><welcome:ServiceName:hasValue>?";
-    	String template = "Do you want me to inform you on the <ServiceName>?";
+        String template = "Do you want me to inform you on the <hasTranslation><welcome:ServiceName:hasValue>?";
         File inputFile = new File("src/test/resources/proto1/ProposeService_Move.json");
 
         ObjectMapper mapper = new ObjectMapper();

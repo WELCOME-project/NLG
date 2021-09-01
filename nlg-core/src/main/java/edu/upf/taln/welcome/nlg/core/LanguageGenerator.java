@@ -96,7 +96,7 @@ public class LanguageGenerator {
                     }
 
                 }) // only canned text supported at the moment
-                .collect(Collectors.joining(". "));
+                .collect(Collectors.joining(" "));
     }
 
     private String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {

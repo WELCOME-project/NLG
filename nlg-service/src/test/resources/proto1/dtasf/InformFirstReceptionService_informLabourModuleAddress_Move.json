@@ -44,15 +44,15 @@
       "@container" : "@list"
     }
   },
-  "@id" : "move_74",
+  "@id" : "move_5",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_74",
+    "@id" : "Statement_non_opinion_5",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
       "@id" : "frs:informLabourModuleAddress",
-      "@type" : null,
+      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
       "welcome:hasTemplateId" : "TInformModuleAddress",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
