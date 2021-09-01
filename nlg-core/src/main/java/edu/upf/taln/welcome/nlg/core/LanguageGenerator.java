@@ -261,7 +261,7 @@ public class LanguageGenerator {
 	                	}
 
 	                	if (rdf.object != null && rdf.object.value != null) {
-	                		replacement = cleanCompactedSchema(rdf.object.value);
+	                		replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
 	                	} else if (rdf.object != null && rdf.object.id != null) {
 		                	replacement = cleanCompactedSchema(rdf.object.id);
 		                } else {
