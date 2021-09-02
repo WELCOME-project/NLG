@@ -62,48 +62,46 @@ public class LanguageGenerator {
             throw new WelcomeException(ex);
         }
     }
+    
+    public String generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
+    	Slot slot = act.slot;
+        String templateId = slot.templateId;
+        
+        Set<RDFContent> rdfContents = null;
+        if (slot.rdf != null) {
+            rdfContents = new HashSet(slot.rdf);
+            for (RDFContent rdf : rdfContents) {
+                if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
+                    rdfContents.remove(rdf);
+                }
+            }
+        }
+        
+        if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
+            return getCannedText(act, language);
 
-    public String generate(DialogueMove move, ULocale language) {
-        return move.speechActs.stream()
-                .map(act -> {
-                    try {
-                        Slot slot = act.slot;
-                        String templateId = slot.templateId;
-                        
-                        Set<RDFContent> rdfContents = null;
-                        if (slot.rdf != null) {
-	                        rdfContents = new HashSet(slot.rdf);
-	                        for (RDFContent rdf : rdfContents) {
-	                            if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
-	                                rdfContents.remove(rdf);
-	                            }
-	                        }
-                        }
-                        
-                        if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
-                            return getCannedText(act, language);
+        } else if (templateId != null) {
+            return getTemplateText(act, language);
 
-                        } else if (templateId != null) {
-                            return getTemplateText(act, language);
+        } else {
+            return getGeneratedText(act);
+        }
+    }
 
-                        } else {
-                            return getGeneratedText(act);
-                        }
-
-                    } catch (WelcomeException e) {
-                        logger.log(Level.SEVERE, "Failed to generate text for speech act " + act.label + "-" + act.slot.type, e);
-                        return "";
-                    }
-
-                }) // only canned text supported at the moment
-                .collect(Collectors.joining(" "));
+    public String generate(DialogueMove move, ULocale language) throws WelcomeException {
+    	List<String> texts = new ArrayList<>();
+        for (SpeechAct act: move.speechActs) {
+        	texts.add(generateSingleText(act, language)); 
+        }
+                
+    	return String.join(" ", texts);
     }
 
     private String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {
         
         Map<String, String> languageMap = canned.get(language);
         if (languageMap == null) {
-            throw new WelcomeException("Language not supported: " + language.getBaseName());
+            throw new WelcomeException("Language not supported for canned text: " + language.getBaseName());
 
         } else {
             String key;

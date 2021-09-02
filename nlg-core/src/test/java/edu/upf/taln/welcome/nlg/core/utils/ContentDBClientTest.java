@@ -1,10 +1,25 @@
 package edu.upf.taln.welcome.nlg.core.utils;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mockito;
+
+import static org.mockito.Mockito.when;
+
+import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
+
 
 /**
  *
@@ -12,7 +27,7 @@ import static org.junit.Assert.*;
  */
 public class ContentDBClientTest {
 
-    private static String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
+    private static final String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
 
     /**
      * Test of getTemplate method, of class ContentDBClient.
@@ -32,6 +47,35 @@ public class ContentDBClientTest {
         
         List<String> result = instance.getTemplate(collection, term, language);
         assertEquals(expResult, result);
+    }
+    
+    @ParameterizedTest(name = "{0}")
+	@CsvSource({ 
+		"NotFound,404,Error on template retrieval. ContentDB failed with code 404. URL: " + CONTENTDB_URL, 
+		"Timeout,408,Error on template retrieval. ContentDB failed with code 408. Request timeout.", 
+		"NotAvailable,503,Error on template retrieval. ContentDB failed with code 503. Service unavailable.", 
+		"InternalServerError,500,Error on template retrieval. ContentDB failed with code 500. For template: <collection> foo <term> foo <language> foo"
+	})
+    public void ResponseHttpErrorsTest(String testName, int status, String expectedExceptionMessage) throws Exception {
+        
+    	WelcomeException exception = Assertions.assertThrows(WelcomeException.class, () -> {
+    		
+    		//Mocking the response (Needed for response.readEntity(String.class) to work)
+    		Response mockResponse = Mockito.mock(Response.class);
+    		when(mockResponse.getStatus()).thenReturn(status);
+    		when(mockResponse.readEntity(String.class)).thenReturn("Mocked response");
+    		
+    		//Stubbing a client spy to return the mocked response
+	    	ContentDBClient spy = Mockito.spy(new ContentDBClient(CONTENTDB_URL));
+	    	when(spy.serviceCall("foo", "foo", "foo"))
+	    		.thenReturn(mockResponse);
+	    	
+	    	List<String> list = spy.getTemplate("foo", "foo", "foo");
+	    	System.out.println(String.join(" ", list));
+	    	
+    	});
+    	
+    	assertEquals(expectedExceptionMessage, exception.getMessage());
     }
     
 }
