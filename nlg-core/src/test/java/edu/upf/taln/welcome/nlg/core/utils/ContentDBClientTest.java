@@ -51,10 +51,10 @@ public class ContentDBClientTest {
     
     @ParameterizedTest(name = "{0}")
 	@CsvSource({ 
-		"NotFound,404,Error on template retrieval. ContentDB failed with code 404. URL: " + CONTENTDB_URL, 
-		"Timeout,408,Error on template retrieval. ContentDB failed with code 408. Request timeout.", 
-		"NotAvailable,503,Error on template retrieval. ContentDB failed with code 503. Service unavailable.", 
-		"InternalServerError,500,Error on template retrieval. ContentDB failed with code 500. For template: <collection> foo <term> foo <language> foo"
+		"NotFound,404,'Error on template retrieval. ContentDB failed with code 404. URL: " + CONTENTDB_URL + "'", 
+		"Timeout,408,'Error on template retrieval. ContentDB failed with code 408. Request timeout.'", 
+		"NotAvailable,503,'Error on template retrieval. ContentDB failed with code 503. Service unavailable.'", 
+		"InternalServerError,500,'Error on template retrieval. ContentDB failed with code 500. For query: collection=foo, term=foo, language=foo.'"
 	})
     public void ResponseHttpErrorsTest(String testName, int status, String expectedExceptionMessage) throws Exception {
         

@@ -45,11 +45,8 @@ public class LanguageGenerator {
     private ContentDBClient contentClient;
     
     public LanguageGenerator() throws WelcomeException {
-        try {                        
-            contentClient = new ContentDBClient(CONTENTDB_URL);
-        } catch (NoSuchAlgorithmException | KeyManagementException ex) {
-            throw new WelcomeException(ex);
-        }
+
+        contentClient = new ContentDBClient(CONTENTDB_URL);
 
         try {
             ObjectMapper mapper = new ObjectMapper();
