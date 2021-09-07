@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -33,7 +34,8 @@ public class LanguageGeneratorTest {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-        String result = generator.generate(move, ULocale.ENGLISH);
+		List<String> sentences = generator.generate(move, ULocale.ENGLISH);
+		String result = String.join(" ", sentences);
         
         String expResult = "Can you see me?\nCan you hear me?";
         assertEquals(expResult, result);

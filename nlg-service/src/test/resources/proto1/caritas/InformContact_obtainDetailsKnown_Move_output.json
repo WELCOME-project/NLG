@@ -1,3 +1,5 @@
 {
-  "text" : "Do you have contact details of Mrs. Meyer?"
+  "text" : "Do you have contact details of Mrs. Meyer?",
+  "chunks" : [ "Do you have contact details of Mrs. Meyer?" ],
+  "chunkType" : "Slot"
 }

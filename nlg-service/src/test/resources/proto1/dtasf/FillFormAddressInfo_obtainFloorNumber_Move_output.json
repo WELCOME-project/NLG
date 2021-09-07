@@ -1,3 +1,5 @@
 {
-  "text" : "On which floor of the building do you live?"
+  "text" : "On which floor of the building do you live?",
+  "chunks" : [ "On which floor of the building do you live?" ],
+  "chunkType" : "Slot"
 }

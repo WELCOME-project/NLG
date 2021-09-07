@@ -1,3 +1,5 @@
 {
-  "text" : "Unfortunately you cannot just go to their office. But, some NGOs or community centers offer help and support, in case you don't have the possibility to do this or if you need help with making the Skype call."
+  "text" : "Unfortunately you cannot just go to their office. But, some NGOs or community centers offer help and support, in case you don't have the possibility to do this or if you need help with making the Skype call.",
+  "chunks" : [ "Unfortunately you cannot just go to their office. But, some NGOs or community centers offer help and support, in case you don't have the possibility to do this or if you need help with making the Skype call." ],
+  "chunkType" : "Slot"
 }

@@ -1,3 +1,5 @@
 {
-  "text" : "In particular, your name, surname, father’s name, mother’s name, date of birth, place of birth, nationality and residence address."
+  "text" : "In particular, your name, surname, father’s name, mother’s name, date of birth, place of birth, nationality and residence address.",
+  "chunks" : [ "In particular, your name, surname, father’s name, mother’s name, date of birth, place of birth, nationality and residence address." ],
+  "chunkType" : "Slot"
 }

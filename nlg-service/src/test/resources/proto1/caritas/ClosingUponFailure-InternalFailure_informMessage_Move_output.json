@@ -1,3 +1,5 @@
 {
-  "text" : "I'm sorry but I can't assist you because something was wrong. Please try again."
+  "text" : "I'm sorry but I can't assist you because something was wrong. Please try again.",
+  "chunks" : [ "I'm sorry but I can't assist you because something was wrong. Please try again." ],
+  "chunkType" : "Slot"
 }

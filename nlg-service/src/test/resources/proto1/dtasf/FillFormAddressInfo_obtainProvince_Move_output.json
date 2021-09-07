@@ -1,3 +1,5 @@
 {
-  "text" : "In which province do you live?"
+  "text" : "In which province do you live?",
+  "chunks" : [ "In which province do you live?" ],
+  "chunkType" : "Slot"
 }

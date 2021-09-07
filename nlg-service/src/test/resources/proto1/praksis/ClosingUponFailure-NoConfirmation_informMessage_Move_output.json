@@ -1,3 +1,5 @@
 {
-  "text" : "I'm sorry but I can't assist you because we have not obtained any confirmation from you. Please try again.."
+  "text" : "I'm sorry but I can't assist you because we have not obtained any confirmation from you. Please try again..",
+  "chunks" : [ "I'm sorry but I can't assist you because we have not obtained any confirmation from you. Please try again.." ],
+  "chunkType" : "Slot"
 }

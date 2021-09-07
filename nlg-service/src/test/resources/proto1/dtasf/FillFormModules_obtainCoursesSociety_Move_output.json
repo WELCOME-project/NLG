@@ -1,3 +1,5 @@
 {
-  "text" : "Have you taken any courses on :courseName:?"
+  "text" : "Have you taken any courses on :courseName:?",
+  "chunks" : [ "Have you taken any courses on :courseName:?" ],
+  "chunkType" : "Slot"
 }

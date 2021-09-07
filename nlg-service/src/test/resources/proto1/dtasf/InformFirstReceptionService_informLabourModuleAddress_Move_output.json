@@ -1,3 +1,5 @@
 {
-  "text" : "Module B is offered at City Council Building."
+  "text" : "Module B is offered at City Council Building.",
+  "chunks" : [ "Module B is offered at City Council Building." ],
+  "chunkType" : "Slot"
 }

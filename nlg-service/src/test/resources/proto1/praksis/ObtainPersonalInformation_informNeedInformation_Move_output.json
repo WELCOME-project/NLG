@@ -1,3 +1,5 @@
 {
-  "text" : "In order to assist you with this issue, I need to know some information from you."
+  "text" : "In order to assist you with this issue, I need to know some information from you.",
+  "chunks" : [ "In order to assist you with this issue, I need to know some information from you." ],
+  "chunkType" : "Slot"
 }

@@ -1,3 +1,5 @@
 {
-  "text" : "Do you already possess knowledge about :courseName:?"
+  "text" : "Do you already possess knowledge about :courseName:?",
+  "chunks" : [ "Do you already possess knowledge about :courseName:?" ],
+  "chunkType" : "Slot"
 }

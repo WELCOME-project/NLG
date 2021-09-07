@@ -1,3 +1,5 @@
 {
-  "text" : "Could you please state your surname or surnames?"
+  "text" : "Could you please state your surname or surnames?",
+  "chunks" : [ "Could you please state your surname or surnames?" ],
+  "chunkType" : "Slot"
 }

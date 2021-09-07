@@ -1,3 +1,5 @@
 {
-  "text" : "Please give me your email."
+  "text" : "Please give me your email.",
+  "chunks" : [ "Please give me your email." ],
+  "chunkType" : "Slot"
 }

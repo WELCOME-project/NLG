@@ -1,3 +1,5 @@
 {
-  "text" : "Mr. Muller."
+  "text" : "Mr. Muller.",
+  "chunks" : [ "Mr. Muller." ],
+  "chunkType" : "Slot"
 }

@@ -1,3 +1,5 @@
 {
-  "text" : "What is the name of the institution that offered the course?"
+  "text" : "What is the name of the institution that offered the course?",
+  "chunks" : [ "What is the name of the institution that offered the course?" ],
+  "chunkType" : "Slot"
 }

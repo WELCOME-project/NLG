@@ -1,3 +1,5 @@
 {
-  "text" : "Do you live in a house or a block?"
+  "text" : "Do you live in a house or a block?",
+  "chunks" : [ "Do you live in a house or a block?" ],
+  "chunkType" : "Slot"
 }

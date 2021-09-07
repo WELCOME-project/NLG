@@ -1,3 +1,5 @@
 {
-  "text" : "I'm sorry but I can't assist you because I cannot make the appointment."
+  "text" : "I'm sorry but I can't assist you because I cannot make the appointment.",
+  "chunks" : [ "I'm sorry but I can't assist you because I cannot make the appointment." ],
+  "chunkType" : "Slot"
 }

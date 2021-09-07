@@ -1,3 +1,5 @@
 {
-  "text" : "The phone number is: 02381-144 270."
+  "text" : "The phone number is: 02381-144 270.",
+  "chunks" : [ "The phone number is: 02381-144 270." ],
+  "chunkType" : "Slot"
 }

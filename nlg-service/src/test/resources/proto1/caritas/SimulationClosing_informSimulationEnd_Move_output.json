@@ -1,3 +1,5 @@
 {
-  "text" : "Please do not hesitate to contact us if we can be of any further assistance. Goodbye!"
+  "text" : "Please do not hesitate to contact us if we can be of any further assistance. Goodbye!",
+  "chunks" : [ "Please do not hesitate to contact us if we can be of any further assistance. Goodbye!" ],
+  "chunkType" : "Slot"
 }

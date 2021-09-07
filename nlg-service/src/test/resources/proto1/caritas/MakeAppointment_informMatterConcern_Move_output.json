@@ -1,3 +1,5 @@
 {
-  "text" : "Thank you, I’ve found your case file. I wanted to talk about :matterConcern:."
+  "text" : "Thank you, I’ve found your case file. I wanted to talk about :matterConcern:.",
+  "chunks" : [ "Thank you, I’ve found your case file. I wanted to talk about :matterConcern:." ],
+  "chunkType" : "Slot"
 }

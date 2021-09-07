@@ -1,3 +1,5 @@
 {
-  "text" : "You speak English, is that correct?"
+  "text" : "You speak English, is that correct?",
+  "chunks" : [ "You speak English, is that correct?" ],
+  "chunkType" : "Slot"
 }

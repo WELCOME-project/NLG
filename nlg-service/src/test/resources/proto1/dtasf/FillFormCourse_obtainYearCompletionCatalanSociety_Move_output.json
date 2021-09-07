@@ -1,3 +1,5 @@
 {
-  "text" : "On what year did you complete the course?"
+  "text" : "On what year did you complete the course?",
+  "chunks" : [ "On what year did you complete the course?" ],
+  "chunkType" : "Slot"
 }

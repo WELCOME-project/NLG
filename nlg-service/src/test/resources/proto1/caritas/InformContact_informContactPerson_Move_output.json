@@ -1,3 +1,5 @@
 {
-  "text" : "The appropriate contact person for you is Mrs. Meyer. You can make an appointment with her to discuss your concerns. "
+  "text" : "The appropriate contact person for you is Mrs. Meyer. You can make an appointment with her to discuss your concerns.",
+  "chunks" : [ "The appropriate contact person for you is Mrs. Meyer. You can make an appointment with her to discuss your concerns." ],
+  "chunkType" : "Slot"
 }

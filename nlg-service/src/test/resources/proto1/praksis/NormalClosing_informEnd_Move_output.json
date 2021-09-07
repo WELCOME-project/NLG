@@ -1,3 +1,5 @@
 {
-  "text" : "Thank you, John."
+  "text" : "Thank you, John.",
+  "chunks" : [ "Thank you, John." ],
+  "chunkType" : "Slot"
 }

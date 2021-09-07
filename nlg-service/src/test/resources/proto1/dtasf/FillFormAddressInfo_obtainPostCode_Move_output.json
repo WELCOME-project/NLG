@@ -1,3 +1,5 @@
 {
-  "text" : "What is your postcode?"
+  "text" : "What is your postcode?",
+  "chunks" : [ "What is your postcode?" ],
+  "chunkType" : "Slot"
 }

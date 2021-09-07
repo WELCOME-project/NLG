@@ -1,3 +1,5 @@
 {
-  "text" : "I think that the best would be if you come to my office to discuss how to proceed."
+  "text" : "I think that the best would be if you come to my office to discuss how to proceed.",
+  "chunks" : [ "I think that the best would be if you come to my office to discuss how to proceed." ],
+  "chunkType" : "Slot"
 }

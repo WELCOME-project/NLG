@@ -1,3 +1,5 @@
 {
-  "text" : "I have a free time slot next Mondays at 10:00."
+  "text" : "I have a free time slot next Mondays at 10:00.",
+  "chunks" : [ "I have a free time slot next Mondays at 10:00." ],
+  "chunkType" : "Slot"
 }

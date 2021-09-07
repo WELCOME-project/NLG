@@ -1,3 +1,5 @@
 {
-  "text" : "Module A is given on Fridays and Mondays from 19:00 to 21:00."
+  "text" : "Module A is given on Fridays and Mondays from 19:00 to 21:00.",
+  "chunks" : [ "Module A is given on Fridays and Mondays from 19:00 to 21:00." ],
+  "chunkType" : "Slot"
 }

@@ -1,3 +1,5 @@
 {
-  "text" : "Have you claimed asylum to :Country:hasValue: or some other country?"
+  "text" : "Have you claimed asylum to :Country:hasValue: or some other country?",
+  "chunks" : [ "Have you claimed asylum to :Country:hasValue: or some other country?" ],
+  "chunkType" : "Slot"
 }

@@ -2,8 +2,6 @@ package edu.upf.taln.welcome.nlg.core;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -15,7 +13,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.tuple.MutablePair;
 
@@ -85,13 +82,13 @@ public class LanguageGenerator {
         }
     }
 
-    public String generate(DialogueMove move, ULocale language) throws WelcomeException {
+    public List<String> generate(DialogueMove move, ULocale language) throws WelcomeException {
     	List<String> texts = new ArrayList<>();
         for (SpeechAct act: move.speechActs) {
         	texts.add(generateSingleText(act, language)); 
         }
                 
-    	return String.join(" ", texts);
+    	return texts;
     }
 
     private String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {

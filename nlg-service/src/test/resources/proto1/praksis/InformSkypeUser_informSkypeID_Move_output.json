@@ -1,3 +1,5 @@
 {
-  "text" : "The Skype ID for :Language:hasValue: or :Language:hasValue: speakers is: asylum.service."
+  "text" : "The Skype ID for :Language:hasValue: or :Language:hasValue: speakers is: asylum.service.",
+  "chunks" : [ "The Skype ID for :Language:hasValue: or :Language:hasValue: speakers is: asylum.service." ],
+  "chunkType" : "Slot"
 }

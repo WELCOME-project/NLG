@@ -1,3 +1,5 @@
 {
-  "text" : "Do you know how to create a Skype account?"
+  "text" : "Do you know how to create a Skype account?",
+  "chunks" : [ "Do you know how to create a Skype account?" ],
+  "chunkType" : "Slot"
 }

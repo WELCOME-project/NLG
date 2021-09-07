@@ -1,3 +1,5 @@
 {
-  "text" : "I need your mobile number."
+  "text" : "I need your mobile number.",
+  "chunks" : [ "I need your mobile number." ],
+  "chunkType" : "Slot"
 }

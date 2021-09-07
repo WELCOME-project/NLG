@@ -1,3 +1,5 @@
 {
-  "text" : "Seeing that you hold a passport of Morocco, I assume your nationality is Morocco. Is that correct?"
+  "text" : "Seeing that you hold a passport of Morocco, I assume your nationality is Morocco. Is that correct?",
+  "chunks" : [ "Seeing that you hold a passport of Morocco, I assume your nationality is Morocco. Is that correct?" ],
+  "chunkType" : "Slot"
 }

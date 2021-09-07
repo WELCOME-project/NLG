@@ -1,18 +1,21 @@
 package edu.upf.taln.welcome.nlg.service;
 
-import com.apicatalog.jsonld.api.JsonLdError;
-import com.apicatalog.jsonld.document.Document;
-import com.apicatalog.jsonld.document.DocumentParser;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.icu.util.ULocale;
-import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
-import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
-import edu.upf.taln.welcome.dms.commons.utils.JsonLDUtils;
-import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
-import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
-import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
-import edu.upf.taln.welcome.nlg.core.LanguageGenerator;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -21,18 +24,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import java.io.IOException;
-import java.io.StringReader;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
+import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
+import edu.upf.taln.welcome.dms.commons.utils.JsonLDUtils;
+import edu.upf.taln.welcome.nlg.commons.input.LanguageConfiguration;
+import edu.upf.taln.welcome.nlg.commons.input.ServiceDescription;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
+import edu.upf.taln.welcome.nlg.core.LanguageGenerator;
 
 
 /**
@@ -358,10 +356,12 @@ public class NLGService {
 		try
 		{
 			DialogueMove move = JsonLDUtils.readMove(input);
-            String text = generator.generate(move, ULocale.ENGLISH); // only English for the time being
+            List<String> sentences = generator.generate(move, ULocale.ENGLISH); // only English for the time being
 
 			GenerationOutput output = new GenerationOutput();
-			output.setText(text);
+			output.setText(String.join("\n\n", sentences));
+			output.setChunks(sentences);
+			output.setChunkType(GenerationOutput.ChunkType.Slot);
 
 			return output;
             

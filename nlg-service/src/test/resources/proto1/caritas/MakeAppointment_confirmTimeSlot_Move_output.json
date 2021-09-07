@@ -1,3 +1,5 @@
 {
-  "text" : "Are you available?"
+  "text" : "Are you available?",
+  "chunks" : [ "Are you available?" ],
+  "chunkType" : "Slot"
 }

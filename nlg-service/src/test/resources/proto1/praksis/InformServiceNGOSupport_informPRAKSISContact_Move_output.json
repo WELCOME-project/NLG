@@ -1,3 +1,5 @@
 {
-  "text" : "For further information you can contact with PRAKSIS NGO to inform you where such a service is available."
+  "text" : "For further information you can contact with PRAKSIS NGO to inform you where such a service is available.",
+  "chunks" : [ "For further information you can contact with PRAKSIS NGO to inform you where such a service is available." ],
+  "chunkType" : "Slot"
 }

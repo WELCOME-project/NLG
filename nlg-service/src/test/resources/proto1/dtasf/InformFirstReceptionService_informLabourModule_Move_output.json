@@ -1,3 +1,5 @@
 {
-  "text" : "Module B. Labour market knowledge, which consists of a 15 hour course on Labour Market and Employment."
+  "text" : "Module B. Labour market knowledge, which consists of a 15 hour course on Labour Market and Employment.",
+  "chunks" : [ "Module B. Labour market knowledge, which consists of a 15 hour course on Labour Market and Employment." ],
+  "chunkType" : "Slot"
 }

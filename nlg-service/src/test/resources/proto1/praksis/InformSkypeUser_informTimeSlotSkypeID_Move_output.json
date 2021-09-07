@@ -1,3 +1,5 @@
 {
-  "text" : "Once you have login to Skype, according to your language, you have to call at a certain time slot to a certain Skype ID."
+  "text" : "Once you have login to Skype, according to your language, you have to call at a certain time slot to a certain Skype ID.",
+  "chunks" : [ "Once you have login to Skype, according to your language, you have to call at a certain time slot to a certain Skype ID." ],
+  "chunkType" : "Slot"
 }

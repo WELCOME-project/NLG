@@ -1,3 +1,5 @@
 {
-  "text" : "When did you first arrive in Catalonia?"
+  "text" : "When did you first arrive in Catalonia?",
+  "chunks" : [ "When did you first arrive in Catalonia?" ],
+  "chunkType" : "Slot"
 }
