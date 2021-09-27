@@ -355,7 +355,7 @@ public class NLGService {
 			@Parameter(description = "Dialogue move used as generation edu.upf.taln.welcome.nlg.commons.input data.", required = true) JsonNode input) throws WelcomeException {
 		try
 		{
-			DialogueMove move = JsonLDUtils.readMove(input);
+			DialogueMove move = JsonLDUtils.readMove(input.toString());
             List<String> sentences = generator.generate(move, ULocale.ENGLISH); // only English for the time being
 
 			GenerationOutput output = new GenerationOutput();
