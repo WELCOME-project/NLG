@@ -63,7 +63,7 @@ public class NLGServiceTest {
 		String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
 		System.out.println(result);
 		
-		Assertions.assertEquals(expResult, result);
+		Assertions.assertEquals(expResult, result, "Actual and expected doesn't match in " + expectedFile.getPath());
     }
 
     static File[] getDirectoryInputs(String baseDir) {

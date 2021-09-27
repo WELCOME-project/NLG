@@ -2,13 +2,10 @@ package edu.upf.taln.welcome.nlg.core.utils;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

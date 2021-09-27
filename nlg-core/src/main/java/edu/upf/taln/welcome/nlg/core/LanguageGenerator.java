@@ -134,8 +134,8 @@ public class LanguageGenerator {
         } else {
             String template = templates.get(0);
             message = applyTemplate(template, slot, language);
-			if (!message.trim().endsWith(".") ||
-					!message.trim().endsWith("!") ||
+			if (!message.trim().endsWith(".") &&
+					!message.trim().endsWith("!") &&
 					!message.trim().endsWith("?")) {
 				message = message.trim() + ".";
 			}
@@ -270,7 +270,10 @@ public class LanguageGenerator {
 	                    logger.log(Level.SEVERE, "No rdf subject found for placeholder '" + variable + "'.");
 	                }
                 }
-				replacement = replacement.replace("&", " and ").replace("/", " or ");
+				
+				if (!replacement.startsWith("http") && !replacement.startsWith("www")) {
+					replacement = replacement.replace("&", " and ").replace("/", " or ");
+				}
                 message.replace(matcher.start(), matcher.end(), replacement);
 	        }
         } while (marchFound);

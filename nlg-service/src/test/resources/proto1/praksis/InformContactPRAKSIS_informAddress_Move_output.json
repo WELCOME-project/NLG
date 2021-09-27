@@ -1,5 +1,5 @@
 {
-  "text" : "The address is 1, Arkadioupoleon & Agiou Dimitriou Streets, Thessaloniki, Greece.",
-  "chunks" : [ "The address is 1, Arkadioupoleon & Agiou Dimitriou Streets, Thessaloniki, Greece." ],
+  "text" : "The address is 1, Arkadioupoleon  and  Agiou Dimitriou Streets, Thessaloniki, Greece.",
+  "chunks" : [ "The address is 1, Arkadioupoleon  and  Agiou Dimitriou Streets, Thessaloniki, Greece." ],
   "chunkType" : "Slot"
 }

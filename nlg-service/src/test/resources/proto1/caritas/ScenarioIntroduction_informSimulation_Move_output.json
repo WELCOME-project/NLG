@@ -1,5 +1,5 @@
 {
-  "text" : "We will practise :scenarioName:.",
-  "chunks" : [ "We will practise :scenarioName:." ],
+  "text" : "We'll practise :scenarioName:.",
+  "chunks" : [ "We'll practise :scenarioName:." ],
   "chunkType" : "Slot"
 }
