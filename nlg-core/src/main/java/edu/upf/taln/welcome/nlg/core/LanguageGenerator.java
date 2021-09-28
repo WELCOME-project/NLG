@@ -26,7 +26,6 @@ import edu.upf.taln.welcome.dms.commons.input.RDFContent.JsonldGeneric;
 import edu.upf.taln.welcome.dms.commons.input.Slot;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
-import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 
 public class LanguageGenerator {
@@ -58,18 +57,24 @@ public class LanguageGenerator {
     }
     
     public String generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
+		
+		String templateId = null;
+		Set<RDFContent> rdfContents = null;
+		
     	Slot slot = act.slot;
-        String templateId = slot.templateId;
-        
-        Set<RDFContent> rdfContents = null;
-        if (slot.rdf != null) {
-            rdfContents = new HashSet(slot.rdf);
-            for (RDFContent rdf : rdfContents) {
-                if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
-                    rdfContents.remove(rdf);
-                }
-            }
-        }
+		if (slot != null) {
+			
+			templateId = slot.templateId;
+			
+			if (slot.rdf != null) {
+				rdfContents = new HashSet(slot.rdf);
+				for (RDFContent rdf : rdfContents) {
+					if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
+						rdfContents.remove(rdf);
+					}
+				}
+			}
+		}
         
         if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
             return getCannedText(act, language);
@@ -98,18 +103,14 @@ public class LanguageGenerator {
             throw new WelcomeException("Language not supported for canned text: " + language.getBaseName());
 
         } else {
-            String key;
-            if (act.label == SpeechActLabel.Apology ||
-                act.label == SpeechActLabel.Conventional_opening ||
-                act.label == SpeechActLabel.Conventional_closing) {
+			String key = act.label.toString();
+			String cannedText = languageMap.get(key);
+			
+			if (cannedText == null && act.slot != null) {
+                key = cleanCompactedSchema(act.slot.id);				
+	            cannedText = languageMap.get(key);
+			}
 
-                key = act.label.toString();
-            } else {
-                key = act.slot.id;
-                key = cleanCompactedSchema(key);
-            }
-
-            String cannedText = languageMap.get(key);
             if (cannedText == null) {
                 throw new WelcomeException("No canned text found for key: " + key + " (" + language.getBaseName() + ")");
 

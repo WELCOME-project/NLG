@@ -127,5 +127,12 @@ public class NLGServiceTest {
     public void testCaritasPrototype1(File jsonLDInput) throws Exception {
         testMove(jsonLDInput);
     }
+    
+	@Test
+    public void testAgreeSpeechActPrototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/input_to_nlg.txt");
+		
+        testMove(jsonLDInput);
+    }
 
 }
