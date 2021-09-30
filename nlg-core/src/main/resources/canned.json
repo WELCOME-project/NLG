@@ -16,6 +16,7 @@
         "Apology": "I'm sorry",
         "Apology_Repeat_Question": "I am sorry, I will repeat the question.",
         "Apology_Repeat_Information": "I am sorry, I will repeat the information.",
+        "Apology_No_Extra_Information": "I am sorry, I have no additional information on that.",
         "Thanking": "Thank you very much",
         
         

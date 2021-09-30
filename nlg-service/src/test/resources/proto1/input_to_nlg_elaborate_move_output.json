@@ -1,0 +1,5 @@
+{
+  "text" : "I am sorry, I will repeat the question.\n\nCan you see me?\nCan you hear me?",
+  "chunks" : [ "I am sorry, I will repeat the question.", "Can you see me?\nCan you hear me?" ],
+  "chunkType" : "Slot"
+}
