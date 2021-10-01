@@ -137,7 +137,7 @@ public class NLGServiceTest {
     
 	@Test
     public void testElaboratePrototype1() throws Exception {
-		File jsonLDInput = new File("src/test/resources/proto1/input_to_nlg_wrong_output.json");
+		File jsonLDInput = new File("src/test/resources/proto1/input_to_nlg_elaborate_move.json");
 		
         testMove(jsonLDInput);
     }
