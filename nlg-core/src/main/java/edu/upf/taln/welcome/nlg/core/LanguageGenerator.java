@@ -78,7 +78,11 @@ public class LanguageGenerator {
         
         if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
             return getCannedText(act, language);
-
+			
+		} else if ("Signal_non_understanding".equals(templateId) ||
+				"Apology_No_Extra_Information".equals(templateId)) {
+            return getCannedText(act, language);
+			
         } else if (templateId != null) {
             return getTemplateText(act, language);
 
