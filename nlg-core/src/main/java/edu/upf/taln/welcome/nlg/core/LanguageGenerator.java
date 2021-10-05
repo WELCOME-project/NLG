@@ -26,6 +26,7 @@ import edu.upf.taln.welcome.dms.commons.input.RDFContent.JsonldGeneric;
 import edu.upf.taln.welcome.dms.commons.input.Slot;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
+import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 
 public class LanguageGenerator {
@@ -76,14 +77,14 @@ public class LanguageGenerator {
 			}
 		}
         
-        if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
+        if (act.label == SpeechActLabel.Signal_non_understanding ||
+				act.label == SpeechActLabel.Apology_No_Extra_Information) {
             return getCannedText(act, language);
 			
-		} else if ("Signal_non_understanding".equals(templateId) ||
-				"Apology_No_Extra_Information".equals(templateId)) {
+        } else if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
             return getCannedText(act, language);
 			
-        } else if (templateId != null) {
+		} else if (templateId != null) {
             return getTemplateText(act, language);
 
         } else {
