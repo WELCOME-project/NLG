@@ -44,16 +44,16 @@
       "@type" : "w3c:boolean"
     }
   },
-  "@id" : "move_1",
+  "@id" : "move_2",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Statement_non_opinion_1",
+    "@id" : "Statement_non_opinion_2",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "Statement_non_opinion",
     "welcome:hasSlot" : {
-      "@id" : "pps:informTimeSlot",
+      "@id" : "pps:informSkypeID",
       "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
-      "welcome:hasTemplateId" : "TInformAppCallTimeSlot",
+      "welcome:hasTemplateId" : "TInformAppCallAccountID",
       "welcome:hasOntologyType" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
       "welcome:hasInputRDFContents" : [ {
         "@type" : "rdf:Statement",
@@ -62,34 +62,16 @@
         "rdf:object" : {
           "@id" : null,
           "@type" : null,
-          "@value" : "English"
+          "@value" : "French"
         }
       }, {
         "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:slot_ef_thes",
-        "rdf:predicate" : "schema:dayOfWeek",
-        "rdf:object" : {
-          "@id" : "schema:Friday",
-          "@type" : null,
-          "@value" : null
-        }
-      }, {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:slot_ef_thes",
-        "rdf:predicate" : "schema:closes",
+        "rdf:subject" : "welcome:skype_informEnglish",
+        "rdf:predicate" : "welcome:hasSkypeId",
         "rdf:object" : {
           "@id" : null,
           "@type" : null,
-          "@value" : "10:00"
-        }
-      }, {
-        "@type" : "rdf:Statement",
-        "rdf:subject" : "welcome:slot_ef_thes",
-        "rdf:predicate" : "schema:opens",
-        "rdf:object" : {
-          "@id" : null,
-          "@type" : null,
-          "@value" : "09:00"
+          "@value" : "asylum.service"
         }
       }, {
         "@type" : "rdf:Statement",

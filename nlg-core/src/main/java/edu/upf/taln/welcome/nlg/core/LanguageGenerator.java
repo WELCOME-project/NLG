@@ -325,6 +325,14 @@ public class LanguageGenerator {
 					newTemplateId = "TObtainMatterConcern";
 				}
 				break;
+			case "pps:informSkypeID":
+				rdfResults = rdfMap.get("Language:hasValue");
+				if (rdfResults != null && rdfResults.size() > 1) {
+					newTemplateId = "TInformAppCallAccountIDTwoLanguages";
+				} else {
+					newTemplateId = "TInformAppCallAccountIDOneLanguage";
+				}
+				break;
 			default: 
 				break;
 		}

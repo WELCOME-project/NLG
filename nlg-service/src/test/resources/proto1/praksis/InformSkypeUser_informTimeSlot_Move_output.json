@@ -1,5 +1,5 @@
 {
-  "text" : "As you are an :Language:hasValue: speaker, you have to call Skype on Friday from 09:00 to 10:00.",
-  "chunks" : [ "As you are an :Language:hasValue: speaker, you have to call Skype on Friday from 09:00 to 10:00." ],
+  "text" : "As you are an English speaker, you have to call Skype on Friday from 09:00 to 10:00.",
+  "chunks" : [ "As you are an English speaker, you have to call Skype on Friday from 09:00 to 10:00." ],
   "chunkType" : "Slot"
 }
