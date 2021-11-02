@@ -1,0 +1,5 @@
+{
+  "text" : "Do you wish to receive notifications by email?",
+  "chunks" : [ "Do you wish to receive notifications by email?" ],
+  "chunkType" : "Slot"
+}

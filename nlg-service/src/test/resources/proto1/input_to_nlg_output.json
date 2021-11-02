@@ -1,0 +1,5 @@
+{
+  "text" : "Yes, that's right\n\nDo you know how to create a Skype account?",
+  "chunks" : [ "Yes, that's right", "Do you know how to create a Skype account?" ],
+  "chunkType" : "Slot"
+}

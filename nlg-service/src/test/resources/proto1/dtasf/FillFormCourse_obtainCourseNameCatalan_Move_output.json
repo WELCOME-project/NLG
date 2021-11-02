@@ -1,0 +1,5 @@
+{
+  "text" : "What is the name of the course on :courseName:?",
+  "chunks" : [ "What is the name of the course on :courseName:?" ],
+  "chunkType" : "Slot"
+}

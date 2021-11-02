@@ -1,14 +1,34 @@
 package edu.upf.taln.welcome.nlg.service;
 
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.AndFileFilter;
+import org.apache.commons.io.filefilter.FileFileFilter;
+import org.apache.commons.io.filefilter.IOFileFilter;
+import org.apache.commons.io.filefilter.SuffixFileFilter;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.io.FileUtils;
-import org.junit.Test;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
+import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
+import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
+
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
+import org.apache.commons.io.FilenameUtils;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 
-import java.io.File;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -19,38 +39,107 @@ import static org.junit.Assert.assertEquals;
  */
 public class NLGServiceTest {
     
-    public void testSample(File inputFile, File expectedFile) throws Exception {
+	private final ObjectWriter writer = new ObjectMapper()
+            .configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true)
+            .writerWithDefaultPrettyPrinter();
+    
+    public void testMove(File inputFile) throws Exception {
+        
+        boolean overrideExpected = false;
+        String baseName = FilenameUtils.getBaseName(inputFile.getName());
         
         ObjectMapper mapper = new ObjectMapper();
         JsonNode input = mapper.readValue(inputFile, JsonNode.class);
 
         NLGService instance = new NLGService();
         GenerationOutput output = instance.generate(input);
-        String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
-
-        String expected = FileUtils.readFileToString(expectedFile, "utf-8");
-        assertEquals(expected, result);
+        
+        File expectedFile = new File(inputFile.getParent(), baseName + "_output.json");
+        if (!expectedFile.exists() || overrideExpected) {
+            writer.writeValue(expectedFile, output);        
+        }
+        String expResult = FileUtils.readFileToString(expectedFile, "utf-8");
+		
+		String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
+		System.out.println(result);
+		
+		Assertions.assertEquals(expResult, result, "Actual and expected doesn't match in " + expectedFile.getPath());
     }
 
-    @Test
-    public void testSampleInitialExtrapolateTurn() throws Exception {
+    static File[] getDirectoryInputs(String baseDir) {
         
-        File inputFile0 = new File("src/test/resources/OpeningDIP_input.jsonld");
-        File expectedFile0= new File("src/test/resources/OpeningDIP_output.json");
-        testSample(inputFile0, expectedFile0);
+        File folder = new File(baseDir);
+        
+        IOFileFilter filterFile = FileFileFilter.FILE;
+        SuffixFileFilter filterSuffix = new SuffixFileFilter("_Move.json");
+        FilenameFilter filter = new AndFileFilter(filterFile, filterSuffix);
 
-//        File inputFile1 = new File("src/test/resources/initial/turn1_input.json");
-//        File expectedFile1 = new File("src/test/resources/initial/turn1_output.json");
-//        testSample(inputFile1, expectedFile1);
-//
-//
-//        File inputFile2 = new File("src/test/resources/initial/turn2_input.json");
-//        File expectedFile2 = new File("src/test/resources/initial/turn2_output.json");
-//        testSample(inputFile2, expectedFile2);
-//
-//        File inputFile3 = new File("src/test/resources/initial/turn3_input.json");
-//        File expectedFile3 = new File("src/test/resources/initial/turn3_output.json");
-//        testSample(inputFile3, expectedFile3);
+        File[] fileList = folder.listFiles(filter);
+        Arrays.sort(fileList);
+        
+        return fileList;
     }
     
+    static Stream<File> proto1DtasfInputs() {
+        String baseDir = "src/test/resources/proto1/dtasf/";
+        File[] fileList = getDirectoryInputs(baseDir);
+        
+        return Stream.of(fileList);
+    }
+    
+    static Stream<File> proto1PraksisInputs() {
+        String baseDir = "src/test/resources/proto1/praksis/";
+        File[] fileList = getDirectoryInputs(baseDir);
+        
+        return Stream.of(fileList);
+    }
+    
+    static Stream<File> proto1CaritasInputs() {
+        String baseDir = "src/test/resources/proto1/caritas/";
+        File[] fileList = getDirectoryInputs(baseDir);
+        
+        return Stream.of(fileList);
+    }
+    
+    @BeforeEach
+    public void resetCounters() {
+        DialogueMove.resetCounter();
+        SpeechAct.resetCounter();        
+    }
+    
+    @DisplayName("DTASF inputs separate tests")
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("proto1DtasfInputs")
+    public void testDtasfPrototype1(File jsonLDInput) throws Exception {
+        testMove(jsonLDInput);
+    }
+    
+    @DisplayName("Praksis inputs tests")
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("proto1PraksisInputs")
+    public void testPraksisPrototype1(File jsonLDInput) throws Exception {
+        testMove(jsonLDInput);
+    }
+    
+    @DisplayName("Caritas inputs tests")
+    @ParameterizedTest(name = "{0}")
+    @MethodSource("proto1CaritasInputs")
+    public void testCaritasPrototype1(File jsonLDInput) throws Exception {
+        testMove(jsonLDInput);
+    }
+    
+	@Test
+    public void testAgreeSpeechActPrototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/input_to_nlg.txt");
+		
+        testMove(jsonLDInput);
+    }
+    
+	@Test
+    public void testElaboratePrototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/input_to_nlg_elaborate_move.json");
+		
+        testMove(jsonLDInput);
+    }
+
 }

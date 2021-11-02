@@ -1,0 +1,5 @@
+{
+  "text" : "Could you tell me the year of your birth please?",
+  "chunks" : [ "Could you tell me the year of your birth please?" ],
+  "chunkType" : "Slot"
+}

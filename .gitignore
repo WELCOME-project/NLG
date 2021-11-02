@@ -32,3 +32,4 @@ nbactions*.xml
 **/nbactions*.xml
 
 /nlg-service/nbproject/
+/nlg-core/nbproject/

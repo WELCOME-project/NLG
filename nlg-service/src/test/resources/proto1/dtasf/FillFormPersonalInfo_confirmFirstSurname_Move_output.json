@@ -1,0 +1,5 @@
+{
+  "text" : "I understand that your surname is Doe. Is this correct?",
+  "chunks" : [ "I understand that your surname is Doe. Is this correct?" ],
+  "chunkType" : "Slot"
+}

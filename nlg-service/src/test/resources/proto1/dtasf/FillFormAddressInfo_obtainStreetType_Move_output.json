@@ -1,0 +1,5 @@
+{
+  "text" : "What type of street is :StreetName:hasValue:? Is it a carrer, avinguda, plaça or some other type?",
+  "chunks" : [ "What type of street is :StreetName:hasValue:? Is it a carrer, avinguda, plaça or some other type?" ],
+  "chunkType" : "Slot"
+}

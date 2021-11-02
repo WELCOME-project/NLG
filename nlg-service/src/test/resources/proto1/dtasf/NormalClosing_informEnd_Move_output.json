@@ -1,0 +1,5 @@
+{
+  "text" : "Thank you, :Name:hasValue:.",
+  "chunks" : [ "Thank you, :Name:hasValue:." ],
+  "chunkType" : "Slot"
+}
