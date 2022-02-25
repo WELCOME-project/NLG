@@ -18,6 +18,7 @@ import org.apache.commons.lang3.tuple.MutablePair;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.icu.text.RuleBasedNumberFormat;
 import com.ibm.icu.util.ULocale;
 
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
@@ -30,6 +31,7 @@ import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
+
 public class LanguageGenerator {
     
     private static final String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
@@ -39,6 +41,7 @@ public class LanguageGenerator {
     protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
     
     private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
+    private static final Pattern hourPattern = Pattern.compile("(\\d?\\d):(\\d\\d)"); //
     
     private final Logger logger = Logger.getLogger(LanguageGenerator.class.getName());
 
@@ -102,8 +105,8 @@ public class LanguageGenerator {
             result.ttsStr = text;
 			
 		} else if (templateId != null) {
-            result.text = getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION);
-            result.ttsStr = getTemplateText(act, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION);
+            result.text = getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, false);
+            result.ttsStr = getTemplateText(act, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION, true);
 
         } else {
             String text = getGeneratedText(act);
@@ -157,7 +160,7 @@ public class LanguageGenerator {
         }
     }
 
-    private String getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId) throws WelcomeException {
+    private String getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
         Slot slot = act.slot;
         String templateId = slot.templateId;
 
@@ -169,7 +172,7 @@ public class LanguageGenerator {
             //get hasOntologyType value and obtain new template
 
             if (template != null) {
-                message = applyTemplate(template, slot, language, collectionId, subCollectionId);
+                message = applyTemplate(template, slot, language, collectionId, subCollectionId, spelloutNumbers);
                 
                 String trimmed = message.trim();
                 if (!trimmed.endsWith(".") &&
@@ -264,7 +267,7 @@ public class LanguageGenerator {
         return rdfMap;
     }
 
-    private String applyTemplate(String template, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap) {
+    private String applyTemplate(String template, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, boolean spelloutNumbers) {
         
         StringBuilder message = new StringBuilder(template);
         boolean marchFound;
@@ -275,6 +278,7 @@ public class LanguageGenerator {
                 String variable = matcher.group(1);
                 String replacement = "";
                 if (!variable.equals("set") && !variable.equals("hasTranslation") && !variable.equals("noTranslation")) {
+
                     variable = removeTemplateBrackets(variable);
                     variable = cleanCompactedSchema(variable);
                     
@@ -296,19 +300,48 @@ public class LanguageGenerator {
                             rdf = rdfList.get(0).getLeft();
                             rdfList.get(0).right = true;
                         }
-                        
-                        if (rdf.object != null && rdf.object.value != null) {
-                            replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
-                        } else if (rdf.object != null && rdf.object.id != null) {
-                            replacement = cleanCompactedSchema(rdf.object.id);
-                        } else {
-                            replacement = ":" + variable + ":";
-                            logger.log(Level.SEVERE, "No rdf object found for placeholder '" + variable + "'.");
+
+	                	if (rdf.object != null && rdf.object.value != null) {
+	                		replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
+	                	} else if (rdf.object != null && rdf.object.id != null) {
+		                	replacement = cleanCompactedSchema(rdf.object.id);
                         }
-                    } else {
-                        replacement = ":" + variable + ":";
-                        logger.log(Level.SEVERE, "No rdf subject found for placeholder '" + variable + "'.");
+                        
+                        if (spelloutNumbers){
+                            Matcher hourMatcher = hourPattern.matcher(replacement.trim());
+                            if (hourMatcher.matches()) {
+                                String hourStr = hourMatcher.group(1);
+                                String minutesStr = hourMatcher.group(2);
+
+                                String meridian = "am";
+                                Integer hour = Integer.parseInt(hourStr);
+                                if (hour > 12) {
+                                    hour = hour % 12;
+                                    meridian = "pm";
+                                }
+                                Integer minutes = Integer.parseInt(minutesStr);
+                                if (hour == 12 && minutes > 0) {
+                                    meridian = "pm";
+                                }
+                                RuleBasedNumberFormat ruleBasedNumberFormat = new RuleBasedNumberFormat(language, RuleBasedNumberFormat.SPELLOUT);
+                                String spelloutHour = ruleBasedNumberFormat.format(hour);
+
+                                String spelloutMinutes;
+                                if (minutes == 0) {
+                                    spelloutMinutes = meridian;
+                                } else {
+                                    spelloutMinutes = ruleBasedNumberFormat.format(minutes) + " " + meridian;
+                                }
+                                String formattedTime = spelloutHour + " " + spelloutMinutes;
+                                replacement = formattedTime;
+                            }
+                        }
                     }
+                }
+                
+                if (replacement.isEmpty()) {
+                    replacement = ":" + variable + ":";
+                    logger.log(Level.SEVERE, "No rdf subject found for placeholder ''{0}''.", variable);                    
                 }
                 
                 if (!replacement.startsWith("http") && !replacement.startsWith("www")) {
@@ -321,7 +354,7 @@ public class LanguageGenerator {
         return message.toString();
     }
     
-    public String applyTemplate(String template, Slot slot, ULocale language, String collectionId, String subCollectionId) throws WelcomeException {
+    public String applyTemplate(String template, Slot slot, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
         
         HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = extractData(slot, language, subCollectionId);
         
@@ -330,7 +363,7 @@ public class LanguageGenerator {
         	template = newTemplate;
         }
         
-        String text = applyTemplate(template, rdfMap);
+        String text = applyTemplate(template, rdfMap, language, spelloutNumbers);
         return text;
     }
     

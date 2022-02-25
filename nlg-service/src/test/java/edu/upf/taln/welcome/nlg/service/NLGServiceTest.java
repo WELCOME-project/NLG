@@ -142,4 +142,10 @@ public class NLGServiceTest {
         testMove(jsonLDInput);
     }
 
+	@Test
+    public void testHoursPrototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/dtasf/InformFirstReceptionService_informLanguageModuleHours_Move.json");
+		
+        testMove(jsonLDInput);
+    }
 }

@@ -52,7 +52,7 @@ public class LanguageGeneratorTest {
         Slot slot = move.speechActs.get(0).slot;
 
         LanguageGenerator generator = new LanguageGenerator();
-        String result = generator.applyTemplate(template, slot, ULocale.UK, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION);
+        String result = generator.applyTemplate(template, slot, ULocale.UK, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION, false);
         
         assertEquals("Do you want me to inform you on the First Reception Service in Catalonia?", result);
     }
