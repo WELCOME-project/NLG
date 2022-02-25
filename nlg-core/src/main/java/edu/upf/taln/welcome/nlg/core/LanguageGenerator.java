@@ -307,6 +307,10 @@ public class LanguageGenerator {
 		                	replacement = cleanCompactedSchema(rdf.object.id);
                         }
                         
+                        if (variable.contains("hasSkypeId")) {
+                            replacement = replacement.replaceAll("\\.", " dot ");
+                        }
+                        
                         if (spelloutNumbers){
                             Matcher hourMatcher = hourPattern.matcher(replacement.trim());
                             if (hourMatcher.matches()) {

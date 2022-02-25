@@ -148,4 +148,11 @@ public class NLGServiceTest {
 		
         testMove(jsonLDInput);
     }
+
+	@Test
+    public void testSkypeIdPrototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/praksis/InformSkypeUser_informSkypeID_oneLanguage_Move.json");
+		
+        testMove(jsonLDInput);
+    }
 }
