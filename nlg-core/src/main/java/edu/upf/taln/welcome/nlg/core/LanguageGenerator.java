@@ -28,18 +28,27 @@ import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
 import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
 public class LanguageGenerator {
     
-    private static String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
-    private static String DEFAULT_TEMPLATE_COLLECTION = "UtteranceTemplatesFirstPrototype";
-    private static String DEFAULT_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesFirstPrototype";
+    private static final String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
+    protected static final String DEFAULT_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototype";
+    protected static final String DEFAULT_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
+    protected static final String TTS_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototype";
+    protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
+    
     private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
     
     private final Logger logger = Logger.getLogger(LanguageGenerator.class.getName());
 
     private Map<ULocale, Map<String, String>> canned;
     private ContentDBClient contentClient;
+    
+    private static class GenerationResult {
+        String text;
+        String ttsStr;
+    }
     
     public LanguageGenerator() throws WelcomeException {
 
@@ -57,7 +66,7 @@ public class LanguageGenerator {
         }
     }
     
-    public String generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
+    public GenerationResult generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
 		
 		String templateId = null;
 		Set<RDFContent> rdfContents = null;
@@ -77,28 +86,51 @@ public class LanguageGenerator {
 			}
 		}
         
+        GenerationResult result = new GenerationResult();
         if (act.label == SpeechActLabel.Signal_non_understanding ||
 				act.label == SpeechActLabel.Apology_No_Extra_Information) {
-            return getCannedText(act, language);
+            
+            String text = getCannedText(act, language);
+            
+            result.text = text;
+            result.ttsStr = text;
 			
         } else if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
-            return getCannedText(act, language);
+            String text = getCannedText(act, language);
+            
+            result.text = text;
+            result.ttsStr = text;
 			
 		} else if (templateId != null) {
-            return getTemplateText(act, language);
+            result.text = getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION);
+            result.ttsStr = getTemplateText(act, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION);
 
         } else {
-            return getGeneratedText(act);
-        }
-    }
+            String text = getGeneratedText(act);
 
-    public List<String> generate(DialogueMove move, ULocale language) throws WelcomeException {
-    	List<String> texts = new ArrayList<>();
-        for (SpeechAct act: move.speechActs) {
-        	texts.add(generateSingleText(act, language)); 
+            result.text = text;
+            result.ttsStr = text;
         }
-                
-    	return texts;
+        return result;
+}
+
+    public GenerationOutput generate(DialogueMove move, ULocale language) throws WelcomeException {
+        
+    	List<String> texts = new ArrayList<>();
+        List<String> chunks = new ArrayList<>();
+        for (SpeechAct act: move.speechActs) {
+            
+            GenerationResult result = generateSingleText(act, language);
+        	texts.add(result.text);
+            chunks.add(result.ttsStr);
+        }
+
+        GenerationOutput output = new GenerationOutput();
+        output.setText(String.join("\n\n", texts));
+        output.setChunks(chunks);
+        output.setChunkType(GenerationOutput.ChunkType.Slot);
+        
+    	return output;
     }
 
     private String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {
@@ -125,26 +157,30 @@ public class LanguageGenerator {
         }
     }
 
-    private String getTemplateText(SpeechAct act, ULocale language) throws WelcomeException {
+    private String getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId) throws WelcomeException {
         Slot slot = act.slot;
         String templateId = slot.templateId;
 
-        List<String> templates = contentClient.getTemplate(DEFAULT_TEMPLATE_COLLECTION, templateId, language.toString());
-        
-        //TODO case when template contains <hasTranslation>
-        //get hasOntologyType value and obtain new template
-        
         String message = "";
-        if (templates == null || templates.isEmpty()) {
-            logger.log(Level.SEVERE, "No template found for templateId " + templateId);
-        } else {
-            String template = templates.get(0);
-            message = applyTemplate(template, slot, language);
-			if (!message.trim().endsWith(".") &&
-					!message.trim().endsWith("!") &&
-					!message.trim().endsWith("?")) {
-				message = message.trim() + ".";
-			}
+        try {
+            String template = contentClient.getTemplate(DEFAULT_TEMPLATE_COLLECTION, templateId, language);
+            
+            //TODO case when template contains <hasTranslation>
+            //get hasOntologyType value and obtain new template
+
+            if (template != null) {
+                message = applyTemplate(template, slot, language, collectionId, subCollectionId);
+                
+                String trimmed = message.trim();
+                if (!trimmed.endsWith(".") &&
+                        !trimmed.endsWith("!") &&
+                        !trimmed.endsWith("?")) {
+                    message = trimmed + ".";
+                }
+            }
+            
+        } catch (WelcomeException we) {
+            logger.log(Level.SEVERE, we.getMessage());
         }
         
         return message;
@@ -179,19 +215,17 @@ public class LanguageGenerator {
     	}
     }
     
-    private void getSubtemplateValue(HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String subTemplateId, ULocale language, String valueName) throws WelcomeException {
-    	List<String> subTemplatesText = contentClient.getTemplate(DEFAULT_SUBTEMPLATE_COLLECTION, subTemplateId, language.toString());
-    	if (subTemplatesText == null || subTemplatesText.isEmpty()) {
-            logger.log(Level.SEVERE, "No subtemplate found for templateId " + subTemplateId);
-        } else {
-            String subTemplateText = subTemplatesText.get(0);
+    private void getSubtemplateValue(HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String subTemplateId, ULocale language, String valueName, String collectionId) throws WelcomeException {
+        
+    	String subTemplate = contentClient.getTemplate(collectionId, subTemplateId, language);
+    	if (subTemplate != null) {
             RDFContent subTemplateRdf = new RDFContent();
-            subTemplateRdf.object = new JsonldGeneric(subTemplateText);
+            subTemplateRdf.object = new JsonldGeneric(subTemplate);
             addValueToRDFMap(rdfMap, valueName, subTemplateRdf);
         }
     }
 
-    public String applyTemplate(String template, Slot slot, ULocale language) throws WelcomeException {
+    private HashMap<String, List<MutablePair<RDFContent, Boolean>>>  extractData(Slot slot, ULocale language, String subCollectionId) throws WelcomeException {
         
         HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
         if (slot.rdf != null) {
@@ -215,7 +249,7 @@ public class LanguageGenerator {
         	List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get("subTemplate");
         	RDFContent rdf = rdfList.get(0).getLeft();
         	if (rdf.predicate != null && rdf.object != null && rdf.object.value != null) {
-	        	getSubtemplateValue(rdfMap, rdf.object.value, language, cleanCompactedSchema(rdf.predicate));
+	        	getSubtemplateValue(rdfMap, rdf.object.value, language, cleanCompactedSchema(rdf.predicate), subCollectionId);
         	}
         }
         
@@ -223,71 +257,84 @@ public class LanguageGenerator {
         if (slot.ontology != null) {
         	String onto = Ontology2TemplateDictionary.getInstance().get(slot.ontology);
         	if (onto != null) {
-        		getSubtemplateValue(rdfMap, onto, language, "hasOntologyType");
+        		getSubtemplateValue(rdfMap, onto, language, "hasOntologyType", subCollectionId);
         	}
         }
         
-        String newTemplate = specialCases(slot, rdfMap, language);
-        if (newTemplate != null) {
-        	template = newTemplate;
-        }
+        return rdfMap;
+    }
+
+    private String applyTemplate(String template, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap) {
         
         StringBuilder message = new StringBuilder(template);
         boolean marchFound;
         do {
-	        Matcher matcher = placeholder.matcher(message);
-	        marchFound = matcher.find();
-	        if (marchFound && matcher.groupCount() >= 1) {
+            Matcher matcher = placeholder.matcher(message);
+            marchFound = matcher.find();
+            if (marchFound && matcher.groupCount() >= 1) {
                 String variable = matcher.group(1);
                 String replacement = "";
                 if (!variable.equals("set") && !variable.equals("hasTranslation") && !variable.equals("noTranslation")) {
-                	variable = removeTemplateBrackets(variable);
-                	variable = cleanCompactedSchema(variable);
-                	
-            		List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get(variable);
-	                if (rdfList != null && !rdfList.isEmpty()) {
-	                	RDFContent rdf = null;
-	                	if (rdfList.size() > 1) {
-	                		Iterator<MutablePair<RDFContent, Boolean>> listIterator = rdfList.iterator();
-	                		while (rdf == null && listIterator.hasNext()) {
-	                			MutablePair<RDFContent, Boolean> tempPair = listIterator.next();
-	                			Boolean used = tempPair.getRight();
-	                			if (!used) {
-	                				rdf = tempPair.getLeft();
-	                				tempPair.right = true;
-	                			}
-	                		}
-	                	}
-	                	if (rdf == null) {
-	                		rdf = rdfList.get(0).getLeft();
-	                		rdfList.get(0).right = true;
-	                	}
-
-	                	if (rdf.object != null && rdf.object.value != null) {
-	                		replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
-	                	} else if (rdf.object != null && rdf.object.id != null) {
-		                	replacement = cleanCompactedSchema(rdf.object.id);
-		                } else {
-		                	replacement = ":" + variable + ":";
-		                    logger.log(Level.SEVERE, "No rdf object found for placeholder '" + variable + "'.");
-		                }
-	                } else {
-	                	replacement = ":" + variable + ":";
-	                    logger.log(Level.SEVERE, "No rdf subject found for placeholder '" + variable + "'.");
-	                }
+                    variable = removeTemplateBrackets(variable);
+                    variable = cleanCompactedSchema(variable);
+                    
+                    List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get(variable);
+                    if (rdfList != null && !rdfList.isEmpty()) {
+                        RDFContent rdf = null;
+                        if (rdfList.size() > 1) {
+                            Iterator<MutablePair<RDFContent, Boolean>> listIterator = rdfList.iterator();
+                            while (rdf == null && listIterator.hasNext()) {
+                                MutablePair<RDFContent, Boolean> tempPair = listIterator.next();
+                                Boolean used = tempPair.getRight();
+                                if (!used) {
+                                    rdf = tempPair.getLeft();
+                                    tempPair.right = true;
+                                }
+                            }
+                        }
+                        if (rdf == null) {
+                            rdf = rdfList.get(0).getLeft();
+                            rdfList.get(0).right = true;
+                        }
+                        
+                        if (rdf.object != null && rdf.object.value != null) {
+                            replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
+                        } else if (rdf.object != null && rdf.object.id != null) {
+                            replacement = cleanCompactedSchema(rdf.object.id);
+                        } else {
+                            replacement = ":" + variable + ":";
+                            logger.log(Level.SEVERE, "No rdf object found for placeholder '" + variable + "'.");
+                        }
+                    } else {
+                        replacement = ":" + variable + ":";
+                        logger.log(Level.SEVERE, "No rdf subject found for placeholder '" + variable + "'.");
+                    }
                 }
-				
-				if (!replacement.startsWith("http") && !replacement.startsWith("www")) {
-					replacement = replacement.replace("&", " and ").replace("/", " or ");
-				}
+                
+                if (!replacement.startsWith("http") && !replacement.startsWith("www")) {
+                    replacement = replacement.replace("&", " and ").replace("/", " or ");
+                }
                 message.replace(matcher.start(), matcher.end(), replacement);
-	        }
+            }
         } while (marchFound);
 
         return message.toString();
     }
     
-    private String specialCases(Slot slot, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language) throws WelcomeException {
+    public String applyTemplate(String template, Slot slot, ULocale language, String collectionId, String subCollectionId) throws WelcomeException {
+        
+        HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = extractData(slot, language, subCollectionId);
+        
+        String newTemplate = specialCases(slot, rdfMap, language, collectionId);
+        if (newTemplate != null) {
+        	template = newTemplate;
+        }
+        
+        String text = applyTemplate(template, rdfMap);
+        return text;
+    }
+    
+    private String specialCases(Slot slot, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
     	String newTemplateId = null;
     	List<MutablePair<RDFContent, Boolean>> rdfResults;
 		switch(slot.id) {
@@ -340,11 +387,9 @@ public class LanguageGenerator {
 		String template = null;
 		
 		if(newTemplateId != null) {
-			List<String> templates = contentClient.getTemplate(DEFAULT_TEMPLATE_COLLECTION, newTemplateId, language.toString());
-			if (templates == null || templates.isEmpty()) {
-	            logger.log(Level.SEVERE, "No template found for special templateId " + newTemplateId);
-	        } else {
-	            template = templates.get(0);
+			String newTemplate = contentClient.getTemplate(collectionId, newTemplateId, language);
+			if (newTemplate != null) {
+	            template = newTemplate;
 	        }
 		}
 		

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.icu.util.ULocale;
 
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
 /**
  *
@@ -26,8 +27,8 @@ public class Proto1Test {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-		List<String> sentences = generator.generate(move, ULocale.ENGLISH);
-		String result = String.join(" ", sentences);
+        GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
+		String result = String.join(" ", output.getText());
         
         assertEquals(expResult, result);
     }
@@ -35,7 +36,7 @@ public class Proto1Test {
     @Test
     public void testOpening() throws Exception {
         String jsonldPath = "src/test/resources/proto1/Opening_Move.json";
-        String expResult = "Can you see me?\nCan you hear me?";
+        String expResult = "Hello!\nCan you see me?\nCan you hear me?";
         
         generate(jsonldPath, expResult);
     }

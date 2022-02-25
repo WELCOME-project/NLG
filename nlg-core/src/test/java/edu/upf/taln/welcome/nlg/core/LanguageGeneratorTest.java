@@ -14,6 +14,7 @@ import com.ibm.icu.util.ULocale;
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.dms.commons.input.Slot;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
+import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 
 /**
  *
@@ -34,10 +35,10 @@ public class LanguageGeneratorTest {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-		List<String> sentences = generator.generate(move, ULocale.ENGLISH);
-		String result = String.join(" ", sentences);
+        GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
+		String result = String.join(" ", output.getText());
         
-        String expResult = "Can you see me?\nCan you hear me?";
+        String expResult = "Hello!\nCan you see me?\nCan you hear me?";
         assertEquals(expResult, result);
     }
     
@@ -51,7 +52,7 @@ public class LanguageGeneratorTest {
         Slot slot = move.speechActs.get(0).slot;
 
         LanguageGenerator generator = new LanguageGenerator();
-        String result = generator.applyTemplate(template, slot, ULocale.UK);
+        String result = generator.applyTemplate(template, slot, ULocale.UK, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION);
         
         assertEquals("Do you want me to inform you on the First Reception Service in Catalonia?", result);
     }

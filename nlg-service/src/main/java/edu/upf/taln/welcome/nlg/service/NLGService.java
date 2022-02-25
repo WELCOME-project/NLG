@@ -356,12 +356,7 @@ public class NLGService {
 		try
 		{
 			DialogueMove move = JsonLDUtils.readMove(input.toString());
-            List<String> sentences = generator.generate(move, ULocale.ENGLISH); // only English for the time being
-
-			GenerationOutput output = new GenerationOutput();
-			output.setText(String.join("\n\n", sentences));
-			output.setChunks(sentences);
-			output.setChunkType(GenerationOutput.ChunkType.Slot);
+            GenerationOutput output = generator.generate(move, ULocale.ENGLISH); // only English for the time being
 
 			return output;
             

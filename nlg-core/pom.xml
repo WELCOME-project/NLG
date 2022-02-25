@@ -11,10 +11,17 @@
     <name>Welcome NLG Core</name>
 
     <dependencies>
+		<dependency>
+			<groupId>edu.upf.taln.welcome</groupId>
+			<artifactId>nlg-commons</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
         <dependency>
             <groupId>edu.upf.taln.welcome</groupId>
             <artifactId>dms-commons</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>

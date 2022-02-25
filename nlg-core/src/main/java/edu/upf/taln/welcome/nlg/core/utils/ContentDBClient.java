@@ -1,5 +1,6 @@
 package edu.upf.taln.welcome.nlg.core.utils;
 
+import com.ibm.icu.util.ULocale;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -113,8 +114,33 @@ public class ContentDBClient {
          
         return response;
     }
+
+    public String getTemplate(String collection, String term, ULocale language) throws WelcomeException {
+        return getTemplate(collection, term, language.toString());
+    }
     
-    public List<String> getTemplate(String collection, String term, String language) throws WelcomeException {
+    public String getTemplate(String collection, String term, String language) throws WelcomeException {
+        
+        List<String> templates = getTemplates(collection, term, language);
+        
+        String template = null;
+        if (templates == null || templates.isEmpty()) {
+            String message = "No template found for templateId " + term + " for language " + language + ".";
+            logger.severe(message);
+            
+        } else {
+            if (templates.size() > 1) {
+                String message = "Multiple templates found for templateId " + term + " for language " + language + ".";
+                logger.warning(message);
+                //throw new WelcomeException(message);
+            }
+            template = templates.get(0);
+        }
+        
+        return template;
+    }    
+    
+    public List<String> getTemplates(String collection, String term, String language) throws WelcomeException {
 
         Response response = serviceCall(collection, term, language);
         
