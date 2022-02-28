@@ -30,6 +30,8 @@ import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
 import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
+import edu.upf.taln.welcome.nlg.core.utils.TimeMapper;
+import java.util.Locale;
 
 
 public class LanguageGenerator {
@@ -41,7 +43,6 @@ public class LanguageGenerator {
     protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
     
     private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
-    private static final Pattern hourPattern = Pattern.compile("(\\d?\\d):(\\d\\d)"); //
     
     private final Logger logger = Logger.getLogger(LanguageGenerator.class.getName());
 
@@ -310,35 +311,9 @@ public class LanguageGenerator {
                         if (variable.contains("hasSkypeId")) {
                             replacement = replacement.replaceAll("\\.", " dot ");
                         }
-                        
-                        if (spelloutNumbers){
-                            Matcher hourMatcher = hourPattern.matcher(replacement.trim());
-                            if (hourMatcher.matches()) {
-                                String hourStr = hourMatcher.group(1);
-                                String minutesStr = hourMatcher.group(2);
 
-                                String meridian = "am";
-                                Integer hour = Integer.parseInt(hourStr);
-                                if (hour > 12) {
-                                    hour = hour % 12;
-                                    meridian = "pm";
-                                }
-                                Integer minutes = Integer.parseInt(minutesStr);
-                                if (hour == 12 && minutes > 0) {
-                                    meridian = "pm";
-                                }
-                                RuleBasedNumberFormat ruleBasedNumberFormat = new RuleBasedNumberFormat(language, RuleBasedNumberFormat.SPELLOUT);
-                                String spelloutHour = ruleBasedNumberFormat.format(hour);
-
-                                String spelloutMinutes;
-                                if (minutes == 0) {
-                                    spelloutMinutes = meridian;
-                                } else {
-                                    spelloutMinutes = ruleBasedNumberFormat.format(minutes) + " " + meridian;
-                                }
-                                String formattedTime = spelloutHour + " " + spelloutMinutes;
-                                replacement = formattedTime;
-                            }
+                        if (spelloutNumbers) {
+							replacement = TimeMapper.spelloutHours(replacement, language, false);
                         }
                     }
                 }
