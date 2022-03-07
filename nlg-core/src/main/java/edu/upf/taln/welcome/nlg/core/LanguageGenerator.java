@@ -18,7 +18,6 @@ import org.apache.commons.lang3.tuple.MutablePair;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibm.icu.text.RuleBasedNumberFormat;
 import com.ibm.icu.util.ULocale;
 
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
@@ -31,7 +30,6 @@ import edu.upf.taln.welcome.dms.commons.output.SpeechActLabel;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
 import edu.upf.taln.welcome.nlg.core.utils.TimeMapper;
-import java.util.Locale;
 
 
 public class LanguageGenerator {
@@ -39,8 +37,8 @@ public class LanguageGenerator {
     private static final String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
     protected static final String DEFAULT_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototype";
     protected static final String DEFAULT_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
-    protected static final String TTS_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototype";
-    protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
+    protected static final String TTS_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototypeTTS";
+    protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototypeTTS";
     
     private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
     
@@ -70,7 +68,7 @@ public class LanguageGenerator {
         }
     }
     
-    public GenerationResult generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
+    protected GenerationResult generateSingleText(SpeechAct act, ULocale language) throws WelcomeException {
 		
 		String templateId = null;
 		Set<RDFContent> rdfContents = null;
@@ -167,7 +165,7 @@ public class LanguageGenerator {
 
         String message = "";
         try {
-            String template = contentClient.getTemplate(DEFAULT_TEMPLATE_COLLECTION, templateId, language);
+            String template = contentClient.getTemplate(collectionId, templateId, language);
             
             //TODO case when template contains <hasTranslation>
             //get hasOntologyType value and obtain new template

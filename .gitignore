@@ -33,3 +33,4 @@ nbactions*.xml
 
 /nlg-service/nbproject/
 /nlg-core/nbproject/
+deploy_token
