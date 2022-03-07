@@ -141,6 +141,13 @@ public class NLGServiceTest {
 		
         testMove(jsonLDInput);
     }
+    
+	@Test
+    public void testError400Prototype1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/proto1/error_400.json");
+		
+        testMove(jsonLDInput);
+    }
 
 	@Test
     public void testHoursPrototype1() throws Exception {
