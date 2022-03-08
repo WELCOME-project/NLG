@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -52,7 +51,7 @@ public class LanguageGeneratorTest {
         Slot slot = move.speechActs.get(0).slot;
 
         LanguageGenerator generator = new LanguageGenerator();
-        String result = generator.applyTemplate(template, slot, ULocale.UK, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION, false);
+        String result = generator.applyTemplate(template, slot, ULocale.ENGLISH, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION, false);
         
         assertEquals("Do you want me to inform you on the First Reception Service in Catalonia?", result);
     }
