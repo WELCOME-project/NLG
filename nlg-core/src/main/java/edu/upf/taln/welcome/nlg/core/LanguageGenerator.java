@@ -232,15 +232,28 @@ public class LanguageGenerator {
         HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
         if (slot.rdf != null) {
 	        for (RDFContent rdf : slot.rdf) {
+
+                String subject = null;
+	        	if (rdf.subject != null) {
+                    subject = cleanCompactedSchema(rdf.subject);
+                }
+
 	        	String key = null;
-	        	if (rdf.subject != null && cleanCompactedSchema(rdf.subject).equals("subTemplate")) {
-	        		key = cleanCompactedSchema(rdf.subject);
-	        	} else if (rdf.predicate != null) {
-	        		if (rdf.subject != null && (cleanCompactedSchema(rdf.predicate).equals("hasValue") || cleanCompactedSchema(rdf.predicate).equals("hasName"))) {
-	        			key = cleanCompactedSchema(rdf.subject) + ":" + cleanCompactedSchema(rdf.predicate);
-	        		} else {
-	        			key = cleanCompactedSchema(rdf.predicate);
-	        		}
+                if (subject != null && subject.equals("subTemplate")) {
+                    key = subject;
+
+                } else if (rdf.predicate != null) {
+
+                    String predicate = cleanCompactedSchema(rdf.predicate);
+                    if (subject != null
+                            && (predicate.equals("hasValue")
+                                || predicate.equals("hasName") 
+                                || predicate.equals("hasRole"))) {
+                        key = subject + ":" + predicate;
+
+                    } else {
+                        key = predicate;
+                    }
 	        	}
 	        	addValueToRDFMap(rdfMap, key, rdf);
 	        }
