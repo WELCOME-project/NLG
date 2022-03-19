@@ -248,7 +248,8 @@ public class LanguageGenerator {
                     if (subject != null
                             && (predicate.equals("hasValue")
                                 || predicate.equals("hasName") 
-                                || predicate.equals("hasRole"))) {
+                                || predicate.equals("hasRole")
+								|| predicate.equals("hasRoleSummary"))) {
                         key = subject + ":" + predicate;
 
                     } else {
