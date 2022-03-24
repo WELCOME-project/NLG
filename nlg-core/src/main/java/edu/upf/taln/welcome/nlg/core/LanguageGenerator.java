@@ -47,7 +47,7 @@ public class LanguageGenerator {
     private Map<ULocale, Map<String, String>> canned;
     private ContentDBClient contentClient;
     
-    private static class GenerationResult {
+    public static class GenerationResult {
         String text;
         String ttsStr;
     }
@@ -173,6 +173,9 @@ public class LanguageGenerator {
             if (template != null) {
                 message = applyTemplate(template, slot, language, collectionId, subCollectionId, spelloutNumbers);
                 
+				message = message.replaceAll(" NGO", " N G O");
+				message = message.replaceAll("PRAKSIS", "Praksis");
+				
                 String trimmed = message.trim();
                 if (!trimmed.endsWith(".") &&
                         !trimmed.endsWith("!") &&
