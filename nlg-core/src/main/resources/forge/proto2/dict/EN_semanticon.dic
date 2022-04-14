@@ -1,0 +1,526 @@
+semanticon {
+
+  //concepts used in the PTB (Locative and Temporal not included, given that we'll manage them through rules).
+  "locative_relation" {
+    sem = "locative_relation"
+    fnframe = "Locative_relation"
+    gen = {
+      lex = "in_IN_01"
+    }
+  }
+
+  "temporal_relation" {
+    sem = "temporal_relation"
+    fnframe = "Time_vector"
+    gen = {
+      lex = "in_IN_01"
+    }
+  }
+
+  "relational_quantity" {
+    sem = "relational_quantity"
+    fnframe = "Relational_quantity"
+    gen = {
+      lex = "of_IN_01"
+    }
+  }
+
+  "accompaniment" {
+    fnframe = "Accompaniment"
+    lex = "with_IN_01"
+    gen = {
+      lex = "with_IN_01"
+    }
+  }
+
+  "anteriority_location":"locative_relation" {
+    lex = "before_IN_01"
+    lex = "into_IN_01"
+    lex = "to_IN_01"
+    gen = {
+      lex = "before_IN_01"
+    }
+  }
+
+  "anteriority_time":"temporal_relation" {
+    lex = "before_IN_01"
+    lex = "by_IN_01"
+    lex = "prior_IN_01"
+    lex = "until_IN_01"
+    gen = {
+      lex = "before_IN_01"
+    }
+  }
+
+  "approximate_measurement":"relational_quantity" {
+    lex = "about_IN_01"
+    lex = "around_IN_01"
+    lex = "circa_IN_01"
+    gen = {
+      lex = "about_IN_01"
+    }
+  }
+
+  //should "support" below merge with this entry?
+  "benefactive" {
+    lex = "for_IN_01"
+    gen = {
+      lex = "for_IN_01"
+    }
+  }
+
+  "causation" {
+    fnframe = "Causation"
+    lex = "because_IN_01"
+    lex = "for_IN_01"
+    lex = "since_IN_01"
+    gen = {
+      lex = "because_IN_01"
+    }
+  }
+
+  "concessive" {
+    fnframe = "Concessive"
+    //lex = "although_IN_01"
+    lex = "but_IN_01"
+    lex = "despite_IN_01"
+    gen = {
+      lex = "although_IN_01"
+    }
+  }
+
+  "direction" {
+    lex = ""
+  }
+
+  "dissimilarity" {
+    fnframe = "Similarity"
+    lex = "unlike_IN_01"
+    gen = {
+      lex = "unlike_IN_01"
+    }
+  }
+
+  "end_time":"temporal_relation" {
+    lex = "until_IN_01"
+    gen = {
+      lex = "until_IN_01"
+    }
+  }
+
+  "evidence" {
+    fnframe = "Evidence"
+    lex = "from_IN_01"
+    gen = {
+      lex = "from_IN_01"
+    }
+  }
+
+  "exclusion" {
+    fnframe = "Inclusion"
+    lex = "excluding_IN_01"
+    gen = {
+      lex = "excluding_IN_01"
+    }
+  }
+
+  "extent" {
+    lex = ""
+  }
+
+  "extent_location":"locative_relation" {
+    lex = "within_IN_01"
+    gen = {
+      lex = "within_IN_01"
+    }
+  }
+
+  "extent_time":"temporal_relation" {
+    lex = "as_IN_01"
+    lex = "during_IN_01"
+    lex = "while_RB_01"
+    gen = {
+      lex = "during_IN_01"
+    }
+  }
+
+  "duration":"temporal_relation" {
+    lex = "for_IN_01"
+    lex = "over_IN_01"
+    gen = {
+      lex = "for_IN_01"
+    }
+  }
+
+  "frequency":"temporal_relation" {
+    lex = "time_NN_01"
+    gen = {
+      lex = "time_NN_01"
+    }
+  }
+
+  "inclusion" {
+    fnframe = "Inclusion"
+    lex = "among_IN_01"
+    gen = {
+      lex = "among_IN_01"
+    }
+  }
+
+  "inferior_measurement":"relational_quantity" {
+    lex = "under_IN_01"
+    gen = {
+      lex = "under_IN_01"
+    }
+  }
+
+  "manner" {
+    lex = "as_IN_01"
+    gen = {
+      lex = "as_IN_01"
+    }
+  }
+
+  "means" {
+    fnframe = "Means"
+    lex = "by_IN_01"
+    lex = "on_IN_01"
+    gen = {
+      lex = "by_IN_01"
+    }
+  }
+
+  "origin" {
+    fnframe = "Origin"
+    lex = "from_IN_01"
+    lex = "of_IN_01"
+    gen = {
+      lex = "from_IN_01"
+    }
+  }
+
+  "partitive" {
+    fnframe = "Partitive"
+    lex = "of_IN_01"
+    gen = {
+      lex = "of_IN_01"
+    }
+  }
+
+  "point_location":"locative_relation" {
+    lex = "above_IN_01"
+    lex = "against_IN_01"
+    lex = "amid_IN_01"
+    lex = "among_IN_01"
+    lex = "around_IN_01"
+    lex = "at_IN_01"
+    lex = "behind_IN_01"
+    lex = "below_IN_01"
+    lex = "beneath_IN_01"
+    lex = "beside_IN_01"
+    lex = "by_IN_01"
+    lex = "down_IN_01"
+    lex = "in_IN_01"
+    lex = "inside_IN_01"
+    lex = "near_IN_01"
+    lex = "off_IN_01"
+    lex = "opposite_IN_01"
+    lex = "on_IN_01"
+    lex = "under_IN_01"
+    lex = "underneath_IN_01"
+    lex = "up_IN_01"
+    lex = "upon_IN_01"
+    //lex = "within_IN_01"
+    lex = "where_WRB_01"
+    gen = {
+      lex = "near_IN_01"
+    }
+  }
+
+  "point_location_on":"locative_relation" {
+    lex = "on_IN_01"
+    lex = "up_IN_01"
+    lex = "upon_IN_01"
+    gen = {
+      lex = "on_IN_01"
+    }
+  }
+
+  "point_time":"temporal_relation" {
+    lex = "around_IN_01"
+    lex = "at_IN_01"
+    lex = "near_IN_01"
+    lex = "on_IN_01"
+    lex = "when_WRB_01"
+    gen = {
+      lex = "in_IN_01"
+    }
+  }
+
+  "point_time_year":"temporal_relation" {
+    lex = "in_IN_01"
+    gen = {
+      lex = "in_IN_01"
+    }
+  }
+
+  "point_time_date":"temporal_relation" {
+    lex = "on_IN_01"
+    gen = {
+      lex = "on_IN_01"
+    }
+  }
+
+  "possession" {
+    fnframe = "Possession"
+    lex = "of_IN_01"
+    sem = "possession"
+    lex = "whose_WP$_01"
+    gen = {
+      lex = "of_IN_01"
+    }
+  }
+
+  "posteriority_location":"locative_relation" {
+    lex = "after_IN_01"
+    lex = "beyond_IN_01"
+    lex = "from_IN_01"
+    lex = "past_IN_01"
+    gen = {
+      lex = "after_IN_01"
+    }
+  }
+
+  "posteriority_time":"temporal_relation" {
+    lex = "after_IN_01"
+    lex = "beyond_IN_01"
+    lex = "from_IN_01"
+    lex = "past_IN_01"
+    lex = "since_IN_01"
+    gen = {
+      lex = "after_IN_01"
+    }
+  }
+
+  "purpose" {
+    lex = "for_IN_01"
+    lex = "into_IN_01"
+    lex = "to_IN_01"
+    gen = {
+      lex = "for_IN_01"
+    }
+  }
+
+  "range_location":"locative_relation" {
+    lex = "between_IN_01"
+    lex = "throughout_IN_01"
+    gen = {
+      lex = "between_IN_01"
+    }
+  }
+
+  "range_time":"temporal_relation" {
+    lex = "between_IN_01"
+    lex = "in_IN_01"
+    lex = "throughout_IN_01"
+    lex = "within_IN_01"
+    gen = {
+      lex = "between_IN_01"
+    }
+  }
+
+  "similarity" {
+    fnframe = "Similarity"
+    lex = "like_IN_01"
+    gen = {
+      lex = "like_IN_01"
+    }
+  }
+
+  "superior_measurement":"relational_quantity" {
+    lex = "over_IN_01"
+    gen = {
+      lex = "over_IN_01"
+    }
+  }
+
+  "support" {
+    fnframe = "Taking_sides"
+    lex = "pro_IN_01"
+    gen = {
+      lex = "pro_IN_01"
+    }
+  }
+
+  "topic" {
+    fnframe = "Topic"
+    lex = "about_IN_01"
+    lex = "concerning_IN_01"
+    lex = "in_IN_01"
+    lex = "on_IN_01"
+    lex = "regarding_IN_01"
+    lex = "upon_IN_01"
+    gen = {
+      lex = "about_IN_01"
+    }
+  }
+
+  "trajectory_location":"locative_relation" {
+    lex = "across_IN_01"
+    lex = "along_IN_01"
+    lex = "athwart_IN_01"
+    lex = "throughout_IN_01"
+    gen = {
+      lex = "aross_IN_01"
+    }
+  }
+
+  "trajectory_time":"temporal_relation" {
+    lex = "through_IN_01"
+    gen = {
+      lex = "through_IN_01"
+    }
+  }
+
+  "unsupport" {
+    fnframe = "Taking_sides"
+    lex = "against_IN_01"
+    gen = {
+      lex = "against_IN_01"
+    }
+  }
+
+  months {
+    "1" = {
+      lex = "January"
+    }
+    "2" = {
+      lex = "February"
+    }
+    "3" = {
+      lex = "March"
+    }
+    "4" = {
+      lex = "April"
+    }
+    "5" = {
+      lex = "May"
+    }
+    "6" = {
+      lex = "June"
+    }
+    "7" = {
+      lex = "July"
+    }
+    "8" = {
+      lex = "August"
+    }
+    "9" = {
+      lex = "September"
+    }
+    "10" = {
+      lex = "October"
+    }
+    "11" = {
+      lex = "November"
+    }
+    "12" = {
+      lex = "December"
+    }
+  }
+
+  //I'm taking the most common values (from the verbneticon) for the mapping of each relation
+  //relations from verbnet (which means that they can be applied to verbs)
+  dependencies_default_map {
+    Actor = {}
+    Agent = {
+      rel = A1
+    }
+    Asset = {
+      rel = A1
+    }
+    Attribute = {
+      rel = A2
+    }
+    Beneficiary = {
+      rel = A4
+    }
+    Cause = {
+      rel = A0
+    }
+    Co_Agent = {
+      rel = A1
+    }
+    Co_Patient = {
+      rel = A2
+    }
+    Co_Theme = {
+      rel = A2
+    }
+    Destination = {
+      rel = A2
+    }
+    Duration = {}
+    Experiencer = {
+      rel = A0
+    }
+    Extent = {
+      rel = A2
+    }
+    Final_Time = {}
+    Frequency = {}
+    Goal = {
+      rel = A2
+    }
+    Initial_Location = {
+      rel = A2
+    }
+    Initial_Time = {}
+    Instrument = {
+      rel = A2
+    }
+    Location = {
+      rel = A2
+    }
+    Material = {
+      rel = A1
+    }
+    Participant = {}
+    Patient = {
+      rel = A2
+    }
+    Pivot = {
+      rel = A0
+    }
+    Place = {}
+    Predicate = {}
+    Product = {
+      rel = A3
+    }
+    Recipient = {
+      rel = A2
+    }
+    Reflexive = {}
+    Result = {
+      rel = A4
+    }
+    Source = {
+      rel = A0
+    }
+    Stimulus = {
+      rel = A1
+    }
+    Theme = {
+      rel = A1
+    }
+    Time = {}
+    Topic = {}
+    Trajectory = {
+      rel = A1
+    }
+    Undergoer = {}
+    Value = {
+      rel = A2
+    }
+  }
+}

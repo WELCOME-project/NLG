@@ -1,0 +1,1895 @@
+{
+  "templates" : {
+    "address" : {
+      "name" : "address",
+      "sentenceAttrs" : [ "template_name=address", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "address",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "apartmentNumber" : {
+      "name" : "apartmentNumber",
+      "sentenceAttrs" : [ "template_name=apartmentNumber", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "apartment_number",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "flat",
+        "feats" : {
+          "default" : "lineId=2|definiteness=DEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=3|class=person"
+        },
+        "head" : [ 2 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "apartmentNumber_agg" : {
+      "name" : "apartmentNumber_agg",
+      "sentenceAttrs" : [ "template_name=apartmentNumber_agg", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "apartment_number",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "which",
+        "feats" : {
+          "default" : "lineId=4|dpos=WDT"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "buildingName" : {
+      "name" : "buildingName",
+      "sentenceAttrs" : [ "template_name=buildingName", "slex=Text" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|main_rheme=yes"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "building",
+        "feats" : {
+          "default" : "lineId=2|definiteness=DEF"
+        },
+        "head" : [ 3, 1 ],
+        "deprel" : "A2,A2",
+        "mandatory" : false
+      }, {
+        "form" : "live",
+        "feats" : {
+          "default" : "lineId=3|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "tell",
+        "feats" : {
+          "default" : "modality=DYN|lineId=5|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=6|class=person"
+        },
+        "head" : [ 5 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "I",
+        "feats" : {
+          "default" : "lineId=7|class=person"
+        },
+        "head" : [ 5 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      } ]
+    },
+    "buildingType" : {
+      "name" : "buildingType",
+      "sentenceAttrs" : [ "template_name=buildingType", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "or",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "house",
+        "feats" : {
+          "default" : "lineId=4|definiteness=INDEF"
+        },
+        "head" : [ 3 ],
+        "deprel" : "Set",
+        "mandatory" : false
+      }, {
+        "form" : "apartment_building",
+        "feats" : {
+          "default" : "lineId=5|definiteness=INDEF"
+        },
+        "head" : [ 3 ],
+        "deprel" : "Set",
+        "mandatory" : false
+      } ]
+    },
+    "city" : {
+      "name" : "city",
+      "sentenceAttrs" : [ "template_name=city", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "city",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "which",
+        "feats" : {
+          "default" : "lineId=4|dpos=WDT"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "confirmationFullName" : {
+      "name" : "confirmationFullName",
+      "sentenceAttrs" : [ "template_name=confirmationFullName", "slex=Text" ],
+      "entries" : [ {
+        "form" : "full_name",
+        "feats" : {
+          "default" : "lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "[full_name]",
+        "feats" : {
+          "default" : "lineId=3|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "correct",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=4"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 4 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "confirmationHaveSecondSurname" : {
+      "name" : "confirmationHaveSecondSurname",
+      "sentenceAttrs" : [ "template_name=confirmationHaveSecondSurname", "slex=Text" ],
+      "entries" : [ {
+        "form" : "surname",
+        "feats" : {
+          "default" : "lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "second",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "not",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "correct",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=5"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      } ]
+    },
+    "confirmationName" : {
+      "name" : "confirmationName",
+      "sentenceAttrs" : [ "template_name=confirmationName", "slex=Text" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "lineId=1|definiteness=no"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "[name]",
+        "feats" : {
+          "default" : "lineId=3|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "correct",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=4"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 4 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "confirmationSecondSurname" : {
+      "name" : "confirmationSecondSurname",
+      "sentenceAttrs" : [ "template_name=confirmationSecondSurname", "slex=Text" ],
+      "entries" : [ {
+        "form" : "surname",
+        "feats" : {
+          "default" : "lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "second",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=3|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "[second_surname]",
+        "feats" : {
+          "default" : "lineId=4|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "correct",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=5"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=6"
+        },
+        "head" : [ 5 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "confirmationSurname" : {
+      "name" : "confirmationSurname",
+      "sentenceAttrs" : [ "template_name=confirmationSurname", "slex=Text" ],
+      "entries" : [ {
+        "form" : "surname",
+        "feats" : {
+          "default" : "lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "first",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=3|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "[first_surname]",
+        "feats" : {
+          "default" : "lineId=4|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "correct",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=5"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=6"
+        },
+        "head" : [ 5 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "continueCV" : {
+      "name" : "continueCV",
+      "sentenceAttrs" : [ "template_name=continueCV", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "continue",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "CV",
+        "feats" : {
+          "default" : "lineId=3|definiteness=DEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "unfinished",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "createCV" : {
+      "name" : "createCV",
+      "sentenceAttrs" : [ "template_name=createCV", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "create",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "CV",
+        "feats" : {
+          "default" : "lineId=3|definiteness=INDEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "new",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "currentMainActivities" : {
+      "name" : "currentMainActivities",
+      "sentenceAttrs" : [ "template_name=currentMainActivities", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "activity",
+        "feats" : {
+          "default" : "lineId=1|main_rheme=yes|number=PL|clause_type=INT|definiteness=DEF"
+        },
+        "head" : [ 0, 3 ],
+        "deprel" : "ROOT,A2",
+        "mandatory" : false
+      }, {
+        "form" : "main",
+        "feats" : {
+          "default" : "lineId=2|dpos=JJ"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "carry_out",
+        "feats" : {
+          "default" : "lineId=3|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "currentOccupation" : {
+      "name" : "currentOccupation",
+      "sentenceAttrs" : [ "template_name=currentOccupation", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "position",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "current",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 2 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 2 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "drivingLicense" : {
+      "name" : "drivingLicense",
+      "sentenceAttrs" : [ "template_name=drivingLicense", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "driving_license",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "valid",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "employer" : {
+      "name" : "employer",
+      "sentenceAttrs" : [ "template_name=employer", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "work",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "who",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      } ]
+    },
+    "employerAddress" : {
+      "name" : "employerAddress",
+      "sentenceAttrs" : [ "template_name=employerAddress", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "address",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|main_rheme=yes|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "company",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 3, 1 ],
+        "deprel" : "A3,A2",
+        "mandatory" : false
+      }, {
+        "form" : "work",
+        "feats" : {
+          "default" : "lineId=3|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "employer_agg" : {
+      "name" : "employer_agg",
+      "sentenceAttrs" : [ "template_name=employer_agg", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT|main_rheme=yes|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "company",
+        "feats" : {
+          "default" : "lineId=2|definiteness=DEF"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A2,A3",
+        "mandatory" : false
+      }, {
+        "form" : "work",
+        "feats" : {
+          "default" : "lineId=3|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "entranceName" : {
+      "name" : "entranceName",
+      "sentenceAttrs" : [ "template_name=entranceName", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "entrance",
+        "feats" : {
+          "default" : "lineId=2|definiteness=DEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "building",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 2 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    },
+    "finishDateDegree" : {
+      "name" : "finishDateDegree",
+      "sentenceAttrs" : [ "template_name=finishDateDegree", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "finish",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 4 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "when",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "degree",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    },
+    "floor" : {
+      "name" : "floor",
+      "sentenceAttrs" : [ "template_name=floor", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "floor",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "which",
+        "feats" : {
+          "default" : "lineId=4|dpos=WDT"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "building",
+        "feats" : {
+          "default" : "lineId=5|definiteness=DEF"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    },
+    "giveStreetNumber" : {
+      "name" : "giveStreetNumber",
+      "sentenceAttrs" : [ "template_name=giveStreetNumber", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "give",
+        "feats" : {
+          "default" : "dative_shift=DO|modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "street_number",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "I",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      } ]
+    },
+    "giveStreetNumber_agg" : {
+      "name" : "giveStreetNumber_agg",
+      "sentenceAttrs" : [ "template_name=giveStreetNumber_agg", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "street_number",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "haveCertificate" : {
+      "name" : "haveCertificate",
+      "sentenceAttrs" : [ "template_name=haveCertificate", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "certificate",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=INDEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "official",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "degree",
+        "feats" : {
+          "default" : "lineId=3|definiteness=DEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A2,A2",
+        "mandatory" : false
+      } ]
+    },
+    "haveSecondSurname" : {
+      "name" : "haveSecondSurname",
+      "sentenceAttrs" : [ "template_name=haveSecondSurname", "slex=Text" ],
+      "entries" : [ {
+        "form" : "surname",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "second",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "tell",
+        "feats" : {
+          "default" : "modality=DYN|lineId=4|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=5|class=person"
+        },
+        "head" : [ 4 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "I",
+        "feats" : {
+          "default" : "lineId=6|class=person"
+        },
+        "head" : [ 4 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      } ]
+    },
+    "highestDegree" : {
+      "name" : "highestDegree",
+      "sentenceAttrs" : [ "template_name=highestDegree", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "degree",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "highest",
+        "feats" : {
+          "default" : "lineId=3|type=RESTR"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "educational",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "municipality" : {
+      "name" : "municipality",
+      "sentenceAttrs" : [ "template_name=municipality", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "city",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "which",
+        "feats" : {
+          "default" : "lineId=4|dpos=WDT"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "nameInstitution" : {
+      "name" : "nameInstitution",
+      "sentenceAttrs" : [ "template_name=nameInstitution", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "institution",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "educational",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 2 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "ownCar" : {
+      "name" : "ownCar",
+      "sentenceAttrs" : [ "template_name=ownCar", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "vehicle",
+        "feats" : {
+          "default" : "lineId=1|main_rheme=yes|clause_type=INT|definiteness=INDEF"
+        },
+        "head" : [ 0, 3 ],
+        "deprel" : "ROOT,A2",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A2,A1",
+        "mandatory" : false
+      }, {
+        "form" : "use",
+        "feats" : {
+          "default" : "lineId=3|modality=DYN|modality_type=PSB|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "job",
+        "feats" : {
+          "default" : "lineId=4|definiteness=INDEF"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      } ]
+    },
+    "postalCode" : {
+      "name" : "postalCode",
+      "sentenceAttrs" : [ "template_name=postalCode", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "postal_code",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousEmployer" : {
+      "name" : "previousEmployer",
+      "sentenceAttrs" : [ "template_name=previousEmployer", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "company",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 3, 1 ],
+        "deprel" : "A3,A2",
+        "mandatory" : false
+      }, {
+        "form" : "work",
+        "feats" : {
+          "default" : "lineId=3|tense=PAST|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousEmployerAddress" : {
+      "name" : "previousEmployerAddress",
+      "sentenceAttrs" : [ "template_name=previousEmployerAddress", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "address",
+        "feats" : {
+          "default" : "lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "company",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 3, 1 ],
+        "deprel" : "A3,A2",
+        "mandatory" : false
+      }, {
+        "form" : "work",
+        "feats" : {
+          "default" : "lineId=3|tense=PAST|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousEndDate" : {
+      "name" : "previousEndDate",
+      "sentenceAttrs" : [ "template_name=previousEndDate", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "date",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "end",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "occupation",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousMainActivities" : {
+      "name" : "previousMainActivities",
+      "sentenceAttrs" : [ "template_name=previousMainActivities", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "activity",
+        "feats" : {
+          "default" : "lineId=1|main_rheme=yes|number=PL|clause_type=INT|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0, 3 ],
+        "deprel" : "ROOT,A2",
+        "mandatory" : false
+      }, {
+        "form" : "main",
+        "feats" : {
+          "default" : "lineId=2|dpos=JJ"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "carry_out",
+        "feats" : {
+          "default" : "lineId=3|tense=PAST|type=RESTR"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=4|class=person"
+        },
+        "head" : [ 3 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousOccupation" : {
+      "name" : "previousOccupation",
+      "sentenceAttrs" : [ "template_name=previousOccupation", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "position",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=3|class=person"
+        },
+        "head" : [ 2 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "previousStartingDate" : {
+      "name" : "previousStartingDate",
+      "sentenceAttrs" : [ "template_name=previousStartingDate", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "date",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "start",
+        "feats" : {
+          "default" : "lineId=2|dpos=JJ"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "occupation",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A3",
+        "mandatory" : false
+      }, {
+        "form" : "this",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=5"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "province" : {
+      "name" : "province",
+      "sentenceAttrs" : [ "template_name=province", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "live",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "province",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "which",
+        "feats" : {
+          "default" : "lineId=4|dpos=WDT"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "province_agg" : {
+      "name" : "province_agg",
+      "sentenceAttrs" : [ "template_name=province_agg", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "province",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "reviewCV" : {
+      "name" : "reviewCV",
+      "sentenceAttrs" : [ "template_name=reviewCV", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "review",
+        "feats" : {
+          "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "CV",
+        "feats" : {
+          "default" : "lineId=3|definiteness=DEF"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "completed",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "startingDate" : {
+      "name" : "startingDate",
+      "sentenceAttrs" : [ "template_name=startingDate", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "start",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "when",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "work",
+        "feats" : {
+          "default" : "lineId=4|finiteness=GER"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    },
+    "stateFirstSurname" : {
+      "name" : "stateFirstSurname",
+      "sentenceAttrs" : [ "template_name=stateFirstSurname", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "statement",
+        "feats" : {
+          "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "surname",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "first",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "stateName" : {
+      "name" : "stateName",
+      "sentenceAttrs" : [ "template_name=stateName", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "statement",
+        "feats" : {
+          "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "name",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    },
+    "stateSecondSurname" : {
+      "name" : "stateSecondSurname",
+      "sentenceAttrs" : [ "template_name=stateSecondSurname", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "statement",
+        "feats" : {
+          "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1, 3 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "surname",
+        "feats" : {
+          "default" : "lineId=3"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "second",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 3 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      } ]
+    },
+    "streetName" : {
+      "name" : "streetName",
+      "sentenceAttrs" : [ "template_name=streetName", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "name",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "street",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=3|class=person"
+        },
+        "head" : [ 2 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=4"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "streetType" : {
+      "name" : "streetType",
+      "sentenceAttrs" : [ "template_name=streetType", "slex=Sentence" ],
+      "entries" : [ {
+        "form" : "type",
+        "feats" : {
+          "default" : "clause_type=INT|lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "street",
+        "feats" : {
+          "default" : "lineId=2"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "what",
+        "feats" : {
+          "default" : "lineId=3|dpos=WDT"
+        },
+        "head" : [ 1 ],
+        "deprel" : "NonCore",
+        "mandatory" : false
+      }, {
+        "form" : "[street_name]",
+        "feats" : {
+          "default" : "lineId=4|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      } ]
+    },
+    "updateAddress" : {
+      "name" : "updateAddress",
+      "sentenceAttrs" : [ "template_name=updateAddress", "slex=Text" ],
+      "entries" : [ {
+        "form" : "address",
+        "feats" : {
+          "default" : "lineId=1"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=2|class=person"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      }, {
+        "form" : "[address]",
+        "feats" : {
+          "default" : "lineId=3|definiteness=no"
+        },
+        "head" : [ 1 ],
+        "deprel" : "A1",
+        "mandatory" : false
+      }, {
+        "form" : "update",
+        "feats" : {
+          "default" : "clause_type=INT|modality=DES|lineId=4|modality_type=??"
+        },
+        "head" : [ 0 ],
+        "deprel" : "ROOT",
+        "mandatory" : false
+      }, {
+        "form" : "you",
+        "feats" : {
+          "default" : "lineId=5|class=person"
+        },
+        "head" : [ 4, 6 ],
+        "deprel" : "A1,A2",
+        "mandatory" : false
+      }, {
+        "form" : "address",
+        "feats" : {
+          "default" : "lineId=6"
+        },
+        "head" : [ 4 ],
+        "deprel" : "A2",
+        "mandatory" : false
+      } ]
+    }
+  }
+}

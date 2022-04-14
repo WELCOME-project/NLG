@@ -50,8 +50,8 @@ public class LanguageGeneratorTest {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         Slot slot = move.speechActs.get(0).slot;
 
-        LanguageGenerator generator = new LanguageGenerator();
-        String result = generator.applyTemplate(template, slot, ULocale.ENGLISH, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION, false);
+		BasicTemplateGenerator generator = new BasicTemplateGenerator();
+		String result = generator.applyTemplate(template, slot, ULocale.ENGLISH, LanguageGenerator.DEFAULT_TEMPLATE_COLLECTION, LanguageGenerator.DEFAULT_SUBTEMPLATE_COLLECTION, false);
         
         assertEquals("Do you want me to inform you on the First Reception Service in Catalonia?", result);
     }

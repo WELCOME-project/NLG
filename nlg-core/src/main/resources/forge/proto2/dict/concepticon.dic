@@ -1,0 +1,7862 @@
+concepticon {
+
+//"11th_Mississippi_Infantry_Monument" {
+//  ES = {
+//    lex = "monumento_al_11_Mississippi_de_Infantería_NN_01"
+//  }
+//}
+
+//"14th_New_Jersey_Volunteer_Infantry_Monument" {
+//  ES = {
+//    lex = "monumento al 14 New Jersey de Voluntarios de Infantería_NN_01"
+//  }
+//}
+
+"above" {
+  //WebNLG
+  ES = {
+    lex = "sobre_IN_02"
+  }
+}
+
+//"Accademia_di_Architettura_di_Mendrisio" {
+//  ES = {
+//    lex = "Academia_de_Arquitectura_de_Mendrisio_NN_01"
+//  }
+//}
+
+//"Acharya_Institute_of_Technology" {
+//  ES = {
+//    lex = "Instituto_de_Tecnología_Acharya_NN_01"
+//  }
+//}
+
+"3D_model" {
+  //V4Design
+  EL = {
+    lex = "τρισδιάστατη_μακέτα_NN_01"
+  }
+  EN = {
+    lex = "3D_model_NN_01"
+  }
+  ES = {
+    lex = "modelo_3D_NN_01"
+  }
+}
+
+"3rd_person_singular_present_verb" {
+  //CONNEXIONs
+  PT = {
+    lex = "verbo_em_terceira_pessoa_do_singular_no_presente_NN_01"
+  }
+}
+
+"acronym" {
+  //CONNEXIONs
+  PT = {
+    lex = "acrônimo_NN_01"
+  }
+}
+
+"add" {
+  //MindSpaces
+  CA = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "add_VB_01"
+  }
+  ES = {
+    lex = "añadir_VB_01"
+  }
+}
+
+"adjective" {
+  //CONNEXIONs
+  PT = {
+    lex = "adjetivo_NN_01"
+  }
+}
+
+"adverb" {
+  //CONNEXIONs
+  PT = {
+    lex = "advérbio_NN_01"
+  }
+}
+
+"advert" {
+  //CONNEXIONs
+  PT = {
+    lex = "anúncio_NN_01"
+  }
+}
+
+"advertised" {
+  //CONNEXIONs
+  PT = {
+    lex = "anunciado_JJ_01"
+  }
+}
+
+"affiliate" {
+  //WebNLG
+  EN = {
+    lex = "affiliate_VB_01"
+  }
+  ES = {
+    lex = "asociado_JJ_01"
+  }
+}
+
+"after" {
+  //WebNLG
+  ES = {
+    lex = "después_IN_01"
+  }
+}
+ 
+//"Agra_Airport" {
+//  ES = {
+//    lex = "aeropuerto_de_Agra_NN_01"
+//  }
+//}
+
+"age" {
+  //CONNEXIONs
+  PT = {
+    lex = "idade_NN_01"
+  }
+}
+
+"air" {
+  //WebNLG
+  ES = {
+    lex = "emitir_VB_01"
+  }
+}
+  
+"aircraft_fighter" {
+  //WebNLG
+  EN = {
+    lex = "aircraft_fighter_NN_01"
+  }
+  ES = {
+    lex = "avión_de_combate_NN_01"
+  }
+}
+
+"aircraft_helicopter" {
+  //WebNLG
+  EN = {
+    lex = "aircraft_helicopter_NN_01"
+  }
+  ES = {
+    lex = "helicóptero_de_combate_NN_01"
+  }
+}
+
+"aircraft_transport" {
+  //WebNLG
+  EN = {
+    lex = "aircraft_transport_NN_01"
+  }
+  ES = {
+    lex = "aeronave_de_transporte_NN_01"
+  }
+}
+
+"airplane" {
+  //MindSpaces
+  CA = {
+    lex = "avió_NN_01"
+  }
+  ES = {
+    lex = "avión_NN_01"
+  }
+}
+
+"airport" {
+  //xR4DRAMA
+  IT = {
+    lex = "aeroporto_NN_01"
+  }
+}
+
+"airport_terminal" {
+  //MindSpaces
+  CA = {
+    lex = "terminal_de_aeroport_NN_01"
+  }
+  ES = {
+    lex = "terminal_de_aeropuerto_NN_01"
+  }
+}
+
+"alley" {
+  //MindSpaces
+  CA = {
+    lex = "carreró_NN_01"
+  }
+  ES = {
+    lex = "callejón_NN_01"
+  }
+}
+
+"also" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "επίσης_RB_01"
+  }
+  EN = {
+    lex = "also_RB_01"
+  }
+  ES = {
+    lex = "también_RB_01"
+  }
+}
+
+"amphitheater" {
+  //MindSpaces
+  CA = {
+    lex = "amfiteatre_NN_01"
+  }
+  ES = {
+    lex = "anfiteatro_NN_01"
+  }
+}
+
+"amusement_park" {
+  //MindSpaces
+  CA = {
+    lex = "parc_d'atraccions_NN_01"
+  }
+  ES = {
+    lex = "parque_de_atracciones_NN_01"
+  }
+}
+
+"analysis" {
+  //MindSpaces
+  CA = {
+    lex = "anàlisi_NN_01"
+  }
+  ES = {
+    lex = "análisis_NN_02"
+  }
+}
+
+"and" {
+  //beAWARE
+  //Beer
+  //CONNEXIONs
+  //MindSpaces
+  //V4Design
+  //WebNLG
+  //xR4DRAMA
+  CA = {
+    lex = "i_CC_01"
+  }
+  EN = {
+    lex = "and_CC_01"
+  }
+  ES = {
+    lex = "y_CC_01"
+  }
+  PT = {
+    lex = "e_CC_01"
+  }
+  IT = {
+    lex = "e_CC_01"
+  }
+}
+
+"anger" {
+  //MindSpaces
+  CA = {
+    lex = "enuig_NN_01"
+  }
+  EL = {
+    lex = "τρισδιάστατη_μακέτα_NN_01"
+  }
+  EN = {
+    lex = "anger_NN_01"
+  }
+  ES = {
+    lex = "enfado_NN_01"
+  }
+}
+
+"animal" {
+  //xR4DRAMA
+  IT = {
+    lex = "animale_NN_01"
+  }
+}
+
+"anthem" {
+  //WebNLG
+  EN = {
+    lex = "anthem_NN_01"
+  }
+  ES = {
+    lex = "himno_NN_01"
+  }
+}
+
+"apartment" {
+  //MindSpaces
+  CA = {
+    lex = "apartament_NN_01"
+  }
+  ES = {
+    lex = "piso_NN_01"
+  }
+}
+
+"apartment_building" {
+  //MindSpaces
+  CA = {
+    lex = "edifici_d'apartaments_NN_01"
+  }
+  ES = {
+    lex = "edificio_de_apartamentos_NN_01"
+  }
+}
+
+"apartment_complex" {
+  //MindSpaces
+  CA = {
+    lex = "edifici_d'apartaments_NN_01"
+  }
+  ES = {
+    lex = "edificio_de_apartamentos_NN_01"
+  }
+}
+
+"apostrophe" {
+  //CONNEXIONs
+  PT = {
+    lex = "apóstrofo_NN_01"
+  }
+}
+
+"apparel" {
+  //MindSpaces
+  CA = {
+    lex = "roba_NN_01"
+  }
+  ES = {
+    lex = "ropa_NN_01"
+  }
+}
+
+"appear" {
+  //WebNLG
+  ES = {
+    lex = "aparecer_VB_01"
+  }
+}  
+
+"arch" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "arc_NN_01"
+  }
+  EN = {
+    lex = "arch_NN_01"
+  }
+  ES = {
+    lex = "arco_NN_01"
+  }
+  IT = {
+    lex = "arcato_NN_01"
+  }
+}
+
+"around" {
+  //xR4DRAMA
+  EN = {
+    lex = "around_IN_01"
+  }
+  IT = {
+    lex = "attorno_RB_01"
+  }
+}
+
+"architect" {
+  //WebNLG
+  EN = {
+    lex = "architect_NN_01"
+  }
+  ES = {
+    lex = "arquitecto_NN_01"
+  }
+}
+
+"architectural_style" {
+  //WebNLG
+  //V4D
+  EL = {
+    lex = "αρχιτεκτονικό_στυλ_NN_01"
+  }
+  ES = {
+    lex = "estilo_arquitectónico_NN_01"
+  }
+}
+
+"as" {
+  //WebNLG
+  ES = {
+    lex = "como_IN_01"
+  }
+}
+
+"ashcan" {
+  //MindSpaces
+  CA = {
+    lex = "paperera_NN_01"
+  }
+  ES = {
+    lex = "cubo_de_basura_01"
+  }
+}
+
+"asset" {
+  //V4Design
+  EL = {
+     lex = "αντικείμενο_NN_01"
+     lex = "πολυμεσικό_υλικό_NN_01"
+  }
+  EN = {
+    lex = "asset_NN_01"
+  }
+  ES = {
+     lex = "recurso_NN_01"
+  }
+}
+
+"attack_aircraft" {
+  //WebNLG
+  EN = {
+    lex = "attack_aircraft_NN_01"
+  }
+  ES = {
+    lex = "aeronave_de_combate_NN_01"
+  }
+}
+
+//"Akita_Museum_of_Art" {
+//  ES = {
+//    lex = "Museo_de_Arte_Akita_NN_01"
+//  }
+//}
+
+//"Americans" {
+//  ES = {
+//    lex = "americanos_NN_01"
+//  }
+//}
+
+//"Ardmore_Airport_(New_Zealand)" {
+//  ES = {
+//    lex = "aeropuerto_de_Ardmore(Nueva_Zelanda)_NN_01"
+//  }
+//}
+
+//"Asian_Americans" {
+//  ES = {
+//    lex = "americanos_asiáticos_NN_01"
+//  }
+//}
+ 
+//"Atatürk_Monument_(İzmir)" {
+//  ES = {
+//    lex = "monumento_a_Ataturk(Izmir)_NN_01"
+//  }
+//}
+
+//"Australians" {
+//  ES = {
+//    lex = "australianos_NN_01"
+//  }
+//}
+
+//"AWH_Engineering_College" {
+//  ES = {
+//    lex = "Escuela_de_Ingeniería_AWH_NN_01"
+//  }
+//}
+
+"average" {
+  //MindSpaces
+  //CONNEXIONs
+  //xR4DRAMA
+  CA = {
+    lex = "mitjà_JJ_01"
+  }
+  EN = {
+    lex = "average_JJ_01"
+  }
+  ES = {
+    lex = "medio_JJ_01"
+  }
+  PT = {
+    lex = "médio_JJ_01"
+  }
+  IT = {
+    lex = "normale_JJ_01"
+  }
+}
+
+"averagely" {
+  //MindSpaces
+  CA = {
+    lex = "medianament_RB_01"
+  }
+  ES = {
+    lex = "medianamente_RB_01"
+  }
+}
+
+"award" {
+  //WebNLG
+  ES = {
+     lex = "condecorar_VB_01"
+  }
+}
+
+"awning" {
+  //MindSpaces
+  CA = {
+    lex = "tendal_NN_01"
+  }
+  ES = {
+    lex = "toldo_NN_01"
+  }
+}
+
+"backup_pilot" {
+  //WebNLG
+  ES = {
+    lex = "copiloto_NN_01"
+  }
+}
+
+"bacon_butty,_bacon_sarnie,_rasher_sandwich,_bacon_sanger,_piece_n_bacon,_bacon_cob,_bacon_barm_and_bacon_muffin" {
+  //WebNLG
+  ES = {
+    lex = "bacon_butty,_bacon_sarnie,_rasher_sandwich,_bacon_sanger,_piece_n_bacon,_bacon_cob,_bacon_barm_y_bacon_muffin_NN_01"
+  }
+}
+
+"bag" {
+  //MindSpaces
+  CA = {
+    lex = "bossa_NN_01"
+  }
+  ES = {
+    lex = "bolsa_NN_01"
+  }
+}
+
+"balcony" {
+  //MindSpaces
+  CA = {
+    lex = "balcó_NN_01"
+  }
+  ES = {
+    lex = "balcón_NN_01"
+  }
+}
+
+"ball" {
+  //MindSpaces
+  CA = {
+    lex = "pilota_NN_01"
+  }
+  ES = {
+    lex = "pelota_NN_01"
+  }
+}
+
+//"Bakewell_pudding" {
+//  ES = {
+//    lex = "pudin_Bakewell_NN_01"
+//  }
+//}
+
+//"Baku_Turkish_Martyrs'_Memorial" {
+//  ES = {
+//    lex = "Memorial_a_los_Mártires_Turcos_de_Bakú_NN_01"
+//  }
+//}
+
+//"Barny_Cakes" {
+//  ES = {
+//    lex = "úalletas_Barny_NN_01"
+//  }
+//}
+
+"bar" {
+  //MindSpaces
+  CA = {
+    lex = "bar_NN_01"
+  }
+  ES = {
+    lex = "bar_NN_01"
+  }
+}
+
+"barrel" {
+  //MindSpaces
+  CA = {
+    lex = "barril_NN_01"
+  }
+  ES = {
+    lex = "barril_NN_01"
+  }
+}
+
+"basement" {
+  //xR4DRAMA
+  EN = {
+    lex = "basement_NN_01"
+  }
+  IT = {
+    lex = "cantina_NN_01"
+  }
+}
+
+"bathroom" {
+  //xR4DRAMA
+  EN = {
+    lex = "bathroom_NN_01"
+  }
+  IT = {
+    lex = "bagno_NN_01"
+  }
+}
+
+"bazaar" {
+  //MindSpaces
+  CA = {
+    lex = "basar_NN_01"
+  }
+  ES = {
+    lex = "bazar_NN_01"
+  }
+}
+
+"be" {
+  //MindSpaces
+  //V4Design
+  //WebNLG
+  //xR4DRAMA
+  CA = {
+    lex = "ser_VB_01"
+  }
+  EL = {
+    lex = "είμαι_VB_01"
+  }
+  EN = {
+    lex = "be_VB_01"
+  }
+  ES = {
+    lex = "ser_VB_01"
+  }
+  IT = {
+    lex = "essere_VB_01"
+  }
+}
+
+"be_made" {
+  //WebNLG
+  ES = {
+    lex = "ser_VB_02"
+  }
+}
+
+"be_named" {
+  //WebNLG
+  ES = {
+    lex = "llamar_VB_02"
+  }
+}
+
+"be_needed" {
+  //xR4DRAMA
+  IT = {
+    lex = "servire_VB_01"
+  }
+}
+
+"be_there" {
+  //xR4DRAMA
+  IT = {
+    lex = "esserci_VB_01"
+  }
+}
+
+"bed" {
+  EN = {
+    lex = "bed_NN_01"
+  }
+  ES = {
+    lex = "cama_NN_01"
+  }
+}
+
+"beach" {
+  //MindSpaces
+  CA = {
+    lex = "platja_NN_01"
+  }
+  ES = {
+    lex = "playa_NN_01"
+  }
+}
+
+"beach_house" {
+  //MindSpaces
+  CA = {
+    lex = "casa_de_platja_NN_01"
+  }
+  ES = {
+    lex = "casa_de_playa_NN_01"
+  }
+}
+
+"begin" {
+  //WebNLG
+  //xR4DRAMA
+  EN = {
+    lex = "begin_VB_01"
+  }
+  ES = {
+    lex = "iniciar_VB_01"
+  }
+  IT = {
+    lex = "iniziare_VB_01"
+  }
+}
+
+"bell" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "bell_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"belong" {
+  //WebNLG
+  ES = {
+    lex = "pertenecer_VB_01"
+  }
+}
+
+"below" {
+  //MindSpaces
+  CA = {
+    lex = "baix_RB_01"
+  }
+  EN = {
+    lex = "below_RB_01"
+  }
+  ES = {
+    lex = "abajo_RB_01"
+  }
+}
+
+"bench" {
+  //MindSpaces
+  CA = {
+    lex = "banc_NN_01"
+  }
+  ES = {
+    lex = "banco_NN_01"
+  }
+}
+
+"bicycle" {
+  //beAWARE
+  //MindSpaces
+  CA = {
+    lex = "bicicleta_NN_01"
+  }
+  EN = {
+    lex = "bike_NN_01"
+  }
+  ES = {
+    lex = "bicicleta_NN_01"
+  }
+  IT = {
+    lex = "bicicletta_NN_01"
+  }
+}
+
+"big" {
+  //xR4DRAMA
+  EN = {
+    lex = "big_JJ_01"
+  }
+  IT = {
+    lex = "grosso_JJ_01"
+  }
+}
+
+"bike_lane" {
+  //beAWARE
+  CA = {
+    lex = "carril_bici_NN_01"
+  }
+  ES = {
+    lex = "carril_bici_NN_01"
+  }
+}
+
+"bird" {
+  //WebNLG
+  EN = {
+    lex = "bird_NN_01"
+  }
+  ES = {
+    lex = "pájaro_NN_01"
+  }
+}
+
+"black" {
+  //MindSpaces
+  CA = {
+    lex = "negre_JJ_01"
+  }
+  EN = {
+    lex = "black_JJ_01"
+  }
+  ES = {
+    lex = "negro_JJ_01"
+  }
+}
+
+"blue" {
+  //MindSpaces
+  CA = {
+    lex = "blau_JJ_01"
+  }
+  EN = {
+    lex = "blue_JJ_01"
+  }
+  ES = {
+    lex = "azul_JJ_01"
+  }
+}
+
+"boat" {
+  //MindSpaces
+  CA = {
+    lex = "vaixell_NN_01"
+  }
+  ES = {
+    lex = "barco_NN_01"
+  }
+}
+
+"boardwalk" {
+  //MindSpaces
+  CA = {
+    lex = "passeig_marítim_NN_01"
+  }
+  ES = {
+    lex = "paseo_marítimo_NN_01"
+  }
+}
+
+"born" {
+  //WebNLG
+  EN = {
+    lex = "born_JJ_01"
+  }
+  ES = {
+    lex = "nacer_VB_01"
+  }
+}
+
+"botanical_garden" {
+  //MindSpaces
+  CA = {
+    lex = "jardí_botànic_NN_01"
+  }
+  ES = {
+    lex = "jardín_botánico_NN_01"
+  }
+}
+
+"both" {
+  //CONNEXIONs
+  PT = {
+    lex = "ambos_JJ_01"
+  }
+}
+
+"bottle" {
+  //MindSpaces
+  CA = {
+    lex = "ampolla_NN_01"
+  }
+  ES = {
+    lex = "botella_NN_01"
+  }
+}
+
+"box" {
+  //MindSpaces
+  CA = {
+    lex = "caixa_NN_01"
+  }
+  ES = {
+    lex = "caja_NN_01"
+  }
+}
+
+"bracket" {
+  //CONNEXIONs
+  PT = {
+    lex = "colchete_NN_01"
+  }
+}
+
+"bread" {
+  //WebNLG
+  ES = {
+    lex = "pan_NN_01"
+  }
+} 
+
+"bread_and_bacon,_with_a_condiment_and_often_ketchup_or_brown_sauce" {
+  //WebNLG
+  ES = {
+    lex = "pan_con_bacon_con_una_salsa,_frecuentemente_ketchup_o_salsa_española_NN_01"
+  }
+} 
+
+"bridge" {
+  //beAWARE
+  //MindSpaces
+  IT = {
+    lex = "pont_NN_01"
+  }
+  EN = {
+    lex = "bridge_NN_01"
+  }
+  IT = {
+    lex = "ponte_NN_01"
+  }
+  EL = {
+    lex = "γέφυρα_NN_01"
+  }
+  ES = {
+    lex = "puente_NN_01"
+  }
+}
+
+"broadcast" {
+  //WebNLG
+  ES = {
+    lex = "emitir_VB_01"
+  }
+}
+
+"brown" {
+  //MindSpaces
+  CA = {
+    lex = "marró_JJ_01"
+  }
+  EN = {
+    lex = "brown_JJ_01"
+  }
+  ES = {
+    lex = "marrón_JJ_01"
+  }
+}
+  
+"build" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "χτίζω_VB_01"
+  }
+  EN = {
+    lex = "build_VB_01"
+  }
+  ES = {
+    lex = "construir_VB_01"
+  }
+}
+
+"building" {
+  //beAWARE
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "edifici_NN_01"
+  }
+  EL = {
+    lex = "κτίριο_NN_01"
+  }
+  EN = {
+    lex = "building_NN_01"
+  }
+  ES = {
+    lex = "edificio_NN_01"
+  }
+  IT = {
+    lex = "edificio_NN_01"
+  }
+}
+
+"building_facade" {
+  //MindSpaces
+  CA = {
+    lex = "façana_d'edifici_NN_01"
+  }
+  ES = {
+    lex = "fachada_de_edificio_NN_01"
+  }
+}
+
+"bus" {
+  //beAWARE
+  //MindSpaces
+  CA = {
+    lex = "autobús_NN_01"
+  }
+  EN = {
+    lex = "bus_NN_01"
+  }
+  ES = {
+    lex = "autobús_NN_01"
+  }
+  IT = {
+    lex = "autobus_NN_01"
+  }
+}
+  
+"call" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "γνωστός_JJ_01"
+  }
+  EN = {
+    lex = "call_VB_01"
+  }
+  ES = {
+    lex = "llamar_VB_03"
+  }
+}
+
+"calm" {
+  //MindSpaces
+  CA = {
+    lex = "de_calma_JJ_01"
+  }
+  ES = {
+    lex = "de_calma_JJ_01"
+  }
+}
+
+"campus" {
+  //MindSpaces
+  CA = {
+    lex = "campus_NN_01"
+  }
+  ES = {
+    lex = "campus_NN_01"
+  }
+}
+
+"canal" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "canal_NN_01"
+  }
+  EN = {
+    lex = "canal_NN_01"
+  }
+  ES = {
+    lex = "canal_NN_01"
+  }
+  IT = {
+    lex = "canale_NN_01"
+  }
+}
+
+"capital" {
+  //WebNLG
+  ES = {
+    lex = "capital_NN_02"
+  }
+}
+
+"car" {
+  //beAWARE
+  //xR4DRAMA
+  CA = {
+    lex = "cotxe_NN_01"
+  }
+  EN = {
+    lex = "car_NN_01"
+  }
+  EL = {
+    lex = "αυτοκίνητο_NN_01"
+  }
+  ES = {
+    lex = "coche_NN_01"
+  }
+  IT = {
+    lex = "macchina_NN_01"
+    lex = "auto_NN_01"
+  }
+}
+
+"carbs" {
+  //WebNLG
+  ES = {
+    lex = "carbohidratos_NN_01"
+  }
+}
+
+"cardinal_number" {
+  //CONNEXIONs
+  PT = {
+    lex = "número_cardinal_NN_01"
+  }
+}
+
+"carry" {
+  //WebNLG
+  ES = {
+    lex = "tener_VB_02"
+  }
+}
+
+"castle" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "castell_NN_01"
+  }
+  ES = {
+    lex = "castillo_NN_01"
+  }
+  IT = {
+    lex = "castello_NN_01"
+  }
+}
+
+"casualty" {
+  //xR4DRAMA
+  EN = {
+    lex = "casualty_NN_01"
+  }
+  IT = {
+    lex = "ferire_NN_01"
+  }
+}
+
+"cat" {
+  //beAWARE
+  EN = {
+    lex = "cat_NN_01"
+  }
+  ES = {
+    lex = "gato_NN_01"
+  }
+}
+
+"ceiling" {
+  //MindSpaces
+  CA = {
+    lex = "sostre_NN_01"
+  }
+  ES = {
+    lex = "techo_NN_01"
+  }
+}
+
+"cemetery" {
+  //MindSpaces
+  CA = {
+    lex = "cementeri_NN_01"
+  }
+  ES = {
+    lex = "cementerio_NN_01"
+  }
+}
+
+"chairman" {
+  //WebNLG
+  ES = {
+    lex = "presidente_NN_01"
+  }
+}
+
+"chair" {
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "cadira_NN_01"
+  }
+  ES = {
+    lex = "silla_NN_01"
+    lex = "presidente_NN_01"
+  }
+}
+
+"champion" {
+  //WebNLG
+  ES = {
+    lex = "campeón_NN_01"
+  }
+}
+
+"chancellor" {
+  //WebNLG
+  ES = {
+    lex = "rector_NN_01"
+  }
+} 
+
+"change" {
+  //MindSpaces
+  CA = {
+    lex = "canviar_VB_01"
+  }
+  ES = {
+    lex = "cambiar_VB_05"
+  }
+}
+
+"character" {
+  //WebNLG
+  ES = {
+    lex = "personaje_NN_01"
+  }
+}
+
+"character_symbol" {
+  //CONNEXIONs
+  EN = {
+    lex = "character_NN_01"
+  }
+  PT = {
+    lex = "caráter_NN_01"
+  } 
+}
+
+"chick" {
+  //xR4DRAMA
+  EN = {
+    lex = "chick_NN_01"
+  }
+  IT = {
+    lex = "pulcino_NN_01"
+  }
+}
+
+"chief" {
+  //WebNLG
+  ES = {
+    lex = "presidente_NN_01"
+  }
+}
+
+"Chief_of_the_Astronaut_Office" {
+  //WebNLG
+  ES = {
+    lex = "director_del_Astronaut_Office_NN_01"
+  }
+}
+
+"child" {
+  //WebNLG
+  ES = {
+    lex = "hijo_NN_01"
+  }
+}
+
+"childs_room" {
+  //MindSpaces
+  CA = {
+    lex = "habitació_de_nen_NN_01"
+  }
+  ES = {
+    lex = "habitación_de_niño_NN_01"
+  }
+}
+  
+"chopped_fruits,_sour_cream,_condensed_milk,_granola,_shredded_coconut_and_raisins"{
+  //WebNLG
+  ES = {
+    lex = "fruta_cortada,_crema_agria,_leche_condensada,_granola,_coco_rallado_y_pasas_NN_01"
+  }
+}
+
+"church" {
+  //MindSpaces
+  CA = {
+    lex = "esglesia_NN_01"
+  }
+  ES = {
+    lex = "iglesia_NN_01"
+  }
+}
+
+"city" {
+  //MindSpaces
+  CA = {
+    lex = "ciutat_NN_01"
+  }
+  ES = {
+    lex = "ciudad_NN_01"
+  }
+}
+
+"cityscape" {
+  //MindSpaces
+  CA = {
+    lex = "paisatge_urbà_NN_01"
+  }
+  ES = {
+    lex = "paisaje_urbano_NN_01"
+  }
+}
+
+"classify" {
+  //MindSpaces
+  CA = {
+    lex = "classificar_VB_01"
+  }
+  ES = {
+    lex = "clasificar_VB_01"
+  }
+}
+
+"clear" {
+  //MindSpaces
+  CA = {
+    lex = "clar_JJ_01"
+  }
+  ES = {
+    lex = "claro_JJ_01"
+  }
+}
+
+"clock" {
+  //MindSpaces
+  CA = {
+    lex = "rellotge_JJ_01"
+  }
+  ES = {
+    lex = "reloj_NN_01"
+  }
+}
+
+"close" {
+  //xR4DRAMA
+  EN = {
+    lex = "close_VB_01"
+  }
+  IT = {
+    lex = "chiudere_VB_01"
+    lex = "chiudere_JJ_01" // ?? adjective??
+  }
+}
+
+"closing_double_quote" {
+  //CONNEXIONs
+  PT = {
+    lex = "aspas_de_fechamento_NN_01"
+  }
+}
+
+"closing" {
+  //CONNEXIONs
+  PT = {
+    lex = "final_JJ_01"
+  }
+}
+
+"coast" {
+  //MindSpaces
+  CA = {
+    lex = "costa_NN_01"
+  }
+  ES = {
+    lex = "costa_NN_01"
+  }
+}
+
+"coherent" {
+  //MindSpaces
+  CA = {
+    lex = "coherent_JJ_01"
+  }
+  ES = {
+    lex = "coherente_JJ_01"
+  }
+}
+
+"collapse" {
+  //beAWARE
+  EL = {
+    lex = "καταρρέω_VB_01"
+  }
+  EN = {
+    lex = "collapse_VB_01"
+  }
+  IT = {
+    lex = "crollare_VB_01"
+    lex = "crollo_NN_01"
+  }
+}
+
+"colon" {
+  //CONNEXIONs
+  PT = {
+    lex = "dois_pontos_NN_01"
+  }
+}
+
+"colour" {
+  //Beer
+  //MindSpaces
+  //V4Design
+  //WebNLG
+  CA = {
+    lex = "color_NN_01"
+  }
+  EL = {
+    lex = "χρώμα_NN_01"
+  }
+  EN = {
+    lex = "colour_NN_01"
+  }
+  ES = {
+    lex = "color_NN_01"
+  }
+}
+
+"colourful" {
+  //MindSpaces
+  CA = {
+    lex = "colorit_JJ_01"
+  }
+  ES = {
+    lex = "colorido_JJ_01"
+  }
+}
+
+"colourfulness" {
+  //MindSpaces
+  CA = {
+    lex = "colorit_NN_01"
+  }
+  ES = {
+    lex = "colorido_NN_01"
+  }
+}
+
+"column" {
+  //MindSpaces
+  CA = {
+    lex = "columna_NN_01"
+  }
+  ES = {
+    lex = "columna_NN_01"
+  }
+}
+
+"come" {
+  //V4Design
+  //TENSOR
+  //WebNLG
+  EL = {
+    lex = "προέρχομαι_VB_01"
+  }
+  EN = {
+    lex = "come_VB_01"
+  }
+  ES = {
+    lex = "venir_VB_02"
+  }
+  PT = {
+    lex = "vir_VB_01"
+  }
+} 
+
+"come_as" {
+  //Rotowire
+  EL = {
+    lex = ""
+  }
+  EN = {
+    lex = "come_VB_02"
+  }
+  ES = {
+    lex = ""
+  }
+} 
+
+"comma" {
+  //CONNEXIONs
+  PT = {
+    lex = "vírgula_NN_01"
+  }
+}
+
+"commander" {
+  //WebNLG
+  ES = {
+    lex = "comandante_NN_01"
+  }
+}
+
+"comment" {
+  //MindSpaces
+  CA = {
+    lex = "comentari_NN_01"
+  }
+  ES = {
+    lex = "comentario_NN_01"
+  }
+}
+
+"comparative_adjective" {
+  //CONNEXIONs
+  PT = {
+    lex = "adjetivo_comparativo_NN_01"
+  }
+}
+
+"comparative_adverb" {
+  //CONNEXIONs
+  PT = {
+    lex = "advérbio_comparativo_NN_01"
+  }
+}
+
+"compete" {
+  //WebNLG
+  EN = {
+    lex = "compete_VB_01"
+  }
+  ES = {
+    lex = "competir_VB_01"
+  }
+}
+
+"complete" {
+  //WebNLG
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "complete_VB_01"
+  }
+  ES = {
+    lex = "terminar_VB_01"
+  }
+}
+
+"compose" {
+  //CONNEXIONs
+  PT = {
+    lex = "compor_VB_01"
+  }
+}
+
+"composition" {
+  //MindSpaces
+  //V4Design
+  //WebNLG
+  CA = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "make_VB_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"confirm" {
+  //xR4DRAMA
+  EN = {
+    lex = "confirm_VB_01"
+  }
+  IT = {
+    lex = "verificare_VB_01"
+  }
+}
+
+"confidence" {
+  //xR4DRAMA
+  EN = {
+    lex = "confidence_NN_01"
+  }
+  IT = {
+    lex = "confidenza_NN_01"
+  }
+}
+
+"confuse" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "mistake_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"construction" {
+  //V4Design
+  //WebNLG
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "construction_NN_01"
+  }
+  ES = {
+    lex = "construcción_NN_01"
+  }
+}
+
+"construction_site" {
+  //MindSpaces
+  CA = {
+    lex = "zona_en_construcció_NN_01"
+  }
+  ES = {
+    lex = "zona_en_construcción_NN_01"
+  }
+}
+
+"contact_phone_number" {
+  //CONNEXIONs
+  PT = {
+    lex = "telefone_de_contato_NN_01"
+  }
+}
+
+"contain" {
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "contenir_VB_01"
+  }
+  ES = {
+    lex = "contener_VB_01"
+  }
+  PT = {
+    lex = "conter_VB_01"
+  }
+}
+
+"continue" {
+  //xR4DRAMA
+  EN = {
+    lex = "continue_VB_01"
+  }
+  IT = {
+    lex = "continuare_VB_01"
+  }
+}
+
+"contribute" {
+  //MindSpaces
+  CA = {
+    lex = "contribuir_VB_01"
+  }
+  ES = {
+    lex = "contribuir_VB_01"
+  }
+}
+
+"convey" {
+  //MindSpaces
+  CA = {
+    lex = "transmetre_VB_01"
+  }
+  ES = {
+    lex = "transmitir_VB_01"
+  }
+}
+
+"coordinating_conjunction" {
+  //CONNEXIONs
+  PT = {
+    lex = "conjunção_coordenativa_NN_01"
+  }
+}
+
+"corridor" {
+  //MindSpaces
+  CA = {
+    lex = "passadís_NN_01"
+  }
+  ES = {
+    lex = "pasillo_NN_01"
+  }
+}
+
+"cost" {
+  //WebNLG
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "cost_VB_01"
+  }
+  ES = {
+    lex = "costar_VB_02"
+  }
+} 
+
+"county" {
+  //WebNLG
+  ES = {
+    lex = "condado_NN_02"
+  }
+}
+
+"courtyard" {
+  //MindSpaces
+  CA = {
+    lex = "pati_NN_01"
+  }
+  ES = {
+    lex = "patio_NN_01"
+  }
+}
+
+"crew_member" {
+  //WebNLG
+  ES = {
+    lex = "miembro_de_la_tripulación_NN_01"
+  }
+}
+
+"crosswalk" {
+  //MindSpaces
+  CA = {
+    lex = "pas_de_vianants_NN_01"
+  }
+  ES = {
+    lex = "paso_de_peatones_NN_01"
+  }
+}
+
+"currency" {
+  //WebNLG
+  ES = {
+    lex = "moneda_NN_01"
+  }
+}
+
+"damage" {
+  //xR4DRAMA
+  EN = {
+    lex = "damage_NN_01"
+  }
+  IT = {
+    lex = "danno_NN_01"
+    lex = "colpire_VB_01"
+  }
+}
+
+"danger" {
+  //beAWARE
+  EN = {
+    lex = "danger_NN_01"
+    lex = "endanger_VB_01"
+    lex = "dangerous_JJ_01"
+  }
+  IT = {
+    lex = "pericolo_NN_01"
+  }
+  ES = {
+    lex = "peligro_NN_01"
+  }
+}
+
+"daughter_company" {
+  //WebNLG
+  ES = {
+    lex = "filial_NN_01"
+  }
+}
+
+//"Cookie" {
+//  ES = {
+//    lex = "galleta_NN_01"
+//  }
+//} 
+
+"dean" {
+  //WebNLG
+  ES = {
+    lex = "decano_NN_01"
+  }
+}
+
+"decoration" {
+  //xR4DRAMA
+  IT = {
+    lex = "decorazione_NN_01"
+  }
+}
+
+"dedicate" {
+  //WebNLG
+  ES = {
+    lex = "dedicar_VB_01"
+  }
+}
+
+"dedicated" {
+  //WebNLG
+  ES = {
+    lex = "dedicado_JJ_01"
+  }
+}
+
+"definitely" {
+  //MindSpaces
+  CA = {
+    lex = "indubtablement_RB_01"
+  }
+  ES = {
+    lex = "indudablemente_RB_01"
+  }
+}
+
+"demolish" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "demolish_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"dependency_tree" {
+  //CONNEXIONs
+  PT = {
+    lex = "árvore_de_dependências_NN_01"
+  }
+}
+
+"depth" {
+  //CONNEXIONs
+  PT = {
+    lex = "profundidade_NN_01"
+  }
+}
+
+"descriptive" {
+  //CONNEXIONs
+  PT = {
+    lex = "descritivo_JJ_01"
+  }
+}
+
+"design" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "σχεδιάζω_VB_01"
+  }
+  EN = {
+    lex = "design_VB_01"
+  }
+  EN = {
+    lex = "design_VB_01"
+  }
+  ES = {
+    lex = "diseñar_VB_01"
+  }
+}
+
+"desk" {
+  //MindSpaces
+  CA = {
+    lex = "escriptori_NN_01"
+  }
+  ES = {
+    lex = "escritorio_NN_01"
+  }
+}
+
+"detect" {
+  //beAWARE
+  //xR4DRAMA
+  ES = {
+    lex = "detectar_VB_01"
+  }
+  IT = {
+    lex = "rilevare_VB_01"
+  }
+}
+
+"determiner" {
+  //CONNEXIONs
+  PT = {
+    lex = "determinante_NN_01"
+  }
+}
+
+"developer" {
+  //WebNLG
+  ES = {
+    lex = "promotor_NN_01"
+  }
+}
+
+"deviation" {
+  //CONNEXIONs
+  PT = {
+    lex = "desvio_NN_01"
+  }
+}
+
+"die" {
+  //WebNLG
+  ES = {
+    lex = "morir_VB_01"
+  }
+}
+"digit" {
+  //CONNEXIONs
+  PT = {
+    lex = "dígito_NN_01"
+  }
+}
+
+
+"director" {
+  //WebNLG
+  ES = {
+    lex = "director_NN_01"
+  }
+}
+
+"disgust" {
+  //MindSpaces
+  CA = {
+    lex = "repulsió_NN_01"
+  }
+  ES = {
+    lex = "repulsión_NN_01"
+  }
+}
+
+"distributor" {
+  //WebNLG
+  ES = {
+    lex = "distribuidor_NN_01"
+  }
+}
+
+"deceased" {
+  //WebNLG
+  ES = {
+    lex = "fallecido_JJ_01"
+  }
+}
+
+//"Department_of_Commerce_Gold_Medal" {
+//  ES = {
+//    lex = "Medalla_de_Oro_del_Departamento_de_de_Comercio_NN_01"
+//  }
+// }
+
+"doctoral_adviser" {
+  //WebNLG
+  ES = {
+    lex = "tutor_de_doctorado_NN_01"
+  }
+ }
+
+"dog" {
+  //beAWARE
+  //xR4DRAMA
+  EN = {
+    lex = "dog_NN_01"
+  }
+  ES = {
+    lex = "perro_NN_01"
+  }
+  IT = {
+    lex = "cane_NN_01"
+  }
+}
+
+"door" {
+  //MindSpaces
+  CA = {
+    lex = "porta_NN_01"
+  }
+  ES = {
+    lex = "puerta_NN_01"
+  }
+}
+
+"downtown" {
+  //MindSpaces
+  CA = {
+    lex = "centre_de_la_ciutat_NN_01"
+  }
+  ES = {
+    lex = "centro_de_la_ciudad_NN_01"
+  }
+}
+
+"drag" {
+  //xR4DRAMA
+  EN = {
+    lex = "drag_VB_01"
+  }
+  IT = {
+    lex = "trascinare_VB_01"
+  }
+}
+
+"driveway" {
+  //MindSpaces
+  CA = {
+    lex = "entrada_de_cotxes_NN_01"
+  }
+  ES = {
+    lex = "entrada_de_coches_NN_01"
+  }
+}
+
+"drone" {
+  //xR4DRAMA
+  IT = {
+    lex = "drone_NN_01"
+  }
+}
+
+"dome" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "dome_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"dot" {
+  //CONNEXIONs
+  PT = {
+    lex = "ponto_NN_01"
+  }
+}
+
+"double_quote" {
+  //CONNEXIONs
+  PT = {
+    lex = "aspas_duplas_NN_01"
+  }
+}
+
+"earth" {
+  //MindSpaces
+  CA = {
+    lex = "terra_NN_01"
+  }
+  ES = {
+    lex = "tierra_NN_03"
+  }
+}
+
+"east" {
+  //WebNLG
+  ES = {
+   lex = "este_NN_01"
+  }
+}
+
+"editor" {
+  //WebNLG
+  ES = {
+    lex = "editor_NN_01"
+  }
+}
+
+"electricity" {
+  //xR4DRAMA
+  EN = {
+    lex = "electricity_NN_01"
+  }
+  IT = {
+    lex = "corrente_NN_01"
+  }
+}
+
+"element" {
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "element_NN_01"
+  }
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "element_NN_01"
+  }
+  ES = {
+    lex = "componente_NN_01"
+    lex = "elemento_NN_01"
+  }
+}
+
+"elevator" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "elevator_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"embankment" {
+  //beAWARE
+  EN = {
+    lex = "embankment_NN_01"
+    lex = "levee_NN_01"
+  }
+  IT = {
+    lex = "argini_NN_01"
+    // lex = "terrapieno_NN_01"
+  }
+}
+
+"emotion" {
+  //MindSpaces
+  CA = {
+    lex = "emoció_NN_01"
+  }
+  ES = {
+    lex = "emoción_NN_01"
+  }
+}
+
+"emotional" {
+  //MindSpaces
+  CA = {
+    lex = "emocional_JJ_01"
+  }
+  ES = {
+    lex = "emocional_JJ_01"
+  }
+}
+
+"empty" {
+  //beAWARE
+  EN = {
+    lex = "empty_JJ_01"
+  }
+  EL = {
+    lex = "άδειος_JJ_01"
+  }
+}
+
+"English" {
+  //CONNEXIONs
+  PT = {
+    lex = "inglês_NN_01"
+  }
+}
+
+"enter" {
+  //xR4DRAMA
+  EN = {
+    lex = "enter_VB_01"
+  }
+  IT = {
+    lex = "entrare_VB_01"
+  }
+}
+
+"environment" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "environment_NN_01"
+  }
+  ES = {
+    lex = "entorno_NN_01"
+  }
+}
+
+"escalator" {
+  //MindSpaces
+  CA = {
+    lex = "escala_mecánica_NN_01"
+  }
+  ES = {
+    lex = "escalera_mecánica_NN_01"
+  }
+}
+
+"escort" {
+  //CONNEXIONs
+  PT = {
+    lex = "acompanhante_NN_01"
+  }
+}
+
+"establish" {
+  //WebNLG
+  ES = {
+    lex = "inaugurar_VB_01"
+  }
+}
+
+"evacuation" {
+  //beAWARE
+  ES = {
+    lex = "evacuación_NN_01"
+  }
+}
+
+"excavation" {
+  //MindSpaces
+  CA = {
+    lex = "excavació_NN_01"
+  }
+  ES = {
+    lex = "excavación_NN_01"
+  }
+}
+
+"excerpt" {
+  //MindSpaces
+  CA = {
+    lex = "extracte_NN_01"
+  }
+  ES = {
+    lex = "extracto_NN_01"
+  }
+}
+
+"excited" {
+  //MindSpaces
+  CA = {
+    lex = "de_excitació_JJ_01"
+  }
+  ES = {
+    lex = "de_excitación_JJ_01"
+  }
+}
+
+"exclamation_mark" {
+  //CONNEXIONs
+  PT = {
+    lex = "ponto_de_exclamação_NN_01"
+  }
+}
+
+"exist" {
+  //beAWARE
+  ES = {
+    lex = "existir_VB_01"
+  }
+}
+
+"existential_pronoun" {
+  //CONNEXIONs
+  PT = {
+    lex = "construção_existencial_NN_01"
+  }
+}
+
+"expand" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "expand_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"express" {
+  //MindSpaces
+  CA = {
+    lex = "expressar_VB_01"
+  }
+  ES = {
+    lex = "expresar_VB_01"
+  }
+}
+
+
+"expression" {
+  //CONNEXIONs
+  PT = {
+    lex = "expressão_NN_01"
+  }
+}
+
+"extremely" {
+  //MindSpaces
+  CA = {
+    lex = "extremadament_RB_01"
+  }
+  ES = {
+    lex = "extremadamente_RB_01"
+  }
+}
+
+"extremely_high" {
+  //CONNEXIONs
+  PT = {
+    lex = "extremamente_alto_JJ_01"
+  }
+}
+
+"extremely_low" {
+  //CONNEXIONs
+  PT = {
+    lex = "extremamente_baixo_JJ_01"
+  }
+}
+
+"facade" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "facade_NN_01"
+  }
+  ES = {
+    lex = "fachada_NN_01"
+  }
+}
+
+"factory" {
+  //xR4DRAMA
+  CA = {
+    lex = "fàbrica_NN_01"
+  }
+  ES = {
+    lex = "fábrica_NN_01"
+  }
+  IT = {
+    lex = "fabbrica_NN_01"
+  }
+}
+
+"fall" {
+  //xR4DRAMA
+  IT = {
+    lex = "abbattere_VB_01"
+    lex = "abbattuto_JJ_01"
+    lex = "terra_NN_01"
+  }
+}
+
+"family" {
+  //WebNLG
+  ES = {
+    lex = "familia_NN_01"
+  }
+}
+
+"fat" {
+  //WebNLG
+  ES = {
+    lex = "grasa_NN_01"
+  }
+}
+
+"fear" {
+  //MindSpaces
+  CA = {
+    lex = "por_NN_01"
+  }
+  ES = {
+    lex = "miedo_NN_01"
+  }
+}
+
+"feel" {
+  //MindSpaces
+  CA = {
+    lex = "sentir_VB_01"
+  }
+  ES = {
+    lex = "sentir_VB_02"
+  }
+}
+
+"feeling" {
+  //MindSpaces
+  CA = {
+    lex = "sensació_NN_01"
+  }
+  ES = {
+    lex = "sensación_NN_02"
+  }
+}
+
+"fence" {
+  //MindSpaces
+  CA = {
+    lex = "tanca_NN_01"
+  }
+  ES = {
+    lex = "valla_NN_01"
+  }
+}
+
+"field" {
+  //MindSpaces
+  CA = {
+    lex = "camp_NN_01"
+  }
+  EN = {
+    lex = "field_NN_02"
+  }
+  ES = {
+    lex = "campo_NN_01"
+  }
+}
+
+"field_road" {
+  //MindSpaces
+  CA = {
+    lex = "camí_NN_01"
+  }
+  ES = {
+    lex = "camino_NN_01"
+  }
+}
+
+"fifth" {
+  //WebNLG
+  ES = {
+    lex = "quinto_JJ_01"
+  }
+}
+
+"find" {
+  //WebNLG
+  ES = {
+    lex = "encontrar_VB_01"
+  }
+}
+
+"fire" {
+  //beAWARE
+  EN = {
+    lex = "fire_NN_01"
+  }
+  ES = {
+    lex = "fuego_NN_01"
+  }
+  IT = {
+    lex = "incendio_NN_01"
+  }
+}
+
+"fire_hydrant" {
+  //beAWARE
+  CA = {
+    lex = "boca_d'incendi_NN_01"
+  }
+  ES = {
+    lex = "boca_de_incendios_NN_01"
+  }
+}
+
+"first"{
+  // WELCOME
+  EN = {
+    lex = "first_JJ_01"
+  }
+}
+
+"firstly"{
+  //WebNLG
+  EN = {
+    lex = "first_RB_01"
+  }
+  ES = {
+    lex = "por_primera_vez_RB_01"
+  }
+}
+
+"first_responder" {
+  //xR4DRAMA
+  IT = {
+    lex = "primo_soccorritore_NN_01"
+  }
+}
+
+"flag" {
+  //MindSpaces
+  CA = {
+    lex = "bandera_NN_01"
+  }
+  ES = {
+    lex = "bandera_NN_01"
+  }
+}
+
+"flood" {
+  //xR4DRAMA
+  //beAWARE
+  EN = {
+    lex = "flood_NN_01"
+    lex = "flood_VB_01"
+  }
+  IT = {
+    lex = "alluvione_NN_01"
+    lex = "allagamento_NN_01"
+    lex = "allagare_VB_01"
+    lex = "allagato_JJ_01"
+    lex = "diluviare_VB_01"
+  }
+  ES = {
+    lex = "inundación_NN_01"
+    lex = "inundar_VB_01"
+  }
+}
+
+"floor" {
+  //WebNLG
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "pis_NN_01"
+  }
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "floor_NN_01"
+  }
+  ES = {
+    lex = "piso_NN_01"
+  }
+}
+
+"flow" {
+  //xR4DRAMA
+  EN = {
+    lex = "flow_NN_01"
+  }
+  IT = {
+    lex = "corrente_NN_01"
+  }
+}
+
+"flow_out" {
+//xR4DRAMA
+  EN = {
+    lex = "flow_out_VB_01"
+  }
+  IT = {
+    lex = "uscire_VB_01"
+  }
+}
+
+"fly" {
+//xR4DRAMA
+  IT = {
+    lex = "volare_VB_01"
+  }
+}
+
+"follow" {
+  //WebNLG
+  ES = {
+    lex = "posterior_JJ_01"
+  }
+}
+
+"foreign_word" {
+  //CONNEXIONs
+  PT = {
+    lex = "estrangeirismo_NN_01"
+  }
+}
+
+"forest" {
+  //beAWARE
+  //MindSpaces
+  CA = {
+    lex = "bosc_NN_01"
+  }
+  EN = {
+    lex = "forest_NN_01"
+  }
+  ES = {
+    lex = "bosque_NN_01"
+  }
+}
+
+"form" {
+  //MindSpaces
+  CA = {
+    lex = "formar_VB_01"
+  }
+  ES = {
+    lex = "formar_VB_01"
+  }
+  //CONNEXIONs
+  PT = {
+    lex = "forma_NN_01"
+  }
+}
+
+"format" {
+  //WebNLG
+  ES = {
+    lex = "formato_NN_01"
+  }
+}
+
+"formerly" {
+  //V4Design
+  //WebNLG
+  DE = {
+    lex = "_RB_01"
+  }
+  EL = {
+    lex = "_RB_01"
+  }
+  EN = {
+    lex = "formerly_RB_01"
+  }
+  ES = {
+    lex = "anteriormente_RB_01"
+  }
+}
+
+"fossat_NN_01":_noun_ {
+   noun_root = "fossat"
+   noun_group = "REG"
+   entryId = "2203242352"
+   lemma = "fossat"
+   gender = "MASC"
+   }
+
+"fossil" {
+  //WebNLG
+  ES = {
+    lex = "fósil_NN_01"
+  }
+}
+
+"found" {
+  //WebNLG
+  ES = {
+    lex = "fundar_VB_01"
+  }
+}
+
+"founder" {
+  //WebNLG
+  ES = {
+    lex = "fundador_NN_01"
+  }
+}
+
+"fountain" {
+  //MindSpaces
+  CA = {
+    lex = "font_NN_01"
+  }
+  ES = {
+    lex = "fuente_NN_02"
+  }
+}
+
+"fourth" {
+  //WebNLG
+  ES = {
+    lex = "cuarto_JJ_01"
+  }
+}
+  
+"full" {
+  //beAWARE
+  EN = {
+    lex = "full_JJ_01"
+  }
+  EL = {
+    lex = "γεμάτος_JJ_01"
+  }
+}
+
+"garden" {
+  //MindSpaces
+  CA = {
+    lex = "jardí_NN_01"
+  }
+  ES = {
+    lex = "jardín_NN_02"
+  }
+}
+
+"govern" {
+  //WebNLG
+  ES = {
+    lex = "gobernar_VB_01"
+  }
+}
+
+"gemstone" {
+  //WebNLG
+  ES = {
+    lex = "piedra_preciosa_NN_01"
+  }
+}
+
+//"Government_of_Addis_Ababa" {
+//  ES = {
+//    lex = "Gobierno_de_Addis_Ababa_NN_01"
+//  }
+//}
+
+"general" {
+  //CONNEXIONs
+  PT = {
+    lex = "geral_JJ_01"
+  }
+}
+
+"general_store" {
+  //MindSpaces
+  CA = {
+    lex = "petit_supermercat_NN_01"
+  }
+  ES = {
+    lex = "pequeño_supermercado_NN_02"
+  }
+}
+
+"genus" {
+  //WebNLG
+  ES = {
+    lex = "género_NN_01"
+  }
+}
+
+"gerund" {
+  //CONNEXIONs
+  PT = {
+    lex = "gerúndio_NN_01"
+  }
+}
+
+"girl/woman" {
+  //CONNEXIONs
+  PT = {
+    lex = "menina/mulher_NN_01"
+  }
+}
+
+"give" {
+  //WebNLG
+  ES = {
+    lex = "conceder_VB_01"
+  }
+  //WELCOME
+  EN = {
+    lex = "give_VB_01"
+  }
+}
+
+"go_out" {
+//xR4DRAMA
+  EN = {
+    lex = "go_out_VB_01"
+  }
+  IT = {
+    lex = "riuscire_VB_01"
+  }
+}
+
+"governing_body" {
+  //WebNLG
+  ES = {
+    lex = "organismo_regulador_NN_01"
+  }
+}
+
+"graduate" {
+  //WebNLG
+  EN = {
+    lex = "graduate_VB_01"
+  }
+  ES = {
+    lex = "graduar_VB_01"
+  }
+}
+
+"gram_flour_and_vegetables" {
+  //WebNLG
+  ES = {
+    lex = "harina_de_garbanzos_y_verduras_NN_01"
+  }
+}
+
+"grasp" {
+//xR4DRAMA
+  EN = {
+    lex = "grasp_VB_01"
+  }
+  IT = {
+    lex = "aggrappare_VB_01"
+  }
+}
+
+"grass" {
+  //MindSpaces
+  CA = {
+    lex = "herba_NN_01"
+  }
+  ES = {
+    lex = "hierba_NN_01"
+  }
+}
+
+"green" {
+  //MindSpaces
+  CA = {
+    lex = "verd_JJ_01"
+  }
+  ES = {
+    lex = "verde_JJ_01"
+  }
+}
+
+"grey" {
+  //MindSpaces
+  CA = {
+    lex = "gris_JJ_01"
+  }
+  ES = {
+    lex = "gris_JJ_01"
+  }
+}
+
+"ground" {
+  //MindSpaces
+  CA = {
+    lex = "sòl_NN_01"
+  }
+  ES = {
+    lex = "suelo_NN_01"
+  }
+}
+
+"ground_almond,_jam,_butter_and_eggs" {
+  //WebNLG
+  ES = {
+    lex = "almendra_molida,_mermelada_mantequilla_y_huevos_NN_01"
+  }
+}
+
+"harbor" {
+  //MindSpaces
+  CA = {
+    lex = "port_NN_01"
+  }
+  ES = {
+    lex = "puerto_NN_01"
+  }
+}
+
+"hardly" {
+  //MindSpaces
+  CA = {
+    lex = "molt_poc_RB_01"
+  }
+  ES = {
+    lex = "muy_poco_RB_01"
+  }
+}
+
+"have" {
+  //V4Design
+  //WebNLG
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "have_VB_01"
+  }
+  ES = {
+    lex = "tener_VB_02"
+  }
+  PT = {
+    lex = "ter_VB_02"
+  }
+}
+
+"health" {
+  //CONNEXIONs
+  PT = {
+    lex = "saúde_NN_01"
+  }
+}
+
+"heat" {
+  //beAWARE
+  ES = {
+    lex = "calor_NN_01"
+  }
+  IT = {
+    lex = "calore_NN_01"
+  }
+}
+
+"heat_wave" {
+  //beAWARE
+  EN = {
+    lex = "heat_wave_NN_01"
+  }
+  EL = {
+    lex = "καύσωνας_NN_01"
+  }
+}
+
+"headquarters" {
+  //WebNLG
+  ES = {
+    lex = "sede_central_NN_01"
+  }
+}
+
+"heavy" {
+  //xR4DRAMA
+  EN = {
+    lex = "heavy_JJ_01"
+  }
+  IT = {
+    lex = "forte_JJ_01"
+  }
+}
+
+
+"height" {
+  //MindSpaces
+  //V4Design
+  //WebNLG
+  CA = {
+    lex = "alçada_NN_01"
+  }
+  EL = {
+    lex = "ύψος_NN_01"
+  }
+  EN = {
+    lex = "height_NN_01"
+  }
+  ES = {
+    lex = "altura_NN_01"
+  }
+}
+
+"help" {
+  //xR4DRAMA
+  EN = {
+    lex = "help_NN_01"
+  }
+  IT = {
+    lex = "aiuto_NN_01"
+  }
+}
+
+
+"high" {
+  //MindSpaces
+  //CONNEXIONs
+  CA = {
+    lex = "alt_JJ_01"
+  }
+  ES = {
+    lex = "alto_JJ_01"
+  }
+  PT = {
+    lex = "alto_JJ_01"
+  }
+}
+
+"higher" {
+  //WebNLG
+  ES = {
+    lex = "alto_JJ_01"
+    type = "comparative"
+  }
+}
+
+"highest" {
+  //V4Design
+  //WebNLG
+  EN = {
+    lex = "highest_RB_01"
+  }
+  ES = {
+    lex = "alto_JJ_01"
+    type = "superlative"
+  }
+}
+
+"highly" {
+  //MindSpaces
+  CA = {
+    lex = "molt_RB_01"
+  }
+  ES = {
+    lex = "muy_RB_01"
+  }
+}
+
+"highway" {
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "autopista_NN_01"
+  }
+  ES = {
+    lex = "autopista_NN_01"
+  }
+  IT = {
+    lex = "autostrada_NN_01"
+  }
+}
+
+"hill" {
+  //MindSpaces
+  CA = {
+    lex = "turó_NN_01"
+  }
+  ES = {
+    lex = "colina_NN_01"
+  }
+}
+
+//"HIV/AIDS" {
+//  ES = {
+//    lex = "VIH/SIDA_NN_01"
+//  }
+//}
+
+"home_town" {
+  //WebNLG
+  ES = {
+    lex = "ciudad_natal_NN_01"
+  }
+}
+
+"hospital" {
+  //MindSpaces
+  CA = {
+    lex = "hospital_NN_01"
+  }
+  ES = {
+    lex = "hospital_NN_01"
+  }
+}
+
+"hotel" {
+  //MindSpaces
+  CA = {
+    lex = "hotel_NN_01"
+  }
+  ES = {
+    lex = "hotel_NN_01"
+  }
+}
+
+"house" {
+  //WebNLG
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "casa_NN_01"
+  }
+  EN = {
+    lex = "house_NN_01"
+    lex = "house_VB_01"
+  }
+  ES = {
+    lex = "albergar_VB_01"
+    lex = "casa_NN_01"
+  }
+  IT = {
+    lex = "casa_NN_01"
+    lex = "abitazione_NN_01"
+  }
+}
+
+"house_of_worship" {
+  //MindSpaces
+  CA = {
+    lex = "casa_de_cult_NN_01"
+  }
+  ES = {
+    lex = "templo_NN_01"
+  }
+}
+
+"hub_airport" {
+  //WebNLG
+  ES = {
+    // could also be "aeropuerto_internacional". careful with preps
+    lex = "aeropuerto_principal_NN_01"
+  }
+}
+
+"huge" {
+  //xR4DRAMA
+  EN = {
+    lex = "huge_JJ_01"
+  }
+  IT = {
+    lex = "ingente_JJ_01"
+  }
+}
+
+"human" {
+  //beAWARE
+  //xR4DRAMA
+  EN = {
+    lex = "person_NN_01"
+  }
+  IT = {
+    lex = "persona_NN_01"
+  }
+  ES = {
+    lex = "persona_NN_01"
+  }
+}
+
+"humidity" {
+  //beAWARE
+  ES = {
+    lex = "humedad_NN_01"
+  }
+}
+
+"hyphen" {
+  //CONNEXIONs
+  PT = {
+    lex = "hífen_NN_01"
+  }
+}
+
+"IATA_location_identifier" {
+  //WebNLG
+  ES = {
+    lex = "código_IATA_NN_01"
+  }
+}
+
+"ICAO_location_identifier" {
+  //WebNLG
+  ES = {
+    lex = "código_OACI_NN_01"
+  }
+}
+
+"ill-spelled" {
+  //CONNEXIONs
+  PT = {
+    lex = "mal_escrito_JJ_01"
+  }
+}
+
+"image" {
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "imatge_NN_01"
+  }
+  EL = {
+    lex = "απεικόνιση_NN_01"
+  }
+  EN = {
+    lex = "image_NN_01"
+  }
+  ES = {
+    lex = "imagen_NN_01"
+  }
+}
+
+"imageability_score" {
+  //MindSpaces
+  CA = {
+    lex = "imaginabilitat_NN_01"
+  }
+  ES = {
+    lex = "imaginabilidad_NN_01"
+  }
+}
+
+"impact" {
+  //beAWARE
+  EN = {
+    lex = "impact_NN_01"
+    lex = "impact_VB_01"
+  }
+  EL = {
+    lex = "επηρεάζω_VB_01"
+  }
+  ES = {
+    lex = "afectar_VB_01"
+  }
+}
+
+"impact_factor" {
+  //WebNLG
+  ES = {
+    lex = "factor_de_impacto_NN_01"
+  }
+}
+
+"in" {
+  //CONNEXIONs
+  PT = {
+    lex = "em_IN_01"
+  }
+}
+
+"inaugurate" {
+  //WebNLG
+  ES = {
+    lex = "inaugurar_VB_01"
+  }
+}
+
+"incall" {
+  //CONNEXIONs
+  PT = {
+    lex = "chamada_entrante_NN_01"
+  }
+}
+
+"incessant" {
+  //xR4DRAMA
+  EN = {
+    lex = "incessant_JJ_01"
+  }
+  IT = {
+    lex = "incessante_JJ_01"
+  }
+}
+
+"include" {
+  //MindSpaces
+  CA = {
+    lex = "incloure_VB_01"
+  }
+  ES = {
+    lex = "incluir_VB_01"
+  }
+}
+
+"index" {
+  //CONNEXIONs
+  PT = {
+    lex = "índice_NN_01"
+  }
+}
+
+//"Indian_people" {
+//  ES = {
+//    lex = "indios_NN_01"
+//  }
+//}
+
+"indicate" {
+  //MindSpaces
+  CA = {
+    lex = "indicar_VB_01"
+  }
+  ES = {
+    lex = "indicar_VB_01"
+  }
+}
+
+"industrial_area" {
+  //MindSpaces
+  CA = {
+    lex = "àrea_industrial_NN_01"
+  }
+  ES = {
+    lex = "área_industrial_NN_01"
+  }
+}
+
+"industrial_setting" {
+  //MindSpaces
+  CA = {
+    lex = "àrea_industrial_NN_01"
+  }
+  ES = {
+    lex = "àrea_industrial_NN_01"
+  }
+}
+
+"infinitive_marker" {
+  //CONNEXIONs
+  PT = {
+    lex = "marcador_de_infinitivo_NN_01"
+  }
+}
+
+"infinitive_verb" {
+  //CONNEXIONs
+  PT = {
+    lex = "verbo_no_infinitivo_NN_01"
+  }
+}
+
+"influence" {
+  //WebNLG
+  ES = {
+    lex = "influenciar_VB_01"
+  }
+}
+
+"ingredient" {
+  //WebNLG
+  ES = {
+    lex = "ingrediente_NN_01"
+  }
+}
+
+"inhabitant" {
+  //xR4DRAMA
+  EN = {
+    lex = "inhabitant_NN_01"
+  }
+  IT = {
+    lex = "residente_NN_01"
+  }
+}
+
+"inside" {
+  //xR4DRAMA"
+  EN = {
+    lex = "inside_IN_01"
+  }
+  IT = {
+    lex = "dentro_IN_01"
+    lex = "dentro_RB_01"
+  }
+}
+
+"install" {
+  //xR4DRAMA"
+  EN = {
+    lex = "install_VB_01"
+  }
+  IT = {
+    lex = "installare_VB_01"
+  }
+}
+
+"interjection" {
+  //CONNEXIONs
+  PT = {
+    lex = "interjeição_NN_01"
+  }
+}
+
+"invent" {
+  //WebNLG
+  ES = {
+    lex = "inventar_VB_01"
+  }
+}
+
+"isolate" {
+  //xR4DRAMA
+  EN = {
+    lex = "isolate_VB_01"
+  }
+  IT = {
+    lex = "isolare_VB_01"
+  }
+}
+
+"ISSN_number" {
+  //WebNLG
+  ES = {
+    lex = "número_ISSN_NN_01"
+  }
+}
+
+"jewelry_shop" {
+  //MindSpaces
+  CA = {
+    lex = "joieria_NN_01"
+  }
+  ES = {
+    lex = "joyería_NN_01"
+  }
+}
+
+"joy" {
+  //MindSpaces
+  CA = {
+    lex = "alegria_NN_01"
+  }
+  ES = {
+    lex = "alegría_NN_01"
+  }
+}
+
+//"John_Clancy_(Labour_politician)" {
+//  ES = {
+//    lex = "John_Clancy_(político_laborista)_NN_01"
+//  }
+//}
+
+"jurisdiction" {
+  //WebNLG
+  ES = {
+    lex = "jurisdicción_NN_02"
+  }
+}
+
+"kennel" {
+  //MindSpaces
+  CA = {
+    lex = "gossera_NN_01"
+  }
+  ES = {
+    lex = "perrera_NN_01"
+  }
+}
+
+"key_person" {
+  //WebNLG
+  ES = {
+    lex = "persona_clave_NN_01"
+  }
+}
+
+"know" {
+  //WebNLG
+  ES = {
+    lex = "conocer_VB_02"
+  }
+}
+
+"lake" {
+  //MindSpaces
+  CA = {
+    lex = "llac_NN_01"
+  }
+  ES = {
+    lex = "lago_NN_01"
+  }
+}
+
+"lamp" {
+  //MindSpaces
+  CA = {
+    lex = "llum_NN_01"
+  }
+  EN = {
+    lex = "lamp_NN_01"
+  }
+  ES = {
+    lex = "lámpara_NN_01"
+  }
+}
+
+"landfill" {
+  //MindSpaces
+  CA = {
+    lex = "abocador_NN_01"
+  }
+  ES = {
+    lex = "vertedero_NN_01"
+  }
+}
+
+"landmark" {
+  //V4Design
+  CA = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "landmark_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"landscape" {
+  //MindSpaces
+  CA = {
+    lex = "paisatge_NN_01"
+  }
+  ES = {
+    lex = "paisaje_NN_01"
+  }
+}
+
+"language" {
+  //CONNEXIONs
+  PT = {
+    lex = "linguagem_NN_01"
+  }
+}
+
+"large_shelter" {
+  //xR4DRAMA
+  IT = {
+    lex = "grosso_rifugio_NN_01"
+  }
+}
+
+"largest_city" {
+  //WebNLG
+  ES = {
+    lex = "ciudad_más_grande_NN_01"
+  }
+}
+
+"last" {
+  //WebNLG
+  ES = {
+    lex = "por_última_vez_RB_01"
+  }
+}
+
+"latin_name" {
+  //WebNLG
+  ES = {
+    lex = "nombre_latino_NN_01"
+  }
+}
+
+"lawn" {
+  //MindSpaces
+  CA = {
+    lex = "gespa_NN_01"
+  }
+  ES = {
+    lex = "césped_NN_01"
+  }
+}
+
+"LCCN_number" {
+  //WebNLG
+  ES = {
+    lex = "número_LCCN_NN_01"
+  }
+}
+
+"leader" {
+  //WebNLG
+  ES = {
+    lex = "líder_NN_01"
+  }
+}
+
+"leader_party" {
+  //WebNLG
+  ES = {
+    lex = "partido_principal_NN_01"
+  }
+}
+
+"legislator" {
+  //WebNLG
+  ES = {
+    lex = "órgano_legislador_NN_01"
+  }
+}
+
+"length" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "μήκος_NN_01"
+  }
+  EN = {
+    lex = "length_NN_01"
+  }
+  ES = {
+    lex = "longitud_NN_01"
+  }
+}
+
+"level" {
+  //xR4DRAMA
+  IT = {
+    lex = "livello_NN_01"
+  }
+}
+
+"light" {
+  //MindSpaces
+  CA = {
+    lex = "il·luminar_VB_01"
+  }
+  ES = {
+    lex = "iluminar_VB_01"
+  }
+  //xR4DRAMA
+  IT = {
+    lex = "luminoso_JJ_01"
+  }
+}
+
+"lighthouse" {
+  //xR4DRAMA
+  IT = {
+    lex = "faro_NN_01"
+  }
+}
+
+"lightning" {
+  //xR4DRAMA
+  EN = {
+    lex = "lightning_NN_01"
+  }
+  IT = {
+    lex = "fulmine_NN_01"
+  }
+}
+
+"likely" {
+  //MindSpaces
+  CA = {
+    lex = "probablement_RB_01"
+  }
+  ES = {
+    lex = "probablemente_RB_01"
+  }
+}
+
+"limited" {
+  //CONNEXIONs
+  PT = {
+    lex = "limitado_JJ_01"
+  }
+}
+
+"list_item_marker" {
+  //CONNEXIONs
+  PT = {
+    lex = "marcador_de_item_de_lista_NN_01"
+  }
+}
+
+"live" {
+  //WebNLG
+  ES = {
+    lex = "vivir_VB_01"
+  }
+}
+
+"living_room" {
+  //MindSpaces
+  CA = {
+    lex = "sala_d'estar_NN_01"
+  }
+  ES = {
+    lex = "sala_de_estar_NN_01"
+  }
+}
+
+"loading_dock" {
+  //MindSpaces
+  CA = {
+    lex = "moll_de_càrrega_NN_01"
+  }
+  ES = {
+    lex = "muelle_de_carga_NN_01"
+  }
+}
+
+"locate" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "βρίσκω_VB_01"
+  }
+  EN = {
+    lex = "locate_VB_01"
+  }
+  ES = {
+    lex = "estar_VB_04"
+  }
+}
+
+"logistic" {
+  //CONNEXIONs
+  PT = {
+    lex = "logística_NN_01"
+  }
+}
+
+"low" {
+  //MindSpaces
+  //CONNEXIONs
+  CA = {
+    lex = "baix_JJ_01"
+  }
+  ES = {
+    lex = "bajo_JJ_01"
+  }
+  PT = {
+    lex = "baixo_JJ_01"
+  }
+  IT = {
+    lex = "basso_JJ_01"
+  }
+}
+
+"main"{
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "principal_JJ_01"
+  }
+  ES = {
+    lex = "principal_JJ_01"
+  }
+}
+
+"man" {
+  //xR4DRAMA
+  EN = {
+    lex = "man_NN_01"
+  }
+  IT = {
+    lex = "uomo_NN_01"
+  }
+}
+
+"manager" {
+  //WebNLG
+  ES = {
+    lex = "entrenador_NN_01"		// sense: trainer
+  }
+}
+
+"market"{
+  //MindSpaces
+  CA = {
+    lex = "mercat_NN_01"
+  }
+  ES = {
+    lex = "mercado_NN_01"
+  }
+}
+
+"mascot" {
+  //WebNLG
+  ES = {
+    lex = "mascota_NN_01"		
+  }
+}
+
+//"Massachusetts_Institute_of_Technology_in_1963_with_a_Sc.D." {
+//  ES = {
+//    lex = "Massachusetts_Institute_of_Technology_en_1963_con_un_Sc.D._NN_01"		
+//  }
+//}
+
+"mausoleum" {
+  //MindSpaces
+  CA = {
+    lex = "mausoleu_NN_01"
+  }
+  ES = {
+    lex = "mausoleo_NN_01"
+  }
+}
+
+"mayor" {
+  //WebNLG
+  ES = {
+    lex = "alcalde_NN_01"		
+  }
+}
+
+"mean" {
+  //CONNEXIONs
+  PT = {
+    lex = "médio_JJ_01"
+  }
+}
+
+"medina" {
+  //MindSpaces
+  CA = {
+    lex = "medina_NN_01"
+  }
+  ES = {
+    lex = "medina_NN_01"
+  }
+}
+
+"memorable" {
+  //MindSpaces
+  CA = {
+    lex = "memorable_JJ_01"
+  }
+  EN = {
+    lex = "memorable_JJ_01"
+  }
+  ES = {
+    lex = "memorable_JJ_01"
+  }
+}
+
+"mention" {
+  //CONNEXIONs
+  PT = {
+    lex = "mencionar_VB_01"
+  }
+}
+
+"mezzanine" {
+  //MindSpaces
+  CA = {
+    lex = "entresòl_NN_01"
+  }
+  ES = {
+    lex = "entreplanta_NN_01"
+  }
+}
+
+"mid-level" {
+  //MindSpaces
+  CA = {
+    lex = "mitjà_JJ_01"
+  }
+  ES = {
+    lex = "mediano_JJ_01"
+  }
+}
+
+"minaret" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "minaret_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"moat" {
+  //MindSpaces
+  CA = {
+    lex = "fossat_NN_01"
+  }
+  ES = {
+    lex = "foso_NN_01"
+  }
+}
+
+"modal_verb" {
+  //CONNEXIONs
+  PT = {
+    lex = "verbo_modal_NN_01"
+  }
+}
+
+"moderate" {
+  //CONNEXIONs
+  PT = {
+    lex = "moderado_JJ_01"
+  } 
+}
+
+"moderately" {
+  //MindSpaces
+  CA = {
+    lex = "moderadament_RB_01"
+  }
+  ES = {
+    lex = "moderadamente_RB_01"
+  }
+}
+
+//"Monarchy_of_Denmark" {
+//  ES = {
+//    lex = "Monarquía_de_Dinamarca_NN_01"
+//  }
+//}
+
+//"Monocacy_National_Battlefield" {
+//  ES = {
+//    lex = "Campo_de_Batalla_Nacional_de_Monocacy_NN_01"
+//  }
+//}
+
+"more" {
+  //MindSpaces
+  CA = {
+    lex = "més_RB_01"
+  }
+  ES = {
+    lex = "más_RB_01"
+  }
+}
+
+"mosque" {
+  //MindSpaces
+  CA = {
+    lex = "mesquita_NN_01"
+  }
+  ES = {
+    lex = "mezquita_NN_01"
+  }
+}
+
+"motorbike" {
+  //MindSpaces
+  CA = {
+    lex = "moto_NN_01"
+  }
+  ES = {
+    lex = "moto_NN_01"
+  }
+}
+
+"motorcycle" {
+  //beAWARE
+  EN = {
+    lex = "motorbike_NN_01"
+  }
+  IT = {
+    lex = "moto_NN_01"
+  }
+}
+
+"motto" {
+  //WebNLG
+  ES = {
+    lex = "lema_NN_01"
+  }
+}
+
+"mountain" {
+  //MindSpaces
+  CA = {
+    lex = "muntanya_NN_01"
+  }
+  ES = {
+    lex = "montaña_NN_01"
+  }
+}
+
+"mountain_path" {
+  //MindSpaces
+  CA = {
+    lex = "sender_de_muntanya_NN_01"
+  }
+  ES = {
+    lex = "sendero_de_montaña_NN_01"
+  }
+}
+
+"move" {
+  //MindSpaces
+  CA = {
+    lex = "moure_VB_01"
+  }
+  ES = {
+    lex = "mover_VB_03"
+  }
+}
+
+"multiple" {
+  //CONNEXIONs
+  PT = {
+    lex = "múltiplo_JJ_02"
+  }
+}
+
+"museum" {
+  //xR4DRAMA
+  IT = {
+    lex = "museo_NN_01"
+  }
+}
+
+"name" {
+  //WELCOME
+  EN = {
+    lex = "name_NN_02"
+  }
+}
+
+"native_name" {
+  //WebNLG
+  ES = {
+    lex = "nombre_original_NN_01"
+  }
+}
+
+"NE" {
+  //CONNEXIONs
+  EN = {
+    lex = "named_entity_NN_01"
+  }
+  PT = {
+    lex = "entidade_nomeada_NN_01"
+  }
+}
+
+"nearest_city" {
+  //WebNLG
+  ES = {
+    lex = "ciudad_más_cercana_NN_01"
+  }
+}
+
+"negative" {
+  //CONNEXIONs
+  //MindSpaces
+  CA = {
+    lex = "negatiu_JJ_01"
+  }
+  ES = {
+    lex = "negativo_JJ_01"
+  }
+  PT = {
+    lex = "negativo_JJ_01"
+  }
+}
+
+"neighboring_municipality" {
+  //WebNLG
+  ES = {
+    lex = "municipio_vecino_NN_01"
+  }
+}
+
+"neutral" {
+  //MindSpaces
+  CA = {
+    lex = "neutral_JJ_01"
+  }
+  ES = {
+    lex = "neutral_JJ_01"
+  }
+}
+
+"no" {
+  //CONNEXIONs
+  PT = {
+    lex = "nenhum_DT_01"
+  }
+  //xR4DRAMA
+  IT = {
+    lex = "nessun_DT_01"
+  }
+}
+
+"noise" {
+  //xR4DRAMA
+  IT = {
+    lex = "acustico_JJ_01"
+  }
+}
+
+"non_3rd_person_singular_present_verb" {
+  //CONNEXIONs
+  PT = {
+    lex = "verbo_não_em_terceira_pessoa_do_singular_no_presente_NN_01"
+  }
+}
+
+"not" {
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "no_RB_01"
+  }
+  DE = {
+    lex = "_RB_01"
+  }
+  EL = {
+    lex = "_RB_01"
+  }
+  EN = {
+    lex = "not_RB_01"
+  }
+  ES = {
+    lex = "no_RB_01"
+  }
+}
+
+// "north" {
+//  ES = {
+//    lex = "al_norte_de_RB_01"
+//  }
+//}
+
+"north" {
+  //WebNLG
+  ES = {
+    lex = "norte_NN_01"
+  }
+}
+
+"northeast" {
+  //WebNLG
+  ES = {
+    lex = "noreste_NN_01"
+  }
+}
+
+"northwest" {
+  //WebNLG
+  ES = {
+    lex = "noroeste_NN_01"
+  }
+}
+
+"number" {
+  //WebNLG
+  ES = {
+    lex = "número_NN_01"
+  }
+}
+
+"number_count" {
+  // as in "amount of"
+  //CONNEXIONs
+  EN = {
+    lex = "number_NN_02"
+  }
+  PT = {
+    lex = "número_NN_02"
+  }
+}
+
+"occupy" {
+  //MindSpaces
+  CA = {
+    lex = "ocupar_VB_01"
+  }
+  ES = {
+    lex = "ocupar_VB_01"
+  }
+}
+
+"offer" {
+  //CONNEXIONs
+  PT = {
+    lex = "oferecer_VB_01"
+  }
+}
+
+"office" {
+  //xR4DRAMA
+  EN = {
+    lex = "office_NN_01"
+  }
+  IT = {
+    lex = "ufficio_NN_01"
+  }
+}
+
+"office_building" {
+  //MindSpaces
+  CA = {
+    lex = "edifici_d'oficines_NN_01"
+  }
+  ES = {
+    lex = "edificio_de_oficinas_NN_01"
+  }
+}
+
+//"Nurturing_Excellence"{
+//  ES = {
+//    lex = "Promoviendo_la_Excelencia_NN_01"
+//  }
+//}
+
+"only" {
+  //CONNEXIONs
+  //MindSpaces
+  CA = {
+    lex = "només_RB_01"
+  }
+  ES = {
+    lex = "sólo_RB_01"
+  }
+  PT = {
+    lex = "só_JJ_01"
+  }
+}
+
+"opening_double_quote" {
+  //CONNEXIONs
+  PT = {
+    lex = "aspas_de_abertura_NN_01"
+  }
+}
+
+"opening" {
+  //CONNEXIONs
+  PT = {
+    lex = "inicial_JJ_01"
+  }
+}
+
+"operate" {
+  //WebNLG
+  ES = {
+    lex = "operar_VB_01"		
+//    lex = "gestionar_VB_01"
+  }
+}
+
+"opinion" {
+  //MindSpaces
+  CA = {
+    lex = "opinió_NN_01"
+  }
+  ES = {
+    lex = "opinión_NN_01"
+  }
+}
+
+"opt-out" {
+  //CONNEXIONs
+  PT = {
+    lex = "desistir_VB_01"
+  }
+}
+
+"or" {
+  //CONNEXIONs
+  CA = {
+    lex = "o_CC_01"
+  }
+  ES = {
+    lex = "o_CC_01"
+  }
+  PT = {
+    lex = "ou_CC_01"
+  }
+}
+
+"orange" {
+  //MindSpaces
+  CA = {
+    lex = "taronja_JJ_01"
+  }
+  ES = {
+    lex = "naranja_JJ_01"
+  }
+}
+
+"orcahrd" {
+  //MindSpaces
+  CA = {
+    lex = "hort_NN_01"
+  }
+  ES = {
+    lex = "huerta_NN_01"
+  }
+}
+
+"order" {
+  //WebNLG
+  ES = {
+   lex = "orden_NN_02"		// masc gender
+  }
+}
+
+"orient" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "orient_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+//"origin" {
+//  //MindSpaces
+//  ES = {
+//    lex = "origen_NN_01"
+//  }
+//}
+
+"originate" {
+  //WebNLG
+  ES = {
+    lex = "ser_VB_02"
+  }
+}
+
+//"Ottoman_Army_soldiers_killed_in_the_Battle_of_Baku" {
+//  ES = {
+//   lex = "aoldados_de_ejército_otomano_muertos_en_la_batalla_de_Bakú"
+//  }
+//}
+
+"outcall" {
+  //CONNEXIONs
+  PT = {
+    lex = "chamada_de_saída_NN_01"
+  }
+}
+
+"outlook_ranking" {
+  //WebNLG
+  ES = {
+   lex = "ranking_Outlook_NN_01"
+  }
+}
+
+"overall" {
+  //MindSpaces
+  CA = {
+   lex = "general_JJ_01"
+  }
+  ES = {
+   lex = "general_JJ_01"
+  }
+}
+
+"overflow" {
+  //xR4DRAMA
+  EN = {
+    lex = "overflow_VB_01"
+  }
+  IT = {
+    lex = "esondare_VB_01"
+    //lex = "esondato_JJ_01"
+    lex = "esondazione_NN_01"
+    //lex = "straripamento_NN_01"
+  }
+}
+
+"own" {
+  //WebNLG
+  ES = {
+    lex = "pertenecer_VB_02"
+  }
+}
+
+"village" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "poble_NN_01"
+  }
+  ES = {
+    lex = "pueblo_NN_01"
+  }
+  EN = {
+    lex = "village_NN_01"
+  }
+  IT = {
+    lex = "paese_NN_01"
+  }
+}
+
+"vineyard" {
+  //MindSpaces
+  CA = {
+    lex = "vinya_NN_01"
+  }
+  ES = {
+    lex = "viñedo_NN_01"
+  }
+}
+
+"visual" {
+  //MindSpaces
+  CA = {
+    lex = "visual_JJ_01"
+  }
+  ES = {
+    lex = "visual_JJ_01"
+  }
+}
+
+"page" {
+  //WebNLG
+  ES = {
+   lex = "página_NN_01"
+  }
+  PT = {
+   lex = "página_NN_01"
+  }
+}
+
+"painting" {
+  //V4Design
+  //MindSpaces
+  CA = {
+    lex = "pintura_NN_01"
+  }
+  EL = {
+    lex = "πίνακας_NN_01"
+  }
+  EN = {
+    lex = "painting_NN_01"
+  }
+  ES = {
+    lex = "pintura_NN_01"
+  }
+}
+
+"palm" {
+  //MindSpaces
+  CA = {
+    lex = "palmera_NN_01"
+  }
+  ES = {
+    lex = "palmera_NN_01"
+  }
+}
+
+"parenthesis" {
+  //CONNEXIONs
+  PT = {
+    lex = "parêntese_NN_01"
+  }
+}
+
+"park" {
+  //beAWARE
+  CA = {
+    lex = "parc_NN_01"
+  }
+  EN = {
+    lex = "park_NN_01"
+  }
+  ES = {
+    lex = "parque_NN_01"
+  }
+}
+
+"parking" {
+  //xR4DRAMA
+  EN = {
+    lex = "parking_NN_01"
+  }
+  IT = {
+    lex = "parcheggio_NN_01"
+  }
+}
+
+"parking_garage" {
+  //xR4DRAMA
+  CA = {
+    lex = "garatge_NN_01"
+  }
+  ES = {
+    lex = "garaje_NN_01"
+  }
+}
+
+"parking_lot" {
+  //xR4DRAMA
+  CA = {
+    lex = "aparcament_NN_01"
+  }
+  ES = {
+    lex = "aparcamiento_NN_01"
+  }
+}
+
+"parking_meter" {
+  //MindSpaces
+  CA = {
+    lex = "parquímetre_NN_01"
+  }
+  ES = {
+    lex = "parquímetro_NN_01"
+  }
+}
+
+"part" {
+  //WebNLG
+  EN = {
+    lex = "part_NN_02"
+  }
+  ES = {
+    lex = "parte_NN_01"
+  }
+}
+
+"participate" {
+  //WebNLG
+  ES = {
+    lex = "participar_VB_01"		
+  }
+}
+
+"particle" {
+  //CONNEXIONs
+  PT = {
+    lex = "partícula_NN_01"
+  }
+}
+
+"past_participle" {
+  //CONNEXIONs
+  PT = {
+    lex = "particípio_passado_NN_01"
+  }
+}
+
+"past_verb" {
+  //CONNEXIONs
+  PT = {
+    lex = "verbo_no_passado_NN_01"
+  }
+}
+
+"path" {
+  //MindSpaces
+  CA = {
+    lex = "camí_NN_01"
+  }
+  ES = {
+    lex = "camino_NN_01"
+  }
+}
+
+"patron_saint" {
+  //WebNLG
+  ES = {
+    lex = "santo_patrono_NN_01"
+  }
+}
+
+"pavilion" {
+  //MindSpaces
+  CA = {
+    lex = "pavelló_NN_01"
+  }
+  ES = {
+    lex = "pabellón_NN_01"
+  }
+}
+
+"pedestrian_area" {
+  //MindSpaces
+  CA = {
+    lex = "àrea_de_vianants_NN_01"
+  }
+  ES = {
+    lex = "zona_peatonal_NN_01"
+  }
+}
+
+"people" {
+  //beAWARE
+  //WebNLG
+  EN = {
+    lex = "people_NN_01"
+  }
+  ES = {
+    lex = "gente_NN_01"
+  }
+  IT = {
+    lex = "gente_NN_01"
+  }
+}
+
+"per" {
+  //CONNEXIONs
+  PT = {
+    lex = "por_IN_01"
+  }
+}
+
+"percentage" {
+  //CONNEXIONs
+  PT = {
+    lex = "percentagem_NN_01"
+  }
+}
+
+"performance_characteristic" {
+  //CONNEXIONs
+  PT = {
+    lex = "característica_de_desempenho_NN_01"
+  }
+}
+
+"person" {
+  //beAWARE
+  //V4Design
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "persona_NN_01"
+  }
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "person_NN_01"
+  }
+  ES = {
+    lex = "persona_NN_01"
+  }
+  IT = {
+    lex = "persona_NN_01"
+  }
+}
+
+"personal_characteristic" {
+  //CONNEXIONs
+  PT = {
+    lex = "característica_pessoal_NN_01"
+  }
+}
+
+"personal_pronoun" {
+  //CONNEXIONs
+  PT = {
+    lex = "pronome_pessoal_NN_01"
+  }
+}
+
+"phone_booth" {
+  //MindSpaces
+  CA = {
+    lex = "cabina_telefònica_NN_01"
+  }
+  ES = {
+    lex = "cabina_telefónica_NN_01"
+  }
+}
+
+"picnic_area" {
+  //MindSpaces
+  CA = {
+    lex = "zona_de_pícnic_NN_01"
+  }
+  ES = {
+    lex = "zona_de_pícnic_NN_01"
+  }
+}
+
+"pier" {
+  //MindSpaces
+  CA = {
+    lex = "moll_NN_01"
+  }
+  ES = {
+    lex = "muelle_NN_01"
+  }
+}
+
+//"Philippine_English_language" {
+//  ES = {
+//    lex = "inglés_filipino_NN_01"
+//  }
+//}
+
+"place" {
+  //MindSpaces
+  CA = {
+    lex = "lloc_NN_01"
+  }
+  ES = {
+    lex = "lugar_NN_01"
+  }
+}
+
+"plant" {
+  //MindSpaces
+  CA = {
+    lex = "planta_NN_01"
+  }
+  ES = {
+    lex = "planta_NN_01"
+  }
+}
+
+"plant_wall" {
+  //MindSpaces
+  CA = {
+    lex = "paret_vegetal_NN_01"
+  }
+  ES = {
+    lex = "pared_de_plantas_NN_01"
+  }
+}
+
+"play" {
+  //WebNLG
+  ES = {
+    lex = "jugar_VB_02"
+  }
+}
+
+"playground" {
+  //MindSpaces
+  CA = {
+    lex = "parc_infantil_NN_01"
+  }
+  ES = {
+    lex = "parque_infantil_NN_01"
+  }
+}
+
+"plaza" {
+  //MindSpaces
+  CA = {
+    lex = "plaça_NN_01"
+  }
+  ES = {
+    lex = "plaza_NN_01"
+  }
+}
+
+"plural_common_noun" {
+  //CONNEXIONs
+  PT = {
+    lex = "substantivo_comum_no_plural_NN_01"
+  }
+}
+
+"plural_proper_noun" {
+  //CONNEXIONs
+  PT = {
+    lex = "substantivo_próprio_no_plural_NN_01"
+  }
+}
+
+"pluralized" {
+  //CONNEXIONs
+  PT = {
+    lex = "pluralizado_JJ_01"
+  }
+}
+
+"pole" {
+  //MindSpaces
+  CA = {
+    lex = "pal_NN_01"
+  }
+  ES = {
+    lex = "poste_NN_01"
+  }
+}
+
+//"Polish_Academy_of_Sciences" {
+//  ES = {
+//    lex = "Academia_de_Ciencias_de_Polonia_NN_01"
+//  }
+//}
+
+"pollution" {
+  //xR4DRAMA
+  IT = {
+    lex = "inquinamento_NN_01"
+  }
+}
+
+"population_density" {
+  //WebNLG
+  ES = {
+    lex = "densidad_de_población_NN_01"
+  }
+}
+
+"portion" {
+  //WebNLG
+  ES = {
+   lex = "ración_NN_01"
+  }
+}
+
+"positive" {
+  //CONNEXIONs
+  //MindSpaces
+  CA = {
+    lex = "positiu_JJ_01"
+  }
+  ES = {
+    lex = "positivo_JJ_01"
+  }
+  PT = {
+    lex = "positivo_JJ_01"
+  }
+}
+
+
+"possessive_ending" {
+  //CONNEXIONs
+  PT = {
+    lex = "apóstrofo_de_genitivo_NN_01"
+  }
+}
+
+"possessive_pronoun" {
+  //CONNEXIONs
+  PT = {
+    lex = "pronome_possessivo_NN_01"
+  }
+}
+
+"possessive_wh_pronoun" {
+  //CONNEXIONs
+  PT = {
+    lex = "pronome_QU_possessivo_NN_01"
+  }
+}
+
+"possible" {
+  //xR4DRAMA
+  IT = {
+    lex = "possibile_JJ_01"
+  }
+}
+
+"possibly" {
+  //MindSpaces
+  CA = {
+    lex = "possiblement_RB_01"
+  }
+  ES = {
+    lex = "posiblemente_RB_01"
+  }
+}
+
+"postgraduate" {
+  //WebNLG
+  ES = {
+   lex = "posgraduado_JJ_01"
+//   lex = "de_posgrado_JJ_01"
+  }
+}
+
+"pot" {
+  //MindSpaces
+  CA = {
+    lex = "test_NN_01"
+  }
+  ES = {
+    lex = "maceta_NN_01"
+  }
+}
+
+"power_outlet" {
+  //xR4DRAMA
+  IT = {
+    lex = "presa_elettrica_NN_01"
+  }
+}
+
+"precipitation" {
+  //beAWARE
+  EN = {
+    lex = "precipitation_NN_01"
+  }
+  ES = {
+    lex = "lluvia_NN_01"
+  }
+}
+
+"predeterminer" {
+  //CONNEXIONs
+  PT = {
+    lex = "predeterminante_NN_01"
+  }
+}
+
+"preposition" {
+  //CONNEXIONs
+  PT = {
+    lex = "preposição_NN_01"
+  }
+}
+
+"president" {
+  //WebNLG
+  ES = {
+    lex = "director_NN_01"
+  }
+}
+
+"print" {
+  //WebNLG
+  ES = {
+    lex = "impreso_JJ_01"
+  }
+}
+
+"probably" {
+  //MindSpaces
+  CA = {
+    lex = "probablement_RB_01"
+  }
+  ES = {
+    lex = "probablemente_RB_01"
+  }
+}
+
+"produce" {
+  //WebNLG
+  ES = {
+    lex = "producir_VB_01"
+  }
+}
+
+"profile" {
+  //CONNEXIONs
+  PT = {
+    lex = "perfil_NN_01"
+  }
+}
+
+"promenade" {
+  //MindSpaces
+  CA = {
+    lex = "passeig_NN_01"
+  }
+  ES = {
+    lex = "paseo_NN_01"
+  }
+}
+
+"proteins" {
+  //WebNLG
+  ES = {
+    lex = "proteina_NN_01"
+  }
+}
+
+"provide" {
+  //CONNEXIONs
+  PT = {
+    lex = "fornecer_VB_01"
+  }
+}
+
+"publish" {
+  //WebNLG
+  ES = {
+    lex = "publicar_VB_01"
+  }
+  PT = {
+    lex = "publicar_VB_01"
+  }
+}
+
+"publisher" {
+  //WebNLG
+  ES = {
+    lex = "editor_NN_01"
+  }
+}
+
+"pupil" {
+  //xR4DRAMA
+  EN = {
+    lex = "pupil_NN_01"
+  }
+  IT = {
+    lex = "alunno_NN_01"
+  }
+}
+
+"purple" {
+  //MindSpaces
+  CA = {
+    lex = "morat_JJ_01"
+  }
+  ES = {
+    lex = "morado_JJ_01"
+  }
+}
+
+"quadratic" {
+  //MindSpaces
+  CA = {
+    lex = "quadràtic_JJ_01"
+  }
+  ES = {
+    lex = "cuadrático_JJ_01"
+  }
+}
+
+"quality" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "ποιότητα_NN_01"
+  }
+  EN = {
+    lex = "quality_NN_01"
+  }
+  ES = {
+    lex = "calidad_NN_01"
+  }
+}
+
+"question_mark" {
+  //CONNEXIONs
+  PT = {
+    lex = "ponto_de_interrogação_NN_01"
+  }
+}
+
+"quite" {
+  //MindSpaces
+  CA = {
+    lex = "força_RB_01"
+  }
+  ES = {
+    lex = "bastante_RB_01"
+  }
+}
+
+"railing" {
+  //xR4DRAMA
+  EN = {
+    lex = "barana_NN_01"
+  }
+  IT = {
+    lex = "barandilla_NN_01"
+  }
+}
+
+"railroad_track" {
+  //MindSpaces
+  CA = {
+    lex = "vies_de_tren_NN_01"
+  }
+  ES = {
+    lex = "vías_de_tren_NN_01"
+  }
+}
+
+"rain" {
+  //xR4DRAMA
+  EN = {
+    lex = "rain_NN_01"
+  }
+  IT = {
+    lex = "pioggia_NN_01"
+    lex = "piovere_VB_01"
+  }
+}
+
+"ramification_factor" {
+  //CONNEXIONs
+  PT = {
+    lex = "fator_de_ramificação_NN_01"
+  }
+}
+
+"range" {
+  //CONNEXIONs
+  PT = {
+    lex = "faixa_NN_01"
+  }
+}
+
+
+"ratio" {
+  //CONNEXIONs
+  PT = {
+    lex = "proporção_NN_01"
+  }
+}
+
+"record" {
+  //V4Design
+  EL = {
+    lex = "γυρίζω_VB_01"
+  }
+  EN = {
+    lex = "record_VB_01"
+  }
+  ES = {
+    lex = "gravar_VB_01"
+  }
+}
+
+"rector" {
+  //WebNLG
+  ES = {
+    lex = "rector_NN_01"
+  }
+}
+
+"red" {
+  //MindSpaces
+  CA = {
+    lex = "vermell_JJ_01"
+  }
+  ES = {
+    lex = "rojo_JJ_01"
+  }
+}
+
+"Reference_Number_in_the_National_Register_of_Historic_Places" {
+  //WebNLG
+  ES = {
+    lex = "Número_de_Referencia_en_Registro_Nacional_de_Sitios_Históricos_NN_01"
+  }
+}
+
+//"Red_granite_and_white_marble" {
+//  ES = {
+//    lex = "granito_rojo_y_mármol_blanco_NN_01"
+//  }
+//}
+
+"religion" {
+  ES = {
+    lex = "religión_NN_01"
+  }
+}
+
+"remain" {
+  //xR4DRAMA
+  EN = {
+    lex = "remain_VB_01"
+  }
+  IT = {
+    lex = "rimanere_VB_01"
+  }
+}
+
+"remove" {
+  //MindSpaces
+  CA = {
+    lex = "retirar_VB_01"
+  }
+  EN = {
+    lex = "remove_VB_01"
+  }
+  ES = {
+    lex = "quitar_VB_01"
+  }
+}
+
+"replace" {
+  //MindSpaces
+  CA = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "replace_VB_01"
+  }
+  ES = {
+    lex = "remplazar_VB_01"
+  }
+}
+
+"report" {
+  //beAWARE
+  //EN = {
+    //lex = "report_NN_01"
+    //lex = "report_VB_01"
+  //}
+  IT = {
+    lex = "segnalare_VB_01"
+  }
+  ES = {
+    //lex = "avistar_VB_01"
+    lex = "reportar_VB_01"
+  }
+  EL = {
+    lex = "αναφέρω_VB_01"
+  }
+}
+
+"represent" {
+  ES = {
+    lex = "representar_VB_01"
+  }
+}
+
+"representative" {
+  ES = {
+    lex = "representante_NN_01"
+  }
+}
+
+"residential_building" {
+  //MindSpaces
+  CA = {
+    lex = "edifici_residencial_NN_01"
+  }
+  ES = {
+    lex = "edificio_residencial_NN_01"
+  }
+}
+
+"residential_neighborhood" {
+  //MindSpaces
+  CA = {
+    lex = "barri_residencial_NN_01"
+  }
+  ES = {
+    lex = "barrio_residencial_NN_01"
+  }
+}
+
+"resolution" {
+  //V4Design
+  EL = {
+    lex = "ανάλυση_NN_01"
+  }
+  EN = {
+    lex = "resolution_NN_01"
+  }
+  ES = {
+    lex = "resolución_NN_01"
+  }
+}
+
+"restaurant" {
+  //xR4DRAMA
+  EN = {
+    lex = "restaurant_NN_01"
+  }
+  IT = {
+    lex = "ristorante_NN_01"
+  }
+}
+
+"restaurant_patio" {
+  //MindSpaces
+  CA = {
+    lex = "pati_de_restaurant_NN_01"
+  }
+  ES = {
+    lex = "patio_de_restaurant_NN_01"
+  }
+}
+
+"restore" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "restore_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"retire" {
+  //WebNLG
+  ES = {
+    lex = "retirar_VB_01"
+//  lex = "jubilar_VB_01"
+  }
+}
+
+"retired" {
+  //WebNLG
+  ES = {
+//    lex = "jubilado_JJ_01"    // synonym
+    lex = "retirado_JJ_01"
+  }
+}
+
+"reveal" {
+  //MindSpaces
+  CA = {
+    lex = "revelar_VB_01"
+  }
+  ES = {
+    lex = "revelar_VB_01"
+  }
+}
+
+"review" {
+  //CONNEXIONs
+  PT = {
+    lex = "resenha_NN_01"
+  }
+}
+
+"richness" {
+  //CONNEXIONs
+  PT = {
+    lex = "riqueza_NN_01"
+  }
+}
+
+"rider" {
+  //MindSpaces
+  CA = {
+    lex = "motorista_NN_01"
+  }
+  ES = {
+    lex = "motorista_NN_01"
+  }
+}
+
+"risk" {
+  //beAWARE
+  //xR4DRAMA
+  ES = {
+    lex = "riesgo_NN_01"
+  }
+  PT = {
+    lex = "risco_NN_01"
+  }
+  IT = {
+    lex = "rischio_NN_01"
+  }
+}
+
+"risk_level" {
+  //CONNEXIONs
+  //xR4DRAMA
+  IT = {
+    lex = "livello_di_rischio_NN_01"
+  }
+  PT = {
+    lex = "nível_de_risco_NN_01"
+  }
+}
+
+"risk_score" {
+  //CONNEXIONs
+  PT = {
+    lex = "pontuação_de_risco_NN_01"
+  }
+}
+
+"risky" {
+  //CONNEXIONs
+  PT = {
+    lex = "arriscado_JJ_01"
+  }
+}
+
+"river" {
+  //beAWARE
+  CA = {
+    lex = "riu_NN_01"
+  }
+  EN = {
+    lex = "river_NN_01"
+  }
+  ES = {
+    lex = "río_NN_01"
+  }
+  IT = {
+    lex = "fiume_NN_01"
+  }
+}
+
+"road" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "carretera_NN_01"
+  }
+  ES = {
+    lex = "carretera_NN_01"
+  }
+  IT = {
+    lex = "strada_NN_01"
+  }
+}
+
+"road_overpass" {
+  //MindSpaces
+  CA = {
+    lex = "pas_elevat_NN_01"
+  }
+  ES = {
+    lex = "pas_elevado_NN_01"
+  }
+}
+
+"roadway_junction" {
+  //MindSpaces
+  CA = {
+    lex = "cruïlla_NN_01"
+  }
+  ES = {
+    lex = "cruce_NN_01"
+  }
+}
+
+"roof" {
+  //xR4DRAMA
+  EN = {
+    lex = "roof_NN_01"
+  }
+  IT = {
+    lex = "tetto_NN_01"
+  }
+}
+
+"roof_garden" {
+  //xR4DRAMA
+  EN = {
+    lex = "terrassa_al_terrat_NN_01"
+  }
+  IT = {
+    lex = "terraza_en_la_azotea_NN_01"
+  }
+}
+
+"room" {
+  //MindSpaces
+  //V4Design
+  CA = {
+    lex = "habitació_NN_01"
+  }
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "room_NN_01"
+  }
+  ES = {
+    lex = "habitación_NN_01"
+  }
+}
+
+"round" {
+  //MindSpaces
+  CA = {
+    lex = "rodó_JJ_01"
+  }
+  ES = {
+    lex = "redondo_JJ_01"
+  }
+}
+
+"ruin" {
+  //MindSpaces
+  CA = {
+    lex = "ruïna_NN_01"
+  }
+  ES = {
+    lex = "ruina_NN_01"
+  }
+}
+
+"runway" {
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "pista_NN_01"
+  }
+  ES = {
+    lex = "pista_NN_01"
+  }
+}
+
+"sadness" {
+  //MindSpaces
+  CA = {
+    lex = "tristesa_NN_01"
+  }
+  ES = {
+    lex = "tristeza_NN_01"
+  }
+}
+
+"same" {
+  //CONNEXIONs
+  PT = {
+    lex = "mesmo_JJ_01"
+  }
+}
+
+"sand" {
+  //MindSpaces
+  CA = {
+    lex = "sorra_NN_01"
+  }
+  ES = {
+    lex = "arena_NN_01"
+  }
+}
+
+"sandbox" {
+  //MindSpaces
+  CA = {
+    lex = "sorra_NN_01"
+  }
+  ES = {
+    lex = "arena_NN_01"
+  }
+}
+
+"scale" {
+  //MindSpaces
+  CA = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "scale_NN_01"
+  }
+  ES = {
+    lex = "escala_NN_01"
+  }
+}
+
+"scene" {
+  //MindSpaces
+  CA = {
+    lex = "escena_NN_01"
+  }
+  ES = {
+    lex = "escena_NN_01"
+  }
+}
+
+"school" {
+  //MindSpaces
+  CA = {
+    lex = "escola_NN_01"
+  }
+  ES = {
+    lex = "colegio_NN_01"
+  }
+}
+
+"score" {
+  //MindSpaces
+  CA = {
+    lex = "puntuació_NN_01"
+  }
+  ES = {
+    lex = "puntuación_NN_01"
+  }
+}
+
+"sculpt" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "sculpt_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"sculpture" {
+  //MindSpaces
+  CA = {
+    lex = "escultura_NN_01"
+  }
+  ES = {
+    lex = "escultura_NN_01"
+  }
+}
+
+"sea" {
+  //MindSpaces
+  CA = {
+    lex = "mar_NN_01"
+  }
+  ES = {
+    lex = "mar_NN_01"
+  }
+}
+
+"seat" {
+  //WebNLG
+  EN = {
+    lex = "seat_NN_01"
+  }
+  ES = {
+    lex = "asiento_NN_01"
+  }
+}
+
+"sea_level" {
+  //WebNLG
+  ES = {
+    lex = "nivel_del_mar_NN_01"
+  }
+}
+
+"second" {
+  //WebNLG
+  ES = {
+    lex = "segundo_JJ_01"
+  }
+  //WELCOME
+  EN = {
+    lex = "second_JJ_01"
+  }
+}
+
+"see" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "see_VB_01"
+  }
+  ES = {
+    lex = "ver_VB_01"
+  }
+}
+
+"semicolon" {
+  //CONNEXIONs
+  PT = {
+    lex = "ponto_e_vírgula_NN_01"
+  }
+}
+
+"senator" {
+  //WebNLG
+  ES = {
+    lex = "senador_NN_01"
+  }
+}
+
+"sentence" {
+  //CONNEXIONs
+  PT = {
+    lex = "oração_NN_01"
+  }
+}
+
+"sequential" {
+  //CONNEXIONs
+  PT = {
+    lex = "sequencial_JJ_01"
+  }
+}
+
+"serve" {
+  //WebNLG
+  ES = {
+    lex = "servicio_NN_01"
+  }
+}
+
+"serve2" {
+  //WebNLG
+  ES = {
+    lex = "servir_VB_02"
+  }
+}
+
+"server_room" {
+  //MindSpaces
+  CA = {
+    lex = "sala_de_servidors_NN_01"
+  }
+  ES = {
+    lex = "sala_de_servidores_NN_01"
+  }
+}
+
+"service" {
+  //CONNEXIONs
+  PT = {
+    lex = "serviço_NN_01"
+  }
+}
+
+"several" {
+  //xR4DRAMA
+  IT = {
+    lex = "diverso_DT_01"
+  }
+}
+
+"sex_act" {
+  //CONNEXIONs
+  PT = {
+    lex = "ato_sexual_NN_01"
+  }
+}
+
+"sexual" {
+  //CONNEXIONs
+  PT = {
+    lex = "sexual_JJ_01"
+  }
+}
+
+"shape" {
+  //MindSpaces
+  CA = {
+    lex = "forma_NN_01"
+  }
+  ES = {
+    lex = "forma_NN_01"
+  }
+}
+
+"shelter" {
+  //xR4DRAMA
+  IT = {
+    lex = "rifugio_NN_01"
+  }
+}
+
+"ship" {
+  //MindSpaces
+  CA = {
+    lex = "vaixell_NN_01"
+  }
+  ES = {
+    lex = "barco_NN_01"
+  }
+}
+
+"short" {
+  //CONNEXIONs
+  PT = {
+    lex = "curto_JJ_01"
+  }
+}
+
+"side" {
+  //MindSpaces
+  CA = {
+    lex = "costat_NN_01"
+  }
+  ES = {
+    lex = "lado_NN_01"
+  }
+}
+
+"sidewalk" {
+  //MindSpaces
+  CA = {
+    lex = "vorera_NN_01"
+  }
+  ES = {
+    lex = "acera_NN_01"
+  }
+}
+
+"signboard" {
+  //MindSpaces
+  CA = {
+    lex = "cartell_NN_01"
+  }
+  ES = {
+    lex = "cartel_NN_01"
+  }
+}
+
+"similar" {
+  ES = {
+    lex = "similar_JJ_01"
+  }
+}
+
+"similarity_SIC" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "similarity_SIC_NN_01"
+  }
+  ES = {
+    lex = "similaridad_NN_01"
+  }
+}
+
+"single_quote" {
+  //CONNEXIONs
+  PT = {
+    lex = "aspas_simples_NN_01"
+  }
+}
+
+"singular_common_noun" {
+  //CONNEXIONs
+  PT = {
+    lex = "substantivo_comum_no_singular_NN_01"
+  }
+}
+
+"singular_proper_noun" {
+  //CONNEXIONs
+  PT = {
+    lex = "substantivo_próprio_no_singular_NN_01"
+  }
+}
+
+"sit" {
+  //MindSpaces
+  CA = {
+    lex = "seure_VB_01"
+  }
+  EN = {
+    lex = "sit_VB_01"
+  }
+  ES = {
+    lex = "sentar_VB_01"
+  }
+}
+
+"site" {
+  //xR4DRAMA
+  EN = {
+    lex = "site_NN_01"
+  }
+  IT = {
+    lex = "sito_NN_01"
+    //lex = "luogo_NN_01"
+  }
+}
+
+"sky" {
+  //MindSpaces
+  CA = {
+    lex = "cel_NN_01"
+  }
+  ES = {
+    lex = "cielo_NN_01"
+  }
+}
+
+"skyscraper" {
+  //MindSpaces
+  CA = {
+    lex = "gratacels_NN_01"
+  }
+  ES = {
+    lex = "rascacielos_NN_01"
+  }
+}
+
+"slightly" {
+  //MindSpaces
+  CA = {
+    lex = "lleugerament_RB_01"
+  }
+  ES = {
+    lex = "ligeramente_RB_01"
+  }
+}
+
+"slum" {
+  //MindSpaces
+  CA = {
+    lex = "barri_marginal_NN_01"
+  }
+  ES = {
+    lex = "barriada_NN_01"
+  }
+}
+
+"smoke" {
+  //beAWARE
+  ES = {
+    lex = "humo_NN_01"
+  }
+}
+
+"so" {
+  //MindSpaces
+  CA = {
+    lex = "i_per_això_CC_01"
+  }
+  ES = {
+    lex = "entonces_CC_01"
+  }
+}
+
+"some" {
+  //xR4DRAMA
+  EN = {
+    lex = "some_DT_01"
+  }
+  IT = {
+    lex = "qualche_DT_01"
+    lex = "vario_DT_01"
+  }
+}
+
+"somewhat" {
+  //MindSpaces
+  CA = {
+    lex = "una_mica_RB_01"
+  }
+  ES = {
+    lex = "algo_RB_01"
+  }
+}
+
+"source" {
+  //xR4DRAMA
+  IT = {
+    lex = "fonte_NN_01"
+  }
+}
+
+"south" {
+  //WebNLG
+  ES = {
+    lex = "sur_NN_01"
+  }
+}
+
+"southeast" {
+  //WebNLG
+  ES = {
+    lex = "sureste_NN_01"
+  }
+}
+
+"southwest" {
+  //WebNLG
+  ES = {
+    lex = "suroeste_NN_01"
+  }
+}
+
+"space" {
+  //MindSpaces
+  CA = {
+    lex = "espai_NN_01"
+  }
+  ES = {
+    lex = "espacio_NN_01"
+  }
+}
+
+"speak" {
+  //WebNLG
+  ES = {
+    lex = "hablar_VB_02"
+  }
+}
+
+"specific" {
+  //MindSpaces
+  CA = {
+    lex = "especific_JJ_01"
+  }
+  ES = {
+    lex = "específico_JJ_01"
+  }
+}
+
+"spend" {
+  //WebNLG
+  ES = {
+    lex = "pasar_VB_02"
+  }
+}
+
+"spire" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "spire_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"sport" {
+  //WebNLG
+  ES = {
+    lex = "actividad_deportiva_NN_01"
+  }
+}
+
+"square" {
+  //MindSpaces
+  CA = {
+    lex = "quadrat_JJ_01"
+  }
+  ES = {
+    lex = "cuadrado_JJ_01"
+    lex = "plaza_NN_01"
+  }
+}
+
+"stable" {
+  //xR4DRAMA
+  EN = {
+    lex = "stable_NN_01"
+  }
+  IT = {
+    lex = "stalla_NN_01"
+  }
+}
+
+"stadium" {
+  //WebNLG
+  //MindSpaces
+  CA = {
+    lex = "estadi_NN_01"
+  }
+  EN = {
+    lex = "stadium_NN_01"
+  }
+  ES = {
+    lex = "estadio_NN_01"
+  }
+  IT = {
+    lex = "stadio_NN_01"
+  }
+}
+
+"stage" {
+  //MindSpaces
+  CA = {
+    lex = "escenari_NN_01"
+  }
+  ES = {
+    lex = "escenario_NN_01"
+  }
+}
+
+"stairs" {
+  //MindSpaces
+  CA = {
+    lex = "esglaóns_NN_01"
+  }
+  ES = {
+    lex = "escalones_NN_01"
+  }
+}
+
+"stairway" {
+  //MindSpaces
+  CA = {
+    lex = "escala_NN_02"
+  }
+  ES = {
+    lex = "escalera_NN_01"
+  }
+}
+
+"stand" {
+  //MindSpaces
+  //xR4DRAMA
+  CA = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "stand_VB_02"
+  }
+  ES = {
+    lex = "de_pie_RB_01"
+  }
+  IT = {
+    lex = "in_piedi_RB_01"
+  }
+}
+
+"standard" {
+  //CONNEXIONs
+  PT = {
+    lex = "padrão_JJ_01"
+  }
+}
+
+"star" {
+  //WebNLG
+  ES = {
+    lex = "protagonizar_VB_01"
+  }
+}
+
+"state" {
+  //MindSpaces
+  CA = {
+    lex = "estat_NN_01"
+  }
+  ES = {
+    lex = "estado_NN_01"
+  }
+}
+
+"statement" {
+  //CONNEXIONs
+  EN = {
+    lex = "state_VB_01"
+  }
+  PT = {
+    lex = "afirmar_VB_01"
+  }
+}
+
+"status" {
+  //WebNLG
+  ES = {
+    lex = "categoría_NN_01"
+  }
+}
+
+"step" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "step_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"stopped" {
+  //xR4DRAMA
+  EN = {
+    lex = "stopped_JJ_01"
+  }
+  IT = {
+    lex = "fermare_JJ_01"
+  }
+}
+
+"stopword" {
+  //CONNEXIONs
+  PT = {
+    lex = "palavra_vazia_NN_01"
+  }
+}
+
+"storage_room" {
+  //MindSpaces
+  CA = {
+    lex = "traster_NN_01"
+  }
+  ES = {
+    lex = "trastero_NN_01"
+  }
+}
+
+"storm" {
+  //xR4DRAMA
+  EN = {
+    lex = "storm_NN_01"
+  }
+  IT = {
+    lex = "nubifragio_NN_01"
+  }
+}
+
+"strem" {
+  //xR4DRAMA
+  EN = {
+    lex = "stream_NN_01"
+  }
+  IT = {
+    lex = "torrente_NN_01"
+  }
+}
+
+
+"street" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "carrer_NN_01"
+  }
+  EN = {
+    lex = "street_NN_01"
+  }
+  ES = {
+    lex = "calle_NN_01"
+  }
+  IT = {
+    lex = "strada_NN_01"
+  }
+}
+
+"streetlight" {
+  //MindSpaces
+  CA = {
+    lex = "fanal_NN_01"
+  }
+  ES = {
+    lex = "farola_NN_01"
+  }
+}
+
+"stress" {
+  //xR4DRAMA
+  IT = {
+    lex = "stress_NN_01"
+  }
+}
+
+"strong" {
+  //beAWARE
+  ES = {
+    lex = "fuerte_JJ_01"
+  }
+}
+
+"structure" {
+  //V4Design
+  //xR4DRAMA
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "structure_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+  IT = {
+    lex = "struttura_NN_01"
+  }
+}
+
+"stuck" {
+  //beAWARE
+  EN = {
+    lex = "stuck_JJ_01"
+  }
+  IT = {
+    //lex = "bloccata_JJ_01"
+    lex = "bloccato_JJ_01"
+    //lex = "bloccare_JJ_01"
+    //lex = "bloccare_VB_01"
+    //lex = "ostruere_VB_01"
+  }
+}
+
+"student" {
+  //WebNLG
+  ES = {
+    lex = "estudiante_NN_01"
+  }
+}
+
+"subject" {
+  //MindSpaces
+  CA = {
+    lex = "individu_NN_01"
+  }
+  ES = {
+    lex = "sujeto_NN_01"
+  }
+}
+
+"subway_station" {
+  //MindSpaces
+  CA = {
+    lex = "estació_de_metro_NN_01"
+  }
+  ES = {
+    lex = "estación_de_metro_NN_01"
+  }
+}
+
+"suite" {
+  //V4Design
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "suite_NN_01"
+  }
+  ES = {
+    lex = "_NN_01"
+  }
+}
+
+"superlative_adjective" {
+  //CONNEXIONs
+  PT = {
+    lex = "adjetivo_superlativo_NN_01"
+  }
+}
+
+"superlative_adverb" {
+  //CONNEXIONs
+  PT = {
+    lex = "advérbio_superlativo_NN_01"
+  }
+}
+
+"supermarket"{
+  //MindSpaces
+  CA = {
+    lex = "supermercat_NN_01"
+  }
+  ES = {
+    lex = "supermercado_NN_01"
+  }
+}
+
+"surname" {
+  //WELCOME
+  EN = {
+    lex = "surname_NN_01"
+  }
+}
+
+"surprise" {
+  //MindSpaces
+  CA = {
+    lex = "sorpresa_NN_01"
+  }
+  ES = {
+    lex = "sorpresa_NN_01"
+  }
+}
+
+"surrounding" {
+  //xR4DRAMA
+  IT = {
+    lex = "dintorno_NN_01"
+  }
+}
+
+"symbol" {
+  //CONNEXIONs
+  PT = {
+    lex = "símbolo_NN_01"
+  }
+}
+
+"synagogue" {
+  //MindSpaces
+  CA = {
+    lex = "sinagoga_NN_01"
+  }
+  ES = {
+    lex = "sinagoga_NN_01"
+  }
+}
+
+"swimming_pool"{
+  //MindSpaces
+  CA = {
+    lex = "piscina_NN_01"
+  }
+  ES = {
+    lex = "piscina_NN_01"
+  }
+}
+
+"table" {
+  //MindSpaces
+  CA = {
+    lex = "mesa_NN_01"
+  }
+  ES = {
+    lex = "mesa_NN_01"
+  }
+}
+
+"temple" {
+  //MindSpaces
+  CA = {
+    lex = "temple_NN_01"
+  }
+  ES = {
+    lex = "templo_NN_01"
+  }
+}
+
+"tenant" {
+  //WebNLG
+  ES = {
+    lex = "inquilino_NN_01"
+//  lex = "arrendatario_NN_01"		// synonym
+  }
+}
+
+"terrace" {
+  //xR4DRAMA
+  EN = {
+    lex = "terrace_NN_01"
+  }
+  IT = {
+    lex = "terrazzo_NN_01"
+  }
+}
+
+"terrain" {
+  //MindSpaces
+  CA = {
+    lex = "terreny_NN_01"
+  }
+  ES = {
+    lex = "terreno_NN_01"
+  }
+}
+
+"text" {
+  //CONNEXIONs
+  //MindSpaces
+  CA = {
+    lex = "text_NN_01"
+  }
+  ES = {
+    lex = "texto_NN_01"
+  }
+  PT = {
+    lex = "texto_NN_01"
+  }
+}
+
+"the_character_Bolt"{
+  //WebNLG
+  ES = {
+    lex = "el_personaje_Bolt_NN_01"
+  }
+}
+
+
+"third" {
+  //WebNLG
+  ES = {
+//    lex = "tercero_JJ_01"		// postposed
+    lex = "tercer_JJ_01"		// anteposed
+  }
+}
+
+"third_person" {
+  //CONNEXIONs
+  PT = {
+    lex = "terceira_pessoa_NN_01"
+  }
+}
+
+"threatening" {
+  //xR4DRAMA
+  EN = {
+    lex = "threatening_JJ_01"
+  }
+  IT = {
+    lex = "minaccioso_JJ_01"
+  }
+}
+
+"title" {
+  //V4Design
+  //WebNLG
+  EL = {
+    lex = "τίτλος_NN_01"
+  }
+  EN = {
+    lex = "title_NN_01"
+  }
+  ES = {
+    lex = "título_NN_06"
+  }
+  PT = {
+    lex = "título_NN_01"
+  }
+}
+
+"top" {
+  //MindSpaces
+  CA = {
+    lex = "dalt_RB_01"
+  }
+  ES = {
+    lex = "arriba_RB_01"
+  }
+}
+
+"total_population" {
+  //WebNLG
+  ES = {
+    lex = "población_total_NN_01"
+   }
+}
+
+"tower" {
+  //V4Design
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "torre_NN_01"
+  }
+  DE = {
+    lex = "_NN_01"
+  }
+  EL = {
+    lex = "_NN_01"
+  }
+  EN = {
+    lex = "tower_NN_01"
+  }
+  ES = {
+    lex = "torre_NN_01"
+  }
+  IT = {
+    lex = "torre_NN_01"
+  }
+}
+
+"trade" {
+  //MindSpaces
+  CA = {
+    lex = "marca_comercial_NN_01"
+  }
+  ES = {
+    lex = "marca_comercial_NN_01"
+  }
+}
+
+"train" {
+  //MindSpaces
+  CA = {
+    lex = "tren_NN_01"
+  }
+  ES = {
+    lex = "tren_NN_01"
+  }
+}
+
+"train_station" {
+  //MindSpaces
+  CA = {
+    lex = "estació_de_tren_NN_01"
+  }
+  ES = {
+    lex = "estación_de_tren_NN_01"
+  }
+}
+
+"traffic" {
+  //beAWARE
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "trànsit_NN_01"
+  }
+  EN = {
+    lex = "traffic_NN_01"
+  }
+  ES = {
+    lex = "tráfico_NN_01"
+  }
+  IT = {
+    lex = "traffico_NN_01"
+  }
+}
+
+"traffic_jam" {
+  //beAWARE
+  //xR4DRAMA
+  EN = {
+    lex = "traffic_jam_NN_01"
+  }
+  EL = {
+    lex = "μποτιλιάρισμα_NN_01"
+    lex = "κίνηση_NN_01"
+  }
+ IT = {
+    lex = "ingorgo_NN_01"
+  }
+}
+
+"traffic_light" {
+  //MindSpaces
+  CA = {
+    lex = "semàfor_NN_01"
+  }
+  ES = {
+    lex = "semáforo_NN_01"
+  }
+}
+
+"traffic_sign" {
+  //MindSpaces
+  CA = {
+    lex = "senyal_de_trànsit_NN_01"
+  }
+  ES = {
+    lex = "señal_de_tráfico_NN_01"
+  }
+}
+
+"trap" {
+  //xR4DRAMA
+  EN = {
+    lex = "trap_VB_01"
+  }
+  IT = {
+    lex = "intrappolare_VB_01"
+  }
+}
+
+"trash-can" {
+  //MindSpaces
+  CA = {
+    lex = "paperera_NN_01"
+  }
+  ES = {
+    lex = "cubo_de_basura_NN_01"
+  }
+}
+
+"trapped" {
+  //xR4DRAMA
+  EN = {
+    lex = "trapped_JJ_01"
+  }
+  IT = {
+    lex = "intrappolato_JJ_01"
+  }
+}
+
+"tree" {
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "arbre_NN_01"
+  }
+  ES = {
+    lex = "árbol_NN_01"
+  }
+  EN = {
+    lex = "tree_NN_01"
+  }
+  IT = {
+    lex = "albero_NN_01"
+  }
+}
+
+
+"truck" {
+  //beAWARE
+  //MindSpaces
+  CA = {
+    lex = "camió_NN_01"
+  }
+  EN = {
+    lex = "truck_NN_01"
+  }
+  IT = {
+    lex = "camion_NN_01"
+  }
+  ES = {
+    lex = "camión_NN_01"
+  }
+}
+
+"trunk" {
+  //xR4DRAMA
+  EN = {
+    lex = "trunk_NN_01"
+  }
+  IT = {
+    lex = "tronco_NN_01"
+  }
+}
+
+"tundra" {
+  //MindSpaces
+  CA = {
+    lex = "tundra_NN_01"
+  }
+  ES = {
+    lex = "tundra_NN_01"
+  }
+}
+
+"tunnel" {
+  //MindSpaces
+  CA = {
+    lex = "túnel_NN_01"
+  }
+  ES = {
+    lex = "túnel_NN_01"
+  }
+}
+
+"undergraduate" {
+  //WebNLG
+  ES = {
+   lex = "de_grado_JJ_01"
+  }
+}
+
+"underpass" {
+  //xR4DRAMA
+  EN = {
+    lex = "underpass_NN_01"
+  }
+  IT = {
+    lex = "sottopasso_NN_01"
+    lex = "sottopassaggio_NN_01"
+  } 
+} 
+
+"uppercase" {
+  //CONNEXIONs
+  PT = {
+    lex = "maiúscula_NN_01"
+  }
+}
+
+"urban_park" {
+  //MindSpaces
+  CA = {
+    lex = "parc_NN_01"
+  }
+  ES = {
+    lex = "parque_NN_01"
+  }
+}
+
+"use" {
+  //WebNLG
+  EN = {
+    lex = "use_VB_01"
+  }
+  ES = {
+    lex = "utilizar_VB_01"
+  }
+  PT = {
+    lex = "usar_VB_01"
+  }
+}
+
+"UTF-8_hyphen" {
+  //CONNEXIONs
+  PT = {
+    lex = "hífen_UTF-8_NN_01"
+  }
+}
+
+"valley" {
+  //MindSpaces
+  CA = {
+    lex = "vall_NN_01"
+  }
+  ES = {
+    lex = "valle_NN_01"
+  }
+}
+
+"van" {
+  //MindSpaces
+  CA = {
+    lex = "furgoneta_NN_01"
+  }
+  ES = {
+    lex = "furgoneta_NN_01"
+  }
+}
+
+"vegetable_garden" {
+  //MindSpaces
+  CA = {
+    lex = "hort_NN_01"
+  }
+  ES = {
+    lex = "huerta_NN_01"
+  }
+}
+
+"vegetation" {
+  //MindSpaces
+  CA = {
+    lex = "vegetació_NN_01"
+  }
+  ES = {
+    lex = "vegetación_NN_01"
+  }
+}
+
+"venue" {
+  //beAWARE
+  EN = {
+    lex = "venue_NN_01"
+  }
+  EL = {
+    lex = "χώρος_NN_01"
+    lex = "αίθουσα_NN_01"
+  }
+}
+
+"very" {
+  //MindSpaces
+  CA = {
+    lex = "molt_RB_01"
+  }
+  ES = {
+    lex = "muy_RB_02"
+  }
+}
+
+"very_high" {
+  //MindSpaces
+  //CONNEXIONs
+  CA = {
+    lex = "molt_alt_JJ_01"
+  }
+  ES = {
+    lex = "muy_alto_JJ_01"
+  }
+  PT = {
+    lex = "muito_alto_JJ_01"
+  }
+}
+
+"very_low" {
+  //MindSpaces
+  //CONNEXIONs
+  CA = {
+    lex = "molt_baix_JJ_01"
+  }
+  ES = {
+    lex = "muy_bajo_JJ_01"
+  }
+  PT = {
+    lex = "muito_baixo_JJ_01"
+  }
+}
+
+"vehicle" {
+  //xR4DRAMA
+  EN = {
+    lex = "vehicle_NN_01"
+  }
+  ES = {
+    lex = "vehículo_NN_01"
+  }
+  IT = {
+    lex = "veicolo_NN_01"
+  }
+}
+
+"video" {
+  //V4Design
+  EL = {
+    lex = "βίντεο_NN_01"
+  }
+  EN = {
+    lex = "video_NN_01"
+  }
+  ES = {
+    lex = "vídeo_NN_01"
+  }
+}
+
+"violent" {
+  //xR4DRAMA
+  EN = {
+    lex = "violent_JJ_01"
+  }
+  IT = {
+    lex = "violento_JJ_01"
+  }
+}
+
+"vocabulary" {
+  //CONNEXIONs
+  PT = {
+    lex = "vocabulário_NN_01"
+  }
+}
+
+"voice" {
+  //WebNLG
+  ES = {
+    //lex = "doblar_VB_01"
+    lex = "interpretar_VB_01"
+  }
+}
+
+"volleyball_court" {
+  //MindSpaces
+  CA = {
+    lex = "pista_de_voleibol_NN_01"
+  }
+  ES = {
+    lex = "pista_de_vóleibol_NN_01"
+  }
+}
+
+"walk" {
+  //MindSpaces
+  CA = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "walk_VB_01"
+  }
+  ES = {
+    lex = "caminar_VB_01"
+  }
+}
+
+"wall" {
+  //MindSpaces
+  CA = {
+    lex = "paret_NN_01"
+  }
+  ES = {
+    lex = "pared_NN_01"
+  }
+}
+
+"warm_or_cold" {
+  //WebNLG
+  ES = {
+    lex = "caliente_o_frío_JJ_01"
+  }
+}
+
+"water" {
+  //beAWARE
+  //xR4DRAMA
+  //MindSpaces
+  CA = {
+    lex = "aigua_NN_01"
+  }
+  EN = {
+    lex = "water_NN_01"
+  }
+  ES = {
+    lex = "agua_NN_01"
+  }
+  IT = {
+    lex = "acqua_NN_01"
+  }
+}
+
+"way" {
+  //MindSpaces
+  CA = {
+    lex = "manera_NN_01"
+  }
+  ES = {
+    lex = "manera_NN_01"
+  }
+}
+
+"website" {
+  //WebNLG
+  ES = {
+    lex = "sitio_web_NN_01"
+  }
+}
+
+"welcome" {
+  //V4Design
+  DE = {
+    lex = "_VB_01"
+  }
+  EL = {
+    lex = "_VB_01"
+  }
+  EN = {
+    lex = "welcome_VB_01"
+  }
+  ES = {
+    lex = "_VB_01"
+  }
+}
+
+"well"{
+  //WebNLG
+  ES = {
+    lex = "muy_RB_02"
+  }
+}
+
+"wellbeing" {
+  //CONNEXIONs
+  PT = {
+    lex = "bem-estar_NN_01"
+  }
+}
+
+"west" {
+  //WebNLG
+  ES = {
+    lex = "oeste_NN_01"
+  }
+}
+
+"wh_adverb" {
+  //CONNEXIONs
+  PT = {
+    lex = "advérbio_interrogativo_NN_01"
+  }
+}
+
+"wh_determiner" {
+  //CONNEXIONs
+  PT = {
+    lex = "adjetivo_interrogativo_NN_01"
+  }
+}
+
+"wh_pronoun" {
+  //CONNEXIONs
+  PT = {
+    lex = "pronome_interrogativo_NN_01"
+  }
+}
+
+"wheelchairuser" {
+  //beAWARE
+  EN = {
+    lex = "wheelchair_user_NN_01"
+  }
+  ES = {
+    lex = "persona_en_silla_de_ruedas_NN_01"
+  }
+}
+
+"wheelchair user" {
+  //beAWARE
+  EN = {
+    lex = "wheelchair_user_NN_01"
+  }
+  ES = {
+    lex = "persona_en_silla_de_ruedas_NN_01"
+  }
+}
+
+"white" {
+  //MindSpaces
+  CA = {
+    lex = "blanc_JJ_01"
+  }
+  ES = {
+    lex = "blanco_JJ_01"
+  }
+}
+
+"width" {
+  //CONNEXIONs
+  PT = {
+    lex = "amplitude_NN_01"
+  }
+}
+
+"without" {
+  //xR4DRAMA
+  IT = {
+    lex = "senza_IN_01"
+  }
+}
+
+"wind" {
+  //beAWARE
+  //xR4DRAMA
+  ES = {
+    lex = "viento_NN_01"
+  }
+  IT = {
+    lex = "vento_NN_01"
+  }
+}
+
+"windmill" {
+  //MindSpaces
+  CA = {
+    lex = "molí_de_vent_NN_01"
+  }
+  ES = {
+    lex = "molino_de_viento_NN_01"
+  }
+}
+
+"windowpane" {
+  //MindSpaces
+  CA = {
+    lex = "finestra_NN_01"
+  }
+  ES = {
+    lex = "ventana_NN_01"
+  }
+}
+
+"word" {
+  //CONNEXIONs
+  PT = {
+    lex = "palavra_NN_01"
+  }
+}
+
+"word_length" {
+  //CONNEXIONs
+  PT = {
+    lex = "comprimento_das_palavras_NN_01"
+  }
+}
+
+"write" {
+  //WebNLG
+  ES = {
+    lex = "escribir_VB_02"
+  }
+}
+
+"yellow" {
+  //MindSpaces
+  CA = {
+    lex = "groc_JJ_01"
+  }
+  ES = {
+    lex = "amarillo_JJ_01"
+  }
+}
+
+"youthclub" {
+  //WebNLG
+  ES = {
+    lex = "club_juvenil_NN_01"
+  }
+}
+
+"zen_garden" {
+  //MindSpaces
+  CA = {
+    lex = "jardí_zen_NN_01"
+  }
+  ES = {
+    lex = "jardín_zen_NN_01"
+  }
+}
+
+/*
+===================
+  META NODES (keep separate in semanticon for now)
+===================
+*/
+
+//concepts used in the PTB (Locative and Temporal not included, given that we'll manage them through rules).
+
+
+"accompaniment" {
+  fnframe = "Accompaniment"
+  lex = "with_IN_01"
+  EN = {
+    lex = "with_IN_01"
+  }
+}
+
+"approximate_measurement":"relational_quantity" {
+  lex = "about_IN_01"
+  lex = "around_IN_01"
+  lex = "circa_IN_01"
+  EN = {
+    lex = "about_IN_01"
+  }
+}
+
+//should "support" below merge with this entry?
+"benefactive" {
+  lex = "for_IN_01"
+  EN = {
+    lex = "for_IN_01"
+  }
+}
+
+"causation" {
+  fnframe = "Causation"
+  lex = "because_IN_01"
+  lex = "for_IN_01"
+  lex = "since_IN_01"
+  EN = {
+    lex = "because_IN_01"
+  }
+}
+
+
+"concessive" {
+  fnframe = "Concessive"
+  //lex = "although_IN_01"
+  lex = "but_IN_01"
+  lex = "despite_IN_01"
+  EN = {
+    lex = "although_IN_01"
+  }
+}
+
+
+"direction" {
+  lex = ""
+}
+
+"dissimilarity" {
+  fnframe = "Similarity"
+  lex = "unlike_IN_01"
+  EN = {
+    lex = "unlike_IN_01"
+  }
+}
+
+"evidence" {
+  fnframe = "Evidence"
+  lex = "from_IN_01"
+  EN = {
+    lex = "from_IN_01"
+  }
+}
+
+"exclusion" {
+  fnframe = "Inclusion"
+  lex = "excluding_IN_01"
+  EN = {
+    lex = "excluding_IN_01"
+  }
+}
+
+"extent" {
+  lex = ""
+}
+
+"inclusion" {
+  fnframe = "Inclusion"
+  lex = "among_IN_01"
+  EN = {
+    lex = "among_IN_01"
+  }
+}
+
+"inferior_measurement":"relational_quantity" {
+  lex = "under_IN_01"
+  EN = {
+    lex = "under_IN_01"
+  }
+}
+
+"manner" {
+  lex = "as_IN_01"
+  EN = {
+    lex = "as_IN_01"
+  }
+}
+
+"means" {
+  fnframe = "Means"
+  lex = "by_IN_01"
+  lex = "on_IN_01"
+  EN = {
+    lex = "by_IN_01"
+  }
+}
+
+"origin" {
+  //MindSpaces
+  fnframe = "Origin"
+  lex = "from_IN_01"
+  lex = "of_IN_01"
+  CA = {
+    lex = "des_IN_01"
+  }
+  EN = {
+    lex = "from_IN_01"
+  }
+  ES = {
+    lex = "desde_IN_01"
+  }
+}
+
+"partitive" {
+  fnframe = "Partitive"
+  lex = "of_IN_01"
+  EN = {
+    lex = "of_IN_01"
+  }
+}
+
+"possession" {
+  fnframe = "Possession"
+  lex = "of_IN_01"
+  sem = "possession"
+  lex = "whose_WP$_01"
+  EN = {
+    lex = "of_IN_01"
+  }
+}
+
+
+"purpose" {
+  lex = "for_IN_01"
+  lex = "into_IN_01"
+  lex = "to_IN_01"
+  EN = {
+    lex = "for_IN_01"
+  }
+}
+
+"relational_quantity" {
+  sem = "relational_quantity"
+  fnframe = "Relational_quantity"
+}
+
+"similarity" {
+  //V4Design
+  fnframe = "Similarity"
+  lex = "like_IN_01"
+  EN = {
+    lex = "like_IN_01"
+  }
+  ES = {
+    lex = "como_IN_01"
+  }
+}
+
+"superior_measurement":"relational_quantity" {
+  lex = "over_IN_01"
+  EN = {
+    lex = "over_IN_01"
+  }
+}
+
+"support" {
+  fnframe = "Taking_sides"
+  lex = "pro_IN_01"
+  EN = {
+    lex = "pro_IN_01"
+  }
+}
+
+"topic" {
+  fnframe = "Topic"
+  lex = "about_IN_01"
+  lex = "concerning_IN_01"
+  lex = "in_IN_01"
+  lex = "on_IN_01"
+  lex = "regarding_IN_01"
+  lex = "upon_IN_01"
+  EN = {
+    lex = "about_IN_01"
+  }
+}
+
+"unsupport" {
+  fnframe = "Taking_sides"
+  lex = "against_IN_01"
+  EN = {
+    lex = "against_IN_01"
+  }
+}
+
+
+
+
+/*
+================
+  LOCATION-TIME
+================
+*/
+
+
+"anteriority_location":"locative_relation" {
+  lex = "before_IN_01"
+  lex = "into_IN_01"
+  lex = "to_IN_01"
+  EN = {
+    lex = "before_IN_01"
+  }
+}
+
+"anteriority_time":"temporal_relation" {
+  lex = "before_IN_01"
+  lex = "by_IN_01"
+  lex = "prior_IN_01"
+  lex = "until_IN_01"
+  EN = {
+    lex = "before_IN_01"
+  }
+}
+
+"duration":"temporal_relation" {
+  lex = "for_IN_01"
+  lex = "over_IN_01"
+  EN = {
+    lex = "for_IN_01"
+  }
+}
+
+"end_time":"temporal_relation" {
+  lex = "until_IN_01"
+  EN = {
+    lex = "until_IN_01"
+  }
+}
+
+"extent_location":"locative_relation" {
+  lex = "within_IN_01"
+  EN = {
+    lex = "within_IN_01"
+  }
+}
+
+"extent_time":"temporal_relation" {
+  lex = "as_IN_01"
+  lex = "during_IN_01"
+  lex = "while_RB_01"
+  EN = {
+    lex = "during_IN_01"
+  }
+}
+
+"frequency":"temporal_relation" {
+  lex = "time_NN_01"
+  EN = {
+    lex = "time_NN_01"
+  }
+}
+
+"locative_relation" {
+  sem = "locative_relation"
+  fnframe = "Locative_relation"
+  EN = {
+    lex = "in_IN_01"
+  }
+  IT = {
+    lex = "in_IN_01"
+  }
+}
+
+"point_location":"locative_relation" {
+  //V4Design
+  lex = "above_IN_01"
+  lex = "against_IN_01"
+  lex = "amid_IN_01"
+  lex = "among_IN_01"
+  lex = "around_IN_01"
+  lex = "at_IN_01"
+  lex = "behind_IN_01"
+  lex = "below_IN_01"
+  lex = "beneath_IN_01"
+  lex = "beside_IN_01"
+  lex = "by_IN_01"
+  lex = "down_IN_01"
+  lex = "in_IN_01"
+  lex = "inside_IN_01"
+  lex = "near_IN_01"
+  lex = "off_IN_01"
+  lex = "opposite_IN_01"
+  lex = "on_IN_01"
+  lex = "under_IN_01"
+  lex = "underneath_IN_01"
+  lex = "up_IN_01"
+  lex = "upon_IN_01"
+  //lex = "within_IN_01"
+  lex = "where_WRB_01"
+  EN = {
+    lex = "near_IN_01"
+  }
+  ES = {
+    lex = "cerca_IN_01"
+  }
+}
+
+"point_location_on":"locative_relation" {
+  //V4Design
+  lex = "on_IN_01"
+  lex = "up_IN_01"
+  lex = "upon_IN_01"
+  EN = {
+    lex = "on_IN_01"
+  }
+  ES = {
+    lex = "sobre_IN_01"
+  }
+  IT = {
+    lex = "su_IN_01"
+  }
+}
+
+"point_time":"temporal_relation" {
+  lex = "around_IN_01"
+  lex = "at_IN_01"
+  lex = "near_IN_01"
+  lex = "on_IN_01"
+  lex = "when_WRB_01"
+  EN = {
+    lex = "in_IN_01"
+  }
+}
+
+"point_time_year":"temporal_relation" {
+  lex = "in_IN_01"
+  EN = {
+    lex = "in_IN_01"
+  }
+}
+
+"point_time_date":"temporal_relation" {
+  lex = "on_IN_01"
+  EN = {
+    lex = "on_IN_01"
+  }
+}
+
+//"posteriority_location":"locative_relation" {
+//  lex = "after_IN_01"
+//  lex = "beyond_IN_01"
+//  lex = "from_IN_01"
+//  lex = "past_IN_01"
+//  EN = {
+//    lex = "after_IN_01"
+//  }
+//}
+
+"posteriority_time":"temporal_relation" {
+  lex = "after_IN_01"
+  lex = "beyond_IN_01"
+  lex = "from_IN_01"
+  lex = "past_IN_01"
+  lex = "since_IN_01"
+  EN = {
+    lex = "after_IN_01"
+  }
+}
+
+"range_location":"locative_relation" {
+  lex = "between_IN_01"
+  lex = "throughout_IN_01"
+  EN = {
+    lex = "between_IN_01"
+  }
+}
+
+"range_time":"temporal_relation" {
+  lex = "between_IN_01"
+  lex = "in_IN_01"
+  lex = "throughout_IN_01"
+  lex = "within_IN_01"
+  EN = {
+    lex = "between_IN_01"
+  }
+}
+
+"temporal_relation" {
+  sem = "temporal_relation"
+  fnframe = "Time_vector"
+  EN = {
+    lex = "in_IN_01"
+  }
+}
+
+"trajectory_location":"locative_relation" {
+  lex = "across_IN_01"
+  lex = "along_IN_01"
+  lex = "athwart_IN_01"
+  lex = "throughout_IN_01"
+  EN = {
+    lex = "across_IN_01"
+  }
+}
+
+"trajectory_time":"temporal_relation" {
+  lex = "through_IN_01"
+  EN = {
+    lex = "through_IN_01"
+  }
+}
+
+months {
+  "1" = {
+    lex = "January"
+  }
+  "2" = {
+    lex = "February"
+  }
+  "3" = {
+    lex = "March"
+  }
+  "4" = {
+    lex = "April"
+  }
+  "5" = {
+    lex = "May"
+  }
+  "6" = {
+    lex = "June"
+  }
+  "7" = {
+    lex = "July"
+  }
+  "8" = {
+    lex = "August"
+  }
+  "9" = {
+    lex = "September"
+  }
+  "10" = {
+    lex = "October"
+  }
+  "11" = {
+    lex = "November"
+  }
+  "12" = {
+    lex = "December"
+  }
+}
+
+/*
+===============
+   RELATIONS
+===============
+*/
+
+//I'm taking the most common values (from the verbneticon) for the mapping of each relation
+//relations from verbnet (which means that they can be applied to verbs)
+dependencies_default_map {
+  Actor = {}
+  Agent = {
+    rel = A1
+  }
+  Asset = {
+    rel = A1
+  }
+  Attribute = {
+    rel = A2
+  }
+  Beneficiary = {
+    rel = A4
+  }
+  Cause = {
+    rel = A0
+  }
+  Co_Agent = {
+    rel = A1
+  }
+  Co_Patient = {
+    rel = A2
+  }
+  Co_Theme = {
+    rel = A2
+  }
+  Destination = {
+    rel = A2
+  }
+  Duration = {}
+  Experiencer = {
+    rel = A0
+  }
+  Extent = {
+    rel = A2
+  }
+  Final_Time = {}
+  Frequency = {}
+  Goal = {
+    rel = A2
+  }
+  Initial_Location = {
+    rel = A2
+  }
+  Initial_Time = {}
+  Instrument = {
+    rel = A2
+  }
+  Location = {
+    rel = A2
+  }
+  Material = {
+    rel = A1
+  }
+  Participant = {}
+  Patient = {
+    rel = A2
+  }
+  Pivot = {
+    rel = A0
+  }
+  Place = {}
+  Predicate = {}
+  Product = {
+    rel = A3
+  }
+  Recipient = {
+    rel = A2
+  }
+  Reflexive = {}
+  Result = {
+    rel = A4
+  }
+  Source = {
+    rel = A0
+  }
+  Stimulus = {
+    rel = A1
+  }
+  Theme = {
+    rel = A1
+  }
+  Time = {}
+  Topic = {}
+  Trajectory = {
+    rel = A1
+  }
+  Undergoer = {}
+  Value = {
+    rel = A2
+  }
+}
+
+}

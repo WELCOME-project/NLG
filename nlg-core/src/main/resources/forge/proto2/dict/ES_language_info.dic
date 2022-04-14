@@ -1,0 +1,32 @@
+// Language information on ENGLISH (ENG)
+// François Lareau
+
+language {
+
+id {
+  name = spanish
+  iso = ES
+}
+
+syntax {
+  pronominalize = yes
+  pro_drop = yes
+  verbform=analytic
+}
+
+writing {
+  system = latin
+  order = left_to_right
+}
+/*
+agreement{
+  NV = {
+    subject = {
+      number = yes
+      person = yes
+         }
+  }
+}
+*/
+
+}

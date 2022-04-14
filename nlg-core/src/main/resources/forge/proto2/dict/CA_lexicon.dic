@@ -1,0 +1,4067 @@
+lexicon {
+
+  //===========================
+  //      GENERIC ENTRIES
+  //===========================
+  _predicate_ {
+    attribute = value
+  }
+
+  _predicateNoExtArg_:_predicate_ {
+    gp = {
+      A1 = I
+      A2 = II
+      A3 = III
+      A4 = IV
+      A5 = V
+      A6 = VI
+      A7 = VII
+      A8 = VIII
+      A9 = IX
+      A10 = X
+      NAME = NAME
+    }
+  }
+
+  _predicateExtArg_:_predicate_ {
+    gp = {
+      A0 = I
+      A1 = II
+      A2 = III
+      A3 = IV
+      A4 = VI
+      A5 = VI
+      A6 = VII
+      A7 = VIII
+      A8 = IX
+      A9 = X
+      A10 = XI
+      NAME = NAME
+    }
+  }
+
+//===================================
+
+  _adjective_without_Oper1_:_predicate_ {
+    invariant = yes
+    gp = {
+      A1 = ATTR
+      A2 = II
+      ATTR = {
+        dpos = N
+      }
+      gov = {
+        dpos = N
+      }
+    }
+    Magn = muy
+    AntiMagn = poco
+  }
+
+  _adverb_:_predicate_ {
+    pos = "RB"
+    dpos = Adv
+    spos = "adverb"
+    invariant = yes
+    gp = {
+      A1 = APPEND
+      A1 = ATTR
+    }
+  }
+
+  _adjective_:_adjective_without_Oper1_ {
+    pos = "JJ"
+    dpos = A
+    spos = "adjective"
+    Oper1 = "ser_VB_01"
+  }
+
+  _participle_:_adjective_ {
+    Oper1 = "estar_VB_01"
+  }
+
+  _cardinal_number_:_adjective_ {
+    pos = "CD"
+    spos = number
+  }
+
+  _conjunction_:_adverb_ {
+    pos = "IN"
+    spos = "conjunction"
+    gp = {
+      A2 = II
+      ATTR = {
+        dpos = V
+      }
+      II = {
+        dpos = V
+        rel = sub_conj
+      }
+    }
+  }
+
+  _coordination_:_adverb_ {
+    pos = "CC"
+    spos = "coord_conjunction"
+    gp = {
+      A1 = COORD
+      A2 = II
+      "A1" = COORD
+      "A2" = II
+      I = {
+        rel = coord
+      }
+      II = {
+        rel = coord_conj
+      }
+    }
+  }
+
+  _determiner_:_adjective_without_Oper1_ {
+    pos = "DT"
+    spos = "determiner"
+  }
+
+  _interjection_:_predicate_ {
+    pos = "UH"
+    dpos = Adv
+    spos = "interjection"
+    invariant = yes
+  }
+
+  _interrogative_pronoun_:_pronoun_ {
+    pos = "WP"
+    spos = "interrogative_pronoun"
+    invariant = yes
+  }
+
+  _noun_:_predicateNoExtArg_ {
+    pos = "NN"
+    dpos = N
+    spos = "noun"
+    Locin = "en_IN_01"
+    gp = {
+      I = {
+        dpos = N
+        rel = obl_compl
+      }
+      II = {
+        dpos = N
+        rel = obl_compl
+      }
+      III = {
+        dpos = N
+        rel = obl_compl
+      }
+      IV = {
+        dpos = N
+        rel = obl_compl
+      }
+    }
+  }
+
+  _nounExtArg_:_predicateExtArg_ {
+    pos = "NN"
+    dpos = N
+    spos = "noun"
+    Locin = "en_IN_01"
+    gp = {
+      I = {
+        dpos = N
+        rel = obl_compl
+      }
+      II = {
+        dpos = N
+        rel = obl_compl
+      }
+      III = {
+        dpos = N
+        rel = obl_compl
+      }
+      IV = {
+        dpos = N
+        rel = obl_compl
+      }
+    }
+  }
+
+  _numeral_:_adjective_without_Oper1_ {
+    pos = NUM
+    spos = "numeral"
+  }
+
+  _possesive_:_adjective_without_Oper1_ {
+    pos = DT
+    spos = "possessive"
+  }
+
+  _preposition_:_adverb_ {
+    spos = "preposition"
+    pos = "IN"
+    gp = {
+      A2 = II
+      II = {
+        rel = prepos
+      }
+    }
+    Oper1 = "estar_VB_01"
+  }
+
+  _pronoun_:_noun_ {
+    pos = "PP"
+    spos = "pronoun"
+    invariant = yes
+  }
+
+  _proper_noun_:_noun_ {
+    pos = "NP"
+    spos = proper_noun
+}
+
+  _relative_pronoun_:_pronoun_ {
+    pos = "WDT"
+    spos = "relative_pronoun"
+    invariant = yes
+  }
+
+  _verb_:_predicateNoExtArg_ {
+    pos = "VB"
+    dpos = V
+    spos = "verb"
+    aux_pass = "ser_VB_01"
+    gp = {
+      I = {
+        dpos = N
+        rel = subj
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = FIN
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = INF
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = GER
+      }
+    }
+  }
+
+  _verbExtArg_:_predicateExtArg_ {
+    pos = "VB"
+    dpos = V
+    spos = "verb"
+    aux_pass = "ser_VB_01"
+    gp = {
+      I = {
+        dpos = N
+        rel = subj
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = FIN
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = INF
+      }
+      I = {
+        dpos = V
+        rel = subj
+        finiteness = GER
+      }
+    }
+  }
+  _reflexive_pronoun_:_noun_ {
+    invariant = yes
+    spos = reflexive_pronoun
+    lemma = "es"
+    rel = aux_refl
+  }
+
+//==============================================================================================================================================
+//                 DEPENDENCIES
+//==============================================================================================================================================
+
+dependencies {
+  abbrev = ATTR
+  abs_pred = ATTR
+  adjunct = ATTR
+  adv = ATTR
+  adv_mod = ATTR
+  agent = I
+  appos = ATTR
+  appos_descr = ATTR
+  attr = ATTR
+  attr_descr = ATTR
+  aux_refl_dir = II
+  aux_refl_indir = III
+  bin_junct = ATTR
+  compar = II
+  compar_conj = II
+  compl1 = II
+  compl2 = III
+  compl_adnom = ATTR
+  coord = COORD
+  coord_conj = II
+  copul = II
+  copul_clitic = II
+  copul_quot = II
+  det = ATTR
+  dobj = II
+  dobj_clitic = II
+  dobj_quot = II
+  elect = ATTR
+  iobj = III
+  iobj_clitic = III
+  juxtapos = APPEND
+  modal = II
+  modif = ATTR
+  modif_descr = ATTR
+  num_junct = ATTR
+  obl_compl = II
+  obj_copred = ATTR
+  obl_obj = II
+  prepos = II
+  prepos_quot = II
+  prolep = ATTR
+  quant = ATTR
+  quant_descr = ATTR
+  quasi_coord = COORD
+  quasi_subj = I
+  relat = ATTR
+  relat_descr = ATTR
+  relat_expl = ATTR
+  restr = ATTR
+  sequent = ATTR
+  subj = I
+  subj_copred = ATTR
+  subj_quot = I
+  sub_conj = II
+}
+
+
+
+  //===========================
+  //	    MISC
+  //===========================
+  dependencies_default_map {
+    APPEND = {
+      rel = adjunct
+      rel = prolep
+      rel = relat_expl
+    }
+    ATTR = {
+      rel = abbrev
+      rel = abs_pred
+      rel = adv
+      rel = adv_mod
+      rel = attr
+      rel = appos
+      rel = aux_refl
+      rel = bin_junct
+      rel = det
+      rel = modif
+      rel = obj_copred
+      rel = quant
+      rel = relat
+      rel = restr
+      rel = sequent
+      rel = subj_copred
+    }
+    COORD = {
+      rel = coord
+      rel = juxtapos
+      rel = num_junct
+      rel = quasi_coord
+    }
+    I = {
+      rel = quasi_subj
+      rel = subj
+    }
+    II = {
+      rel = agent
+      rel = compar
+      rel = compl
+      rel = compl1
+      rel = conj
+      rel = coord_conj
+      rel = copul
+      rel = copul_clitic
+      rel = dobj
+      rel = dobj_clitic
+      rel = elect
+      rel = obl_obj
+      rel = prepos
+      rel = sub_conj
+    }
+    III = {
+      rel = iobj
+      rel = compl2
+    }
+    NAME = {
+      rel = aux_phras
+    }
+    ROOT = {
+      rel = ROOT
+    }
+  }
+
+  miscellaneous {
+    determiners = {
+      "INDEF" = "un_DT_01"
+      "DEF" = "el_DT_01"
+      "GEN" = "seu_PRP$_01"
+      "GEN" = "teu_PRP$_01"
+      "GEN" = "meu_PRP$_01"
+      "GEN" = "nostre_PRP$_01"
+      "GEN" = "vostre_PRP$_01"
+      "GEN_3_NEU_SG" = "seu"
+    }
+    relative_pronouns = {
+      human = {
+        subj = "que_WP_01"
+        dobj = "que_WP_01"
+        obl_compl = ""
+        prepos = "qual_WP_01"
+      }
+      non_human = {
+        subj = "que_WDT_01"
+        dobj = "que_WDT_01"
+        obl_compl = ""
+        prepos = "qual_WP_01"
+      }
+    }
+    locative_pronoun = {
+      adv = "allà"
+      copul = "allà"
+      obl_obj = "allà"
+      attr = "allà"
+    }
+    time_pronoun = {
+      adv = "aleshores"
+      obl_obj = "aleshores"
+      attr = "aleshores"
+    }
+    comparative = {
+      lex = "més_RB_01"
+    }
+    personal_pronouns = {
+      human = {
+        "SG" = {
+          "FEM" = {
+            dobj = "la"
+            iobj = "li"
+            prepos = "ella"
+          }
+          "MASC" = {
+            dobj = "ho"
+            iobj = "li"
+            prepos = "ell"
+          }
+        }
+        "PL" = {
+          "FEM" = {
+            dobj = "les"
+            iobj = "els"
+            prepos = "ellas"
+          }
+          "MASC" = {
+            dobj = "hos"
+            iobj = "els"
+            prepos = "ells"
+          }
+        }
+      }
+      non_human = {
+        "SG" = {
+          "FEM" = {
+            dobj = "la"
+            iobj = "li"
+            prepos = "ella"
+          }
+          "MASC" = {
+            dobj = "ho"
+            iobj = "li"
+            prepos = "ell"
+          }
+        }
+        "PL" = {
+          "FEM" = {
+            dobj = "les"
+            iobj = "els"
+            prepos = "ellas"
+          }
+          "MASC" = {
+            dobj = "lo"
+            iobj = "els"
+            prepos = "ells"
+          }
+        }
+      }
+      correspondences = {
+        "jo" = {
+          ACC = "em"
+          DAT = "em"
+        }
+        "tu" = {
+          ACC = "et"
+          DAT = "et"
+        }
+        "ell" = {
+          ACC = "ho"
+          DAT = "se"
+        }
+        "ella" = {
+          ACC = "la"
+          DAT = "se"
+        }
+        "nosaltres" = {
+          ACC = "ens"
+          DAT = "ens"
+        }
+        "vosaltres" = {
+          ACC = "us"
+          DAT = "us"
+        }
+        "ellos" = {
+          ACC = "els"
+          DAT = "se"
+        }
+      }
+    }
+    conjunction = {
+      "coordination" = "i_CC_01"
+      "disjunction" = "o_CC_01"
+      coord_rel = coord
+      coord_conj_rel = coord_conj
+    }
+
+    support_verb = {
+      Oper1 = "ser_VB_01"
+      Oper2 = "tenir_VB_01"
+      "locative_relation" = "estar_VB_01"
+      "temporal_relation" = "ser_VB_01"
+    }
+  }
+
+  modality {
+    "EPI" = {
+      "PSB" = "poder_VB_01"
+      "NCS" = "deure_VB_01"
+      "??" = "poder_VB_01"
+    }
+    "DEO" = {
+      "PSB" = "poder_VB_01"
+      "NCS" = "deure_VB_01"
+      "??" = "deure_VB_01"
+    }
+    "DYN" = {
+      "PSB" = "poder_VB_01"
+      "??" = "poder_VB_01"
+    }
+    "EPI/DEO" = {
+      "PSB" = "poder_VB_01"
+      "NCS" = "deure_VB_01"
+    }
+    "DEO/DYN" = {
+      "PSB" = "poder_VB_01"
+    }
+    "EPI/DYN" = {
+      "??" = "poder_VB_01"
+    }
+  }
+
+  postags {
+    "JJ" = {
+      pos = "JJ"
+    }
+    "JJR" = {
+      pos = "JJ"
+      comparative = "COMP"
+    }
+    "JJS" = {
+      pos = "JJ"
+      comparative = "SUP"
+    }
+    "RB" = {
+      pos = "JJ"
+    }
+    "RBR" = {
+      pos = "RB"
+      comparative = "COMP"
+    }
+    "RBS" = {
+      pos = "RB"
+      comparative = "SUP"
+    }
+    "NNS" = {
+      number = "PL"
+      pos = "NN"
+    }
+    "NN" = {
+      number = "SG"
+      pos = "NN"
+    }
+    "NNS" = {
+      number = "PL"
+      pos = "NN"
+    }
+    "NNP" = {
+      number = "SG"
+      pos = "NN"
+    }
+    "NNPS" = {
+      number = "PL"
+      pos = "NN"
+    }
+    "MD" = {
+      finiteness = "FIN"
+    }
+    "VB" = {
+      finiteness = "INF"
+      pos = "VB"
+    }
+    "VBD" = {
+      finiteness = "FIN"
+      tense = "PAST"
+      pos = "VB"
+    }
+    "VBG" = {
+      finiteness = "GER"
+      pos = "VB"
+    }
+    "VBN" = {
+      finiteness = "PART"
+      pos = "VB"
+    }
+    "VBP" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      pos = "VB"
+    }
+    "VBZ" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      person = "3"
+      pos = "VB"
+    }
+    "VD" = {
+      finiteness = "INF"
+      pos = "VB"
+    }
+    "VDD" = {
+      finiteness = "FIN"
+      tense = "PAST"
+      pos = "VB"
+    }
+    "VDG" = {
+      finiteness = "GER"
+      pos = "VB"
+    }
+    "VDN" = {
+      finiteness = "PART"
+      pos = "VB"
+    }
+    "VDP" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      pos = "VB"
+    }
+    "VDZ" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      person = "3"
+      pos = "VB"
+    }
+    "VH" = {
+      finiteness = "INF"
+      pos = "VB"
+    }
+    "VHD" = {
+      finiteness = "FIN"
+      tense = "PAST"
+      pos = "VB"
+    }
+    "VHG" = {
+      finiteness = "GER"
+      pos = "VB"
+    }
+    "VHN" = {
+      finiteness = "PART"
+      pos = "VB"
+    }
+    "VHP" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      pos = "VB"
+    }
+    "VHZ" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      person = "3"
+      pos = "VB"
+    }
+    "VV" = {
+      finiteness = "INF"
+      pos = "VB"
+    }
+    "VVD" = {
+      finiteness = "FIN"
+      tense = "PAST"
+      pos = "VB"
+    }
+    "VVG" = {
+      finiteness = "GER"
+      pos = "VB"
+    }
+    "VVN" = {
+      finiteness = "PART"
+      pos = "VB"
+    }
+    "VVP" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      pos = "VB"
+    }
+    "VVZ" = {
+      finiteness = "FIN"
+      tense = "PRES"
+      person = "3"
+      pos = "VB"
+    }
+  }
+
+  test_map {
+    adv = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+    }
+//    adjunct = {
+//      default = {
+//        dsyntRel = ATTR
+//        orderV = {
+//          lin = POST
+//          mobile = yes
+//        }
+//      }
+//    }
+    agent = {
+      default = {
+        dsyntRel = I
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+    }
+    analyt_fut = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    analyt_pass = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    analyt_perf = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    analyt_progr = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    appos = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    attr = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    aux_phras = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    aux_refl = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = PRE
+          mobile = no
+        }
+      }
+      "INF" = {
+        default = {
+          dsyntRel = "--"
+          orderV = {
+            lin = POST
+            mobile = no
+          }
+        }
+      }
+    }
+    compar = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = PRE
+          mobile = no
+        }
+      }
+    }
+    conj = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    coord = {
+      default = {
+        dsyntRel = COORD
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    coord_conj = {
+      default = {
+        dsyntRel = II
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    copul = {
+      default = {
+        dsyntRel = II
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+      "PP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WDT" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+    det = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = PRE
+          mobile = no
+        }
+      }
+    }
+    dobj = {
+      default = {
+        dsyntRel = II
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+      "WDT" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "PP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+  iobj = {
+      default = {
+        dsyntRel = III
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+      "PP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+    modal = {
+      default = {
+        dsyntRel = "--"
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    modif = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    obl_compl = {
+      default = {
+        dsyntRel = II
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+      "WP$" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WDT" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "PP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+    obl_obj = {
+      default = {
+        dsyntRel = II
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+      "DT" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+    prepos = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    quant = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = PRE
+          mobile = no
+        }
+      }
+    }
+    quasi_subj = {
+      default = {
+        dsyntRel = I
+        orderV = {
+          lin = POST
+          mobile = yes
+        }
+      }
+    }
+    relat = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    sub_conj = {
+      default = {
+        dsyntRel = ATTR
+        orderV = {
+          lin = POST
+          mobile = no
+        }
+      }
+    }
+    subj = {
+      default = {
+        dsyntRel = I
+        orderV = {
+          lin = PRE
+          mobile = yes
+        }
+      }
+      "WDT" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+      "WP" = {
+        default = {
+          dsyntRel = II
+          orderV = {
+            lin = PRE
+            mobile = no
+          }
+        }
+      }
+    }
+  }
+
+
+
+//==============LEXICAL ENTRIES====================
+
+"%_NN_01":_noun_ {
+    project = "MindSpaces"
+    invariant = yes
+    lemma = "%"
+    number = "SG"
+    gp = {
+      A1 = I
+      A2 = II
+      I = {}
+      II = { prep = "de" }
+    }
+    definiteness = "no"
+  }
+
+
+//================A=================
+
+
+"[arousal]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[arousal]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[change[roomParameter]]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[change[roomParameter]]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[colour]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[colour]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[colourfulnessContribution]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[colourfulnessContribution]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[colourWall]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[colourWall]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[height]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[height]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[light]_NN_01":_noun_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[light]"
+  gp = {
+    I = {}
+  }
+}
+
+"[overallColourfulness]_RB_01":_adverb_ {
+  project = "MindSpaces"
+  lemma = "[overallColourfulness]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[overallImageability]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[overallImageability]"
+  gp = {
+    A1 = ATTR
+    A2 = II
+    I = {}
+    II = { prep = "sobre" }
+  }
+}
+
+"[roomParameter]_NN_01":_noun_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[roomParameter]"
+  gp = {
+    A1 = I
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"[segment]_NN_01":_noun_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[segment]"
+}
+
+"[segmentColourfulness]_RB_01":_adverb_ {
+  project = "MindSpaces"
+  lemma = "[segmentColourfulness]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[segmentImageability]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[segmentImageability]"
+  gp = {
+    A1 = ATTR
+    A2 = II
+    I = {}
+    II = { prep = "sobre" }
+  }
+}
+
+"[segmentPercentage]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[segmentPercentage]"
+  gp = {
+    A1 = ATTR
+  }
+  anteposed = yes
+}
+
+"[shape]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  lemma = "[shape]"
+  gp = {
+    I = {}
+  }
+}
+
+"[state[confidence]]_NN_01":_noun_ {
+  project = "MindSpaces"
+  lemma = "[state[confidence]]"
+  gp = {
+    I = {}
+  }
+}
+
+"[valence]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[valence]"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"[vergeImageability]_JJ_01":_adjective_ {
+  project = "MindSpaces"
+  Oper1 = "ser_VB_01"
+  lemma = "[vergeImageability]"
+  gp = {
+    A1 = ATTR
+    A2 = II
+    I = {}
+  }
+}
+
+"a_IN_01":_preposition_ {
+  entryId = "2004171200"
+  lemma = "a"
+  lex_ENG = "at_IN_01"
+}
+
+"a_vegades_RB_01":_adverb_ {
+  entryId = "2004171203"
+  bn = "bn:00117070r"
+  lemma = "a vegades"
+  lex_ENG = "sometimes_RB_01"
+}
+
+"abocador_NN_01":_noun_ {
+   noun_root = "abocador"
+   noun_group = "REG"
+   entryId = "2203242339"
+   lemma = "abocador"
+   }
+
+"aigua_NN_01":_noun_ {
+    entryId = "2203041800"
+    bn = "bn:00042379n"
+    lemma = "aigua"
+    gender = "FEM"
+    startswith = vowel
+  }
+
+"alegria_NN_01":_noun_ {
+  noun_root = "alegri"
+  noun_group = "a"
+  entryId = "2004171207"
+  lemma = "alegria"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"alt_JJ_01":_adjective_ {
+  adj_root = "alt"
+  adj_group = "CON"
+  entryId = "2004171208"
+  lemma = "alt"
+  bn = "bn:00104162a"
+  lex_ENG = "high_JJ_01"
+}
+
+"alçada_NN_01":_noun_ {
+  noun_root = "alçad"
+  noun_group = "a"
+    entryId = "2004171301"
+    lemma = "alçada"
+    gender = "FEM"
+    // countable = "no"
+    // measurable = "yes"
+    Oper2 = "tenir_VB_01"
+    gp = {
+      A1 = I
+      A2 = II
+      I = {
+        prep = "de"
+        pos = "NN"
+      }
+      II = {
+        prep = "de"
+        pos = "NN"
+      }
+    }
+    lex_ENG = "height_NN_01"
+  startswith = vowel
+  }
+
+"anàlisi_NN_01":_nounExtArg_ {
+  noun_root = "anàlisi"
+  noun_group = "REG"
+  entryId = "2202161327"
+  lemma = "anàlisi"
+  gender = "FEM"
+  Eng_tr = "analysis"
+  lex_ENG = "analysis_NN_01"
+  gp = {
+    A0 = I
+    A1 = II
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "de"
+    }
+  }
+  startswith = vowel
+}
+
+"anar_VB_01":_verb_{
+// used as auxiliary to conjugate verbs in the past
+  entryId = "2203011037"
+  lemma = "anar"
+  gp = {
+    I = {}
+    II = {}
+  }
+}
+
+  "amfiteatre_NN_01":_noun_ {
+    noun_root = "amfiteatre"
+    noun_group = "REG"
+    entryId = "2203242252"
+    lemma = "amfiteatre"
+    gender = "MASC"
+    gp = {
+      I = {}
+    }
+  }
+
+"ampolla_NN_01":_noun_ {
+   noun_root = "ampoll"
+   noun_group = "a"
+   entryId = "2203242302"
+   lemma = "ampolla"
+   gender = "FEM"
+   }
+
+"apartament_NN_01":_noun_ {
+   noun_root = "apartament"
+   noun_group = "REG"
+   entryId = "2203041805"
+   lemma = "apartament"
+   gender = "MASC"
+   startswith = vowel
+   }
+
+"ara_RB_01":_adverb_ {
+  entryId = "2004171206"
+   lemma = "ara"
+   bn = "bn:00114626r"
+   lex_ENG = "now_RB_01"
+}
+
+"arbre_NN_01":_noun_ {
+   noun_root = "arbre"
+   noun_group = "REG"
+   entryId = "2203041752"
+   lemma = "arbre"
+   gender = "MASC"
+   startswith = vowel
+   }
+
+"arc_NN_01":_noun_ {
+   noun_root = "arc"
+   noun_group = "REG"
+   entryId = "2203041806"
+   lemma = "arc"
+   gender = "MASC"
+   startswith = vowel
+  gp = {
+    I = {}
+    II = {}
+  }
+}
+
+"àrea_de_vianants_NN_01":_noun_ {
+  entryId = "2203041657"
+  lemma = "àrea_de_vianants"
+  gender = "FEM"
+  startswith = vowel
+}
+
+"àrea_industrial_NN_01":_noun_ {
+   entryId = "2203041624"
+   lemma = "àrea_industrial"
+   gender = "FEM"
+  startswith = vowel
+   }
+
+"autobús_NN_01":_noun_ {
+   entryId = "2203041421"
+   lemma = "autobús"
+   gender = "MASC"
+  startswith = vowel
+  }
+
+"autopista_NN_01":_noun_ {
+  noun_root = "autopsist"
+  noun_group = "a"
+  lemma = "autopista"
+  gender = "FEM"
+}
+
+"avall_RB_01":_adverb_ {
+  entryId = "2004171205"
+  lemma = "avall"
+  bn = "bn:00114401r"
+}
+
+"avió_NN_01":_noun_ {
+  noun_root = "avi"
+  noun_group = "ó"
+  entryId = "2203041803"
+  lemma = "avió"
+  gender = "MASC"
+  startswith = vowel
+}
+
+"baix_JJ_01":_adjective_ {
+  adj_root = "baix"
+  adj_group = "CON_FRIC"
+  entryId = "2004171300"
+  lemma = "baix"
+  gp = {
+    II = {
+    prep = "de"
+    }
+  }
+}
+
+"balcó_NN_01":_noun_ {
+  noun_root = "balc"
+  noun_group = "ó"
+  entryId = "2203041808"
+  lemma = "balcó"
+  gender = "MASC"
+}
+
+"baix_RB_01":_adverb_ {
+  entryId = "2004171204"
+  lemma = "baix"
+}
+
+"banc_NN_01":_noun_ {
+  noun_root = "banc"
+  noun_group = "CON_os"
+  entryId = "2203041811"
+  lemma = "banc"
+  gender = "MASC"
+}
+
+"bandera_NN_01":_noun_ {
+  noun_root = "bander"
+  noun_group = "a"
+  entryId = "2203041604"
+  lemma = "bandera"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = {}
+  }
+}
+
+"bar_NN_01":_noun_ {
+   noun_root = "bar"
+   noun_group = "REG"
+   entryId = "2203041809"
+   lemma = "bar"
+   gender = "MASC"
+}
+
+"barana_NN_01":_noun_ {
+   noun_root = "baran"
+   noun_group = "a"
+   entryId = "2203250011"
+   lemma = "barana"
+   gender = "FEM"
+   }
+
+"barri_marginal_NN_01":_nounExtArg_ {
+    lemma = "barri_marginal"
+    entryId = "2203250020"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {}
+    }
+  }
+
+"barri_residencial_NN_01":_nounExtArg_ {
+    lemma = "barri_residencial"
+    entryId = "2203041711"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {}
+    }
+  }
+
+"barril_NN_01":_noun_ {
+   noun_root = "barril"
+   noun_group = "REG"
+   entryId = "2203142256"
+   lemma = "barril"
+   gender = "MASC"
+   bn = "bn:00008694n"
+   }
+
+"basar_NN_01":_noun_ {
+   noun_root = "basar"
+   noun_group = "CON"
+   entryId = "2203041809"
+   lemma = "basar"
+   gender = "MASC"
+   }
+
+"bicicleta_NN_01":_noun_ {
+   noun_root = "biciclet"
+   noun_group = "a"
+   entryId = "2203041812"
+   lemma = "bicicleta"
+   gender = "FEM"
+   }
+
+"blanc_JJ_01":_adjective_ {
+  adj_root = "blan"
+  adj_group = "c_q"
+  entryId = "2004171306"
+  lemma = "blanc"
+}
+
+"blau_JJ_01":_adjective_ {
+  adj_root = "bla"
+  adj_group = "VOC_u"
+  entryId = "2004171305"
+  lemma = "blau"
+}
+
+"boca_d'incendis_NN_01":_noun_ {
+   entryId = "2203041827"
+   lemma = "boca_d'incendis"
+   gender = "MASC"
+  }
+
+"bosc_NN_01":_noun_ {
+  entryId = "2203242330"
+  onID = "wood-n.2"
+//  nbcls = ""
+//  nbID = ""
+  bn = "bn:00035868n"
+  lemma = "bosc"
+  gender = "MASC"
+  Eng_tr = "forest"
+  lex_ENG = "forest_NN_01"	// or wood_NN_01
+  gp = {
+    I = {			// elements composing the forest
+      prep = "de"		// ex. bosque de pinos
+    }
+  }
+}
+
+"bossa_NN_01":_noun_ {
+   noun_root = "boss"
+   noun_group = "a"
+   entryId = "2203242254"
+   lemma = "bossa"
+   gender = "FEM"
+   }
+
+"cabina_de_telèfon_NN_01":_noun_ {
+   entryId = "2203250002"
+   lemma = "cabina_de_telèfon"
+   gender = "FEM"
+   bn = "bn:00012180n"
+   }
+
+"cadira_NN_01":_noun_ {
+  noun_root = "cadir"
+  noun_group = "a"
+  lemma = "cadira"
+  entryId = "2203242308"
+  gender = "FEM"
+}
+
+"caixa_NN_01":_noun_ {
+   noun_root = "caix"
+   noun_group = "a"
+   entryId = "2203242305"
+   lemma = "caixa"
+   gender = "FEM"
+   }
+
+"camí_NN_01":_noun_ {
+  noun_root = "cam"
+  noun_group = "í"
+  entryId = "2203041653"
+  lemma = "camí"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"camió_NN_01":_noun_ {
+   noun_root = "cami"
+   noun_group = "ó"
+   entryId = "2203041753"
+   lemma = "camió"
+   gender = "MASC"
+   }
+
+"camp_NN_01":_noun_ {
+  noun_root = "camp"
+  noun_group = "CON_os"
+  entryId = "2203041422"
+  lemma = "camp"
+  gender = "MASC"
+}
+
+"campus_NN_01":_noun_ {
+  entryId = "2203041602"
+  lemma = "campus"
+  gender = "MASC"
+}
+
+"canal_NN_01":_noun_ {
+  noun_root = "canal"
+  noun_group = "REG"
+  entryId = "2203041422"
+  lemma = "canal"
+  gender = "MASC"
+}
+
+"canviar_VB_01":_verb_{
+  verb_root = "canvi"
+  verb_group = "ar"
+  entryId = "2004171330"
+  lemma = "canviar"
+  gp = {
+    I = {}
+    II = {}
+    III = {
+      prep  = "a"
+    }
+  } 
+}
+
+"carrer_NN_01":_noun_ {
+   noun_root = "carrer"
+   noun_group = "REG"
+   entryId = "2203041732"
+   lemma = "carrer"
+   gender = "MASC"
+   gp = {
+    I = {
+      prep = "de"
+      }
+  }
+}
+
+"carreró_NN_01":_noun_ {
+   noun_root = "carrer"
+   noun_group = "ó"
+   entryId = "2203041804"
+   lemma = "carreró"
+   gender = "MASC"
+   gp = {
+    I = {
+      prep = "de"
+      }
+  }
+}
+
+"carretera_NN_01":_noun_ {
+  noun_root = "carreter"
+  noun_group = "a"
+  entryId = "2203041831"
+  lemma = "carretera"
+  gender = "FEM"
+}
+
+"carril_bici_NN_01":_noun_ {
+   entryId = "2203041823"
+   lemma = "carril_bici"
+   gender = "MASC"
+   }
+
+"cartell_NN_01":_noun_ {
+   noun_root = "cartell"
+   noun_group = "REG"
+   entryId = "2203041724"
+   lemma = "cartell"
+   gender = "MASC"
+   }
+
+"casa_NN_01":_noun_ {
+  noun_root = "cas"
+  noun_group = "a"
+  lemma = "casa"
+  entryId = "2203041621"
+  gender = "MASC"
+}
+
+"casa_de_cult_NN_01":_noun_ {
+  entryId = "2203041623"
+  lemma = "casa_de_cult"
+  gender = "MASC"
+}
+
+"casa_de_playa_NN_01":_noun_ {
+  entryId = "2203242258"
+  lemma = "casa_de_playa"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = {}
+  }
+}
+
+"castell_NN_01":_noun_ {
+    noun_root = "castell"
+    noun_group = "REG"
+    entryId = "2203041424"
+    lemma = "castell"
+    gp = {
+      I = {}
+      II = { prep = "de" }
+    }
+  }
+
+"cel_NN_01":_noun_ {
+   noun_root = "cel"
+   noun_group = "reg"
+   entryId = "2203041725"
+   lemma = "cel"
+   gender = "MASC"
+   }
+
+"cementeri_NN_01":_noun_ {
+   noun_root = "cementeri"
+   noun_group = "REG"
+   entryId = "2203242307"
+   lemma = "cementeri"
+   gender = "MASC"
+   }
+
+"centre_de_la_ciutat_NN_01":_noun_ {
+   entryId = "2203041553"
+   lemma = "centre_de_la_ciutat"
+   gender = "MASC"
+   definiteness = "DEF"
+   }
+
+"ciutat_NN_01":_noun_ {
+   noun_root = "ciutat"
+   noun_group = "REG"
+   entryId = "2203041818"
+    lemma = "ciutat"
+    gender = "FEM"
+    gp = {
+      I = {}
+    }
+  }
+
+"clar_JJ_01":_adjective_ {
+  adj_root = "clar"
+  adj_group = "CON"
+  entryId = "2203021647"
+  lemma = "clar"
+ }
+
+"classificar_VB_01":_verbExtArg_ {
+  verb_root = "classific"
+  verb_group = "ar"
+  entryId = "2202141942"
+  lemma = "classificar"
+  Eng_tr = "classify"
+  lex_ENG = "classify_VB_01"
+  gp = {
+    A0 = I
+    A1 = II
+    A2 = III
+    I = {}
+    II = {}
+    III = {
+      prep = "com"  // not really a preposition though...
+    }
+  }
+}
+
+"coherent_JJ_01":_adjective_ {
+   adj_root = "coherent"
+   adj_group = "GEND_INV"
+   entryId = "2202151009"
+   lemma = "coherent"
+}
+
+"color_NN_01":_noun_ {
+  noun_root = "color"
+  noun_group = "REG"
+  entryId = "2004171448"
+  nbID = "01"
+  bn = "bn:00020726n"
+  lemma = "color"
+  gender = "MASC"
+  lex_ENG = "color_NN_01"		
+  gp = {
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"colorit_JJ_01":_adjective_ {
+   adj_root = "colori"
+   adj_group = "t_d"
+   entryId = "2202151009"
+   lemma = "colorit"
+}
+
+"colorit_NN_01":_noun_ {
+  noun_root = "colorit"
+  noun_group = "REG"
+  entryId = "2202151010"
+  lemma = "colorit"
+  gender = "MASC"
+  Eng_tr = "colourfulness"
+  lex_ENG = "colourfulness_NN_01"
+  gp = {
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"columna_NN_01":_noun_ {
+   noun_root = "column"
+   noun_group = "a"
+   entryId = "2203041545"
+   lemma = "columna"
+}
+
+"comentari_NN_01":_nounExtArg_ {
+  noun_root = "comentari"
+  noun_group = "REG"
+  entryId = "2202171645"
+  lemma = "comentari"
+  gender = "MASC"
+  Eng_tr = "comment"
+  lex_ENG = "comment_NN_01"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "sobre"
+    }
+    III = {
+      prep = "a"
+    }
+  }
+}
+
+"contenir_VB_01":_verb_ {
+  entryId = "2202151028"
+  lemma = "contenir"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {}
+    III = {
+      prep = "en"
+    }
+  }
+}
+
+"contribuir_VB_01":_verbExtArg_{
+  lemma = "contribuir"
+  gp = {
+    A0 = I
+    A1 = II
+    A2 = III
+    A3 = IV
+    I = {}
+    III = {
+      prep = "a"
+    }
+    IV = {
+      prep = "en"
+    }
+  }
+}
+
+"costa_NN_01":_noun_ {
+   noun_root = "cost"
+   noun_group = "a"
+   entryId = "2203041537"
+   lemma = "costa"
+   gender = "FEM"
+   gp = {
+     I = {}
+     II = { prep = "de" }
+   }
+}
+
+"cotxe_NN_01":_noun_ {
+   noun_root = "cotxe"
+   noun_group = "REG"
+   entryId = "2203041824"
+   lemma = "cotxe"
+   gender = "MASC"
+   }
+
+
+"costat_NN_01":_noun_ {
+  noun_root = "costat"
+  noun_group = "REG"
+  entryId = "2004171454"
+  lemma = "costat"
+  gender = "MASC"
+  gp = {
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"cruïlla_NN_01":_noun_ {
+   noun_root = "cruïll"
+   noun_group = "a"
+   entryId = "2203041714"
+   lemma = "cruïlla"
+   gender = "FEM"
+   gp = {
+     I = {}
+     II = { prep = "de" }
+   }
+  }
+
+"dalt_RB_01":_adverb_ {
+  entryId = "2004171303"
+  lemma = "dalt"
+}
+
+"dalt_JJ_01":_adjective_ {
+  entryId = "2004171304"
+  lemma = "dalt"
+  gp = {
+    II = {
+    prep = "de"
+    }
+  }
+}
+
+"de_calma_JJ_01":_adjective_ {
+   entryId = "2203211304"
+   lemma = "de_calma"
+   invariant = yes
+   spos = "adjective"
+   gp = {
+     A1 = ATTR
+   }
+  }
+
+"de_excitació_JJ_01":_adjective_ {
+   entryId = "2203211305"
+   lemma = "de_excitació"
+   invariant = yes
+   spos = "adjective"
+   gp = {
+     A1 = ATTR
+   }
+  }
+
+"des_IN_01":_preposition_ {
+  entryId = "2004171704"
+  lemma = "des"
+  gp = {
+    A2 = II
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"deure_VB_01":_verb_ {
+  entryId = "2004171352"
+  lemma = "deure"
+  spos = "modal"
+  dpos = "V"
+  pos = "VB"
+  gp = {
+    A1 = I
+    A2 = II
+    I = {
+      pos = "NN"
+      rel = subj
+    }
+    II = {
+      pos = "VV"
+      finiteness= "INF"
+      rel = modal
+    }
+  }
+}
+
+"edifici_d'apartaments_NN_01":_nounExtArg_ {
+    lemma = "edifici_d'apartaments"
+    entryId = "2203041643"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {}
+    }
+  }
+
+"edifici_NN_01":_noun_ {
+    noun_root = "edifici"
+    noun_group = "REG"
+    entryId = "2203041325"
+    lemma = "edifici"
+    lex_ENG = "building_NN_01"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {
+        prep = "de"
+      }
+    }
+    startswith = vowel
+  }
+
+"edifici_d'oficinas_NN_01":_nounExtArg_ {
+    lemma = "edifici_d'oficinas"
+    entryId = "2203041642"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {}
+    }
+    startswith = vowel
+  }
+
+"edifici_residencial_NN_01":_nounExtArg_ {
+    lemma = "edifici_residencial"
+    entryId = "2203041710"
+    gender = "MASC"
+    gp = {
+      I = {}
+      II = {}
+    }
+    startswith = vowel
+  }
+
+"el_DT_01":_determiner_ {
+  entryId = "2004171505"
+  pos = "DT"
+  spos = "determiner"
+  lemma = "el"
+  definiteness = "DEF"
+}
+
+"element_NN_01":_noun_ {
+  noun_root = "element"
+  noun_group = "REG"
+  entryId = "2202151030"
+  lemma = "element"
+  gender = "MASC"
+  Eng_tr = "element"
+  lex_ENG = "element_NN_02"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {		// n1 quantified
+      prep = "de"
+    }
+    II = {}
+    III = { prep = "en"}
+  }
+  startswith = vowel
+}
+
+"emocional_JJ_01":_adjective_ {
+  adj_root = "emocional"
+  adj_group = "GEND_INV"
+  entryId = "2004171316"
+  lemma = "emocional"
+}
+
+"emoció_NN_01":_noun_ {
+  noun_root = "emoci"
+  noun_group = "ó"
+  entryId = "2202151033"
+  lemma = "emoció"
+  gender = "FEM"
+  gp = {
+    I = {}
+  }
+  startswith = vowel
+}
+
+"entrada_de_cotxes_NN_01":_noun_ {
+  lemma = "entrada_de_cotxes"
+  gender = "FEM"
+  entryId = "2203242324"
+  startswith = vowel
+}
+
+"entresòl_NN_01":_noun_ {
+  noun_root = "entresòl"
+  noun_group = "REG"
+  entryId = "2203041634"
+  lemma = "entresòl"
+  gender = "MASC"
+  startswith = vowel
+}
+
+"enuig_NN_01":_noun_ {
+  noun_root = "enuig"
+  noun_group = "REG"
+   entryId = "2004171210"
+   lemma = "enuig"
+   gender = "MASC"
+   bn = ""
+   gp = {
+     I = {
+       prep = "de"
+    }
+  }
+  startswith = vowel
+}
+
+"escala_NN_01":_noun_ {
+  noun_root = "escal"
+  noun_group = "a"
+//  pbcls = ""			
+//  pbID = ""
+  lemma = "escala"
+  gender = "FEM"
+  Eng_tr = "scale"
+  lex_ENG = "scale_NN_01"		
+  gp = {
+    I = {		// n1 descriptor
+      prep = "de"		
+    } 
+  }
+  startswith = vowel
+}
+
+"escala_NN_02":_noun_ {
+  noun_root = "escal"
+  noun_group = "a"
+  entryId = "2203041731"
+  lemma = "escala"
+  gender = "FEM"
+  startswith = vowel
+}
+
+"escala_mecánica_NN_01":_noun_ {
+  lemma = "escala_mecánica"
+  gender = "FEM"
+  entryId = "2203041556"
+  startswith = vowel
+}
+
+"escena_NN_01":_noun_ {
+  noun_root = "escen"
+  noun_group = "a"
+  entryId = "2202171549"
+  lemma = "escena"
+  gender = "FEM"
+  startswith = vowel
+}
+
+"escenari_NN_01":_noun_ {
+  noun_root = "escenari"
+  noun_group = "REG"
+  entryId = "2203041729"
+  lemma = "escenari"
+  gender = "MASC"
+  startswith = vowel
+}
+
+"escola_NN_01":_noun_ {
+  noun_root = "escol"
+  noun_group = "a"
+  entryId = "2203041718"
+  lemma = "escola"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+  startswith = vowel
+}
+
+"escultura_NN_01":_noun_ {
+  noun_root = "escultur"
+  noun_group = "a"
+  entryId = "2203041720"
+  lemma = "escultura"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+  startswith = vowel
+}
+
+"escriptori_NN_01":_noun_ {
+   noun_root = "escriptori"
+   noun_group = "REG"
+   entryId = "2203242319"
+   lemma = "escriptori"
+   gender = "MASC"
+   startswith = vowel
+   }
+
+"esglaons_NN_01":_noun_ {
+  lemma = "esglaons"
+  gender = "MASC"
+  number = "PL"
+  entryId = "2203150022"
+}
+
+"esglesia_NN_01":_noun_ {
+   noun_root = "esglesi"
+   noun_group = "a"
+   entryId = "2203041531"
+   lemma = "esglesia"
+   gender = "FEM"
+   startswith = vowel
+   }
+
+"espai_NN_01":_noun_ {
+  noun_root = "espai"
+  noun_group = "REG"
+  entryId = "2202161314"
+  lemma = "espai"
+  gender = "MASC"
+  Eng_tr = "space"
+  lex_ENG = "space_NN_01"
+  gp = {
+    I = {}		// n1 = theme
+    II = {}		// n2 = value
+    III = {
+      prep = "per a"	// n3 = use/purpose
+    }
+  }
+  startswith = vowel
+}
+
+"especific_JJ_01":_adjective_ {
+  adj_root = "especifi"
+  adj_group = "c_q"
+  entryId = "2202171610"
+  lemma = "especific"
+  Eng_tr = "specific"
+  lex_ENG = "specific_JJ_01"
+}
+
+"estació_de_metro_NN_01":_noun_ {
+   entryId = "2203041735"
+   lemma = "estació_de_metro"
+   gender = "FEM"
+   startswith = vowel
+}
+
+"estació_de_tren_NN_01":_noun_ {
+   entryId = "2203041747"
+   lemma = "estació_de_tren"
+   gender = "FEM"
+   startswith = vowel
+}
+
+"estadi_NN_01":_noun_ {
+   noun_root = "estadi"
+   noun_group = "REG"
+   entryId = "2203041727"
+   lemma = "estadi"
+   gender = "MASC"
+   gp = {
+     I = { prep = "de" }
+   }
+   startswith = vowel
+}
+
+"estar_VB_01":_verb_ {
+  verb_root = "est"
+  verb_group = "ar"
+  entryId = "2004171345"
+  lemma = "estar"
+  spos = "copula"
+  dpos = "V"
+  pos = "VB"
+  gp = {				
+    A1 = I	
+    A2 = II
+    I = {
+      rel = subj
+    }
+    II = {				
+      rel = copul
+    }
+  }
+}
+
+"estat_NN_01":_noun_ {
+  noun_root = "estat"
+  noun_group = "REG"
+  entryId = "2004171451"
+  lemma = "estat"
+  gender = "MASC"
+  gp = {
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"excavació_NN_01":_noun_ {
+  noun_root = "excavaci"
+  noun_group = "ó"
+  entryId = "2203242326"
+  lemma = "excavació"
+  gender = "FEM"
+  startswith = "vowel"
+}
+
+"expressar_VB_01":_verbExtArg_ {
+  verb_root = "express"
+  verb_group = "ar"
+  entryId = "2202171642"
+  lemma = "expressar"
+  Eng_tr = "express"
+  lex_ENG = "express_VB_01"
+  gp = {
+    A0 = I
+    A1 = II
+    A2 = III
+    I = {}
+    II = {}
+    III = {
+      prep = "amb"
+    }
+  }
+}
+
+"extracte_NN_01":_noun_ {
+  noun_root = "extracte"
+  noun_group = "REG"
+  entryId = "2202171648"
+  lemma = "extracte"
+  gender = "MASC"
+  Eng_tr = "excerpt"
+  lex_ENG = "excerpt_NN_01"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {
+      prep = "de"
+    }
+    III = {
+      prep = "sobre"
+    }
+  }
+  startswith = vowel
+}
+
+"extremadament_RB_01":_adverb_ {
+    entryId = "2203071105"
+    lemma = "extremadament"
+  }
+
+
+"fàbrica_NN_01":_noun_ {
+   noun_root = "fàbri"
+   noun_group = "ca"
+   entryId = "2203041825"
+   lemma = "fàbrica"
+   gender = "FEM"
+   bn = "bn:00032675n"
+   gp = {
+     I = {
+       prep = "de"
+     }
+    }
+   }
+
+"façana_d'edifici_NN_01":_noun_ {
+  lemma = "façana_d'edifici"
+  entryId = "2203041815"
+  gender = "FEM"
+  gp = {
+    I = {}
+  }
+}
+
+"fanal_NN_01":_noun_ {
+  noun_root = "fanal"
+  noun_group = "REG"
+  entryId = "2203041734"
+  lemma = "fanal"
+  gender = "MASC"
+}
+
+"finestra_NN_01":_noun_ {
+  noun_root = "finestr"
+  noun_group = "a"
+  entryId = "2203041802"
+  lemma = "finestra"
+  gender = "FEM"
+}
+
+"font_NN_02":_noun_ {
+   noun_root = "font"
+   noun_group = "REG"
+   entryId = "2203041605"
+   lemma = "font"
+   gender = "FEM"
+   }
+
+"força_RB_01":_adverb_ {
+    entryId = "2203071104"
+    lemma = "força"
+  }
+
+"forma_NN_01":_noun_ {
+  noun_root = "form"
+  noun_group = "a"
+  entryId = "2004171452"
+  lemma = "forma"
+  gender = "FEM"
+  gp = {
+    A1 = I
+    A2 = II
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"formar_VB_01":_verbExtArg_{
+  verb_root = "form"
+  verb_group = "ar"
+  entryId = "2202171547"
+  lemma = "formar"
+  gp = {
+    A0 = I
+    A1 = II
+    I = {}
+    II = {}
+  }
+}
+
+"furgoneta_NN_01":_noun_ {
+   noun_root = "furgoneta"
+   noun_group = "REG"
+   entryId = "2203041756"
+   lemma = "furgoneta"
+   gender = "FEM"
+   }
+
+"general_JJ_01":_adjective_ {
+  adj_root = "general"
+  adj_group = "GEND_INV"
+  entryId = "2202161316"
+  bn = "bn:00103507a"
+  lemma = "general"
+  Eng_tr = "general"
+  lex_ENG = "general_JJ_01"
+}
+
+"gespa_NN_01":_noun_ {
+   entryId = "2203242340"
+   lemma = "gespa"
+   gender = "FEM"
+   invariant = yes
+   }
+
+"gossera_NN_01":_noun_ {
+   noun_root = "gosser"
+   noun_group = "a"
+   entryId = "2203242336"
+   lemma = "gossera"
+   }
+
+"gratacels_NN_01":_noun_ {
+   entryId = "2203041726"
+   lemma = "gratacels"
+   gender = "MASC"
+   invariant = yes
+   }
+
+"gris_JJ_01":_adjective_ {
+  adj_root = "gris"
+  adj_group = "CON_FRIC"
+  entryId = "2004171307"
+  lemma = "gris"
+}
+
+"groc_JJ_01":_adjective_ {
+  adj_root = "gro"
+  adj_group = "c_g"
+  entryId = "2004171209"
+  lemma = "groc"
+  Oper1 = "ser_VB_01"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"habitació_NN_01":_noun_ {
+  noun_root = "habitaci"
+  noun_group = "ó"
+  entryId = "2004171453"
+  lemma = "habitació"
+  gender = "FEM"
+  startswith = vowel
+}
+
+"habitació_de_nen_NN_01":_noun_ {
+    entryId = "2203142311"
+    lemma = "habitaci_de_nen"
+    gender = "FEM"
+   startswith = vowel
+  }
+
+"herba_NN_01":_noun_ {
+   noun_root = "herb"
+   noun_group = "a"
+   entryId = "2203041611"
+   lemma = "herba"
+   gender = "FEM"
+   startswith = vowel
+   definiteness = "no"
+  startswith = vowel
+   }
+
+"hort_NN_01":_noun_ {
+	noun_root = "hort"
+	noun_group = "REG"
+	entryId = "2203242356"
+    lemma = "hort"
+	gender = "MASC"
+  }
+
+"hospital_NN_01":_noun_ {
+  noun_root = "hospital"
+  noun_group = "REG"
+  entryId = "2203041619"
+  lemma = "hospital"
+  gender = "MASC"
+  startswith = vowel
+  startswith = vowel
+}
+
+"hotel_NN_01":_noun_ {
+  noun_root = "hotel"
+  noun_group = "REG"
+  entryId = "2203041620"
+  lemma = "hotel"
+  gender = "MASC"
+  startswith = vowel
+  startswith = vowel
+}
+
+"i_CC_01":_coordination_ {
+  entryId = "2004171503"
+  //pos = "CC"
+  //spos = "coord_conjunction"
+  lemma = "i"
+}
+
+"i_per_això_CC_01":_coordination_ {
+  entryId = "2004171521"
+  lemma = "i per això"
+}
+
+"il·luminar_VB_01":_verb_ {
+  verb_root = "il·lumin"
+  verb_group = "ar"
+  entryId = "2004171331"
+  lemma = "il·luminar"
+  gp = {
+    I = {}
+    II = {}
+    III = {
+      prep = "amb"
+    }
+  }
+}
+
+"imaginabilitat_NN_01":_noun_ {
+  noun_root = "imaginabilitat"
+  noun_group = "REG"
+  entryId = "2202151034"
+  lemma = "imaginabilitat"
+  gender = "FEM"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {
+      prep = "de"
+    }
+    III = {
+      prep = "sobre"
+    }
+  }
+}
+
+"imatge_NN_01":_noun_ {
+  noun_root = "imatge"
+  noun_group = "REG"
+  entryId = "2202160946"
+  lemma = "imatge"
+  gender = "FEM"
+  bn = "bn:00045970n"
+}
+
+"incloure_VB_01":_verbExtArg_{
+  verb_root = "inclou"
+  verb_group = "er"
+  entryId = "2202171555"
+  lemma = "incloure"
+  gp = {
+    I = {}
+	II = {}
+	III = {
+	  prep  = "en"
+	}
+  }
+}
+
+"indicar_VB_01":_verbExtArg_ {
+  verb_root = "indic"
+  verb_group = "ar"
+  entryId = "2202171737"
+  lemma = "indicar"
+  gp = {
+    A0 = I
+    A1 = II
+    A2 = III
+    I = {}
+    II = {}
+    III = {
+      prep = "a"
+    }
+  }
+}
+
+"individu_NN_01":_noun_ {
+  noun_root = "individu"
+  noun_group = "REG"
+  entryId = "2004171500"
+  lemma = "individu"
+  gender = "MASC"
+  gp = {}
+  startswith = vowel
+}
+
+"indubtablement_RB_01":_adverb_ {
+  entryId = "2004171320"
+  lemma = "indubtablement"
+  postposed = {
+    restrictive = "yes"
+  }
+}
+
+"jardí_NN_01":_noun_ {
+  noun_root = "jard"
+  noun_group = "í"
+  entryId = "2203242300"
+  lemma = "jardí"
+  gender = "MASC"
+}
+
+"jardí_botànic_NN_01":_noun_ {
+  entryId = "2203242301"
+  lemma = "jardí_botànic"
+  gender = "MASC"
+}
+
+"jardí_zen_NN_01":_noun_ {
+  entryId = "2203250032"
+  lemma = "jardí_zen"
+  gender = "MASC"
+}
+
+"joieria_NN_01":_noun_ {
+  noun_root = "joieri"
+  noun_group = "a"
+  entryId = "2203041626"
+  lemma = "joieria"
+  gender = "FEM"
+}
+
+"llac_NN_01":_noun_ {
+  noun_root = "llac"
+  noun_group = "REG"
+  entryId = "2203041628"
+  lemma = "llac"
+  gender = "MASC"
+}
+
+"lleugerament_RB_01":_adverb_ {
+    entryId = "2203071059"
+    lemma = "lleugerament"
+  }
+
+"lloc_NN_01":_noun_ {
+  noun_root = "lloc"
+  noun_group = "REG"
+  entryId = "2202151035"
+  lemma = "lloc"
+  gender = "MASC"
+  bn = "bn:00062699n"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {}
+    III = { prep = "en" }
+  }
+}
+
+"llum_NN_01":_noun_ {
+  noun_root = "llum"
+  noun_group = "REG"
+  entryId = "2104231358"
+  lemma = "llum"
+  gender = "FEM"
+}
+
+"manera_NN_01":_noun_ {
+  noun_root = "maner"
+  noun_group = "a"
+  entryId = "2203021117"
+  lemma = "manera"
+  Eng_tr = "way"
+  gender = "FEM"
+  lex_ENG = "way_NN_01"
+}
+
+"mar_NN_01":_noun_ {
+   noun_root = "mar"
+   noun_group = "REG"
+   entryId = "2203250020"
+   lemma = "mar"
+   bn = "bn:00069946n"
+   }
+
+"marca_comercial_NN_01":_noun_ {
+   entryId = "2203250027"
+   lemma = "marca_comercial"
+   gender = "FEM"
+   bn = "bn:00077877n"
+   }
+
+"marró_JJ_01":_adjective_ {
+  entryId = "2004171308"
+  lemma = "marró"
+}
+
+"mausoleu_NN_01":_noun_ {
+   noun_root = "mausoleu"
+   noun_group = "REG"
+   entryId = "2203242348"
+   lemma = "mausoleu"
+   }
+
+"medianament_RB_01":_adverb_ {
+    entryId = "2203071102"
+    lemma = "medianament"
+  }
+
+"medina_NN_01":_noun_ {
+   noun_root = "medin"
+   noun_group = "a"
+   entryId = "2203242348"
+   lemma = "medina"
+   }
+
+"memorable_JJ_01":_adjective_ {
+  adj_root = "memorable"
+  adj_group = "GEND_INV"
+  entryId = "2202151036"
+  lemma = "memorable"
+}
+
+"mercat_NN_01":_noun_ {
+  noun_root = "mercat"
+  noun_group = "REG"
+  entryId = "2203041631"
+  lemma = "mercat"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"més_JJ_01":_adjective_ {
+  lemma = "més"
+  spos = "adjective"
+  comparative = yes
+  gp = {
+    A1 = ATTR
+    A2 = II
+    I = {}
+    II = { prep = "que" }
+  }
+}
+
+"més_RB_01":_adverb_ {
+  entryId = "2202161312"
+  bn = "bn:00116285r"
+  lemma = "més"
+  Eng_tr = "most"
+  lex_ENG = "most_RB_01"
+  gp = {
+    A2 = II
+    II = {
+     prep = "que"
+    }
+  }
+}
+
+"mesa_NN_01":_noun_ {
+   noun_root = "mes"
+   noun_group = "a"
+   entryId = "2203250025"
+   lemma = "mesa"
+   gender = "FEM"
+   }
+
+"mesquita_NN_01":_noun_ {
+  noun_root = "mesquit"
+  noun_group = "a"
+  entryId = "2203041636"
+  lemma = "mesquita"
+  gender = "FEM"
+}
+
+"mitjà_JJ_01":_adjective_ {
+  adj_root = "mitj"
+  adj_group = "à"
+  entryId = "2004171317"
+  lemma = "mitjà"
+}
+
+"moderadament_RB_01":_adverb_ {
+    entryId = "2203071100"
+    lemma = "moderadament"
+  }
+
+"molí_de_vent_NN_01":_noun_ {
+   entryId = "2203250030"
+   lemma = "molí_de_vent"
+   gender = "MASC"
+   }
+
+"moll_NN_01":_noun_ {
+   noun_root = "moll"
+   noun_group = "REG"
+   entryId = "2203041701"
+   lemma = "moll"
+   gender = "MASC"
+   }
+
+"moll_de_càrrega_NN_01":_noun_ {
+  entryId = "2203242346"
+  lemma = "moll_de_càrrega"
+  gender = "MASC"
+}
+
+"molt_RB_01":_adverb_ {
+  entryId = "2202180935"
+  lemma = "molt"
+}
+
+"molt_poc_RB_01":_adverb_ {
+    entryId = "2203071057"
+    lemma = "molt_poc"
+  }
+
+"morat_JJ_01":_adjective_ {
+  adj_root = "mora"
+  adj_group = "t_d"
+  entryId = "2004171309"
+  lemma = "morat"
+}
+
+"moto_NN_01":_noun_ {
+  noun_root = "moto"
+  noun_group = "REG"
+  entryId = "2203041637"
+  lemma = "moto"
+  gender = "FEM"
+}
+
+"motorista_NN_01":_noun_ {
+  noun_root = "motorist"
+  noun_group = "a"
+  entryId = "2203041712"
+  lemma = "motorista"
+  gender = "MASC"
+}
+
+"moure_VB_01":_verb_{
+  entryId = "2004171340"
+  lemma = "moure"
+  gp = { 
+    I = {}
+    II = {}
+    III = {
+      prep  = "a"
+    }
+  } 
+}
+
+"muntanya_NN_01":_noun_ {
+  noun_root = "muntany"
+  noun_group = "a"
+  entryId = "2203041638"
+  lemma = "muntanya"
+  gender = "FEM"
+}
+
+"negatiu_JJ_01":_adjective_ {
+  adj_root = "negati"
+  adj_group = "VOC_u"
+  entryId = "2202171714"
+  lemma = "negatiu"
+  Eng_tr = "negative"
+  lex_ENG = "negative_JJ_01"
+}
+
+"negre_JJ_01":_adjective_ {
+  adj_root = "negr"
+  adj_group = "e_UNSTR"
+  entryId = "2004171311"
+  lemma = "negre"
+}
+
+"neutral_JJ_01":_adjective_ {
+   adj_root = "neutral"
+   adj_group = "GEND_INV"
+   entryId = "2202281414"
+   lemma = "neutral"
+  }
+
+"no_RB_01":_adverb_ {
+  entryId = "2202171606"
+  lemma = "no"
+  Eng_tr = "not"
+  lex_ENG = "not_RB_01"
+}
+
+"només_RB_01":_adverb_ {
+   entryId = "2203101725"
+    lemma = "només"
+    bn = "bn:00114626r"
+  }
+
+"o_CC_01":_coordination_ {
+  entryId = "2004171504"
+  lemma = "o"
+}
+
+"ocupar_VB_01":_verb_ {
+   verb_root = "ocup"
+   verb_group = "ar"
+   entryId = "2202151037"
+   lemma = "ocupar"
+   gp = {
+     A1 = I
+     A2 = II
+     I = {}
+     II = {}
+   }
+ }
+
+"opinió_NN_01":_nounExtArg_ {
+  noun_root = "opini"
+  noun_group = "ó"
+  entryId = "2202171655"
+  lemma = "opinió"
+  gender = "FEM"
+  Eng_tr = "opinion"
+  lex_ENG = "opinion_NN_01"
+  gp = {
+    A0 = I
+    A1 = II
+    I = {}
+    II = {
+      prep = "sobre"
+    }
+  }
+}
+
+"pavelló_NN_01":_noun_ {
+  noun_root = "pavell"
+  noun_group = "ó"
+  entryId = "2203041655"
+  lemma = "pavelló"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"paisatge_NN_01":_noun_ {
+  noun_root = "paisatge"
+  noun_group = "REG"
+  entryId = "2203041629"
+  lemma = "paisatge"
+  gender = "MASC"
+}
+
+"paisatge_urbà_NN_01":_noun_ {
+  lemma = "paisatge_urbà"
+  entryId = "2203041630"
+  gender = "MASC"
+}
+
+"pal_NN_01":_noun_ {
+  noun_root = "pal"
+  noun_group = "REG"
+  entryId = "2203041707"
+  lemma = "pal"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"palmera_NN_01":_noun_ {
+   noun_root = "palmer"
+   noun_group = "a"
+   entryId = "2203041644"
+   lemma = "palmera"
+   gender = "FEM"
+   }
+
+"paperera_NN_01":_noun_ {
+   noun_root = "paperer"
+   noun_group = "a"
+   entryId = "2203041751"
+   lemma = "paperera"
+   gender = "FEM"
+   }
+
+
+"parc_NN_01":_noun_ {
+   noun_root = "parc"
+   noun_group = "REG"
+   entryId = "2203041651"
+   lemma = "parc"
+   gender = "MASC"
+   }
+
+"parc_d'atraccions_NN_01":_noun_ {
+	entryId = "2203041703"
+	lemma = "parc_d'atraccions"
+	gender = "MASC"
+  }
+
+"parc_infantil_NN_01":_noun_ {
+	entryId = "2203041702"
+	lemma = "parc_infantil"
+	gender = "MASC"
+  }
+
+"paret_NN_01":_noun_ {
+  noun_root = "paret"
+  noun_group = "REG"
+  entryId = "2004171456"
+  lemma = "paret"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"paret_vegetal_NN_01":_noun_ {
+    lemma = "paret_vegetal"
+    gender = "FEM"
+    countable = "yes"
+    Eng_tr = "plant_wall"
+  }
+
+"parquímetre_NN_01":_noun_ {
+  noun_root = "parquímetre"
+  noun_group = "REG"
+  entryId = "2203041829"
+  lemma = "parquímetre"
+  gender = "MASC"
+}
+
+"pas_de_vianants_NN_01":_noun_ {
+   entryId = "2203041549"
+   lemma = "pas_de_vianants"
+   gender = "MASC"
+   }
+
+"pas_elevat_NN_01":_noun_ {
+   entryId = "2203041713"
+   lemma = "pas_elevat"
+   gender = "MASC"
+   }
+
+"pasadís_NN_01":_noun_ {
+	noun_root = "pasadís"
+	noun_group = "CON_os"
+	entryId = "2203242316"
+    lemma = "pasadís"
+	gender = "MASC"
+  }
+
+"passeig_NN_01":_noun_ {
+   noun_root = "passeig"
+   noun_group = "REG"
+   entryId = "2203041708"
+   lemma = "passeig"
+   gender = "MASC"
+  }
+
+"passeig_marítim_NN_01":_noun_ {
+   entryId = "2203041709"
+   lemma = "passeig_marítim"
+   gender = "MASC"
+  }
+
+"pati_NN_01":_noun_ {
+   noun_root = "pati"
+   noun_group = "REG"
+   entryId = "2203041548"
+   lemma = "pati"
+   gender = "MASC"
+   }
+
+"pati_de_restaurante_NN_01":_noun_ {
+   entryId = "2203150014"
+   lemma = "pati_de_restaurante"
+   gender = "MASC"
+   }
+
+"persona_NN_01":_noun_ {
+   noun_root = "person"
+   noun_group = "a"
+   entryId = "2203041658"
+   lemma = "persona"
+   gender = "FEM"
+   }
+
+"petit_supermercat_NN_01":_noun_ {
+	entryId = "2203242333"
+	lemma = "petit_supermercat"
+	gender = "MASC"
+  }
+
+"pilota_NN_01":_noun_ {
+   noun_root = "pilot"
+   noun_group = "a"
+   entryId = "2203242255"
+   lemma = "pilota"
+   gender = "FEM"
+   }
+
+"pintura_NN_01":_noun_ {
+   noun_root = "pintur"
+   noun_group = "a"
+   entryId = "2203250001"
+   lemma = "pintura"
+   gender = "FEM"
+ }
+
+"pis_NN_01":_noun_ {
+   noun_root = "pis"
+   noun_group = "CON_os"
+   entryId = "2203242255"
+   lemma = "pis"
+   gender = "MASC"
+   }
+
+"piscina_NN_01":_noun_ {
+	noun_root = "piscin"
+	noun_group = "a"
+	entryId = "2203041739"
+	bn = "bn:00056911n"
+	lemma = "piscina"
+	gender = "FEM"
+	Eng_tr = "swimming_pool"
+	lex_ENG = "swimming_pool_NN_01"
+  }
+
+"pista_NN_01":_noun_ {
+  noun_root = "pist"
+  noun_group = "a"
+  entryId = "2203041716"
+  lemma = "pal"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"pista_de_voleibol_NN_01":_noun_ {
+  entryId = "2203041759"
+  lemma = "pista_de_voleibol"
+  gender = "FEM"
+}
+
+"plaça_NN_01":_noun_ {
+   noun_root = "pla"
+   noun_group = "ça"
+   entryId = "2203041704"
+   lemma = "plaça"
+   gender = "FEM"
+   }
+
+"planta_NN_01":_noun_ {
+   noun_root = "plant"
+   noun_group = "a"
+   entryId = "2203250005"
+   lemma = "planta"
+   gender = "FEM"
+   bn = "bn:00035324n"
+   }
+
+"platja_NN_01":_noun_ {
+   entryId = "2203041810"
+   lemma = "platja"
+   gender = "FEM"
+   }
+
+"poble_NN_01":_noun_ {
+  noun_root = "poble"
+  noun_group = "REG"
+  entryId = "2203242358"
+  nbcls = "town"
+  nbID = "01"
+  bn = "bn:00077773n"
+  lemma = "poble"
+  gender = "MASC"
+  Eng_tr = "town"
+  lex_ENG = "town_NN_01"
+  gp = {
+    I = {}
+  }
+}
+
+"poder_VB_01":_verb_ {
+  verb_root = "pod"
+  verb_group = "er"
+  entryId = "2004171350"
+  bn = "bn:13601970v"
+  fn = "Capability"		
+  lemma = "poder"
+  spos = "modal"
+  dpos = "V"
+  pos = "VB"
+  gp = {
+    A1 = I
+    A2 = II
+    I = {
+      pos = "NN"
+      rel = subj
+    }
+    II = {
+      pos = "VV"
+      finiteness= "INF"
+      rel = modal
+    }
+  }
+}
+
+"pont_NN_01":_noun_ {
+  noun_root = "pont"
+  noun_group = "REG"
+  entryId = "2203041813"
+  lemma = "pont"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = {}
+  }
+}
+
+"por_NN_01":_noun_ {
+  noun_root = "por"
+  noun_group = "REG"
+  entryId = "2004171455"
+  lemma = "por"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "a"
+    }
+  }
+}
+
+"port_NN_01":_noun_ {
+  noun_root = "port"
+  noun_group = "REG"
+  lemma = "port"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"porta_NN_01":_noun_ {
+   noun_root = "port"
+   noun_group = "a"
+   entryId = "2203041551"
+   lemma = "porta"
+   gender = "FEM"
+   }
+
+"posiblement_RB_01":_adverb_ {
+  entryId = "2202151038"
+  lemma = "posiblement"
+  Eng_tr = "possibly"
+  lex_ENG = "possibly_RB_01"
+}
+
+"positiu_JJ_01":_adjective_ {
+  adj_root = "positi"
+  adj_group = "VOC_u"
+  entryId = "2202171652"
+  lemma = "positiu"
+  Eng_tr = "positive"
+  lex_ENG = "positive_JJ_01"
+}
+
+"principal_JJ_01":_adjective_ {
+  adj_root = "principal"
+  adj_group = "GEND_INV"
+  entryId = "2202161259"
+  bn = "bn:00099598a"
+  lemma = "principal"
+}
+
+"probablement_RB_01":_adverb_ {
+  entryId = "2004171321"
+  lemma = "probablement"
+}
+
+"puntuació_NN_01":_noun_ {
+  noun_root = "puntuaci"
+  noun_group = "ó"
+  lemma = "puntuació"
+  gender = "FEM"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {
+      prep = "de"
+    }
+    III = {
+      prep = "sobre"
+    }
+  }
+}
+
+"quadrat_JJ_01":_adjective_ {
+  adj_root = "quadra"
+  adj_group = "t_d"
+  entryId = "2004171314"
+  lemma = "quadrat"
+}
+
+"quadràtic_JJ_01":_adjective_ {
+  adj_root = "quadràti"
+  adj_group = "c_q"
+  entryId = "2004171315"
+  lemma = "quadràtic"
+}
+
+"que_WDT_01":_relative_pronoun_ {
+  entryId = "2202161558"
+  lemma = "que"
+  personal = yes
+  meaning = "-"
+  ids = "that1"
+}
+
+"que_WP_01":_relative_pronoun_ {				//from MS, commented just in case
+  entryId = 1076
+  lemma = "que"
+  pos = "WP"
+  personal = yes
+  meaning = "-"
+  ids = "who1"
+}
+
+"rellotge_NN_01":_noun_ {
+    noun_root = "rellotge"
+    noun_group = "REG"
+    lemma = "rellotge"
+    gp = {
+      I = {}
+      II = { prep = "de" }
+    }
+  }
+
+"repulsió_NN_01":_noun_ {
+  noun_root = "repulsi"
+  noun_group = "ó"
+  entryId = "2004171458"
+  lemma = "repulsió"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "per"
+    }
+  }
+}
+
+"retirar_VB_01":_verb_{
+  verb_root = "retir"
+  verb_group = "ar"
+  entryId = "2004171357"
+  lemma = "retirar"
+  gp = { 
+    I = {}
+    II = {}
+  } 
+}
+
+"revelar_VB_01":_verb_ {
+  verb_root = "revel"
+  verb_group = "ar"
+  entryId = "2202151039"
+  lemma = "revelar"
+  gp = {
+    A1 = I
+    A2 = II
+    A3 = III
+    I = {}
+    II = {}
+    III = { prep = "a"}
+  }
+}
+
+"riu_NN_01":_noun_ {
+  noun_root = "riu"
+  noun_group = "REG"
+  entryId = "2203041830"
+  lemma = "riu"
+  gender = "MASC"
+}
+
+"roba_NN_01":_noun_ {
+   noun_root = "roba"
+   noun_group = "a"
+   entryId = "2203242253"
+   lemma = "ropa"
+   gender = "FEM"
+   bn = "bn:00006125n"
+   }
+
+"rodó_JJ_01":_adjective_ {
+  entryId = "2004171318"
+  lemma = "rodó"
+}
+
+"ruïna_NN_01":_noun_ {
+   noun_root = "ruïn"
+   noun_group = "a"
+   entryId = "2203041716"
+   lemma = "ruïna"
+   gender = "FEM"
+  }
+
+"sala_d'estar_NN_01":_noun_ {
+  entryId = "2203242345"
+  lemma = "sala_d'estar"
+  gender = "FEM"
+}
+
+"sala_de_servidors_NN_01":_noun_ {
+  entryId = "2203211314"
+  lemma = "sala_de_servidors"
+  gender = "FEM"
+}
+
+"semàfor_NN_01":_noun_ {
+  noun_root = "semàfor"
+  noun_group = "REG"
+  entryId = "2203041749"
+  lemma = "semàfor"
+  gender = "MASC"
+}
+
+"sender_de_muntanya_NN_01":_noun_ {
+  entryId = "2203041640"
+  lemma = "sender_de_muntanya"
+  gender = "MASC"
+}
+
+"sensació_NN_01":_noun_ {
+  noun_root = "sensaci"
+  noun_group = "ó"
+  entryId = "2202161331"
+  lemma = "sensació"
+  Eng_tr = "feeling"
+  lex_ENG = "feeling_NN_01"
+  gender = "FEM"
+  gp = {
+    I = {}
+    II = {
+      prep = "de"
+	}
+  }
+}
+
+"sentir_VB_01":_verb_{
+  verb_root = "sent"
+  verb_group = "ir"
+  entryId = "2004171341"
+  lemma = "sentir"
+  // uncomment for testing the behaviour of reflexives on the MindSpaces dataset
+  // reflexive = yes
+  gp = { 
+    I = {}
+    II = {}
+  } 
+}
+
+"senyal_de_trànsit_NN_01":_noun_ {
+  entryId = "2203041750"
+  lemma = "senyal_de_trànsit"
+  gender = "MASC"
+}
+
+"ser_VB_01":_verb_ {		
+  entryId = "2004171342"
+  lemma = "ser"
+  spos = "copula"
+  dpos = "V"
+  pos = "VB"
+  gp = {				
+    A1 = I	
+    A2 = II
+    I = {
+      rel = subj
+    }
+    II = {				
+      rel = copul
+    }
+  }
+}
+
+"seure_VB_01":_verb_{
+  verb_root = "seu"
+  verb_group = "er"
+  entryId = "2104231349"
+  lemma = "seure"
+  // uncomment for testing the behaviour of reflexives on the MindSpaces dataset
+  // reflexive = yes
+  gp = { 
+    I = {}
+    II = {}
+  }
+}
+
+"sinagoga_NN_01":_noun_ {
+   noun_root = "sinago"
+   noun_group = "ga"
+   entryId = "2203041738"
+   lemma = "sinagoga"
+   gender = "FEM"
+   }
+
+"sòl_NN_01":_noun_ {
+   noun_root = "sòl"
+   noun_group = "REG"
+   entryId = "2203041614"
+   lemma = "sòl"
+   gender = "MASC"
+   bn = "bn:00027386n"
+   }
+
+"sorpresa_NN_01":_noun_ {
+  noun_root = "sorpres"
+  noun_group = "a"
+  entryId = "2004171459"
+  lemma = "sorpresa"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "per"
+    }
+  }
+}
+
+"sorra_NN_01":_noun_ {
+   noun_root = "sorr"
+   noun_group = "a"
+   entryId = "2203041717"
+   lemma = "sorra"
+   gender = "FEM"
+   bn = "bn:00069126n"
+   }
+
+"sostre_NN_01":_noun_ {
+  noun_root = "sostre"
+  noun_group = "REG"
+  entryId = "2004171501"
+  lemma = "sostre"
+  gender = "MASC"
+  gp = {
+    I = {
+      prep = "de"
+    }
+  }
+}
+
+"supermercat_NN_01":_noun_ {
+  noun_root = "supermercat"
+  noun_group = "REG"
+  entryId = "2203041737"
+  lemma = "supermercat"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"tanca_NN_01":_noun_ {
+  noun_root = "tan"
+  noun_group = "ca"
+  entryId = "2203041558"
+  lemma = "tanca"
+  gender = "FEM"
+}
+
+"taronja_JJ_01":_adjective_ {
+  adj_root = "taronja"
+  adj_group = "GEND_INV"
+  entryId = "2004171310"
+  lemma = "taronja"
+}
+
+"temple_NN_01":_noun_ {
+  noun_root = "temple"
+  noun_group = "REG"
+  entryId = "2203250026"
+  lemma = "temple"
+  gender = "MASC"
+}
+
+"tendal_NN_01":_noun_ {
+  noun_root = "tendal"
+  noun_group = "REG"
+  entryId = "2203041807"
+  lemma = "tendal"
+  gender = "MASC"
+}
+
+"tenir_VB_01":_verb_ {
+  entryId = "2004171355"
+  lemma = "tenir"
+  spos = "verb"
+  dpos = "V"
+  pos = "VB"
+  gp = {
+    A1 = I
+    A2 = II
+    I = {}
+    II = {}
+  }
+}
+
+  "terminal_d'aeroport_NN_01":_noun_ {
+    entryId = "2203242250"
+    lemma = "terminal_d'aeroport"
+    gender = "FEM"
+    gp = {
+      I = {}
+    }
+  }
+
+"terra_NN_01":_noun_ {
+  noun_root = "terr"
+  noun_group = "a"
+  entryId = "2203041554"
+  lemma = "terra"
+  gender = "FEM"
+   definiteness = "no"
+}
+
+"terrassa_al_terrat_NN_01":_noun_ {
+   entryId = "2203250017"
+   lemma = "terrassa_al_terrat"
+   gender = "FEM"
+   }
+
+"terreny_NN_01":_noun_ {
+   noun_root = "terreny"
+   noun_group = "REG"
+   entryId = "2203041745"
+   lemma = "terreny"
+   gender = "MASC"
+   }
+
+"test_NN_01":_noun_ {
+   entryId = "2203250008"
+   lemma = "test"
+   gender = "MASC"
+   }
+
+"text_NN_01":_nounExtArg_ {
+ noun_root = "text"
+ noun_group = "CON_os"
+ entryId = "2202171744"
+  lemma = "text"
+  gender = "MASC"
+  Eng_tr = "text"
+  lex_ENG = "text_NN_01"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "de"
+    }
+  }
+}
+
+"torre_NN_01":_noun_ {
+  noun_root = "torre"
+  noun_group = "REG"
+  entryId = "2203041833"
+  lemma = "torre"
+  gender = "FEM"
+}
+
+"trànsit_NN_01":_noun_ {
+   entryId = "2203150028"
+   lemma = "trànsit"
+   gender = "MASC"
+   number = "SG"
+   bn = "bn:00077888n"
+   }
+
+"transmetre_VB_01":_verbExtArg_{
+  verb_root = "transmet"
+  verb_group = "er"
+  lemma = "transmetre"
+  entryId = "22021151041"
+  gp = {
+    A1 = I
+    A2 = II
+    I = {}
+	II = {}
+	III = {
+	  prep  = "a"
+	}
+  }
+}
+
+"traster_NN_01":_noun_ {
+   noun_root = "traster"
+   noun_group = "REG"
+   entryId = "2203250024"
+   lemma = "traster"
+   gender = "MASC"
+   }
+
+"tren_NN_01":_noun_ {
+   noun_root = "tren"
+   noun_group = "REG"
+   entryId = "2203041746"
+   lemma = "tren"
+   gender = "MASC"
+   }
+
+"tristesa_NN_01":_noun_ {
+  noun_root = "tristes"
+  noun_group = "a"
+  entryId = "2004171502"
+  lemma = "tristesa"
+  gender = "FEM"
+  gp = {
+    I = {
+      prep = "de"
+    }
+    II = {
+      prep = "per"
+    }
+  }
+}
+
+"tundra_NN_01":_noun_ {
+   entryId = "2203250029"
+   lemma = "tundra"
+   gender = "FEM"
+   number = "SG"
+   definiteness = "DEF"
+   }
+
+"túnel_NN_01":_noun_ {
+   noun_root = "túnel"
+   noun_group = "REG"
+   entryId = "2203041754"
+   lemma = "túnel"
+   gender = "MASC"
+   }
+
+"turó_NN_01":_noun_ {
+  noun_root = "turó"
+  noun_group = "REG"
+  lemma = "turó"
+  gender = "MASC"
+}
+
+"un_DT_01":_determiner_ {
+  entryId = "2004171506"
+  pos = "DT"
+  spos = "determiner"
+  lemma = "un"
+  definiteness = "INDEF"
+}
+
+"una_mica_RB_01":_adverb_ {
+  entryId = "2202180955"
+  lemma = "una_mica"
+  Eng_tr = "somewhat"
+  lex_ENG = "somewhat_RB_01"
+}
+
+"vaixell_NN_01":_noun_ {
+   noun_root = "vaixell"
+   noun_group = "REG"
+   entryId = "2203041721"
+   lemma = "vaixell"
+   gender = "MASC"
+   }
+
+"vall_NN_01":_noun_ {
+  noun_root = "vall"
+  noun_group = "REG"
+  entryId = "2203041755"
+  lemma = "vall"
+  gender = "MASC"
+  gp = {
+    I = {}
+    II = { prep = "de" }
+  }
+}
+
+"vegetació_NN_01":_noun_ {
+   noun_root = "vegetaci"
+   noun_group = "ó"
+   entryId = "2203041758"
+   lemma = "vegetació"
+   gender = "FEM"
+   }
+
+"verd_JJ_01":_adjective_ {
+  adj_root = "verd"
+  adj_group = "CON"
+  entryId = "2004171313"
+  lemma = "verd"
+  gp = {
+    A1 = ATTR
+  }
+}
+
+"vermell_JJ_01":_adjective_ {
+  adj_root = "vermell"
+  adj_group = "CON"
+  entryId = "2004171312"
+  lemma = "vermell"
+}
+
+"víes_de_tren_NN_01":_noun_ {
+   entryId = "2203250012"
+   lemma = "víes_de_tren"
+   gender = "FEM"
+   number = "PL"
+   }
+
+"vinya_NN_01":_noun_ {
+   noun_root = "viny"
+   noun_group = "a"
+   entryId = "2203242255"
+   lemma = "viñedo"
+   gender = "MASC"
+   }
+
+"visual_JJ_01":_adjective_ {
+  adj_root = "visual"
+  adj_group = "GEND_INV"
+  entryId = "2202151042"
+  lemma = "visual"
+  Eng_tr = "visual"
+  lex_ENG = "visual_JJ_01"
+}
+
+"vorera_NN_01":_noun_ {
+   noun_root = "vorer"
+   noun_group = "a"
+   entryId = "2203041723"
+   lemma = "vorera"
+   gender = "FEM"
+   }
+
+"zona_de_pícnic_NN_01":_noun_ {
+   entryId = "2203241458"
+   lemma = "zona_de_pícnic_NN_01"
+   gender = "FEM"
+   }
+
+"zona_en_construcció_NN_01":_noun_ {
+  entryId = "2203242314"
+  lemma = "zona_en_construcció"
+  gender = "FEM"
+}
+
+}

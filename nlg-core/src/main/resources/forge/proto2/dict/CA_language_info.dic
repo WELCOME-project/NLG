@@ -1,0 +1,31 @@
+// Language information on CATALAN
+
+language {
+
+id {
+  name = catalan
+  iso = CA
+}
+
+syntax {
+  pronominalize = yes
+  pro_drop = yes
+  verbform=analytic
+}
+
+writing {
+  system = latin
+  order = left_to_right
+}
+/*
+agreement{
+  NV = {
+    subject = {
+      number = yes
+      person = yes
+         }
+  }
+}
+*/
+
+}

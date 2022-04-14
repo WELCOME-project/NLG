@@ -1,0 +1,415 @@
+morph {
+
+//============== MORPH GEN ===================
+
+// Finite Verbs
+
+// Participle
+"ar_<V><PART>" { suffix = "at" }
+"ar_<V><PART><FEM><SG>" { suffix = "ada" }
+"ar_<V><PART><MASC><SG>" { suffix = "at" }
+"ar_<V><PART><FEM><PL>" { suffix = "ades" }
+"ar_<V><PART><MASC><PL>" { suffix = "ats" }
+
+"ir_<V><PART>" { suffix = "it" }
+"ir_<V><PART><FEM><SG>" { suffix = "ida" }
+"ir_<V><PART><MASC><SG>" { suffix = "it" }
+"ir_<V><PART><FEM><PL>" { suffix = "ides" }
+"ir_<V><PART><MASC><PL>" { suffix = "its" }
+
+"er_<V><PART>" { suffix = "ut" }
+"er_<V><PART><FEM><SG>" { suffix = "uda" }
+"er_<V><PART><MASC><SG>" { suffix = "ut" }
+"er_<V><PART><FEM><PL>" { suffix = "udes" }
+"er_<V><PART><MASC><PL>" { suffix = "uts" }
+
+// Gerund
+"ar_<V><GER>" { suffix = "ant" }
+"ir_<V><GER>" { suffix = "int" }
+"er_<V><GER>" { suffix = "ent" }
+
+// AR
+"ar_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"ar_<V><IND><IMP><PRES><SG><2>" { suffix = "es" }
+"ar_<V><IND><IMP><PRES><SG><3>" { suffix = "a" }
+"ar_<V><IND><IMP><PRES><PL><1>" { suffix = "em" }
+"ar_<V><IND><IMP><PRES><PL><2>" { suffix = "eu" }
+"ar_<V><IND><IMP><PRES><PL><3>" { suffix = "en" }
+
+"ar_<V><IND><IMP><PAST><SG><1>" { suffix = "ava" }
+"ar_<V><IND><IMP><PAST><SG><2>" { suffix = "aves" }
+"ar_<V><IND><IMP><PAST><SG><3>" { suffix = "ava" }
+"ar_<V><IND><IMP><PAST><PL><1>" { suffix = "àvem" }
+"ar_<V><IND><IMP><PAST><PL><2>" { suffix = "àveu" }
+"ar_<V><IND><IMP><PAST><PL><3>" { suffix = "aven" }
+
+// ER
+"er_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"er_<V><IND><IMP><PRES><SG><2>" { suffix = "s" }
+"er_<V><IND><IMP><PRES><SG><3>" { suffix = "" }
+"er_<V><IND><IMP><PRES><PL><1>" { suffix = "em" }
+"er_<V><IND><IMP><PRES><PL><2>" { suffix = "eu" }
+"er_<V><IND><IMP><PRES><PL><3>" { suffix = "en" }
+
+"er_<V><IND><IMP><PAST><SG><1>" { suffix = "ia" }
+"er_<V><IND><IMP><PAST><SG><2>" { suffix = "ies" }
+"er_<V><IND><IMP><PAST><SG><3>" { suffix = "ia" }
+"er_<V><IND><IMP><PAST><PL><1>" { suffix = "íem" }
+"er_<V><IND><IMP><PAST><PL><2>" { suffix = "íeu" }
+"er_<V><IND><IMP><PAST><PL><3>" { suffix = "ien" }
+
+// IR
+"ir_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"ir_<V><IND><IMP><PRES><SG><2>" { suffix = "s" }
+"ir_<V><IND><IMP><PRES><SG><3>" { suffix = "" }
+"ir_<V><IND><IMP><PRES><PL><1>" { suffix = "im" }
+"ir_<V><IND><IMP><PRES><PL><2>" { suffix = "iu" }
+"ir_<V><IND><IMP><PRES><PL><3>" { suffix = "in" }
+
+"ir_<V><IND><IMP><PAST><SG><1>" { suffix = "ia" }
+"ir_<V><IND><IMP><PAST><SG><2>" { suffix = "ies" }
+"ir_<V><IND><IMP><PAST><SG><3>" { suffix = "ia" }
+"ir_<V><IND><IMP><PAST><PL><1>" { suffix = "íem" }
+"ir_<V><IND><IMP><PAST><PL><2>" { suffix = "íeu" }
+"ir_<V><IND><IMP><PAST><PL><3>" { suffix = "ien" }
+
+// Adjectives
+// Source: https://books.google.es/books?id=H2E2XM069egC&printsec=frontcover&hl=es#v=onepage&q&f=false
+
+"CON_<JJ><FEM><SG>" { suffix = "a" }
+"CON_<JJ><MASC><SG>" { suffix = "" }
+"CON_<JJ><FEM><PL>" { suffix = "es" }
+"CON_<JJ><MASC><PL>" { suffix = "s" }
+
+// Fricative consonant (s, ç, x, and others)
+"CON_FRIC_<JJ><FEM><SG>" { suffix = "a" }
+"CON_FRIC_<JJ><MASC><SG>" { suffix = "" }
+"CON_FRIC_<JJ><FEM><PL>" { suffix = "es" }
+"CON_FRIC_<JJ><MASC><PL>" { suffix = "os" }
+
+// Unstressed e / o
+"e_UNSTR_<JJ><FEM><SG>" { suffix = "a" }
+"e_UNSTR_<JJ><MASC><SG>" { suffix = "e" }
+"e_UNSTR_<JJ><FEM><PL>" { suffix = "es" }
+"e_UNSTR_<JJ><MASC><PL>" { suffix = "es" }
+
+"o_UNSTR_<JJ><FEM><SG>" { suffix = "a" }
+"o_UNSTR_<JJ><MASC><SG>" { suffix = "o" }
+"o_UNSTR_<JJ><FEM><PL>" { suffix = "es" }
+"o_UNSTR_<JJ><MASC><PL>" { suffix = "os" }
+
+// Stressed a
+"à_<JJ><FEM><SG>" { suffix = "ana" }
+"à_<JJ><MASC><SG>" { suffix = "à" }
+"à_<JJ><FEM><PL>" { suffix = "anes" }
+"à_<JJ><MASC><PL>" { suffix = "ans" }
+
+// Change of phonemes
+"VOC_u_<JJ><FEM><SG>" { suffix = "va" }
+"VOC_u_<JJ><MASC><SG>" { suffix = "u" }
+"VOC_u_<JJ><FEM><PL>" { suffix = "ves" }
+"VOC_u_<JJ><MASC><PL>" { suffix = "us" }
+
+"t_d_<JJ><FEM><SG>" { suffix = "da" }
+"t_d_<JJ><MASC><SG>" { suffix = "t" }
+"t_d_<JJ><FEM><PL>" { suffix = "des" }
+"t_d_<JJ><MASC><PL>" { suffix = "ts" }
+
+"c_g_<JJ><FEM><SG>" { suffix = "ga" }
+"c_g_<JJ><MASC><SG>" { suffix = "c" }
+"c_g_<JJ><FEM><PL>" { suffix = "gues" }
+"c_g_<JJ><MASC><PL>" { suffix = "cs" }
+
+"c_q_<JJ><FEM><SG>" { suffix = "ca" }
+"c_q_<JJ><MASC><SG>" { suffix = "c" }
+"c_q_<JJ><FEM><PL>" { suffix = "ques" }
+"c_q_<JJ><MASC><PL>" { suffix = "cs" }
+
+// Gender invariant
+"GEND_INV_<JJ><FEM><SG>" { suffix = "" }
+"GEND_INV_<JJ><MASC><SG>" { suffix = "" }
+"GEND_INV_<JJ><FEM><PL>" { suffix = "s" }
+"GEND_INV_<JJ><MASC><PL>" { suffix = "s" }
+
+
+// Nouns
+// Source: https://books.google.es/books?id=H2E2XM069egC&printsec=frontcover&hl=es#v=onepage&q&f=false
+
+"REG_<N><PL>" { suffix = "s" }
+"CON_os_<N><PL>" { suffix = "os" }
+"a_<N><SG>" { suffix = "a" }
+"a_<N><PL>" { suffix = "es" }
+"ca_<N><SG>" { suffix = "ca" }
+"ca_<N><PL>" { suffix = "ques" }
+"ça_<N><SG>" { suffix = "ça" }
+"ça_<N><PL>" { suffix = "ces" }
+"ga_<N><SG>" { suffix = "ga" }
+"ga_<N><PL>" { suffix = "gues" }
+"í_<N><SG>" { suffix = "í" }
+"í_<N><PL>" { suffix = "ins" }
+"ó_<N><SG>" { suffix = "ó" }
+"ó_<N><PL>" { suffix = "ons" }
+
+//============== DETS ===================
+
+//Definite
+"el<DT><FEM><SG>" { word = "la" endswith = vowel precedesVowel = "l'" }
+"el<DT><FEM><PL>" { word = "les" }
+"el<DT><MASC><SG>" { word = "el" endswith = consonant precedesVowel = "l'" concatenate = { "a" = "al" "de" = "del" "per" = "pel" } }
+"el<DT><MASC><PL>" { word = "els" concatenate = { "a" = "als" "de" = "dels" "per" = "pels" } }
+
+//Indefinite
+"un<DT><FEM><SG>" { word = "una" }
+"un<DT><MASC><SG>" { word = "un" }
+"un<DT><FEM><PL>" { word = "unes" }
+"un<DT><MASC><PL>" { word = "uns" }
+
+// Possessive determiners (probably doesn't make sense like this, think about it)
+"su<DT><3><SG><MASC><SG>" { word = "seu" }
+"su<DT><3><SG><MASC><PL>" { word = "seus" }
+"su<DT><2><SG><MASC><SG>" { word = "teu" }
+"su<DT><2><SG><MASC><PL>" { word = "teus" }
+"su<DT><1><SG><MASC><SG>" { word = "meu" }
+"su<DT><1><SG><<MASC>PL>" { word = "meus" }
+"su<DT><3><SG><FEM><SG>" { word = "seva" }
+"su<DT><3><SG><FEM><PL>" { word = "sevas" }
+"su<DT><2><SG><FEM><SG>" { word = "tevaa" }
+"su<DT><2><SG><FEM><PL>" { word = "tevas" }
+"su<DT><1><SG><FEM><SG>" { word = "meva" }
+"su<DT><1><SG><FEM><PL>" { word = "mevas" }
+"su<DT><3><PL><MASC><SG>" { word = "seu" }
+"su<DT><3><PL><FEM><SG>" { word = "seva" }
+"su<DT><3><PL><MASC><PL>" { word = "seus" }
+"su<DT><3><PL><FEM><PL>" { word = "sevas" }
+"su<DT><2><PL><MASC><SG>" { word = "vostre" }
+"su<DT><2><PL><FEM><SG>" { word = "vostra" }
+"su<DT><2><PL><MASC><PL>" { word = "vostres" }
+"su<DT><2><PL><FEM><PL>" { word = "vostres" }
+"su<DT><1><PL><MASC><SG>" { word = "nostre" }
+"su<DT><1><PL><FEM><SG>" { word = "nostra" }
+"su<DT><1><PL><MASC><PL>" { word = "nostres" }
+"su<DT><1><PL><FEM><PL>" { word = "nostres" }
+
+//============== PRONOUNS ===================
+
+"_PRO-HUM_<PP><3><FEM><PL><subj>" { word = "elles" }
+"_PRO-HUM_<PP><3><FEM><PL><dobj>" { word = "les" }
+"_PRO-HUM_<PP><3><FEM><PL><obl_compl>" { word = "seu" }
+"_PRO-HUM_<PP><3><FEM><PL><prepos>" { word = "elles" }
+
+"_PRO-HUM_<PP><3><MASC><PL><subj>" { word = "ells" }
+"_PRO-HUM_<PP><3><MASC><PL><dobj>" { word = "los" }
+"_PRO-HUM_<PP><3><MASC><PL><obl_compl>" { word = "seu" }
+"_PRO-HUM_<PP><3><MASC><PL><prepos>" { word = "ells" }
+
+"_PRO-HUM_<PP><3><NEU><PL><subj>" { word = "ells" }
+"_PRO-HUM_<PP><3><NEU><PL><dobj>" { word = "los" }
+"_PRO-HUM_<PP><3><NEU><PL><obl_compl>" { word = "seus" }
+"_PRO-HUM_<PP><3><NEU><PL><prepos>" { word = "ells" }
+
+"_PRO-HUM_<PP><3><FEM><SG><subj>" { word = "ella" }
+"_PRO-HUM_<PP><3><FEM><SG><dobj>" { word = "la" }
+"_PRO-HUM_<PP><3><FEM><SG><obl_compl>" { word = "seu" }
+"_PRO-HUM_<PP><3><FEM><SG><prepos>" { word = "ella" }
+
+"_PRO-HUM_<PP><3><MASC><SG><subj>" { word = "ell" }
+"_PRO-HUM_<PP><3><MASC><SG><dobj>" { word = "el" }
+"_PRO-HUM_<PP><3><MASC><SG><obl_compl>" { word = "seu" }
+"_PRO-HUM_<PP><3><MASC><SG><prepos>" { word = "ell" }
+
+"_PRO-HUM_<PP><3><NEU><SG><subj>" { word = "ell" }
+"_PRO-HUM_<PP><3><NEU><SG><dobj>" { word = "els" }
+"_PRO-HUM_<PP><3><NEU><SG><obl_compl>" { word = "seu" }
+"_PRO-HUM_<PP><3><NEU><SG><prepos>" { word = "ell" }
+
+"_PRO_<PP><3><FEM><PL><subj>" { word = "elles" }
+"_PRO_<PP><3><FEM><PL><dobj>" { word = "les" }
+"_PRO_<PP><3><FEM><PL><obl_compl>" { word = "seus" }
+"_PRO_<PP><3><FEM><PL><prepos>" { word = "elles" }
+
+"_PRO_<PP><3><MASC><PL><subj>" { word = "ells" }
+"_PRO_<PP><3><MASC><PL><dobj>" { word = "els" }
+"_PRO_<PP><3><MASC><PL><obl_compl>" { word = "seus" }
+"_PRO_<PP><3><MASC><PL><prepos>" { word = "ells" }
+
+"_PRO_<PP><3><NEU><PL><subj>" { word = "ells" }
+"_PRO_<PP><3><NEU><PL><dobj>" { word = "els" }
+"_PRO_<PP><3><NEU><PL><obl_compl>" { word = "seus" }
+"_PRO_<PP><3><NEU><PL><prepos>" { word = "ells" }
+
+"_PRO_<PP><3><FEM><SG><subj>" { word = "ella" }
+"_PRO_<PP><3><FEM><SG><dobj>" { word = "la" }
+"_PRO_<PP><3><FEM><SG><obl_compl>" { word = "seu" }
+"_PRO_<PP><3><FEM><SG><prepos>" { word = "ella" }
+
+"_PRO_<PP><3><MASC><SG><subj>" { word = "ell" }
+"_PRO_<PP><3><MASC><SG><dobj>" { word = "el" }
+"_PRO_<PP><3><MASC><SG><obl_compl>" { word = "seu" }
+"_PRO_<PP><3><MASC><SG><prepos>" { word = "ell" }
+
+"_PRO_<PP><3><NEU><SG><subj>" { word = "ell" }
+"_PRO_<PP><3><NEU><SG><dobj>" { word = "ho" }
+
+"_PRO_<PP><3><NEU><SG><obl_compl>" { word = "su" }
+"_PRO_<WP><3><FEM><SG><obl_compl>" { word = "de la qual" }
+"_PRO_<WP><3><MASC><SG><obl_compl>" { word = "del qual" }
+"_PRO_<WP><3><NEU><SG><obl_compl>" { word = "del qual" }
+"_PRO_<WP><3><FEM><PL><obl_compl>" { word = "de les quals" }
+"_PRO_<WP><3><MASC><PL><obl_compl>" { word = "dels quals" }
+"_PRO_<WP><3><NEU><PL><obl_compl>" { word = "dels quals" }
+"_PRO_<WP$><3><FEM><SG><obl_compl>" { word = "de la qual" }
+"_PRO_<WP$><3><MASC><SG><obl_compl>" { word = "del qual" }
+"_PRO_<WP$><3><NEU><SG><obl_compl>" { word = "del qual" }
+"_PRO_<WP$><3><FEM><PL><obl_compl>" { word = "de les quals" }
+"_PRO_<WP$><3><MASC><PL><obl_compl>" { word = "dels quals" }
+"_PRO_<WP$><3><NEU><PL><obl_compl>" { word = "dels quals" }
+
+"del_qual<WP><3><FEM><SG><obl_compl>" { word = "de la qual" }
+"del_qual<WP><3><MASC><SG><obl_compl>" { word = "del qual" }
+"del_qual<WP><3><NEU><SG><obl_compl>" { word = "del qual" }
+"del_qual<WP><3><FEM><PL><obl_compl>" { word = "de les quals" }
+"del_qual<WP><3><MASC><PL><obl_compl>" { word = "dels quals" }
+"del_qual<WP><3><NEU><PL><obl_compl>" { word = "dels quals" }
+"del_qual<WP$><3><FEM><SG><obl_compl>" { word = "de la qual" }
+"del_qual<WP$><3><MASC><SG><obl_compl>" { word = "del qual" }
+"del_qual<WP$><3><NEU><SG><obl_compl>" { word = "del qual" }
+"del_qual<WP$><3><FEM><PL><obl_compl>" { word = "de les quals" }
+"del_qual<WP$><3><MASC><PL><obl_compl>" { word = "dels quals" }
+"del_qual<WP$><3><NEU><PL><obl_compl>" { word = "dels quals" }
+
+//============== PARTICLES
+
+"es" { word = "es" endswith = consonant precedesVowel = "s'" }
+"ca" { word = "ca" concatenate = { "el" = "cal" "els" = "cals" "en" = "can" } }
+
+//============== NOUNS ===================
+
+"paret_vegetal<N><PL>" { word = "parets vegetals" }
+
+
+//============== VERBS ===================
+
+"anar<V><IND><IMP><PRES><SG><1>" { word = "vaig" }
+"anar<V><IND><IMP><PRES><SG><2>" { word = "vas" }
+"anar<V><IND><IMP><PRES><SG><3>" { word = "va" }
+"anar<V><IND><IMP><PRES><PL><1>" { word = "vam" }
+"anar<V><IND><IMP><PRES><PL><2>" { word = "vau" }
+"anar<V><IND><IMP><PRES><PL><3>" { word = "van" }
+
+"contenir<V><PART><FEM><PL>" { word = "contingudas" }
+"contenir<V><PART><FEM><SG>" { word = "continguda" }
+"contenir<V><PART><MASC><PL>" { word = "continguts" }
+"contenir<V><PART><MASC><SG>" { word = "contingut" }
+"contenir<V><IND><PRES><PL><3>" { word = "contenen" }
+"contenir<V><IND><PRES><SG><3>" { word = "conté" }
+"contenir<V><IND><IMP><PRES><PL><3>" { word = "contenen" }
+"contenir<V><IND><IMP><PRES><SG><3>" { word = "conté" }
+
+"contribuir<V><IND><IMP><PRES><SG><3>"{ word = "contribueix" }
+
+"deure<V><INF>" { word = "deure" }
+"deure<V><GER>" { word = "devent" }
+"deure<V><PART><FEM><PL>" { word = "degudes" }
+"deure<V><PART><FEM><SG>" { word = "deguda" }
+"deure<V><PART><MASC><PL>" { word = "deguts" }
+"deure<V><PART><MASC><SG>" { word = "degut" }
+"deure<V><IND><PRES><PL><3>" { word = "deuen" }
+"deure<V><IND><PRES><SG><3>" { word = "deu" }
+
+"estar<V><IND><PRES><PL><3>" { word = "estan" startswith = vowel }
+"estar<V><IND><PRES><SG><3>" { word = "està" startswith = vowel }
+"estar<V><IND><IMP><PRES><PL><3>" { word = "estan" startswith = vowel }
+"estar<V><IND><IMP><PRES><SG><3>" { word = "està" startswith = vowel }
+"estar<V><IND><PERF-S><PAST><PL><3>" { word = "estigueren" startswith = vowel }
+"estar<V><IND><PERF-S><PAST><SG><3>" { word = "estigué" startswith = vowel }
+
+"haber<V><IND><IMP><PRES><PL><3>" { word = "han" startswith = vowel }
+"haber<V><IND><IMP><PRES><SG><3>" { word = "ha" startswith = vowel }
+
+"il·luminar<V><IND><IMP><PAST><PL><3>" { word = "il·luminaven" startswith = vowel }
+"il·luminar<V><IND><IMP><PAST><SG><3>" { word = "il·luminava" startswith = vowel }
+
+"moure<V><INF>" { word = "moure" }
+"moure<V><GER>" { word = "movent" }
+"moure<V><PART><FEM><PL>" { word = "mogudes" }
+"moure<V><PART><FEM><SG>" { word = "moguda" }
+"moure<V><PART><MASC><PL>" { word = "moguts" }
+"moure<V><PART><MASC><SG>" { word = "dmogut" }
+"moure<V><IND><PRES><PL><3>" { word = "mouen" }
+"moure<V><IND><PRES><SG><3>" { word = "mou" }
+
+"poder<V><INF>" { word = "poder" }
+"poder<V><GER>" { word = "podent" }
+"poder<V><PART>" { word = "pogut" }
+"poder<V><PART><FEM><PL>" { word = "pogudes" }
+"poder<V><PART><FEM><SG>" { word = "poguda" }
+"poder<V><PART><MASC><PL>" { word = "poguts" }
+"poder<V><PART><MASC><SG>" { word = "pogut" }
+"poder<V><IND><IMP><PRES><PL><3>" { word = "poden" }
+"poder<V><IND><IMP><PRES><SG><3>" { word = "pot" }
+"poder<V><SBJ><PRES><SG><3>" { word = "pugui" }
+
+"ser<V><INF>" { word = "ser" }
+"ser<V><GER>" { word = "sent" }
+"ser<V><PART>" { word = "sigut" }
+"ser<V><PART><FEM><PL>" { word = "sigudes" }
+"ser<V><PART><FEM><SG>" { word = "siguda" }
+"ser<V><PART><MASC><PL>" { word = "siguts" }
+"ser<V><PART><MASC><SG>" { word = "sigut" }
+"ser<V><IND><PRES><PL><3>" { word = "són" }
+"ser<V><IND><PRES><SG><3>" { word = "és" }
+"ser<V><IND><IMP><PRES><PL><3>" { word = "són" }
+"ser<V><IND><IMP><PRES><SG><3>" { word = "és" }
+"ser<V><IND><IMP><PAST><PL><3>" { word = "eren" }
+"ser<V><IND><IMP><PAST><SG><3>" { word = "era" }
+"ser<V><IND><PAST><PL><3>" { word = "foren" }
+"ser<V><IND><PAST><SG><3>" { word = "fou" }
+"ser<V><IND><PERF-S><PAST><PL><3>" { word = "foren" }
+"ser<V><IND><PERF-S><PAST><SG><3>" { word = "fou" }
+
+"seure<V><INF>" { word = "seure" }
+"seure<V><GER>" { word = "seient" }
+"seure<V><PART>" { word = "segut" }
+"seure<V><PART><FEM><PL>" { word = "segudes" }
+"seure<V><PART><FEM><SG>" { word = "seguda" }
+"seure<V><PART><MASC><PL>" { word = "seguts" }
+"seure<V><PART><MASC><SG>" { word = "segut" }
+
+"tenir<V><INF>" { word = "tenir" }
+"tenir<V><GER>" { word = "tenint" }
+"tenir<V><PART>" { word = "tingut" }
+"tenir<V><PART><FEM><PL>" { word = "tingudes" }
+"tenir<V><PART><FEM><SG>" { word = "tinguda" }
+"tenir<V><PART><MASC><PL>" { word = "tinguts" }
+"tenir<V><PART><MASC><SG>" { word = "tingut" }
+"tenir<V><IND><PRES><PL><3>" { word = "tenen" }
+"tenir<V><IND><PRES><SG><3>" { word = "té" }
+"tenir<V><IND><IMP><PRES><PL><3>" { word = "tenen" }
+"tenir<V><IND><IMP><PRES><SG><3>" { word = "té" }
+
+"transmetre<V><INF>" { word = "transmetre" }
+"transmetre<V><PART><FEM><PL>" { word = "transmeses" }
+"transmetre<V><PART><FEM><SG>" { word = "transmesa" }
+"transmetre<V><PART><MASC><PL>" { word = "transmesos" }
+"transmetre<V><PART><MASC><SG>" { word = "transmès" }
+
+
+//============== ADJECTIVES ===================
+
+"rodò<JJ><FEM><PL>" { word = "rodonas" }
+"rodò<JJ><FEM><SG>" { word = "rodona" }
+"rodò<JJ><MASC><PL>" { word = "rodons" }
+"rodò<JJ><MASC><SG>" { word = "rodò" }
+
+"mitjà<JJ><FEM><PL>" { word = "mitjanas" }
+"mitjà<JJ><FEM><SG>" { word = "mitjana" }
+"mitjà<JJ><MASC><PL>" { word = "mitjans" }
+"mitjà<JJ><MASC><SG>" { word = "mitjà" }
+
+"marró<JJ><FEM><PL>" { word = "marrons" }
+"marró<JJ><FEM><SG>" { word = "marró" }
+"marró<JJ><MASC><PL>" { word = "marrons" }
+"marró<JJ><MASC><SG>" { word = "marró" }
+
+
+}

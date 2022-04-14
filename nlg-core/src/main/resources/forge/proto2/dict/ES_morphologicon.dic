@@ -1,0 +1,905 @@
+morph {
+
+//============== MORPH GEN ===================
+
+// Finite Verbs
+
+// Participles
+"ar_<V><PART>" { suffix = "ado"}
+"ar_<V><PART><FEM><SG>" { suffix = "ada"}
+"ar_<V><PART><MASC><SG>" { suffix = "ado"}
+"ar_<V><PART><FEM><PL>" { suffix = "adas"}
+"ar_<V><PART><MASC><PL>" { suffix = "ados"}
+
+"ir_<V><PART>" { suffix = "ido"}
+"ir_<V><PART><FEM><SG>" { suffix = "ida"}
+"ir_<V><PART><MASC><SG>" { suffix = "ido"}
+"ir_<V><PART><FEM><PL>" { suffix = "idas"}
+"ir_<V><PART><MASC><PL>" { suffix = "idos"}
+
+"er_<V><PART>" { suffix = "ido"}
+"er_<V><PART><FEM><SG>" { suffix = "ida"}
+"er_<V><PART><MASC><SG>" { suffix = "ido"}
+"er_<V><PART><FEM><PL>" { suffix = "idas"}
+"er_<V><PART><MASC><PL>" { suffix = "idos"}
+
+// Gerund
+"ar_<V><GER>" { suffix = "ando" }
+"er_<V><GER>" { suffix = "iendo" }
+"ir_<V><GER>" { suffix = "iendo" }
+
+// Infinitive
+"ar_<V><INF>" { suffix = "ar" }
+"er_<V><INF>" { suffix = "er" }
+"ir_<V><INF>" { suffix = "ir" }
+
+// AR
+"ar_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"ar_<V><IND><IMP><PRES><SG><2>" { suffix = "as" }
+"ar_<V><IND><IMP><PRES><SG><3>" { suffix = "a" }
+"ar_<V><IND><IMP><PRES><PL><1>" { suffix = "amos" }
+"ar_<V><IND><IMP><PRES><PL><2>" { suffix = "áis" }
+"ar_<V><IND><IMP><PRES><PL><3>" { suffix = "an" }
+
+"ar_<V><IND><IMP><PAST><SG><1>" { suffix = "aba" }
+"ar_<V><IND><IMP><PAST><SG><2>" { suffix = "abas" }
+"ar_<V><IND><IMP><PAST><SG><3>" { suffix = "aba" }
+"ar_<V><IND><IMP><PAST><PL><1>" { suffix = "ábamos" }
+"ar_<V><IND><IMP><PAST><PL><2>" { suffix = "abáis" }
+"ar_<V><IND><IMP><PAST><PL><3>" { suffix = "aban" }
+
+// ER
+"er_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"er_<V><IND><IMP><PRES><SG><2>" { suffix = "es" }
+"er_<V><IND><IMP><PRES><SG><3>" { suffix = "e" }
+"er_<V><IND><IMP><PRES><PL><1>" { suffix = "emos" }
+"er_<V><IND><IMP><PRES><PL><2>" { suffix = "éis" }
+"er_<V><IND><IMP><PRES><PL><3>" { suffix = "en" }
+
+// IR
+"ir_<V><IND><IMP><PRES><SG><1>" { suffix = "o" }
+"ir_<V><IND><IMP><PRES><SG><2>" { suffix = "es" }
+"ir_<V><IND><IMP><PRES><SG><3>" { suffix = "e" }
+"ir_<V><IND><IMP><PRES><PL><1>" { suffix = "imos" }
+"ir_<V><IND><IMP><PRES><PL><2>" { suffix = "ís" }
+"ir_<V><IND><IMP><PRES><PL><3>" { suffix = "en" }
+
+
+"ir_<V><IND><IMP><PAST><SG><1>" { suffix = "ia" }
+"ir_<V><IND><IMP><PAST><SG><2>" { suffix = "ies" }
+"ir_<V><IND><IMP><PAST><SG><3>" { suffix = "ia" }
+"ir_<V><IND><IMP><PAST><PL><1>" { suffix = "íem" }
+"ir_<V><IND><IMP><PAST><PL><2>" { suffix = "íeu" }
+"ir_<V><IND><IMP><PAST><PL><3>" { suffix = "ien" }
+
+// Adjectives
+// Source: https://espanol.lingolia.com/es/gramatica/adjetivos/terminacion#:~:text=El%20plural%20de%20los%20adjetivos,menudo%20en%20ricos%20platos.&text=Si%20el%20adjetivo%20acaba%20en,se%20a%C3%B1ade%20%2Des%20al%20final.
+// En general, los adjetivos masculinos acaban en -o. Ejemplo: Félix es un gato blanco. 
+// El femenino se forma con la terminación -a. Ejemplo: Alba es una gata blanca.
+// Los adjetivos acabados en -e o en consonante tienen una única forma para ambos géneros. Ejemplo: José es el amable dueño de Félix. Berta es la amable dueña de Félix.
+// Para formar el femenino de los adjetivos acabados en -or, -ol, -ón, -án, -ín y -és, se añade una a, a excepción de cortés. Ejemplo: José no es francés. Berta tampoco es francesa. (pero: José es cortés. Berta también es cortés.)
+// Todos los demás adjetivos que acaban en consonante tienen una única forma para ambos géneros. Ejemplo: Félix está encima de la silla gris. Félix está encima del sillón gris.
+// There are of course exceptions, whoch is why this morphologicon exists.
+
+"e_<JJ><FEM><SG>" { suffix = "e"}
+"e_<JJ><MASC><SG>" { suffix = "e"}
+"e_<JJ><FEM><PL>" { suffix = "es"}
+"e_<JJ><MASC><PL>" { suffix = "es"}
+
+"o_<JJ><FEM><SG>" { suffix = "a"}
+"o_<JJ><MASC><SG>" { suffix = "o"}
+"o_<JJ><FEM><PL>" { suffix = "as"}
+"o_<JJ><MASC><PL>" { suffix = "os"}
+
+"l_<JJ><FEM><SG>" { suffix = ""}
+"l_<JJ><MASC><SG>" { suffix = ""}
+"l_<JJ><FEM><PL>" { suffix = "es"}
+"l_<JJ><MASC><PL>" { suffix = "es"}
+
+// Nouns
+// Source: https://espanol.lingolia.com/es/gramatica/sustantivos/plural
+// Los sustantivos acabados en las consonantes -d, -j, -l, -n, -r forman el plural añadiendo -es. Ejemplo: el ordenador – los ordenadores, el reloj - los relojes
+// Si la palabra termina en -z, esta se transforma en una c antes de añadir -es. Ejemplo: la cruz – las cruces
+// Los extranjerismos que terminan en consonante forman el plural añadiendo -s o o -es . Ejemplo: el club – los clubs/clubes
+"CON_<N><PL>" { suffix = "es"}
+"VOC_<N><PL>" { suffix = "s"}
+"ón_<N><SG>" { suffix = "ón" }
+"ón_<N><PL>" { suffix = "ones" }
+
+//============== DETS ===================
+"el<DT><FEM><SG>" {word = "la"}
+"el<DT><FEM><PL>" {word = "las"}
+"el<DT><MASC><SG>" {word = "el"}
+"el<DT><MASC><PL>" {word = "los"}
+
+"su<DT><3><SG>" {word = "su"}
+"su<DT><3><PL>" {word = "sus"}
+"su<DT><2><SG>" {word = "tu"}
+"su<DT><2><PL>" {word = "tus"}
+"su<DT><1><SG>" {word = "mi"}
+"su<DT><1><PL>" {word = "mis"}
+
+"un<DT><FEM><SG>" { word = "una" }
+"un<DT><MASC><SG>" { word = "un" }
+"un<DT><FEM><PL>" { word = "unas" }
+"un<DT><MASC><PL>" { word = "unos" }
+
+"_PRO-HUM_<PP><3><FEM><PL><subj>" { word = "ellas"}
+"_PRO-HUM_<PP><3><FEM><PL><dobj>" { word = "las"}
+"_PRO-HUM_<PP><3><FEM><PL><obl_compl>" { word = "su"}
+"_PRO-HUM_<PP><3><FEM><PL><prepos>" { word = "ellas"}
+
+"_PRO-HUM_<PP><3><MASC><PL><subj>" { word = "ellos"}
+"_PRO-HUM_<PP><3><MASC><PL><dobj>" { word = "los"}
+"_PRO-HUM_<PP><3><MASC><PL><obl_compl>" { word = "su"}
+"_PRO-HUM_<PP><3><MASC><PL><prepos>" { word = "ellos"}
+
+"_PRO-HUM_<PP><3><NEU><PL><subj>" { word = "ellos"}
+"_PRO-HUM_<PP><3><NEU><PL><dobj>" { word = "los"}
+"_PRO-HUM_<PP><3><NEU><PL><obl_compl>" { word = "sus"}
+"_PRO-HUM_<PP><3><NEU><PL><prepos>" { word = "ellos"}
+
+"_PRO-HUM_<PP><3><FEM><SG><subj>" { word = "ella"}
+"_PRO-HUM_<PP><3><FEM><SG><dobj>" { word = "la"}
+"_PRO-HUM_<PP><3><FEM><SG><obl_compl>" { word = "su"}
+"_PRO-HUM_<PP><3><FEM><SG><prepos>" { word = "ella"}
+
+"_PRO-HUM_<PP><3><MASC><SG><subj>" { word = "él"}
+"_PRO-HUM_<PP><3><MASC><SG><dobj>" { word = "lo"}
+"_PRO-HUM_<PP><3><MASC><SG><obl_compl>" { word = "su"}
+"_PRO-HUM_<PP><3><MASC><SG><prepos>" { word = "él"}
+
+"_PRO-HUM_<PP><3><NEU><SG><subj>" { word = "él"}
+"_PRO-HUM_<PP><3><NEU><SG><dobj>" { word = "lo"}
+"_PRO-HUM_<PP><3><NEU><SG><obl_compl>" { word = "su"}
+"_PRO-HUM_<PP><3><NEU><SG><prepos>" { word = "él"}
+
+"_PRO_<PP><3><FEM><PL><subj>" { word = "ellas"}
+"_PRO_<PP><3><FEM><PL><dobj>" { word = "las"}
+"_PRO_<PP><3><FEM><PL><obl_compl>" { word = "sus"}
+"_PRO_<PP><3><FEM><PL><prepos>" { word = "ellas"}
+
+"_PRO_<PP><3><MASC><PL><subj>" { word = "ellos"}
+"_PRO_<PP><3><MASC><PL><dobj>" { word = "los"}
+"_PRO_<PP><3><MASC><PL><obl_compl>" { word = "sus"}
+"_PRO_<PP><3><MASC><PL><prepos>" { word = "ellos"}
+
+"_PRO_<PP><3><NEU><PL><subj>" { word = "ellos"}
+"_PRO_<PP><3><NEU><PL><dobj>" { word = "los"}
+"_PRO_<PP><3><NEU><PL><obl_compl>" { word = "sus"}
+"_PRO_<PP><3><NEU><PL><prepos>" { word = "ellos"}
+
+"_PRO_<PP><3><FEM><SG><subj>" { word = "ella"}
+"_PRO_<PP><3><FEM><SG><dobj>" { word = "la"}
+"_PRO_<PP><3><FEM><SG><obl_compl>" { word = "su"}
+"_PRO_<PP><3><FEM><SG><prepos>" { word = "ella"}
+
+"_PRO_<PP><3><MASC><SG><subj>" { word = "él"}
+"_PRO_<PP><3><MASC><SG><dobj>" { word = "lo"}
+"_PRO_<PP><3><MASC><SG><obl_compl>" { word = "su"}
+"_PRO_<PP><3><MASC><SG><prepos>" { word = "él"}
+
+"_PRO_<PP><3><NEU><SG><subj>" { word = "él"}
+"_PRO_<PP><3><NEU><SG><dobj>" { word = "lo"}
+
+"_PRO_<PP><3><NEU><SG><obl_compl>" { word = "su"}
+"_PRO_<WP><3><FEM><SG><obl_compl>" { word = "cuya"}
+"_PRO_<WP><3><MASC><SG><obl_compl>" { word = "cuyo"}
+"_PRO_<WP><3><NEU><SG><obl_compl>" { word = "cuyo"}
+"_PRO_<WP><3><FEM><PL><obl_compl>" { word = "cuyas"}
+"_PRO_<WP><3><MASC><PL><obl_compl>" { word = "cuyos"}
+"_PRO_<WP><3><NEU><PL><obl_compl>" { word = "cuyos"}
+"_PRO_<WP$><3><FEM><SG><obl_compl>" { word = "cuya"}
+"_PRO_<WP$><3><MASC><SG><obl_compl>" { word = "cuyo"}
+"_PRO_<WP$><3><NEU><SG><obl_compl>" { word = "cuyo"}
+"_PRO_<WP$><3><FEM><PL><obl_compl>" { word = "cuyas"}
+"_PRO_<WP$><3><MASC><PL><obl_compl>" { word = "cuyos"}
+"_PRO_<WP$><3><NEU><PL><obl_compl>" { word = "cuyos"}
+
+"cuyo<WP><3><FEM><SG><obl_compl>" { word = "cuya"}
+"cuyo<WP><3><MASC><SG><obl_compl>" { word = "cuyo"}
+"cuyo<WP><3><NEU><SG><obl_compl>" { word = "cuyo"}
+"cuyo<WP><3><FEM><PL><obl_compl>" { word = "cuyas"}
+"cuyo<WP><3><MASC><PL><obl_compl>" { word = "cuyos"}
+"cuyo<WP><3><NEU><PL><obl_compl>" { word = "cuyos"}
+"cuyo<WP$><3><FEM><SG><obl_compl>" { word = "cuya"}
+"cuyo<WP$><3><MASC><SG><obl_compl>" { word = "cuyo"}
+"cuyo<WP$><3><NEU><SG><obl_compl>" { word = "cuyo"}
+"cuyo<WP$><3><FEM><PL><obl_compl>" { word = "cuyas"}
+"cuyo<WP$><3><MASC><PL><obl_compl>" { word = "cuyos"}
+"cuyo<WP$><3><NEU><PL><obl_compl>" { word = "cuyos"}
+
+//============== NOUNS ===================
+"3D<N><SG>" { word = "3D" }
+"bacon_butty,_bacon_sarnie,_rasher_sandwich,_bacon_sanger,_piece_n_bacon,_bacon_cob,_bacon_barm_y_bacon_muffin<N><PL>" { word = "bacon_butty,_bacon_sarnie,_rasher_sandwich,_bacon_sanger,_piece_n_bacon,_bacon_cob,_bacon_barm_y_bacon_muffin"}
+"bhaji_and_bajji<N><MASC><PL>" { word = "bhaji_and_bajji"}
+"camión<N><PL>" { word = "camiones"}
+"campeón<N><PL>" { word = "campeones"}
+"CODEN<N><SG>" { word = "CODEN" }
+"Congreso<N><SG>" { word = "Congreso" }
+"construcción<N><PL>" { word = "construcciones"}
+"EISSN<N><SG>" { word = "EISSN" }
+"evacuación<N><PL>" { word = "evacuaciones"}
+"habitación<N><PL>" { word = "habitaciones" }
+"Históricos<N><SG>" { word = "Históricos" }
+"IATA<N><SG>" { word = "IATA" }
+"imagen<N><PL>" { word = "imágenes" }
+"invasión_de_Granada<N><PL>" { word = "invasiones_de_Granada"}
+"ISBN<N><SG>" { word = "ISBN" }
+"ISSN<N><SG>" { word = "ISSN" }
+"Kurdish_languages<N><MASC><PL>" { word = "Kurdish_languages"}
+"LCCN<N><SG>" { word = "LCCN" }
+"miembro de la tripulación<N><PL>" { word = "miembros de la tripulación"}
+"OACI<N><SG>" { word = "OACI" }
+"OCLC<N><SG>" { word = "OCLC" }
+"Office<N><SG>" { word = "Office" }
+"Outlook<N><SG>" { word = "Outlook" }
+"persona en silla de ruedas<N><PL>" { word = "personas en silla de ruedas" }
+"población<N><PL>" { word = "poblaciones"}
+"propiedad_contribuidora<N><PL>" { word = "propiedades_contribuidoras"}
+"ración<N><MASC><PL>" { word = "raciones" }
+"religión<N><PL>" { word = "religiones"}
+"tripulación<N><PL>" { word = "tripulaciones"}
+"UTC<N><SG>" { word = "UTC" }
+"variación<N><PL>" { word = "variaciones"}
+
+//============== VERBS ===================
+"abreviar<V><IND><IMP><PRES><PL><3>" { word = "abrevian"}
+"abreviar<V><IND><IMP><PRES><SG><3>" { word = "abrevia" }
+
+"afectar<V><GER>" {word = "anunciando"}
+"afectar<V><IND><PAST><PL><3>" {word = "afectaron"}
+"afectar<V><IND><PAST><SG><3>" {word = "afectó"}
+"afectar<V><IND><PRES><PL><3>" {word = "afectan"}
+"afectar<V><IND><PRES><SG><3>" {word = "afecta"}
+"afectar<V><INF>" {word = "afectar"}
+
+"albergar<V><IND><IMP><PRES><PL><3>" { word = "albergan"}
+"albergar<V><IND><IMP><PRES><SG><3>" { word = "alberga" }
+
+"anunciar<V><GER>" {word = "anunciando"}
+"anunciar<V><IND><PAST><PL><3>" {word = "anunciaron"}
+"anunciar<V><IND><PAST><SG><3>" {word = "anunció"}
+"anunciar<V><IND><PRES><PL><3>" {word = "anuncian"}
+"anunciar<V><IND><PRES><SG><3>" {word = "anuncia"}
+"anunciar<V><INF>" {word = "anunciar"}
+
+"aparecer<V><IND><PERF-S><PAST><PL><3>" { word = "aparecieron"}
+"aparecer<V><IND><PERF-S><PAST><SG><3>" { word = "apareció" }
+
+"avistar<V><GER>" {word = "avistando"}
+"avistar<V><IND><PAST><PL><3>" {word = "avistaron"}
+"avistar<V><IND><PAST><SG><3>" {word = "avistó"}
+"avistar<V><IND><PRES><PL><3>" {word = "avistan"}
+"avistar<V><IND><PRES><SG><3>" {word = "avista"}
+"avistar<V><IND><IMP><PRES><PL><3>" {word = "avistan"}
+"avistar<V><IND><IMP><PRES><SG><3>" {word = "avista"}
+"avistar<V><IND><PERF-S><PAST><PL><3>" {word = "avistaron"}
+"avistar<V><IND><PERF-S><PAST><SG><3>" {word = "avistó"}
+"avistar<V><INF>" {word = "avistar"}
+
+"cambiar<V><GER>" {word = "cambiando"}
+"cambiar<V><IND><PERF-S><PAST><PL><3>" { word = "cambiaron"}
+"cambiar<V><IND><PERF-S><PAST><SG><3>" { word = "cambió" }
+
+"competir<V><IND><IMP><PRES><SG><3>" { word = "compite" }
+
+"construir<V><IND><IMP><PAST><PL><3>" { word = "construían" }
+"construir<V><IND><IMP><PAST><SG><3>" { word = "construía" }
+"construir<V><IND><IMP><PRES><PL><3>" { word = "construyen" }
+"construir<V><IND><IMP><PRES><SG><3>" { word = "construye" }
+"construir<V><IND><PERF-S><PAST><PL><3>" { word = "construyeron"}
+"construir<V><IND><PERF-S><PAST><SG><3>" { word = "construyó" }
+"construir<V><IND><PERF-S><PRES><PL><3>" { word = "construyen"}
+"construir<V><IND><PERF-S><PRES><SG><3>" { word = "construye" }
+
+"contener<V><IND><IMP><PRES><PL><3>" { word = "contienen"}
+"contener<V><IND><IMP><PRES><SG><3>" { word = "contiene" }
+
+"contribuir<V><IND><IMP><PRES><PL><3>" { word = "contribuyen"}
+"contribuir<V><IND><IMP><PRES><SG><3>" { word = "contribuye" }
+
+"costar<V><IND><IMP><PRES><SG><3>" { word = "cuesta" }
+"costar<V><IND><PERF-S><PAST><SG><3>" { word = "costó" }
+
+"crear<V><IND><PERF-S><PAST><PL><3>" { word = "crearon"}
+"crear<V><IND><PERF-S><PAST><SG><3>" { word = "creó" }
+
+"detectar<V><GER>" {word = "detectando"}
+"detectar<V><IND><PAST><PL><3>" {word = "detectaron"}
+"detectar<V><IND><PAST><SG><3>" {word = "detectó"}
+"detectar<V><IND><PRES><PL><3>" {word = "detectan"}
+"detectar<V><IND><PRES><SG><3>" {word = "detecta"}
+"detectar<V><IND><IMP><PRES><PL><3>" {word = "detectan"}
+"detectar<V><IND><IMP><PRES><SG><3>" {word = "detecta"}
+"detectar<V><IND><PERF-S><PAST><PL><3>" {word = "detectaron"}
+"detectar<V><IND><PERF-S><PAST><SG><3>" {word = "detectó"}
+"detectar<V><INF>" {word = "detectar"}
+
+"diseñar<V><IND><PERF-S><PAST><PL><3>" { word = "diseñaron"}
+"diseñar<V><IND><PERF-S><PAST><SG><3>" { word = "diseñó" }
+
+"emitir<V><IND><IMP><PRES><PL><3>" { word = "emiten"}
+"emitir<V><IND><IMP><PRES><SG><3>" { word = "emite" }
+"emitir<V><IND><PERF-S><PAST><PL><3>" { word = "emitieron"}
+"emitir<V><IND><PERF-S><PAST><SG><3>" { word = "emitió" }
+
+"encontrar<V><IND><IMP><PRES><PL><3>" { word = "encuentran"}
+"encontrar<V><IND><IMP><PRES><SG><3>" { word = "encuentra" }
+"encontrar<V><IND><PERF-S><PAST><SG><3>" { word = "encontró" }
+
+"escribir<V><IND><PERF-S><PAST><PL><3>" { word = "escribieron"}
+"escribir<V><IND><PERF-S><PAST><SG><3>" { word = "escribió" }
+
+"especializar<V><IND><IMP><PRES><PL><3>" { word = "especializan"}
+"especializar<V><IND><IMP><PRES><SG><3>" { word = "especializa" }
+
+"estar<V><GER>" {word = "estando"}
+"estar<V><IND><IMP><PRES><PL><3>" { word = "están"}
+"estar<V><IND><IMP><PRES><SG><3>" { word = "está" }
+"estar<V><IND><IMP><PAST><PL><3>" {word = "estaban"}
+"estar<V><IND><IMP><PAST><SG><3>" {word = "estaba"}
+"estar<V><IND><PERF-S><PAST><PL><3>" {word = "fueron"}
+"estar<V><IND><PERF-S><PAST><SG><3>" {word = "fue"}
+"estar<V><INF>" {word = "estar"}
+
+"existir<V><IND><IMP><PRES><PL><3>" { word = "existen"}
+"existir<V><IND><IMP><PRES><SG><3>" { word = "existe" }
+
+"fundar<V><IND><PERF-S><PAST><PL><3>" { word = "fundaron"}
+"fundar<V><IND><PERF-S><PAST><SG><3>" { word = "fundó" }
+
+"gobernar<V><IND><IMP><PRES><PL><3>" { word = "gobiernan"}
+"gobernar<V><IND><IMP><PRES><SG><3>" { word = "gobierna" }
+
+"graduar<V><IND><PERF-S><PAST><PL><3>" { word = "graduaron"}
+"graduar<V><IND><PERF-S><PAST><SG><3>" { word = "graduó" }
+
+"gravar<V><IND><IMP><PAST><PL><3>" { word = "gravaban" }
+"gravar<V><IND><IMP><PAST><SG><3>" { word = "gravaba" }
+"gravar<V><IND><IMP><PRES><PL><3>" { word = "gravan" }
+"gravar<V><IND><IMP><PRES><SG><3>" { word = "grava" }
+"gravar<V><IND><PERF-S><PAST><PL><3>" { word = "gravaron"}
+"gravar<V><IND><PERF-S><PAST><SG><3>" { word = "gravó" }
+"gravar<V><IND><PERF-S><PRES><PL><3>" { word = "gravan"}
+"gravar<V><IND><PERF-S><PRES><SG><3>" { word = "grava" }
+
+"haber<V><IND><IMP><PRES><PL><3>" { word = "han"}
+"haber<V><IND><IMP><PRES><SG><3>" { word = "ha" }
+
+"hablar<V><IND><IMP><PRES><PL><3>" { word = "hablan"}
+"hablar<V><IND><IMP><PRES><SG><3>" { word = "habla" }
+
+"iluminar<V><GER>" {word = "iluminando"}
+"iluminar<V><IND><IMP><PAST><PL><3>" { word = "iluminaban"}
+"iluminar<V><IND><IMP><PAST><SG><3>" { word = "iluminaba" }
+"iluminar<V><IND><PERF-S><PAST><PL><3>" { word = "iluminaron"}
+"iluminar<V><IND><PERF-S><PAST><SG><3>" { word = "iluminó" }
+
+"inaugurar<V><IND><PERF-S><PAST><PL><3>" { word = "inauguraron"}
+"inaugurar<V><IND><PERF-S><PAST><SG><3>" { word = "inauguró" }
+
+"incluir<V><IND><IMP><PRES><PL><3>" { word = "incluyen"}
+"incluir<V><IND><IMP><PRES><SG><3>" { word = "incluye" }
+
+"influenciar<V><IND><PERF-S><PAST><SG><3>" { word = "influenció" }
+
+"iniciar<V><IND><PERF-S><PAST><PL><3>" { word = "iniciaron"}
+"iniciar<V><IND><PERF-S><PAST><SG><3>" { word = "inició" }
+
+"interpretar<V><IND><IMP><PRES><SG><3>" { word = "interpreta" }
+
+"inventar<V><IND><PERF-S><PAST><SG><3>" { word = "inventó" }
+
+"jugar<V><IND><IMP><PAST><PL><3>" { word = "jugaban"}
+"jugar<V><IND><IMP><PAST><SG><3>" { word = "jugaba"}
+"jugar<V><IND><IMP><PRES><PL><3>" { word = "juegan"}
+"jugar<V><IND><IMP><PRES><SG><3>" { word = "juega" }
+"jugar<V><IND><PERF-S><PAST><PL><3>" { word = "jugaron"}
+"jugar<V><IND><PERF-S><PAST><SG><3>" { word = "jugó" }
+
+"llamar<V><IND><IMP><PRES><PL><3>" { word = "llaman"}
+"llamar<V><IND><IMP><PRES><SG><3>" { word = "llama" }
+
+"morir<V><IND><PERF-S><PAST><PL><3>" { word = "murieron"}
+"morir<V><IND><PERF-S><PAST><SG><3>" { word = "murió" }
+
+"nacer<V><IND><PERF-S><PAST><PL><3>" { word = "nacieron"}
+"nacer<V><IND><PERF-S><PAST><SG><3>" { word = "nació" }
+
+"ocupar<V><IND><IMP><PRES><SG><3>" { word = "ocupa" }
+
+"ofrecer<V><IND><IMP><PRES><PL><3>" { word = "ofrecen"}
+"ofrecer<V><IND><IMP><PRES><SG><3>" { word = "ofrece" }
+
+"operar<V><IND><IMP><PRES><PL><3>" { word = "operan"}
+"operar<V><IND><IMP><PRES><SG><3>" { word = "opera" }
+"operar<V><IND><IMP><PAST><PL><3>" { word = "operaban"}
+"operar<V><IND><IMP><PAST><SG><3>" { word = "operaba" }
+
+"participar<V><IND><PERF-S><PAST><PL><3>" { word = "participaron"}
+"participar<V><IND><PERF-S><PAST><SG><3>" { word = "participó" }
+
+"pasar<V><IND><PERF-S><PAST><PL><3>" { word = "pasaron"}
+"pasar<V><IND><PERF-S><PAST><SG><3>" { word = "pasó" }
+
+"pertenecer<V><IND><IMP><PRES><PL><3>" { word = "pertenecen"}
+"pertenecer<V><IND><IMP><PRES><SG><3>" { word = "pertenece" }
+
+"poder<V><IND><IMP><PRES><PL><3>" { word = "pueden"}
+"poder<V><IND><IMP><PRES><SG><3>" { word = "puede" }
+"poder<V><IND><IMP><PAST><PL><3>" { word = "podían"}
+"poder<V><IND><IMP><PAST><SG><3>" { word = "podía" }
+
+"prestar<V><IND><IMP><PRES><PL><3>" { word = "prestan"}
+"prestar<V><IND><IMP><PRES><SG><3>" { word = "presta" }
+
+"producir<V><IND><IMP><PRES><PL><3>" { word = "producen"}
+"producir<V><IND><IMP><PRES><SG><3>" { word = "produce" }
+
+"protagonizar<V><IND><IMP><PRES><PL><3>" { word = "protagonizan"}
+"protagonizar<V><IND><IMP><PRES><SG><3>" { word = "protagoniza" }
+
+"publicar<V><IND><IMP><PRES><PL><3>" { word = "publican"}
+"publicar<V><IND><IMP><PRES><SG><3>" { word = "publica" }
+"publicar<V><IND><PERF-S><PAST><PL><3>" { word = "publicaron"}
+"publicar<V><IND><PERF-S><PAST><SG><3>" { word = "publicó" }
+"publicar<V><IND><PERF-S><PRES><PL><3>" { word = "publicaron"}
+"publicar<V><IND><PERF-S><PRES><SG><3>" { word = "publicó" }
+
+"recibir<V><IND><PERF-S><PAST><PL><3>" { word = "recibieron"}
+"recibir<V><IND><PERF-S><PAST><SG><3>" { word = "recibió" }
+
+"reportar<V><GER>" {word = "reportando"}
+"reportar<V><IND><PAST><PL><3>" {word = "reportaron"}
+"reportar<V><IND><PAST><SG><3>" {word = "reportó"}
+"reportar<V><IND><PRES><PL><3>" {word = "reportan"}
+"reportar<V><IND><PRES><SG><3>" {word = "reporta"}
+"reportar<V><IND><IMP><PRES><PL><3>" {word = "reportan"}
+"reportar<V><IND><IMP><PRES><SG><3>" {word = "reporta"}
+"reportar<V><IND><PERF-S><PAST><PL><3>" {word = "reportaron"}
+"reportar<V><IND><PERF-S><PAST><SG><3>" {word = "reportó"}
+"reportar<V><INF>" {word = "reportar"}
+
+"representar<V><IND><IMP><PRES><PL><3>" { word = "representan"}
+"representar<V><IND><IMP><PRES><SG><3>" { word = "representa" }
+
+"retirar<V><IND><PERF-S><PAST><PL><3>" { word = "retiraron"}
+"retirar<V><IND><PERF-S><PAST><SG><3>" { word = "retiró" }
+
+"revelar<V><IND><IMP><PRES><SG><3>" { word = "revela" }
+
+"seleccionar<V><IND><PERF-S><PAST><PL><3>" { word = "seleccionaron"}
+"seleccionar<V><IND><PERF-S><PAST><SG><3>" { word = "seleccionó" }
+
+"señalar<V><GER>" {word = "señalando"}
+"señalar<V><IND><PAST><PL><3>" {word = "señalaron"}
+"señalar<V><IND><PAST><SG><3>" {word = "señaló"}
+"señalar<V><IND><PRES><PL><3>" {word = "señalan"}
+"señalar<V><IND><PRES><SG><3>" {word = "señala"}
+"señalar<V><INF>" {word = "señalar"}
+
+"sentir<V><GER>" {word = "sintiendo"}
+"sentir<V><IND><PERF-S><PAST><PL><3>" { word = "sintieron"}
+"sentir<V><IND><PERF-S><PAST><SG><3>" { word = "sintió" }
+
+"ser<V><GER>" {word = "siendo"}
+"ser<V><IND><IMP><PAST><PL><3>" { word = "eran"}
+"ser<V><IND><IMP><PAST><SG><3>" { word = "era" }
+"ser<V><IND><IMP><PRES><PL><3>" { word = "son"}
+"ser<V><IND><IMP><PRES><SG><3>" { word = "es" }
+"ser<V><IND><PAST><PL><3>" {word = "fueron"}
+"ser<V><IND><PAST><SG><3>" {word = "fue"}
+"ser<V><IND><PERF-S><PAST><PL><3>" { word = "fueron"}
+"ser<V><IND><PERF-S><PAST><SG><3>" { word = "fue" }
+"ser<V><IND><PRES><PL><3>" {word = "son"}
+"ser<V><IND><PRES><SG><3>" {word = "es"}
+"ser<V><INF>" {word = "ser"}
+"ser<V><PART>" {word = "sido"}
+"ser<V><PART><FEM><PL>" {word = "sido"}
+"ser<V><PART><FEM><SG>" {word = "sido"}
+"ser<V><PART><MASC><PL>" {word = "sido"}
+"ser<V><PART><MASC><SG>" {word = "sido"}
+
+"tener<V><IND><IMP><PRES><PL><3>" { word = "tienen"}
+"tener<V><IND><IMP><PRES><SG><3>" { word = "tiene" }
+
+"terminar<V><IND><PERF-S><PAST><PL><3>" { word = "terminaron"}
+"terminar<V><IND><PERF-S><PAST><SG><3>" { word = "terminó" }
+
+"transmitir<V><IND><IMP><PRES><SG><3>" { word = "transmite" }
+
+"utilizar<V><IND><IMP><PRES><PL><3>" { word = "utilizan"}
+"utilizar<V><IND><IMP><PRES><SG><3>" { word = "utiliza" }
+
+"venir<V><IND><IMP><PRES><PL><3>" { word = "vienen"}
+"venir<V><IND><IMP><PRES><SG><3>" { word = "viene" }
+"vivir<V><IND><IMP><PRES><PL><3>" { word = "viven"}
+"vivir<V><IND><IMP><PRES><SG><3>" { word = "vive" }
+
+//============== ADJECTIVES ===================
+//HACK, clean some day
+"(retirado)<JJ><FEM><SG>" { word = "(retirada)"}
+"(retirado)<JJ><MASC><SG>" { word = "(retirado)"}
+"(retirado)<JJ><FEM><PL>" { word = "(retiradas)"}
+"(retirado)<JJ><MASC><PL>" { word = "(retirados)"}
+
+
+//"acuática<N><SG>" { word = "acuática" }
+//"administrativo<N><SG>" { word = "administrativo" }
+//"alcalde<N><MASC><SG>" { word = "alcalde" }
+//"altura<N><PL>" { word = "alturas"}
+//"altura<N><SG>" { word = "altura" }
+//"área<N><SG>" { word = "área" }
+//"arquitectónico<N><PL>" { word = "arquitectónicos"}
+//"arquitectónico<N><SG>" { word = "arquitectónico" }
+//"asiento<N><PL>" { word = "asientos" }
+//"autor<N><PL>" { word = "autores"}
+//"autor<N><SG>" { word = "autor" }
+//"calidad<N><PL>" { word = "calidades" }
+//"cama<N><PL>" { word = "camas" }
+//"campeón<N><SG>" { word = "campeón" }
+//"capital<N><PL>" { word = "capitales"}
+//"capital<N><SG>" { word = "capital" }
+//"carbohidratos<N><PL>" { word = "carbohidratos" }
+//"categoría<N><PL>" { word = "categorías"}
+//"categoría<N><SG>" { word = "categoría" }
+//"central<N><PL>" { word = "centrales"}
+//"central<N><SG>" { word = "central" }
+//"cercana<N><PL>" { word = "cercanas"}
+//"cercana<N><SG>" { word = "cercana" }
+//"clase<N><PL>" { word = "clases"}
+//"clase<N><SG>" { word = "clase" }
+//"clave<N><PL>" { word = "claves"}
+//"clave<N><SG>" { word = "clave" }
+//"coche<N><PL>" { word = "coches"}
+//"color<N><SG>" { word = "color" }
+//"comandante<N><SG>" { word = "comandante" }
+//"combate<N><PL>" { word = "combates"}
+//"combate<N><SG>" { word = "combate" }
+//"concurso<N><PL>" {word = "concursos"}
+//"concurso<N><SG>" {word = "concurso"}
+//"condado<N><PL>" { word = "condados"}
+//"condado<N><SG>" { word = "condado" }
+//"construcción<N><SG>" { word = "construcción" }
+//"construida<N><PL>" { word = "construidas"}
+//"construida<N><SG>" { word = "construida" }
+//"copiloto<N><PL>" { word = "copilotos"}
+//"copiloto<N><SG>" { word = "copiloto" }
+//"decano<N><PL>" { word = "decanos"}
+//"decano<N><SG>" { word = "decano" }
+//"deportiva<N><PL>" { word = "deportivas"}
+//"deportiva<N><SG>" { word = "deportiva" }
+//"director<N><MASC><PL>" { word = "directores"}
+//"director<N><MASC><SG>" { word = "director" }
+//"diseño<N><PL>" {word = "diseños"}
+//"diseño<N><SG>" {word = "diseño"}
+//"distribuidor<N><PL>" { word = "distribuidores"}
+//"distribuidor<N><SG>" { word = "distribuidor" }
+//"doctorado<N><SG>" { word = "doctorado" }
+//"editor<N><PL>" { word = "editores"}
+//"editor<N><SG>" { word = "editor" }
+//"empleado<N><PL>" { word = "empleados" }
+//"entrenador<N><PL>" { word = "entrenadores"}
+//"entrenador<N><SG>" { word = "entrenador" }
+//"espacio<N><PL>" { word = "espacios"}
+//"espacio<N><SG>" { word = "espacio" }
+//"estadio<N><PL>" { word = "estadios"}
+//"estadio<N><SG>" { word = "estadio" }
+//"estudiante<N><MASC><PL>" { word = "estudiantes" }
+//"étnico<N><SG>" { word = "étnico" }
+//"familia<N><PL>" { word = "familias"}
+//"familia<N><SG>" { word = "familia" }
+//"filial<N><PL>" { word = "filiales"}
+//"filial<N><SG>" { word = "filial" }
+//"formato<N><MASC><PL>" { word = "formatos"}
+//"formato<N><MASC><SG>" { word = "formato" }
+//"fósil<N><SG>" { word = "fósil" }
+//"fundador<N><PL>" { word = "fundadores"}
+//"fundador<N><SG>" { word = "fundador" }
+//"gato<N><MASC><PL>" { word = "gatos"}
+//"gato<N><MASC><SG>" { word = "gato" }
+//"género<N><SG>" { word = "género" }
+//"grande<N><PL>" { word = "grandes"}
+//"grande<N><SG>" { word = "grande" }
+//"grasa<N><MASC><SG>" { word = "grasa" }
+//"hijo<N><SG>" { word = "hijo" }
+//"himno<N><PL>" { word = "himnos"}
+//"himno<N><SG>" { word = "himno" }
+//"impacto<N><SG>" { word = "impacto" }
+//"ingrediente<N><PL>" { word = "ingredientes"}
+//"ingrediente<N><SG>" { word = "ingrediente" }
+//"inquilino<N><PL>" { word = "inquilinos"}
+//"inquilino<N><SG>" { word = "inquilino" }
+//"jurisdicción<N><SG>" { word = "jurisdicción" }
+//"juvenil<N><SG>" { word = "juvenil" }
+//"latino<N><PL>" { word = "latinos"}
+//"latino<N><SG>" { word = "latino" }
+//"legislador<N><MASC><PL>" { word = "legisladores"}
+//"legislador<N><MASC><SG>" { word = "legislador" }
+//"lema<N><PL>" { word = "lemas"}
+//"lema<N><SG>" { word = "lema" }
+//"líder<N><PL>" { word = "líderes"}
+//"líder<N><SG>" { word = "líder" }
+//"longitud<N><PL>" { word = "longitudes"}
+//"longitud<N><SG>" { word = "longitud" }
+//"mar<N><PL>" { word = "mares"}
+//"mar<N><SG>" { word = "mar" }
+//"mascota<N><SG>" { word = "mascota" }
+//"moneda<N><PL>" { word = "monedas"}
+//"moneda<N><SG>" { word = "moneda" }
+//"nacimiento<N><PL>" { word = "nacimientos"}
+//"nacimiento<N><SG>" { word = "nacimiento" }
+//"natal<N><PL>" { word = "natales"}
+//"natal<N><SG>" { word = "natal" }
+//"nombre<N><PL>" { word = "nombres"}
+//"nombre<N><SG>" { word = "nombre" }
+//"noreste<N><PL>" { word = "norestes"}
+//"noreste<N><SG>" { word = "noreste" }
+//"noroeste<N><PL>" { word = "noroestes"}
+//"noroeste<N><SG>" { word = "noroeste" }
+//"norte<N><PL>" { word = "nortes"}
+//"norte<N><SG>" { word = "norte" }
+//"número<N><PL>" { word = "números"}
+//"número<N><SG>" { word = "número" }
+//"oeste<N><PL>" { word = "oestes"}
+//"oeste<N><SG>" { word = "oeste" }
+//"orden<N><PL>" { word = "ordenes"}
+//"orden<N><SG>" { word = "orden" }
+//"original<N><PL>" { word = "originales"}
+//"original<N><SG>" { word = "original" }
+//"página<N><PL>" { word = "páginas" }
+//"pájaro<N><PL>" { word = "pájaros"}
+//"pájaro<N><SG>" { word = "pájaro" }
+//"pared<N><PL>" { word = "paredes"}
+//"parte<N><SG>" { word = "parte" }
+//"patrono<N><PL>" { word = "patronos"}
+//"patrono<N><SG>" { word = "patrono" }
+//"perro<N><MASC><PL>" { word = "perros"}
+//"perro<N><MASC><SG>" { word = "perro" }
+//"persona<N><PL>" { word = "personas" }
+//"personaje<N><PL>" { word = "personajes"}
+//"personaje<N><SG>" { word = "personaje" }
+//"pista<N><PL>" { word = "pistas"}
+//"pista<N><SG>" { word = "pista" }
+//"planta<N><PL>" { word = "plantas" }
+//"población<N><SG>" { word = "población" }
+//"postal<N><PL>" { word = "postales"}
+//"postal<N><SG>" { word = "postal" }
+//"preciosa<N><PL>" { word = "preciosas"}
+//"preciosa<N><SG>" { word = "preciosa" }
+//"presidente<N><PL>" { word = "presidentes"}
+//"presidente<N><SG>" { word = "presidente" }
+//"principal<N><PL>" { word = "principales"}
+//"principal<N><SG>" { word = "principal" }
+//"promotor<N><SG>" { word = "promotor" }
+//"proteina<N><FEM><PL>" { word = "proteinas" }
+//"proteina<N><FEMS><PL>" { word = "proteinas" }
+//"rector<N><SG>" { word = "rector" }
+//"regulador<N><PL>" { word = "reguladores"}
+//"regulador<N><SG>" { word = "regulador" }
+//"religión<N><SG>" { word = "religión" }
+//"río<N><MASC><SG>" { word = "río" }
+//"senador<N><PL>" { word = "senadores"}
+//"senador<N><SG>" { word = "senador" }
+//"servicio<N><PL>" { word = "servicios"}
+//"servicio<N><SG>" { word = "servicio" }
+//"soup<N><MASC><PL>" { word = "sopas"}
+//"sureste<N><PL>" { word = "surestes"}
+//"sureste<N><SG>" { word = "sureste" }
+//"suroeste<N><PL>" { word = "suroestes"}
+//"suroeste<N><SG>" { word = "suroeste" }
+//"tema<N><PL>" {word = "temas"}
+//"tema<N><SG>" {word = "tema"}
+//"terrestre<N><PL>" { word = "terrestres"}
+//"terrestre<N><SG>" { word = "terrestre" }
+//"título<N><SG>" { word = "título" }
+//"total<N><PL>" { word = "totales"}
+//"total<N><SG>" { word = "total" }
+//"tripulación<N><SG>" { word = "tripulación" }
+//"ubicación<N><SG>" { word = "ubicación" }
+//"variación<N><SG>" { word = "variación" }
+//"vecino<N><PL>" { word = "vecinos"}
+//"vecino<N><SG>" { word = "vecino" }
+//"web<N><SG>" { word = "web" }
+//"abreviar<V><PART>" {word = "abreviado"}
+//"abreviar<V><PART><FEM><PL>" {word = "abreviadas"}
+//"abreviar<V><PART><FEM><SG>" {word = "abreviada"}
+//"abreviar<V><PART><MASC><PL>" {word = "abreviados"}
+//"abreviar<V><PART><MASC><SG>" {word = "abreviao"}
+//"afectar<V><PART><FEM><PL>" {word = "afectadas"}
+//"afectar<V><PART><FEM><SG>" {word = "afectada"}
+//"afectar<V><PART><MASC><PL>" {word = "afectados"}
+//"afectar<V><PART><MASC><SG>" {word = "afectado"}
+//"anunciar<V><PART><FEM><PL>" {word = "anunciadas"}
+//"anunciar<V><PART><FEM><SG>" {word = "anunciada"}
+//"anunciar<V><PART><MASC><PL>" {word = "anunciados"}
+//"anunciar<V><PART><MASC><SG>" {word = "anunciado"}
+//"aparecer<V><PART>" {word = "aparecido"}
+//"aparecer<V><PART><FEM><PL>" {word = "aparecidas"}
+//"aparecer<V><PART><FEM><SG>" {word = "aparecida"}
+//"aparecer<V><PART><MASC><PL>" {word = "aparecidos"}
+//"aparecer<V><PART><MASC><SG>" {word = "aparecido"}
+//"avistar<V><PART><FEM><PL>" {word = "avistadas"}
+//"avistar<V><PART><FEM><SG>" {word = "avistada"}
+//"avistar<V><PART><MASC><PL>" {word = "avistados"}
+//"avistar<V><PART><MASC><SG>" {word = "avistado"}
+//"cambiar<V><PART>" {word = "cambiado"}
+//"cambiar<V><PART><FEM><PL>" {word = "cambiadas"}
+//"cambiar<V><PART><FEM><SG>" {word = "cambiada"}
+//"cambiar<V><PART><MASC><PL>" {word = "cambiados"}
+//"cambiar<V><PART><MASC><SG>" {word = "cambiado"}
+//"conceder<V><PART><MASC><SG>" { word = "concedido" }
+//"condecorar<V><PART><MASC><SG>" { word = "condecorado" }
+//"conocer<V><PART><MASC><SG>" { word = "conocido" }
+//"construir<V><PART><MASC><SG>" { word = "construido"}
+//"contener<V><PART><FEM><PL>" {word = "contenidas"}
+//"contener<V><PART><FEM><SG>" {word = "contenida"}
+//"contener<V><PART><MASC><PL>" {word = "contenidos"}
+//"contener<V><PART><MASC><SG>" {word = "contenido"}
+//"crear<V><PART>" {word = "creado"}
+//"crear<V><PART><FEM><PL>" {word = "creadas"}
+//"crear<V><PART><FEM><SG>" {word = "creada"}
+//"crear<V><PART><MASC><PL>" {word = "creados"}
+//"crear<V><PART><MASC><SG>" {word = "creado"}
+//"detectar<V><PART>" {word = "detectado"}
+//"detectar<V><PART><FEM><PL>" {word = "detectadas"}
+//"detectar<V><PART><FEM><SG>" {word = "detectada"}
+//"detectar<V><PART><MASC><PL>" {word = "detectados"}
+//"detectar<V><PART><MASC><SG>" {word = "detectado"}
+//"diseñar<V><PART>" {word = "diseñado"}
+//"diseñar<V><PART><FEM><PL>" {word = "diseñadas"}
+//"diseñar<V><PART><FEM><SG>" {word = "diseñada"}
+//"diseñar<V><PART><MASC><PL>" {word = "diseñados"}
+//"diseñar<V><PART><MASC><SG>" {word = "diseñado"}
+//"encontrar<V><PART>" { word = "encontrado"}
+//"encontrar<V><PART><FEM><PL>" {word = "encontradas"}
+//"encontrar<V><PART><FEM><SG>" {word = "encontrada"}
+//"encontrar<V><PART><MASC><PL>" {word = "encontrados"}
+//"encontrar<V><PART><MASC><SG>" {word = "encontrado"}
+//"especializar<V><PART>" { word = "especializado"}
+//"especializar<V><PART><FEM><PL>" {word = "especializadas"}
+//"especializar<V><PART><FEM><SG>" {word = "especializada"}
+//"especializar<V><PART><MASC><PL>" {word = "especializados"}
+//"especializar<V><PART><MASC><SG>" {word = "especializado"}
+//"estar<V><PART>" {word = "estado"}
+//"estar<V><PART><FEM><PL>" {word = "estado"}
+//"estar<V><PART><FEM><SG>" {word = "estado"}
+//"estar<V><PART><MASC><PL>" {word = "estado"}
+//"estar<V><PART><MASC><SG>" {word = "estado"}
+//"fundar<V><PART>" { word = "fundado"}
+//"fundar<V><PART><FEM><PL>" {word = "fundadas"}
+//"fundar<V><PART><FEM><SG>" {word = "fundada"}
+//"fundar<V><PART><MASC><PL>" {word = "fundados"}
+//"fundar<V><PART><MASC><SG>" {word = "fundado"}
+//"gobernar<V><PART>" { word = "gobernado"}
+//"gobernar<V><PART><FEM><PL>" {word = "gobernadas"}
+//"gobernar<V><PART><FEM><SG>" {word = "gobernada"}
+//"gobernar<V><PART><MASC><PL>" {word = "gobernados"}
+//"gobernar<V><PART><MASC><SG>" {word = "gobernado"}
+//"graduar<V><PART>" { word = "gobernado"}
+//"graduar<V><PART><FEM><PL>" {word = "graduadas"}
+//"graduar<V><PART><FEM><SG>" {word = "graduada"}
+//"graduar<V><PART><MASC><PL>" {word = "graduados"}
+//"graduar<V><PART><MASC><SG>" {word = "graduado"}
+//"gravar<V><PART>" { word = "gravado"}
+//"gravar<V><PART><FEM><PL>" {word = "gravadas"}
+//"gravar<V><PART><FEM><SG>" {word = "gravada"}
+//"gravar<V><PART><MASC><PL>" {word = "gravados"}
+//"gravar<V><PART><MASC><SG>" {word = "gravado"}
+//"hablar<V><PART><MASC><SG>" { word = "hablado"}
+//"hablar<V><PART>" { word = "hablado"}
+//"hablar<V><PART><FEM><PL>" {word = "habladas"}
+//"hablar<V><PART><FEM><SG>" {word = "hablada"}
+//"hablar<V><PART><MASC><PL>" {word = "hablados"}
+//"hablar<V><PART><MASC><SG>" {word = "hablado"}
+//"iluminar<V><PART>" {word = "iluminado"}
+//"iluminar<V><PART><FEM><PL>" {word = "iluminadas"}
+//"iluminar<V><PART><FEM><SG>" {word = "iluminada"}
+//"iluminar<V><PART><MASC><PL>" {word = "iluminados"}
+//"iluminar<V><PART><MASC><SG>" {word = "iluminado"}
+//"inaugurar<V><PART>" {word = "inaugurado"}
+//"inaugurar<V><PART><FEM><PL>" {word = "inauguradas"}
+//"inaugurar<V><PART><FEM><SG>" {word = "inaugurada"}
+//"inaugurar<V><PART><MASC><PL>" {word = "inaugurados"}
+//"inaugurar<V><PART><MASC><SG>" {word = "inaugurado"}
+//"publicar<V><PART><MASC><SG>" { word = "publicado"}
+//"reportar<V><PART>" {word = "reportado"}
+//"reportar<V><PART><FEM><PL>" {word = "reportadas"}
+//"reportar<V><PART><FEM><SG>" {word = "reportada"}
+//"reportar<V><PART><MASC><PL>" {word = "reportados"}
+//"reportar<V><PART><MASC><SG>" {word = "reportado"}
+//"seleccionar<V><PART><FEM><PL>" {word = "seleccionadas"}
+//"seleccionar<V><PART><FEM><SG>" {word = "seleccionada"}
+//"seleccionar<V><PART><MASC><PL>" {word = "seleccionados"}
+//"seleccionar<V><PART><MASC><SG>" {word = "seleccionado"}
+//"señalar<V><PART><FEM><PL>" {word = "señaladas"}
+//"señalar<V><PART><FEM><SG>" {word = "señalada"}
+//"señalar<V><PART><MASC><PL>" {word = "señalados"}
+//"señalar<V><PART><MASC><SG>" {word = "señalado"}
+//"sentir<V><PART>" {word = "sentido"}
+//"sentir<V><PART><FEM><PL>" {word = "sentidas"}
+//"sentir<V><PART><FEM><SG>" {word = "sentida"}
+//"sentir<V><PART><MASC><PL>" {word = "sentidos"}
+//"sentir<V><PART><MASC><SG>" {word = "sentido"}
+//"alto<JJ><FEM><SG>" { word = "alta"}
+//"alto<JJ><FEM><PL>" { word = "altas"}
+//"alto<JJ><MASC><PL>" { word = "altos"}
+//"amarillo<JJ><FEM><SG>" { word = "amarilla"}
+//"amarillo<JJ><FEM><PL>" { word = "amarillas"}
+//"amarillo<JJ><MASC><PL>" { word = "amarillos"}
+//"asociado<JJ><FEM><SG>" { word = "asociada"}
+//"asociado<JJ><FEM><PL>" { word = "asociadas"}
+//"asociado<JJ><MASC><PL>" { word = "asociados"}
+//"azul<JJ><FEM><SG>" { word = "azul"}
+//"azul<JJ><FEM><PL>" { word = "azules"}
+//"azul<JJ><MASC><PL>" { word = "azules"}
+//"bajo<JJ><FEM><SG>" { word = "baja"}
+//"bajo<JJ><FEM><PL>" { word = "bajas"}
+//"bajo<JJ><MASC><PL>" { word = "bajos"}
+//"blanco<JJ><FEM><SG>" { word = "blanca"}
+//"blanco<JJ><FEM><PL>" { word = "blancas"}
+//"blanco<JJ><MASC><PL>" { word = "blancos"}
+//"cuadrático<JJ><FEM><SG>" { word = "cuadrática" }
+//"cuadrático<JJ><FEM><PL>" { word = "cuadráticas" }
+//"cuadrático<JJ><MASC><PL>" { word = "cuadráticos" }
+//"cuadrado<JJ><FEM><SG>" { word = "cuadrada" }
+//"cuadrado<JJ><FEM><PL>" { word = "cuadradas" }
+//"cuadrado<JJ><MASC><PL>" { word = "cuadrados" }
+//"cuarto<JJ><FEM><SG>" { word = "cuarta" }
+//"cuarto<JJ><FEM><PL>" { word = "cuartas" }
+//"cuarto<JJ><MASC><PL>" { word = "cuartos" }
+//"dedicado<JJ><FEM><SG>" { word = "dedicada"}
+//"dedicado<JJ><FEM><PL>" { word = "dedicadas"}
+//"dedicado<JJ><MASC><PL>" { word = "dedicados"}
+//"gris<JJ><FEM><SG>" { word = "gris"}
+//"gris<JJ><FEM><PL>" { word = "grises"}
+//"gris<JJ><MASC><PL>" { word = "grises"}
+//"impaciente<JJ><MASC><SG>" {word = "impaciente"}
+//"impaciente<JJ><FEM><SG>" {word = "impaciente"}
+//"impaciente<JJ><MASC><PL>" {word = "impacientes"}
+//"impaciente<JJ><FEM><PL>" {word = "impacientes"}
+//"marrón<JJ><FEM><SG>" { word = "marrón"}
+//"marrón<JJ><FEM><PL>" { word = "marrones"}
+//"marrón<JJ><MASC><PL>" { word = "marrones"}
+//"mediano<JJ><FEM><SG>" { word = "mediana"}
+//"mediano<JJ><FEM><PL>" { word = "medianas"}
+//"mediano<JJ><MASC><PL>" { word = "medianos"}
+//"morado<JJ><FEM><SG>" { word = "morada"}
+//"morado<JJ><FEM><PL>" { word = "moradas"}
+//"morado<JJ><MASC><PL>" { word = "morados"}
+//"negro<JJ><FEM><SG>" { word = "negra"}
+//"negro<JJ><FEM><PL>" { word = "negras"}
+//"negro<JJ><MASC><PL>" { word = "negros"}
+//"posgraduado<JJ><FEM><SG>" { word = "posgraduada" }
+//"posgraduado<JJ><FEM><PL>" { word = "posgraduadas" }
+//"posgraduado<JJ><MASC><PL>" { word = "posgraduados" }
+//"principal<JJ><FEM><SG>" { word = "principal" }
+//"principal<JJ><FEM><PL>" { word = "principales" }
+//"principal<JJ><MASC><PL>" { word = "principales" }
+//"quinto<JJ><FEM><SG>" { word = "quinta" }
+//"quinto<JJ><FEM><PL>" { word = "quintas" }
+//"quinto<JJ><MASC><PL>" { word = "quintos" }
+//"redondo<JJ><FEM><SG>" { word = "redonda"}
+//"redondo<JJ><FEM><PL>" { word = "redondas"}
+//"redondo<JJ><MASC><PL>" { word = "redondos"}
+//"retirado<JJ><FEM><SG>" { word = "retirada"}
+//"retirado<JJ><FEM><PL>" { word = "retiradas"}
+//"retirado<JJ><MASC><PL>" { word = "retirados"}
+//"rojo<JJ><FEM><SG>" { word = "roja"}
+//"rojo<JJ><FEM><PL>" { word = "rojas"}
+//"rojo<JJ><MASC><PL>" { word = "rojos"}
+//"segundo<JJ><FEM><SG>" { word = "segunda" }
+//"segundo<JJ><FEM><PL>" { word = "segundas" }
+//"segundo<JJ><MASC><PL>" { word = "segundos" }
+//"tercer<JJ><FEM><SG>" { word = "terecera" }
+//"tercer<JJ><FEM><PL>" { word = "tereceras" }
+//"tercer<JJ><MASC><PL>" { word = "tereceros" }
+//"verde<JJ><FEM><SG>" { word = "verde"}
+//"verde<JJ><FEM><PL>" { word = "verdes"}
+//"verde<JJ><MASC><PL>" { word = "verdes"}
+//"(retirado)<JJ><FEM><SG>" { word = "(retirada)"}
+//"(retirado)<JJ><FEM><PL>" { word = "(retiradas)"}
+//"(retirado)<JJ><MASC><PL>" { word = "(retirados)"}
+
+}

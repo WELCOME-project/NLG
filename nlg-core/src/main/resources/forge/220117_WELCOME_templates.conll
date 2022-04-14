@@ -1,0 +1,300 @@
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=createCV|slex=Sentence
+1	create	_	_	_	_	lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	CV	_	_	_	_	lineId=3|definiteness=INDEF	_	1	_	A2	_	_	_	true
+4	new	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=continueCV|slex=Sentence
+1	continue	_	_	_	_	lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	CV	_	_	_	_	lineId=3|definiteness=DEF	_	1	_	A2	_	_	_	true
+4	unfinished	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=reviewCV|slex=Sentence
+1	review	_	_	_	_	lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	CV	_	_	_	_	lineId=3|definiteness=DEF	_	1	_	A2	_	_	_	true
+4	completed	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=stateName|slex=Sentence
+1	statement	_	_	_	_	modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	name	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=confirmationName|slex=Text	slex=Sentence	slex=Sentence
+1	name	_	_	_	_	lineId=1|definiteness=no	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	[name]	_	_	_	_	lineId=3|definiteness=no	_	1	_	A1	_	_	_	true	_	true
+4	correct	_	_	_	_	clause_type=INT|lineId=4	_	0	_	ROOT	_	_	_	true	true	_
+5	this	_	_	_	_	lineId=5	_	4	_	A1	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=stateFirstSurname|slex=Sentence
+1	statement	_	_	_	_	modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	surname	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	first	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=confirmationSurname|slex=Text	slex=Sentence	slex=Sentence
+1	surname	_	_	_	_	lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	first	_	_	_	_	lineId=2	_	1	_	NonCore	_	_	_	true	_	true
+3	you	_	_	_	_	lineId=3|class=person	_	1	_	A2	_	_	_	true	_	true
+4	[first_surname]	_	_	_	_	lineId=4|definiteness=no	_	1	_	A1	_	_	_	true	_	true
+5	correct	_	_	_	_	clause_type=INT|lineId=5	_	0	_	ROOT	_	_	_	true	true	_
+6	this	_	_	_	_	lineId=6	_	5	_	A1	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=haveSecondSurname|slex=Text	slex=Sentence	slex=Sentence
+1	surname	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	second	_	_	_	_	lineId=3	_	1	_	NonCore	_	_	_	true	_	true
+4	tell	_	_	_	_	modality=DYN|lineId=4|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true	true	_
+5	you	_	_	_	_	lineId=5|class=person	_	4	_	A1	_	_	_	true	true	_
+6	I	_	_	_	_	lineId=6|class=person	_	4	_	A3	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=stateSecondSurname|slex=Sentence
+1	statement	_	_	_	_	modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	surname	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	second	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=confirmationSecondSurname|slex=Text	slex=Sentence	slex=Sentence
+1	surname	_	_	_	_	lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	second	_	_	_	_	lineId=2	_	1	_	NonCore	_	_	_	true	_	true
+3	you	_	_	_	_	lineId=3|class=person	_	1	_	A2	_	_	_	true	_	true
+4	[second_surname]	_	_	_	_	lineId=4|definiteness=no	_	1	_	A1	_	_	_	true	_	true
+5	correct	_	_	_	_	clause_type=INT|lineId=5	_	0	_	ROOT	_	_	_	true	true	_
+6	this	_	_	_	_	lineId=6	_	5	_	A1	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=confirmationHaveSecondSurname|slex=Text	slex=Sentence	slex=Sentence
+1	surname	_	_	_	_	lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	second	_	_	_	_	lineId=3	_	1	_	NonCore	_	_	_	true	_	true
+4	not	_	_	_	_	lineId=4	_	1	_	NonCore	_	_	_	true	_	true
+5	correct	_	_	_	_	clause_type=INT|lineId=5	_	0	_	ROOT	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=confirmationFullName|slex=Text	slex=Sentence	slex=Sentence
+1	full_name	_	_	_	_	lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	[full_name]	_	_	_	_	lineId=3|definiteness=no	_	1	_	A1	_	_	_	true	_	true
+4	correct	_	_	_	_	clause_type=INT|lineId=4	_	0	_	ROOT	_	_	_	true	true	_
+5	this	_	_	_	_	lineId=5	_	4	_	A1	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=updateAddress|slex=Text	slex=Sentence	slex=Sentence
+1	address	_	_	_	_	lineId=1	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	[address]	_	_	_	_	lineId=3|definiteness=no	_	1	_	A1	_	_	_	true	_	true
+4	update	_	_	_	_	clause_type=INT|modality=DES|lineId=4|modality_type=??	_	0	_	ROOT	_	_	_	true	true	_
+5	you	_	_	_	_	lineId=5|class=person	_	4,6	_	A1,A2	_	_	_	true	true	_
+6	address	_	_	_	_	lineId=6	_	4	_	A2	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=address|slex=Sentence
+1	address	_	_	_	_	clause_type=INT|lineId=1|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true
+3	what	_	_	_	_	lineId=3	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=city|slex=Sentence
+1	live	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	city	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	which	_	_	_	_	lineId=4|dpos=WDT	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=streetName|slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	street	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	you	_	_	_	_	lineId=3|class=person	_	2	_	A2	_	_	_	true
+4	what	_	_	_	_	lineId=4	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=streetType|slex=Sentence
+1	type	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	street	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	what	_	_	_	_	lineId=3|dpos=WDT	_	1	_	NonCore	_	_	_	true
+4	[street_name]	_	_	_	_	lineId=4|definiteness=no	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=giveStreetNumber|slex=Sentence
+1	give	_	_	_	_	dative_shift=DO|modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A1,A2	_	_	_	true
+3	street_number	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	I	_	_	_	_	lineId=4|class=person	_	1	_	A3	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=buildingName|slex=Text	slex=Sentence	slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1|main_rheme=yes	_	0	_	ROOT	_	_	_	true	_	true
+2	building	_	_	_	_	lineId=2|definiteness=DEF	_	3,1	_	A2,A2	_	_	_	true	_	true
+3	live	_	_	_	_	lineId=3|type=RESTR	_	0	_	ROOT	_	_	_	true	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true	_	true
+5	tell	_	_	_	_	modality=DYN|lineId=5|modality_type=PSB|clause_type=INT|tense=PAST	_	0	_	ROOT	_	_	_	true	true	_
+6	you	_	_	_	_	lineId=6|class=person	_	5	_	A1	_	_	_	true	true	_
+7	I	_	_	_	_	lineId=7|class=person	_	5	_	A3	_	_	_	true	true	_
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=entranceName|slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	entrance	_	_	_	_	lineId=2|definiteness=DEF	_	1	_	A2	_	_	_	true
+3	building	_	_	_	_	lineId=3	_	2	_	A2	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=buildingType|slex=Sentence
+1	live	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	or	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	house	_	_	_	_	lineId=4|definiteness=INDEF	_	3	_	Set	_	_	_	true
+5	apartment_building	_	_	_	_	lineId=5|definiteness=INDEF	_	3	_	Set	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=floor|slex=Sentence
+1	live	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	floor	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	which	_	_	_	_	lineId=4|dpos=WDT	_	3	_	NonCore	_	_	_	true
+5	building	_	_	_	_	lineId=5|definiteness=DEF	_	3	_	A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=apartmentNumber|slex=Sentence
+1	apartment_number	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	flat	_	_	_	_	lineId=2|definiteness=DEF	_	1	_	A2	_	_	_	true
+3	you	_	_	_	_	lineId=3|class=person	_	2	_	A2	_	_	_	true
+4	what	_	_	_	_	lineId=4	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=postalCode|slex=Sentence
+1	postal_code	_	_	_	_	clause_type=INT|lineId=1|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	what	_	_	_	_	lineId=3	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=province|slex=Sentence
+1	live	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	province	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	which	_	_	_	_	lineId=4|dpos=WDT	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=municipality|slex=Sentence
+1	live	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	city	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true
+4	which	_	_	_	_	lineId=4|dpos=WDT	_	3	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=highestDegree|slex=Sentence
+1	degree	_	_	_	_	clause_type=INT|lineId=1|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	highest	_	_	_	_	lineId=3|type=RESTR	_	1	_	NonCore	_	_	_	true
+4	educational	_	_	_	_	lineId=4	_	1	_	NonCore	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=haveCertificate|slex=Sentence
+1	certificate	_	_	_	_	clause_type=INT|lineId=1|definiteness=INDEF	_	0	_	ROOT	_	_	_	true
+2	official	_	_	_	_	lineId=2	_	1	_	NonCore	_	_	_	true
+3	degree	_	_	_	_	lineId=3|definiteness=DEF	_	1	_	A3	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	1,3	_	A2,A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=nameInstitution|slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	institution	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	educational	_	_	_	_	lineId=3	_	2	_	NonCore	_	_	_	true
+4	what	_	_	_	_	lineId=4	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=finishDateDegree|slex=Sentence
+1	finish	_	_	_	_	clause_type=INT|lineId=1|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,4	_	A1,A2	_	_	_	true
+3	when	_	_	_	_	lineId=3	_	1	_	NonCore	_	_	_	true
+4	degree	_	_	_	_	lineId=4	_	1	_	A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=currentOccupation|slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	position	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	current	_	_	_	_	lineId=3	_	2	_	NonCore	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	2	_	A2	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=currentMainActivities|slex=Sentence
+1	activity	_	_	_	_	lineId=1|main_rheme=yes|number=PL|clause_type=INT|definiteness=DEF	_	0,3	_	ROOT,A2	_	_	_	true
+2	main	_	_	_	_	lineId=2|dpos=JJ	_	1	_	NonCore	_	_	_	true
+3	carry_out	_	_	_	_	lineId=3|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=employer|slex=Sentence
+1	work	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	who	_	_	_	_	lineId=3	_	1	_	A3	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=employerAddress|slex=Sentence
+1	address	_	_	_	_	clause_type=INT|lineId=1|main_rheme=yes|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	company	_	_	_	_	lineId=2	_	3,1	_	A3,A2	_	_	_	true
+3	work	_	_	_	_	lineId=3|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=startingDate|slex=Sentence
+1	start	_	_	_	_	clause_type=INT|lineId=1|tense=PAST	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	when	_	_	_	_	lineId=3	_	1	_	NonCore	_	_	_	true
+4	work	_	_	_	_	lineId=4|finiteness=GER	_	1	_	A2	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousOccupation|slex=Sentence
+1	name	_	_	_	_	clause_type=INT|lineId=1|tense=PAST|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	position	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	you	_	_	_	_	lineId=3|class=person	_	2	_	A2	_	_	_	true
+4	what	_	_	_	_	lineId=4	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousMainActivities|slex=Sentence
+1	activity	_	_	_	_	lineId=1|main_rheme=yes|number=PL|clause_type=INT|tense=PAST|definiteness=DEF	_	0,3	_	ROOT,A2	_	_	_	true
+2	main	_	_	_	_	lineId=2|dpos=JJ	_	1	_	NonCore	_	_	_	true
+3	carry_out	_	_	_	_	lineId=3|tense=PAST|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousEmployer|slex=Sentence
+1	name	_	_	_	_	lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	company	_	_	_	_	lineId=2	_	3,1	_	A3,A2	_	_	_	true
+3	work	_	_	_	_	lineId=3|tense=PAST|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousEmployerAddress|slex=Sentence
+1	address	_	_	_	_	lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	company	_	_	_	_	lineId=2	_	3,1	_	A3,A2	_	_	_	true
+3	work	_	_	_	_	lineId=3|tense=PAST|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousStartingDate|slex=Sentence
+1	date	_	_	_	_	clause_type=INT|lineId=1|tense=PAST|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	start	_	_	_	_	lineId=2|dpos=JJ	_	1	_	A2	_	_	_	true
+3	occupation	_	_	_	_	lineId=3	_	1	_	A3	_	_	_	true
+4	this	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=previousEndDate|slex=Sentence
+1	date	_	_	_	_	clause_type=INT|lineId=1|tense=PAST|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	end	_	_	_	_	lineId=2	_	1	_	A2	_	_	_	true
+3	occupation	_	_	_	_	lineId=3	_	1	_	A3	_	_	_	true
+4	this	_	_	_	_	lineId=4	_	3	_	NonCore	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=drivingLicense|slex=Sentence
+1	driving_license	_	_	_	_	clause_type=INT|lineId=1	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true
+3	valid	_	_	_	_	lineId=3	_	1	_	NonCore	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=ownCar|slex=Sentence
+1	vehicle	_	_	_	_	lineId=1|main_rheme=yes|clause_type=INT|definiteness=INDEF	_	0,3	_	ROOT,A2	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1,3	_	A2,A1	_	_	_	true
+3	use	_	_	_	_	lineId=3|modality=DYN|modality_type=PSB|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	job	_	_	_	_	lineId=4|definiteness=INDEF	_	3	_	A3	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=giveStreetNumber_agg|slex=Sentence
+1	street_number	_	_	_	_	lineId=1|clause_type=INT	_	0	_	ROOT	_	_	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true
+3	what	_	_	_	_	lineId=3	_	1	_	A1	_	_	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=apartmentNumber_agg|slex=Sentence
+1	live	_	_	_	_	lineId=1|clause_type=INT	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A1	_	_	_	true	_	true
+3	apartment_number	_	_	_	_	lineId=3	_	1	_	A2	_	_	_	true	_	true
+4	which	_	_	_	_	lineId=4|dpos=WDT	_	3	_	NonCore	_	_	_	true	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=province_agg|slex=Sentence
+1	province	_	_	_	_	lineId=1|clause_type=INT	_	0	_	ROOT	_	_	_	true	_	true
+2	you	_	_	_	_	lineId=2|class=person	_	1	_	A2	_	_	_	true	_	true
+3	what	_	_	_	_	lineId=3	_	1	_	A1	_	_	_	true	_	true
+
+0	_	_	_	_	_	_	_	_	_	_	_	_	_	template_name=employer_agg|slex=Sentence
+1	name	_	_	_	_	lineId=1|clause_type=INT|main_rheme=yes|definiteness=DEF	_	0	_	ROOT	_	_	_	true
+2	company	_	_	_	_	lineId=2|definiteness=DEF	_	1,3	_	A2,A3	_	_	_	true
+3	work	_	_	_	_	lineId=3|type=RESTR	_	0	_	ROOT	_	_	_	true
+4	you	_	_	_	_	lineId=4|class=person	_	3	_	A1	_	_	_	true
+5	what	_	_	_	_	lineId=5	_	1	_	A1	_	_	_	true

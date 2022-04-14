@@ -1,0 +1,9 @@
+{
+  "[not found]" : [ "continueCV", "employerAddress", "giveStreetNumber_agg", "city", "stateSecondSurname", "postalCode", "ownCar", "municipality", "previousEmployerAddress", "employer_agg", "streetName", "previousStartingDate", "province", "stateName", "province_agg", "haveSecondSurname", "previousOccupation", "employer", "floor", "entranceName", "stateFirstSurname", "confirmationHaveSecondSurname", "address", "currentMainActivities", "highestDegree", "reviewCV", "nameInstitution", "previousEmployer", "giveStreetNumber", "createCV", "apartmentNumber_agg", "buildingName", "currentOccupation", "drivingLicense", "finishDateDegree", "startingDate", "previousMainActivities", "buildingType", "apartmentNumber", "haveCertificate", "previousEndDate" ],
+  "address" : [ "updateAddress" ],
+  "first_surname" : [ "confirmationSurname" ],
+  "full_name" : [ "confirmationFullName" ],
+  "name" : [ "confirmationName" ],
+  "second_surname" : [ "confirmationSecondSurname" ],
+  "street_name" : [ "streetType" ]
+}

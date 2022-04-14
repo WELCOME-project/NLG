@@ -1,0 +1,19 @@
+// Language information on ENGLISH (ENG)
+// François Lareau
+language {
+
+  id {
+    name = english
+    iso = EN
+  }
+
+  syntax {
+    pronominalize = yes
+    verbform = analytic
+  }
+
+  writing {
+    system = latin
+    order = left_to_right
+  }
+}
