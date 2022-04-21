@@ -18,6 +18,9 @@
         "Apology_Repeat_Information": "I am sorry, I will repeat the information.",
         "Apology_No_Extra_Information": "I am sorry, I have no additional information on that.",
         "Thanking": "Thank you very much",
+
+        "Say_Yes_No": "Please, say \"yes\" or \"no\". ",
+        "Say_Yes_No_Information": "Please, say \"yes\" or \"no\". I will repeat the information. ",
         
         
         "confirmCommunication": "Can you hear me?",
