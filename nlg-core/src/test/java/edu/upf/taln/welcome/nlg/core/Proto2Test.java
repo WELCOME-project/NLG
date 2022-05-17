@@ -37,9 +37,9 @@ public class Proto2Test {
     @Test
     public void testSample() throws Exception {
         String jsonldPath = "src/test/resources/proto2/sample.json";
-        String textOutput = "Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn’t replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service (:webURL:).";
+        String textOutput = "Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service (:webURL:).";
         List<String> ttsOutput = new ArrayList<>();
-		ttsOutput.add("Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn’t replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service. You can see the link on the screen.");
+		ttsOutput.add("Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service. You can see the link on the screen.");
         
         generate(jsonldPath, textOutput, ttsOutput);
     }
