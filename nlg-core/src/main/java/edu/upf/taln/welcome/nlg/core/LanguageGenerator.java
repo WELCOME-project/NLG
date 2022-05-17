@@ -112,6 +112,8 @@ public class LanguageGenerator {
         List<String> chunks = new ArrayList<>();
         for (SpeechAct act: move.speechActs) {
             
+			// TODO: Collect forge-generable slots to send them grouped!
+			
             GenerationResult result = generateSingleText(act, language);
         	texts.add(result.text);
             chunks.add(result.ttsStr);

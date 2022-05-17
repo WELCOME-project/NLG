@@ -3,7 +3,6 @@ package edu.upf.taln.welcome.nlg.core;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 

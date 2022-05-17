@@ -39,17 +39,24 @@ public class TemplateUtilsTest {
         for (String key : collection.getTemplates().keySet()) {
             GenerationTemplate template = collection.getTemplate(key);
             
-            String name = "[not found]";
+            String name = null;
             for(TemplateEntry entry : template.getEntries()) {
                 String form = entry.getForm();
                 if (form.startsWith("[")) {
                     name = form.replace("[", "").replace("]", "");
-                }
+
+					List<String> values = mapping.getOrDefault(name, new ArrayList<>());
+					values.add(key);
+					mapping.put(name, values);
+				}
             }
-        
-            List<String> values = mapping.getOrDefault(name, new ArrayList<>());
-            values.add(key);
-            mapping.put(name, values);
+			
+			if (name == null) {
+				name = "[not found]";				
+				List<String> values = mapping.getOrDefault("[not found]", new ArrayList<>());
+				values.add(key);
+				mapping.put(name, values);				
+			}
         }
         
         File mappingFile = new File(basePath, "generated_mapping.json");

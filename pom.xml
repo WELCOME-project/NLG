@@ -29,7 +29,7 @@
 		<swagger.version>2.0.8</swagger.version>
 		<swagger.ui.version>2.1.4</swagger.ui.version>
 
-		<dms.version>0.2.3</dms.version>
+		<dms.version>0.3.0-SNAPSHOT</dms.version>
 	</properties>
 
 	<modules>

@@ -44,26 +44,32 @@
       "@container": "@list"
     }
   },
-  "@id": "move_4",
+  "@id": "move_323",
   "@type": "welcome:DialogueMove",
   "welcome:hasSpeechActs": [
     {
-      "@id": "Yes_No_Question_2",
+      "@id": "Say_Yes_No_455",
       "@type": "welcome:SpeechAct",
-      "welcome:hasLabel": "Yes_No_Question",
+      "welcome:hasLabel": "Say_Yes_No",
+      "welcome:hasSlot": null
+    },
+    {
+      "@id": "Wh_Question_456",
+      "@type": "welcome:SpeechAct",
+      "welcome:hasLabel": "Wh_Question",
       "welcome:hasSlot": {
-        "@id": "welcome:confirmCommunication",
-        "rdf:type": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
-        "welcome:hasTemplateId": "TInformFormDisclaimer",
-        "welcome:hasOntologyType": null,
+        "@id": "fpr:obtainAsylumClaimRegistration",
+        "rdf:type": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#ConfirmationRequest",
+        "welcome:hasTemplateId": "TObtainConfirmation_Clear",
+        "welcome:hasOntologyType": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
         "welcome:hasInputRDFContents": [
           {
             "@id": "welcome:Unknown"
           }
         ],
-        "welcome:hasStatus": "welcome:Pending",
-        "welcome:hasNumberAttempts": 0,
-        "welcome:confidenceScore": 1,
+        "welcome:hasStatus": "welcome:FailedAnalysis",
+        "welcome:hasNumberAttempts": 1,
+        "welcome:confidenceScore": 0,
         "welcome:isOptional": false
       }
     }

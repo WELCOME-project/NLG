@@ -1,0 +1,9 @@
+project_info {
+
+  // Project info dictionary to activate rules that produce the Surface Realization data. which take as input a UD structure with columns 2 and 3 inverted (form and lemma)
+  project {
+    name = WELCOME
+    gen_type = D2T
+    collapse_preps = YES
+  }
+}
