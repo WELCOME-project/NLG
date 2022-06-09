@@ -27,7 +27,7 @@ public class Proto1Test {
         
         LanguageGenerator generator = new LanguageGenerator();
         GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
-		String result = String.join(" ", output.getText());
+        String result = output.getText();
         
         assertEquals(expResult, result);
     }

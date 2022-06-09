@@ -47,9 +47,9 @@ public class Proto2Test {
     @Test
     public void testSayYesNo() throws Exception {
         String jsonldPath = "src/test/resources/proto2/yes_no_question.json";
-        String textOutput = "Please, say \"yes\" or \"no\". \n\nIs it clear?";
+        String textOutput = "Please, say \"yes\" or \"no\".\n\nIs it clear?";
         List<String> ttsOutput = new ArrayList<>();
-		ttsOutput.add("Please, say \"yes\" or \"no\". ");
+		ttsOutput.add("Please, say \"yes\" or \"no\".");
 		ttsOutput.add("Is it clear?");
         
         generate(jsonldPath, textOutput, ttsOutput);

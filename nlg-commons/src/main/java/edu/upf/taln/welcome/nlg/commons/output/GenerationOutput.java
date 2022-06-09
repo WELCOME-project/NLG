@@ -10,25 +10,34 @@ public class GenerationOutput {
 	
 	public enum ChunkType {Slot, Sentence, Paragraph};
 	
-    private String text;
+	private String text;
+	private List<String> displayChunks;
     private List<String> chunks;
 	private ChunkType chunkType;
 
-    public String getText() {
-        return text;
-    }
+	public String getText() {
+		return text;
+	}
 
-    public void setText(String text) {
-        this.text = text;
-    }     
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public List<String> getDisplayChunks() {
+		return displayChunks;
+	}
+
+	public void setDisplayChunks(List<String> displayChunks) {
+		this.displayChunks = displayChunks;
+	}
 
 	public List<String> getChunks() {
-        return chunks;
-    }
+		return chunks;
+	}
 
-    public void setChunks(List<String> chunks) {
-        this.chunks = chunks;
-    }
+	public void setChunks(List<String> chunks) {
+		this.chunks = chunks;
+	}
 
 	public ChunkType getChunkType() {
 		return chunkType;

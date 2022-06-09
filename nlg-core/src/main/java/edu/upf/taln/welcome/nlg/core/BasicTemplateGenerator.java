@@ -1,6 +1,7 @@
 package edu.upf.taln.welcome.nlg.core;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -54,36 +55,45 @@ public class BasicTemplateGenerator {
 		contentClient = new ContentDBClient(CONTENTDB_URL);		
 	}
 
-    public String getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
+    public List<String> getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
         Slot slot = act.slot;
         String templateId = slot.templateId;
 
-        String message = "";
+        List<String> sentences = new ArrayList<>();
         try {
             String template = contentClient.getTemplate(collectionId, templateId, language);
-            
+
             //TODO case when template contains <hasTranslation>
             //get hasOntologyType value and obtain new template
 
             if (template != null) {
-                message = applyTemplate(template, slot, language, collectionId, subCollectionId, spelloutNumbers);
-                
-				message = message.replaceAll(" NGO", " N G O");
-				message = message.replaceAll("PRAKSIS", "Praksis");
-				
-                String trimmed = message.trim();
-                if (!trimmed.endsWith(".") &&
-                        !trimmed.endsWith("!") &&
-                        !trimmed.endsWith("?")) {
-                    message = trimmed + ".";
-                }
+            	
+            	//split template <s_end> into separated sentences
+            	String[] templatesArray = template.split("<s_end>");
+            	for (String sentenceTemplate : templatesArray) {
+            		
+            		String message = applyTemplate(sentenceTemplate, slot, language, collectionId, subCollectionId, spelloutNumbers);
+                    
+    				message = message.replaceAll(" NGO", " N G O");
+    				message = message.replaceAll("PRAKSIS", "Praksis");
+    				
+    				message = message.trim();
+                    if (!message.endsWith(".") &&
+                            !message.endsWith("!") &&
+                            !message.endsWith("?")) {
+                        message = message + ".";
+                    }
+                    
+                    sentences.add(message);
+            	}
+ 
             }
             
         } catch (WelcomeException we) {
             logger.log(Level.SEVERE, we.getMessage());
         }
         
-        return message;
+        return sentences;
     }
     
     private void addValueToRDFMap(HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String key, RDFContent value) {

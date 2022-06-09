@@ -7,8 +7,8 @@ import java.util.Set;
 import java.util.logging.Logger;
 
 import com.ibm.icu.util.ULocale;
-import edu.upf.taln.forge.commons.ForgeException;
 
+import edu.upf.taln.forge.commons.ForgeException;
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.dms.commons.input.RDFContent;
 import edu.upf.taln.welcome.dms.commons.input.Slot;
@@ -35,7 +35,8 @@ public class LanguageGenerator {
 	
     public static class GenerationResult {
         String text;
-        String ttsStr;
+        List<String> displayStr = new ArrayList<>();
+        List<String> ttsStr = new ArrayList<>();
     }
     
     public LanguageGenerator() throws WelcomeException {
@@ -71,23 +72,28 @@ public class LanguageGenerator {
             String text = cannedGenerator.getCannedText(act, language);
             
             result.text = text;
-            result.ttsStr = text;
+            result.displayStr.add(text);
+            result.ttsStr.add(text);
 			
         } else if (templateId == null && (rdfContents == null || rdfContents.isEmpty())) {
             String text = cannedGenerator.getCannedText(act, language);
             
             result.text = text;
-            result.ttsStr = text;
+            result.displayStr.add(text);
+            result.ttsStr.add(text);
 			
 		} else if (templateId != null) {
-            result.text = templateGenerator.getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, false);
+			List<String> display = templateGenerator.getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, false);
+            result.text = String.join("\n\n", display);
+            result.displayStr = display;
             result.ttsStr = templateGenerator.getTemplateText(act, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION, true);
 
         } else {
             String text = forgeGenerator.generate(act, 10, true);
 
             result.text = text;
-            result.ttsStr = text;
+            result.displayStr.add(text);
+            result.ttsStr.add(text);
         }
         return result;
 }
@@ -109,18 +115,22 @@ public class LanguageGenerator {
     public GenerationOutput generate(DialogueMove move, ULocale language) throws WelcomeException {
         
     	List<String> texts = new ArrayList<>();
+    	List<String> displayChunks = new ArrayList<>();
         List<String> chunks = new ArrayList<>();
         for (SpeechAct act: move.speechActs) {
             
+        	List<String> sentences = new ArrayList<>();
 			// TODO: Collect forge-generable slots to send them grouped!
 			
             GenerationResult result = generateSingleText(act, language);
         	texts.add(result.text);
-            chunks.add(result.ttsStr);
+        	displayChunks.addAll(result.displayStr);
+            chunks.addAll(result.ttsStr);
         }
 
         GenerationOutput output = new GenerationOutput();
         output.setText(String.join("\n\n", texts));
+        output.setDisplayChunks(displayChunks);
         output.setChunks(chunks);
         output.setChunkType(GenerationOutput.ChunkType.Slot);
         

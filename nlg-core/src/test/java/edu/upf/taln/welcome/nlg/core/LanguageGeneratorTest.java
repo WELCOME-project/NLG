@@ -35,7 +35,7 @@ public class LanguageGeneratorTest {
         
         LanguageGenerator generator = new LanguageGenerator();
         GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
-		String result = String.join(" ", output.getText());
+        String result = output.getText();
         
         String expResult = "Hello!\nCan you see me?\nCan you hear me?";
         assertEquals(expResult, result);

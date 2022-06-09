@@ -51,6 +51,7 @@ public class CannedGenerator {
                 throw new WelcomeException("No canned text found for key: " + key + " (" + language.getBaseName() + ")");
 
             } else {
+            	cannedText = cannedText.trim();
                 return cannedText;
             }
         }
