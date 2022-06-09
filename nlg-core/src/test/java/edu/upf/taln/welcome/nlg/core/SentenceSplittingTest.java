@@ -36,7 +36,18 @@ public class SentenceSplittingTest {
     }
     
     @Test
-    public void testSentenceSplitting() throws Exception {
+    public void testOpening() throws Exception {
+        String jsonldPath = "src/test/resources/testSentenceSplitting/Opening_Move.json";
+        String textResult = "Hello!\nCan you see me?\nCan you hear me?";
+        List<String> displayOutput = new ArrayList<>();
+        displayOutput.add("Hello!\nCan you see me?\nCan you hear me?");
+        List<String> ttsOutput = new ArrayList<>();
+        ttsOutput.add("Hello!\nCan you see me?\nCan you hear me?");
+        generate(jsonldPath, textResult, displayOutput, ttsOutput);
+    }
+    
+    @Test
+    public void testYesNoQuestion() throws Exception {
         String jsonldPath = "src/test/resources/testSentenceSplitting/yes_no_question.json";
         String textResult = "Please, say \"yes\" or \"no\".\n\n" + 
         		"Welcome to the CV creation service.\n\n" + 
@@ -114,4 +125,25 @@ public class SentenceSplittingTest {
         ttsOutput.add("You can see the link on the screen.");
         generate(jsonldPath, textResult, displayOutput, ttsOutput);
     }
+    
+    @Test
+    public void testDocumentsNeeded() throws Exception {
+        String jsonldPath = "src/test/resources/testSentenceSplitting/documentsNeeded.json";
+        String textResult = "For signing up in the population register, you have to provide the following information:.\n\n" + 
+        		"• Identity document (passport, foreigner identity card or provisional asylum seeker document).\n\n" + 
+        		"• Proof of your address (property deeds, rental contract, supplies bill, letter of authorization from the person identified as the lessee in the contract).\n\n" + 
+        		"• Level of studies.";
+        List<String> displayOutput = new ArrayList<>();
+        displayOutput.add("For signing up in the population register, you have to provide the following information:.");
+        displayOutput.add("• Identity document (passport, foreigner identity card or provisional asylum seeker document).");
+        displayOutput.add("• Proof of your address (property deeds, rental contract, supplies bill, letter of authorization from the person identified as the lessee in the contract).");
+        displayOutput.add("• Level of studies.");
+        List<String> ttsOutput = new ArrayList<>();
+        ttsOutput.add("For signing up in the population register, you have to provide the following information.");
+        ttsOutput.add("Identity document like passport, foreigner identity card or provisional asylum seeker document.");
+        ttsOutput.add("Proof of your address like property deeds, rental contract, supplies bill, letter of authorization from the person identified as the lessee in the contract.");
+        ttsOutput.add("Level of studies.");
+        generate(jsonldPath, textResult, displayOutput, ttsOutput);
+    }
+    
 }
