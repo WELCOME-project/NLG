@@ -9,7 +9,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -17,7 +17,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -25,7 +25,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -38,7 +38,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "flat",
@@ -46,7 +46,7 @@
           "default" : "lineId=2|definiteness=DEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -54,7 +54,7 @@
           "default" : "lineId=3|class=person"
         },
         "head" : [ 2 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -62,7 +62,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -75,7 +75,7 @@
           "default" : "lineId=1|clause_type=INT"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -83,7 +83,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "apartment_number",
@@ -91,7 +91,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "which",
@@ -99,7 +99,7 @@
           "default" : "lineId=4|dpos=WDT"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -112,7 +112,7 @@
           "default" : "clause_type=INT|lineId=1|main_rheme=yes"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "building",
@@ -120,7 +120,7 @@
           "default" : "lineId=2|definiteness=DEF"
         },
         "head" : [ 3, 1 ],
-        "deprel" : "A2,A2",
+        "deprel" : [ "A2", "A2" ],
         "mandatory" : false
       }, {
         "form" : "live",
@@ -128,7 +128,7 @@
           "default" : "lineId=3|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -136,7 +136,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "tell",
@@ -144,7 +144,7 @@
           "default" : "modality=DYN|lineId=5|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -152,7 +152,7 @@
           "default" : "lineId=6|class=person"
         },
         "head" : [ 5 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "I",
@@ -160,7 +160,7 @@
           "default" : "lineId=7|class=person"
         },
         "head" : [ 5 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       } ]
     },
@@ -173,7 +173,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -181,7 +181,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "or",
@@ -189,7 +189,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "house",
@@ -197,7 +197,7 @@
           "default" : "lineId=4|definiteness=INDEF"
         },
         "head" : [ 3 ],
-        "deprel" : "Set",
+        "deprel" : [ "Set" ],
         "mandatory" : false
       }, {
         "form" : "apartment_building",
@@ -205,7 +205,7 @@
           "default" : "lineId=5|definiteness=INDEF"
         },
         "head" : [ 3 ],
-        "deprel" : "Set",
+        "deprel" : [ "Set" ],
         "mandatory" : false
       } ]
     },
@@ -218,7 +218,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -226,7 +226,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "city",
@@ -234,7 +234,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "which",
@@ -242,7 +242,7 @@
           "default" : "lineId=4|dpos=WDT"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -255,7 +255,7 @@
           "default" : "lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -263,7 +263,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "[full_name]",
@@ -271,7 +271,7 @@
           "default" : "lineId=3|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "correct",
@@ -279,7 +279,7 @@
           "default" : "clause_type=INT|lineId=4"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -287,7 +287,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 4 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -300,7 +300,7 @@
           "default" : "lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -308,7 +308,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "second",
@@ -316,7 +316,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "not",
@@ -324,7 +324,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "correct",
@@ -332,7 +332,7 @@
           "default" : "clause_type=INT|lineId=5"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       } ]
     },
@@ -345,7 +345,7 @@
           "default" : "lineId=1|definiteness=no"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -353,7 +353,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "[name]",
@@ -361,7 +361,7 @@
           "default" : "lineId=3|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "correct",
@@ -369,7 +369,7 @@
           "default" : "clause_type=INT|lineId=4"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -377,7 +377,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 4 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -390,7 +390,7 @@
           "default" : "lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "second",
@@ -398,7 +398,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -406,7 +406,7 @@
           "default" : "lineId=3|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "[second_surname]",
@@ -414,7 +414,7 @@
           "default" : "lineId=4|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "correct",
@@ -422,7 +422,7 @@
           "default" : "clause_type=INT|lineId=5"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -430,7 +430,7 @@
           "default" : "lineId=6"
         },
         "head" : [ 5 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -443,7 +443,7 @@
           "default" : "lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "first",
@@ -451,7 +451,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -459,7 +459,7 @@
           "default" : "lineId=3|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "[first_surname]",
@@ -467,7 +467,7 @@
           "default" : "lineId=4|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "correct",
@@ -475,7 +475,7 @@
           "default" : "clause_type=INT|lineId=5"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -483,7 +483,7 @@
           "default" : "lineId=6"
         },
         "head" : [ 5 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -496,7 +496,7 @@
           "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -504,7 +504,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "CV",
@@ -512,7 +512,7 @@
           "default" : "lineId=3|definiteness=DEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "unfinished",
@@ -520,7 +520,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -533,7 +533,7 @@
           "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -541,7 +541,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "CV",
@@ -549,7 +549,7 @@
           "default" : "lineId=3|definiteness=INDEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "new",
@@ -557,7 +557,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -570,7 +570,7 @@
           "default" : "lineId=1|main_rheme=yes|number=PL|clause_type=INT|definiteness=DEF"
         },
         "head" : [ 0, 3 ],
-        "deprel" : "ROOT,A2",
+        "deprel" : [ "ROOT", "A2" ],
         "mandatory" : false
       }, {
         "form" : "main",
@@ -578,7 +578,7 @@
           "default" : "lineId=2|dpos=JJ"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "carry_out",
@@ -586,7 +586,7 @@
           "default" : "lineId=3|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -594,7 +594,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -602,7 +602,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -615,7 +615,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "position",
@@ -623,7 +623,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "current",
@@ -631,7 +631,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 2 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -639,7 +639,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 2 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -647,7 +647,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -660,7 +660,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -668,7 +668,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "valid",
@@ -676,7 +676,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -689,7 +689,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -697,7 +697,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "who",
@@ -705,7 +705,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       } ]
     },
@@ -718,7 +718,7 @@
           "default" : "clause_type=INT|lineId=1|main_rheme=yes|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "company",
@@ -726,7 +726,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 3, 1 ],
-        "deprel" : "A3,A2",
+        "deprel" : [ "A3", "A2" ],
         "mandatory" : false
       }, {
         "form" : "work",
@@ -734,7 +734,7 @@
           "default" : "lineId=3|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -742,7 +742,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -750,7 +750,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -763,7 +763,7 @@
           "default" : "lineId=1|clause_type=INT|main_rheme=yes|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "company",
@@ -771,7 +771,7 @@
           "default" : "lineId=2|definiteness=DEF"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A2,A3",
+        "deprel" : [ "A2", "A3" ],
         "mandatory" : false
       }, {
         "form" : "work",
@@ -779,7 +779,7 @@
           "default" : "lineId=3|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -787,7 +787,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -795,7 +795,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -808,7 +808,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "entrance",
@@ -816,7 +816,7 @@
           "default" : "lineId=2|definiteness=DEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "building",
@@ -824,7 +824,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 2 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -832,7 +832,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     },
@@ -845,7 +845,7 @@
           "default" : "clause_type=INT|lineId=1|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -853,7 +853,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 4 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "when",
@@ -861,7 +861,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "degree",
@@ -869,7 +869,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     },
@@ -882,7 +882,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -890,7 +890,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "floor",
@@ -898,7 +898,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "which",
@@ -906,7 +906,7 @@
           "default" : "lineId=4|dpos=WDT"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "building",
@@ -914,7 +914,7 @@
           "default" : "lineId=5|definiteness=DEF"
         },
         "head" : [ 3 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     },
@@ -927,7 +927,7 @@
           "default" : "dative_shift=DO|modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -935,7 +935,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "street_number",
@@ -943,7 +943,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "I",
@@ -951,7 +951,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       } ]
     },
@@ -964,7 +964,7 @@
           "default" : "lineId=1|clause_type=INT"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -972,7 +972,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -980,7 +980,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -993,7 +993,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=INDEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "official",
@@ -1001,7 +1001,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "degree",
@@ -1009,7 +1009,7 @@
           "default" : "lineId=3|definiteness=DEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1017,7 +1017,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A2,A2",
+        "deprel" : [ "A2", "A2" ],
         "mandatory" : false
       } ]
     },
@@ -1030,7 +1030,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1038,7 +1038,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "second",
@@ -1046,7 +1046,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "tell",
@@ -1054,7 +1054,7 @@
           "default" : "modality=DYN|lineId=4|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1062,7 +1062,7 @@
           "default" : "lineId=5|class=person"
         },
         "head" : [ 4 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "I",
@@ -1070,7 +1070,7 @@
           "default" : "lineId=6|class=person"
         },
         "head" : [ 4 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       } ]
     },
@@ -1083,7 +1083,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1091,7 +1091,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "highest",
@@ -1099,7 +1099,7 @@
           "default" : "lineId=3|type=RESTR"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "educational",
@@ -1107,7 +1107,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1115,7 +1115,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1128,7 +1128,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1136,7 +1136,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "city",
@@ -1144,7 +1144,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "which",
@@ -1152,7 +1152,7 @@
           "default" : "lineId=4|dpos=WDT"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -1165,7 +1165,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "institution",
@@ -1173,7 +1173,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "educational",
@@ -1181,7 +1181,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 2 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1189,7 +1189,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1202,7 +1202,7 @@
           "default" : "lineId=1|main_rheme=yes|clause_type=INT|definiteness=INDEF"
         },
         "head" : [ 0, 3 ],
-        "deprel" : "ROOT,A2",
+        "deprel" : [ "ROOT", "A2" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1210,7 +1210,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A2,A1",
+        "deprel" : [ "A2", "A1" ],
         "mandatory" : false
       }, {
         "form" : "use",
@@ -1218,7 +1218,7 @@
           "default" : "lineId=3|modality=DYN|modality_type=PSB|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "job",
@@ -1226,7 +1226,7 @@
           "default" : "lineId=4|definiteness=INDEF"
         },
         "head" : [ 3 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       } ]
     },
@@ -1239,7 +1239,7 @@
           "default" : "clause_type=INT|lineId=1|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1247,7 +1247,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1255,7 +1255,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1268,7 +1268,7 @@
           "default" : "lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "company",
@@ -1276,7 +1276,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 3, 1 ],
-        "deprel" : "A3,A2",
+        "deprel" : [ "A3", "A2" ],
         "mandatory" : false
       }, {
         "form" : "work",
@@ -1284,7 +1284,7 @@
           "default" : "lineId=3|tense=PAST|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1292,7 +1292,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1300,7 +1300,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1313,7 +1313,7 @@
           "default" : "lineId=1|main_rheme=yes|clause_type=INT|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "company",
@@ -1321,7 +1321,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 3, 1 ],
-        "deprel" : "A3,A2",
+        "deprel" : [ "A3", "A2" ],
         "mandatory" : false
       }, {
         "form" : "work",
@@ -1329,7 +1329,7 @@
           "default" : "lineId=3|tense=PAST|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1337,7 +1337,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1345,7 +1345,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1358,7 +1358,7 @@
           "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "end",
@@ -1366,7 +1366,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "occupation",
@@ -1374,7 +1374,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -1382,7 +1382,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1390,7 +1390,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1403,7 +1403,7 @@
           "default" : "lineId=1|main_rheme=yes|number=PL|clause_type=INT|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0, 3 ],
-        "deprel" : "ROOT,A2",
+        "deprel" : [ "ROOT", "A2" ],
         "mandatory" : false
       }, {
         "form" : "main",
@@ -1411,7 +1411,7 @@
           "default" : "lineId=2|dpos=JJ"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "carry_out",
@@ -1419,7 +1419,7 @@
           "default" : "lineId=3|tense=PAST|type=RESTR"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1427,7 +1427,7 @@
           "default" : "lineId=4|class=person"
         },
         "head" : [ 3 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1435,7 +1435,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1448,7 +1448,7 @@
           "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "position",
@@ -1456,7 +1456,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1464,7 +1464,7 @@
           "default" : "lineId=3|class=person"
         },
         "head" : [ 2 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1472,7 +1472,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1485,7 +1485,7 @@
           "default" : "clause_type=INT|lineId=1|tense=PAST|definiteness=DEF"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "start",
@@ -1493,7 +1493,7 @@
           "default" : "lineId=2|dpos=JJ"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "occupation",
@@ -1501,7 +1501,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A3",
+        "deprel" : [ "A3" ],
         "mandatory" : false
       }, {
         "form" : "this",
@@ -1509,7 +1509,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1517,7 +1517,7 @@
           "default" : "lineId=5"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1530,7 +1530,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1538,7 +1538,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "province",
@@ -1546,7 +1546,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "which",
@@ -1554,7 +1554,7 @@
           "default" : "lineId=4|dpos=WDT"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -1567,7 +1567,7 @@
           "default" : "lineId=1|clause_type=INT"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1575,7 +1575,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1583,7 +1583,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1596,7 +1596,7 @@
           "default" : "lineId=1|clause_type=INT|modality=DES|modality_type=??|coord_type=disjunction"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1604,7 +1604,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "CV",
@@ -1612,7 +1612,7 @@
           "default" : "lineId=3|definiteness=DEF"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "completed",
@@ -1620,7 +1620,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -1633,7 +1633,7 @@
           "default" : "clause_type=INT|lineId=1|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1641,7 +1641,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "when",
@@ -1649,7 +1649,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "work",
@@ -1657,7 +1657,7 @@
           "default" : "lineId=4|finiteness=GER"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     },
@@ -1670,7 +1670,7 @@
           "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1678,7 +1678,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "surname",
@@ -1686,7 +1686,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "first",
@@ -1694,7 +1694,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -1707,7 +1707,7 @@
           "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1715,7 +1715,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "name",
@@ -1723,7 +1723,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     },
@@ -1736,7 +1736,7 @@
           "default" : "modality=DYN|lineId=1|modality_type=PSB|clause_type=INT|tense=PAST"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1744,7 +1744,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1, 3 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "surname",
@@ -1752,7 +1752,7 @@
           "default" : "lineId=3"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "second",
@@ -1760,7 +1760,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 3 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       } ]
     },
@@ -1773,7 +1773,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "street",
@@ -1781,7 +1781,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1789,7 +1789,7 @@
           "default" : "lineId=3|class=person"
         },
         "head" : [ 2 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1797,7 +1797,7 @@
           "default" : "lineId=4"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1810,7 +1810,7 @@
           "default" : "clause_type=INT|lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "street",
@@ -1818,7 +1818,7 @@
           "default" : "lineId=2"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "what",
@@ -1826,7 +1826,7 @@
           "default" : "lineId=3|dpos=WDT"
         },
         "head" : [ 1 ],
-        "deprel" : "NonCore",
+        "deprel" : [ "NonCore" ],
         "mandatory" : false
       }, {
         "form" : "[street_name]",
@@ -1834,7 +1834,7 @@
           "default" : "lineId=4|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       } ]
     },
@@ -1847,7 +1847,7 @@
           "default" : "lineId=1"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1855,7 +1855,7 @@
           "default" : "lineId=2|class=person"
         },
         "head" : [ 1 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       }, {
         "form" : "[address]",
@@ -1863,7 +1863,7 @@
           "default" : "lineId=3|definiteness=no"
         },
         "head" : [ 1 ],
-        "deprel" : "A1",
+        "deprel" : [ "A1" ],
         "mandatory" : false
       }, {
         "form" : "update",
@@ -1871,7 +1871,7 @@
           "default" : "clause_type=INT|modality=DES|lineId=4|modality_type=??"
         },
         "head" : [ 0 ],
-        "deprel" : "ROOT",
+        "deprel" : [ "ROOT" ],
         "mandatory" : false
       }, {
         "form" : "you",
@@ -1879,7 +1879,7 @@
           "default" : "lineId=5|class=person"
         },
         "head" : [ 4, 6 ],
-        "deprel" : "A1,A2",
+        "deprel" : [ "A1", "A2" ],
         "mandatory" : false
       }, {
         "form" : "address",
@@ -1887,7 +1887,7 @@
           "default" : "lineId=6"
         },
         "head" : [ 4 ],
-        "deprel" : "A2",
+        "deprel" : [ "A2" ],
         "mandatory" : false
       } ]
     }

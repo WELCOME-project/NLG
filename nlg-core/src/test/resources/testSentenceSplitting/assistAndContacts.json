@@ -60,8 +60,6 @@
 	        "rdf:subject" : "welcome:AgentNGO",
 	        "rdf:predicate" : "welcome:webURL",
 	        "rdf:object" : {
-	          "@id" : null,
-	          "@type" : null,
 	          "@value" : "https://www.caritas-hamm.de/einrichtungen/beratungszentrum/beratungszentrum"
 	        }
 	      },{
@@ -69,8 +67,6 @@
 	        "rdf:subject" : "welcome:AgentNGO",
 	        "rdf:predicate" : "welcome:agentName",
 	        "rdf:object" : {
-	          "@id" : null,
-	          "@type" : null,
 	          "@value" : "CARITAS"
 	        }
 	      } 

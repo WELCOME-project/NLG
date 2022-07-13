@@ -1,16 +1,18 @@
 package edu.upf.taln.welcome.nlg.core;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.tuple.MutablePair;
+
 import com.ibm.icu.util.ULocale;
 
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
@@ -96,7 +98,7 @@ public class BasicTemplateGenerator {
         return sentences;
     }
     
-    private void addValueToRDFMap(HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String key, RDFContent value) {
+    private static void addValueToRDFMap(Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String key, RDFContent value) {
     	if (key != null && value != null) {
     		List<MutablePair<RDFContent, Boolean>> listPairs;
     		if (rdfMap.containsKey(key)) {
@@ -110,7 +112,7 @@ public class BasicTemplateGenerator {
     	}
     }
     
-    private void getSubtemplateValue(HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String subTemplateId, ULocale language, String valueName, String collectionId) throws WelcomeException {
+    private void getSubtemplateValue(Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, String subTemplateId, ULocale language, String valueName, String collectionId) throws WelcomeException {
         
     	String subTemplate = contentClient.getTemplate(collectionId, subTemplateId, language);
     	if (subTemplate != null) {
@@ -119,12 +121,11 @@ public class BasicTemplateGenerator {
             addValueToRDFMap(rdfMap, valueName, subTemplateRdf);
         }
     }
-
-    private HashMap<String, List<MutablePair<RDFContent, Boolean>>>  extractData(Slot slot, ULocale language, String subCollectionId) throws WelcomeException {
-        
-        HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
-        if (slot.rdf != null) {
-	        for (RDFContent rdf : slot.rdf) {
+    
+    public static Map<String, List<MutablePair<RDFContent, Boolean>>> extractRdfData(List<RDFContent> rdfs) {
+    	Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new LinkedHashMap<>();
+        if (rdfs != null) {
+	        for (RDFContent rdf : rdfs) {
 
                 String subject = null;
 	        	if (rdf.subject != null) {
@@ -152,6 +153,13 @@ public class BasicTemplateGenerator {
 	        	addValueToRDFMap(rdfMap, key, rdf);
 	        }
         }
+        return rdfMap;
+    }
+
+    public Map<String, List<MutablePair<RDFContent, Boolean>>>  extractData(Slot slot, ULocale language, String subCollectionId) throws WelcomeException {
+        
+        Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
+        rdfMap = extractRdfData(slot.rdf);
         
         //look for subtemplates
         if (rdfMap.containsKey("subTemplate")) {
@@ -173,7 +181,7 @@ public class BasicTemplateGenerator {
         return rdfMap;
     }
 
-    private String applyTemplate(String template, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, boolean spelloutNumbers) {
+    private String applyTemplate(String template, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, boolean spelloutNumbers) {
         
         StringBuilder message = new StringBuilder();
 		
@@ -256,7 +264,7 @@ public class BasicTemplateGenerator {
     
     public String applyTemplate(String template, Slot slot, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
         
-        HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = extractData(slot, language, subCollectionId);
+        Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = extractData(slot, language, subCollectionId);
         
         String newTemplate = specialCases(slot, rdfMap, language, collectionId);
         if (newTemplate != null) {
@@ -267,7 +275,7 @@ public class BasicTemplateGenerator {
         return text;
     }
     
-    private String specialCases(Slot slot, HashMap<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
+    private String specialCases(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
     	String newTemplateId = null;
     	List<MutablePair<RDFContent, Boolean>> rdfResults;
 		switch(slot.id) {

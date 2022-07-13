@@ -43,6 +43,8 @@
         "InformOverview": "The First Reception Service consists of a number of initial training and information activities especially designed for its users. It includes counselling, initial adult training, and certification of basic skills and competences to make living and working in Catalonia easier. There are three different modules",
         "InformSocietyModule": "Module C. Catalan Society, which consists of a 15 h course specifically on your municipality and the services you can apply for",
         "InformSocietyModuleAddress": "Module C is offered at the City Council building",
-        "InformSocietyModuleHours": "Module C is given on Wednesdays from 19:00 to 21:00"
+        "InformSocietyModuleHours": "Module C is given on Wednesdays from 19:00 to 21:00",
+        
+        "NeedsUpdateAnswer": "Currently I have stored <TCNAnswer>. Would you like to update it?"
     }
 }

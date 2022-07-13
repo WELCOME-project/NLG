@@ -37,9 +37,11 @@ public class Proto2Test {
     @Test
     public void testSample() throws Exception {
         String jsonldPath = "src/test/resources/proto2/sample.json";
-        String textOutput = "Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service (:webURL:).";
+        String textOutput = "Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:.\n\nPlease keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service (:webURL:).";
         List<String> ttsOutput = new ArrayList<>();
-		ttsOutput.add("Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:. Please keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service. You can see the link on the screen.");
+		ttsOutput.add("Thank you. Here is a pre-filled form using the data you entered during your registration to :AppName:hasValue:.");
+		ttsOutput.add("Please keep in mind that this pre-filled form doesn't replace the online full-registration procedure that you must complete through the official website of the :Country:hasValue: Asylum Service.");
+		ttsOutput.add("You can see the link on the screen.");
         
         generate(jsonldPath, textOutput, ttsOutput);
     }
@@ -51,6 +53,17 @@ public class Proto2Test {
         List<String> ttsOutput = new ArrayList<>();
 		ttsOutput.add("Please, say \"yes\" or \"no\".");
 		ttsOutput.add("Is it clear?");
+        
+        generate(jsonldPath, textOutput, ttsOutput);
+    }
+    
+    @Test
+    public void testNeedsUpdate() throws Exception {
+        String jsonldPath = "src/test/resources/proto2/NeedsUpdate-Original_Move.json";
+        String textOutput = "Please give me your email.\n\nCurrently I have stored testuser@example.com. Would you like to update it?";
+        List<String> ttsOutput = new ArrayList<>();
+        ttsOutput.add("Please give me your email.");
+		ttsOutput.add("Currently I have stored testuser@example.com. Would you like to update it?");
         
         generate(jsonldPath, textOutput, ttsOutput);
     }
