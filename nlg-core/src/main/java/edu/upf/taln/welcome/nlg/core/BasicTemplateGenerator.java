@@ -12,13 +12,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.tuple.MutablePair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import com.ibm.icu.util.ULocale;
 
 import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.dms.commons.input.RDFContent;
 import edu.upf.taln.welcome.dms.commons.input.Slot;
-import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
 import edu.upf.taln.welcome.nlg.core.utils.ContentDBClient;
 import edu.upf.taln.welcome.nlg.core.utils.TimeMapper;
 
@@ -35,7 +35,6 @@ public class BasicTemplateGenerator {
 	private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
 
 	private ContentDBClient contentClient;
-
     
     public static String cleanCompactedSchema(String value) {
     	if (value == null) { return null; }
@@ -56,40 +55,85 @@ public class BasicTemplateGenerator {
 	public BasicTemplateGenerator() throws WelcomeException {
 		contentClient = new ContentDBClient(CONTENTDB_URL);		
 	}
+	
+	public boolean isLanguageTemplate(String templateId, ULocale language, String collectionId) {
 
-    public List<String> getTemplateText(SpeechAct act, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
-        Slot slot = act.slot;
-        String templateId = slot.templateId;
+        String template = null;
+		try {
+			template = contentClient.getTemplate(collectionId, templateId, language);
+		} catch (WelcomeException we) {
+			logger.log(Level.INFO, we.getMessage());
+		}
 
+        return template != null;
+	}
+	
+	public List<Pair<String, String>> getRequiredTemplatesIds(Slot slot, String collectionId, String subCollectionId) {
+		List<Pair<String, String>> templatesIds = new ArrayList<>();
+		
+		String baseTemplateId = slot.templateId;
+		templatesIds.add(Pair.of(baseTemplateId, collectionId));
+		
+		Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
+        rdfMap = extractRdfData(slot.rdf);
+        
+        //look for subtemplates
+        if (rdfMap.containsKey("subTemplate")) {
+        	List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get("subTemplate");
+        	RDFContent rdf = rdfList.get(0).getLeft();
+        	if (rdf.predicate != null && rdf.object != null && rdf.object.value != null) {
+        		templatesIds.add(Pair.of(rdf.object.value, subCollectionId));
+        	}
+        }
+        
+        //look for ontology info
+        if (slot.ontology != null) {
+        	String onto = Ontology2TemplateDictionary.getInstance().get(slot.ontology);
+        	if (onto != null) {
+        		templatesIds.add(Pair.of(onto, subCollectionId));
+        	}
+        }
+	        
+		String newTemplate = getSpecialCasesTemplateId(slot, rdfMap);
+		if (newTemplate != null) {
+			templatesIds.add(Pair.of(newTemplate, collectionId));
+		}
+			
+		return templatesIds;
+	}
+
+    public List<String> getTemplateText(Slot slot, ULocale language, String collectionId, String subCollectionId, boolean spelloutNumbers) throws WelcomeException {
+
+    	String templateId = slot.templateId;
+    	
         List<String> sentences = new ArrayList<>();
+        
         try {
-            String template = contentClient.getTemplate(collectionId, templateId, language);
+        	String template = contentClient.getTemplate(collectionId, templateId, language);
 
             //TODO case when template contains <hasTranslation>
             //get hasOntologyType value and obtain new template
-
+            
             if (template != null) {
-            	
-            	//split template <s_end> into separated sentences
-            	String[] templatesArray = template.split("<s_end>");
-            	for (String sentenceTemplate : templatesArray) {
-            		
-            		String message = applyTemplate(sentenceTemplate, slot, language, collectionId, subCollectionId, spelloutNumbers);
-                    
+
+    			// split template <s_end> into separated sentences
+    			String[] templatesArray = template.split("<s_end>");
+    			for (String sentenceTemplate : templatesArray) {
+
+    				String message = applyTemplate(sentenceTemplate, slot, language, collectionId, subCollectionId,	spelloutNumbers);
+
     				message = message.replaceAll(" NGO", " N G O");
     				message = message.replaceAll("PRAKSIS", "Praksis");
-    				
+
     				message = message.trim();
-                    if (!message.endsWith(".") &&
-                            !message.endsWith("!") &&
-                            !message.endsWith("?")) {
-                        message = message + ".";
-                    }
-                    
-                    sentences.add(message);
-            	}
- 
-            }
+    				if (!message.endsWith(".") && !message.endsWith("!") && !message.endsWith("?")) {
+    					message = message + ".";
+    				}
+
+    				sentences.add(message);
+    			}
+
+    		}
             
         } catch (WelcomeException we) {
             logger.log(Level.SEVERE, we.getMessage());
@@ -156,7 +200,7 @@ public class BasicTemplateGenerator {
         return rdfMap;
     }
 
-    public Map<String, List<MutablePair<RDFContent, Boolean>>>  extractData(Slot slot, ULocale language, String subCollectionId) throws WelcomeException {
+    public Map<String, List<MutablePair<RDFContent, Boolean>>> extractData(Slot slot, ULocale language, String subCollectionId) throws WelcomeException {
         
         Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
         rdfMap = extractRdfData(slot.rdf);
@@ -275,7 +319,7 @@ public class BasicTemplateGenerator {
         return text;
     }
     
-    private String specialCases(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
+    private String getSpecialCasesTemplateId(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap) {
     	String newTemplateId = null;
     	List<MutablePair<RDFContent, Boolean>> rdfResults;
 		switch(slot.id) {
@@ -325,7 +369,13 @@ public class BasicTemplateGenerator {
 				break;
 		}
 		
-		String template = null;
+		return newTemplateId;
+	}
+    
+    private String specialCases(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
+    	String newTemplateId = getSpecialCasesTemplateId(slot, rdfMap);
+    	
+	    String template = null;
 		
 		if(newTemplateId != null) {
 			String newTemplate = contentClient.getTemplate(collectionId, newTemplateId, language);

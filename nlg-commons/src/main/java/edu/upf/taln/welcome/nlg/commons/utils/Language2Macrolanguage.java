@@ -46,7 +46,7 @@ public class Language2Macrolanguage {
 	 * @return 
 	 */
 	public static String getMacrolanguage(String lang) {
-		String macro = macroLanguages.get(lang);
+		String macro = macroLanguages.get(lang.toLowerCase());
 		if (macro == null)
 			macro = lang;
 		return macro;

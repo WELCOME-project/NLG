@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.apache.commons.lang3.tuple.Pair;
 
 import com.ibm.icu.util.ULocale;
 
@@ -84,10 +87,27 @@ public class LanguageGenerator {
             result.ttsStr.add(text);
 			
 		} else if (templateId != null) {
-			List<String> display = templateGenerator.getTemplateText(act, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, false);
+			if (language != ULocale.ENGLISH) {
+				List<Pair<String, String>> requiredTemplatesIds = templateGenerator.getRequiredTemplatesIds(slot, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION);
+				requiredTemplatesIds.addAll(templateGenerator.getRequiredTemplatesIds(slot, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION));
+				
+				boolean allTemplatesForLanguage = true;
+				int i = 0;
+				while (allTemplatesForLanguage && i < requiredTemplatesIds.size()) {
+					Pair<String, String> templateInfo = requiredTemplatesIds.get(i);
+					allTemplatesForLanguage = templateGenerator.isLanguageTemplate(templateInfo.getLeft(), language, templateInfo.getRight());
+					i++;
+				}
+				if (!allTemplatesForLanguage) {
+					logger.log(Level.INFO, "There are some missing templates for language: " + language.getDisplayLanguage() + ". Changing language to English.");
+					language = ULocale.ENGLISH;
+				}
+			}
+			
+			List<String> display = templateGenerator.getTemplateText(slot, language, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, false);
             result.text = String.join("\n\n", display);
             result.displayStr = display;
-            result.ttsStr = templateGenerator.getTemplateText(act, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION, true);
+            result.ttsStr = templateGenerator.getTemplateText(slot, language, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION, true);
 
         } else {
             String text = forgeGenerator.generate(act, 10, true);
@@ -103,7 +123,7 @@ public class LanguageGenerator {
 		
 		Set<RDFContent> rdfContents = null;
 		if (slot.rdf != null) {
-			rdfContents = new HashSet(slot.rdf);
+			rdfContents = new HashSet<RDFContent>(slot.rdf);
 			for (RDFContent rdf : rdfContents) {
 				if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
 					rdfContents.remove(rdf);
@@ -120,7 +140,7 @@ public class LanguageGenerator {
         List<String> chunks = new ArrayList<>();
         for (SpeechAct act: move.speechActs) {
             
-        	List<String> sentences = new ArrayList<>();
+        	//List<String> sentences = new ArrayList<>();
 			// TODO: Collect forge-generable slots to send them grouped!
 			
             GenerationResult result = generateSingleText(act, language);

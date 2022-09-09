@@ -52,7 +52,7 @@ public class NLGServiceTest {
         JsonNode input = mapper.readValue(inputFile, JsonNode.class);
 
         NLGService instance = new NLGService();
-        GenerationOutput output = instance.generate(input);
+        GenerationOutput output = instance.generate(null, input);
         
         File expectedFile = new File(inputFile.getParent(), baseName + "_output.json");
         if (!expectedFile.exists() || overrideExpected) {

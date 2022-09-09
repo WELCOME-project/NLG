@@ -7,10 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.jupiter.api.Test;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+
 import edu.upf.taln.forge.core.template.GenerationTemplate;
 import edu.upf.taln.forge.core.template.TemplateCollection;
 import edu.upf.taln.forge.core.template.TemplateEntry;

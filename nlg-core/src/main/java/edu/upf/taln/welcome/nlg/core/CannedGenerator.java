@@ -2,12 +2,11 @@ package edu.upf.taln.welcome.nlg.core;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,6 +25,8 @@ import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
  * @author rcarlini
  */
 public class CannedGenerator {
+	
+	private final Logger logger = Logger.getLogger(CannedGenerator.class.getName());
 	
     private Map<ULocale, Map<String, String>> canned;
     
@@ -47,6 +48,11 @@ public class CannedGenerator {
     public String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {
         
         Map<String, String> languageMap = canned.get(language);
+        if (language != ULocale.ENGLISH && languageMap == null) {
+        	logger.warning("Language not supported for canned text: " + language.getBaseName() + "\nDefaulting to English canned text.");
+        	language = ULocale.ENGLISH;
+        	languageMap = canned.get(language);
+        }
         if (languageMap == null) {
             throw new WelcomeException("Language not supported for canned text: " + language.getBaseName());
 
@@ -58,7 +64,6 @@ public class CannedGenerator {
                 key = BasicTemplateGenerator.cleanCompactedSchema(act.slot.id);				
 	            cannedText = languageMap.get(key);
 			}
-
             if (cannedText == null) {
                 throw new WelcomeException("No canned text found for key: " + key + " (" + language.getBaseName() + ")");
 
