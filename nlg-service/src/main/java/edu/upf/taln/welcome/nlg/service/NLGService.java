@@ -16,6 +16,10 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
+
+import org.apache.commons.lang3.tuple.Pair;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.ibm.icu.util.ULocale;
@@ -365,7 +369,7 @@ public class NLGService {
 	 * Unmarshalls JSON-LD edu.upf.taln.welcome.nlg.commons.input to POJO representations of dialogue moves, and passes it to the linguistic generator --if NLG is required.
 	 * The resulting texts is returned wrapped in a JSON message.
 	 */
-	public GenerationOutput generate(@Context HttpHeaders headers,
+	public Response generate(@Context HttpHeaders headers,
 			@Parameter(description = "Dialogue move used as generation edu.upf.taln.welcome.nlg.commons.input data.", required = true) JsonNode input) throws WelcomeException {
 		
 		StringBuffer strb = new StringBuffer(); 
@@ -376,7 +380,7 @@ public class NLGService {
 		}
 		logger.log(Level.INFO, strb.toString());
 		
-		String language = "en";
+		String language = "eng";
 		List<String> languageArray = headers.getRequestHeader("X-Language");
 		if(languageArray != null) {
 			language = languageArray.get(0);
@@ -388,9 +392,12 @@ public class NLGService {
 		try
 		{
 			DialogueMove move = JsonLDUtils.readMove(input.toString());
-            GenerationOutput output = generator.generate(move, locale); // only English for the time being
+            Pair<GenerationOutput, ULocale> output = generator.generate(move, locale); // only English for the time being
 
-			return output;
+            ResponseBuilder rBuild = Response
+					.ok(output.getLeft(), MediaType.APPLICATION_JSON)
+					.header("x-language", output.getRight().getISO3Language());
+            return rBuild.build();
             
         } catch (WelcomeException ex) {
             throw ex;

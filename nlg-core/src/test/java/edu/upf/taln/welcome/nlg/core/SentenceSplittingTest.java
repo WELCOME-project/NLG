@@ -6,6 +6,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,11 +29,11 @@ public class SentenceSplittingTest {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-        GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
+        Pair<GenerationOutput, ULocale> output = generator.generate(move, ULocale.ENGLISH);
         
-        assertEquals(textOutput, output.getText());
-        assertEquals(displayOutput, output.getDisplayChunks());
-        assertEquals(ttsOutput, output.getChunks());
+        assertEquals(textOutput, output.getLeft().getText());
+        assertEquals(displayOutput, output.getLeft().getDisplayChunks());
+        assertEquals(ttsOutput, output.getLeft().getChunks());
     }
     
     @Test

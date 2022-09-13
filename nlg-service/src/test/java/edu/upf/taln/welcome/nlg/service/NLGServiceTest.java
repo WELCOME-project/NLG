@@ -2,32 +2,40 @@ package edu.upf.taln.welcome.nlg.service;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MultivaluedHashMap;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.AndFileFilter;
 import org.apache.commons.io.filefilter.FileFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.mockito.Mockito;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import edu.upf.taln.welcome.dms.commons.exceptions.WelcomeException;
 import edu.upf.taln.welcome.dms.commons.output.DialogueMove;
 import edu.upf.taln.welcome.dms.commons.output.SpeechAct;
-
 import edu.upf.taln.welcome.nlg.commons.output.GenerationOutput;
-import org.apache.commons.io.FilenameUtils;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 
 
 /**
@@ -42,6 +50,31 @@ public class NLGServiceTest {
 	private final ObjectWriter writer = new ObjectMapper()
             .configure(SerializationFeature.ORDER_MAP_ENTRIES_BY_KEYS, true)
             .writerWithDefaultPrettyPrinter();
+	
+	private void error_management(Response response) throws WelcomeException {
+        String responseStr = response.readEntity(String.class);
+        ObjectMapper om = new ObjectMapper()
+        		.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        if (response.getStatus() == Response.Status.INTERNAL_SERVER_ERROR.getStatusCode()) {
+
+        	WelcomeException we;
+            try {
+            	we = om.readValue(responseStr, WelcomeException.class);
+            } catch (Exception e) {
+                try {
+                    Exception newEx = om.readValue(responseStr, Exception.class);
+                    we = new WelcomeException(newEx.getMessage(), newEx);
+
+                } catch (IOException e1) {
+                    throw new WelcomeException("" + response.getStatus());
+                }
+            }
+            throw we;
+        } else {
+            throw new WelcomeException("" + response.getStatus());
+        }
+    }
     
     public void testMove(File inputFile) throws Exception {
         
@@ -51,19 +84,33 @@ public class NLGServiceTest {
         ObjectMapper mapper = new ObjectMapper();
         JsonNode input = mapper.readValue(inputFile, JsonNode.class);
 
-        NLGService instance = new NLGService();
-        GenerationOutput output = instance.generate(null, input);
+        //Creating headers mock up
+        HttpHeaders httpHeaders = Mockito.mock(HttpHeaders.class);
+        MultivaluedMap<String, String> headers = new MultivaluedHashMap<String, String>();
+        headers.putSingle("X-Language", "eng");
+        Mockito.when(httpHeaders.getRequestHeaders()).thenReturn(headers);
+        Mockito.when(httpHeaders.getRequestHeader("X-Language")).thenReturn(new ArrayList<>(Arrays.asList(new String[] {"eng"})));
         
-        File expectedFile = new File(inputFile.getParent(), baseName + "_output.json");
-        if (!expectedFile.exists() || overrideExpected) {
-            writer.writeValue(expectedFile, output);        
+        NLGService instance = new NLGService();
+        Response response = instance.generate(httpHeaders, input);
+        
+        if (response.getStatus() == Response.Status.OK.getStatusCode()) {
+        	GenerationOutput output = (GenerationOutput) response.getEntity();
+        	
+        	File expectedFile = new File(inputFile.getParent(), baseName + "_output.json");
+            if (!expectedFile.exists() || overrideExpected) {
+                writer.writeValue(expectedFile, output);        
+            }
+            String expResult = FileUtils.readFileToString(expectedFile, "utf-8");
+    		
+    		String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
+    		System.out.println(result);
+    		
+    		Assertions.assertEquals(expResult, result, "Actual and expected doesn't match in " + expectedFile.getPath());
+    		
+        } else {
+        	error_management(response);
         }
-        String expResult = FileUtils.readFileToString(expectedFile, "utf-8");
-		
-		String result = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(output);
-		System.out.println(result);
-		
-		Assertions.assertEquals(expResult, result, "Actual and expected doesn't match in " + expectedFile.getPath());
     }
 
     static File[] getDirectoryInputs(String baseDir) {

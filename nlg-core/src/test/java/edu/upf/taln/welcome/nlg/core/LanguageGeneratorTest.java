@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,8 +35,8 @@ public class LanguageGeneratorTest {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-        GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
-        String result = output.getText();
+        Pair<GenerationOutput, ULocale> output = generator.generate(move, ULocale.ENGLISH);
+        String result = output.getLeft().getText();
         
         String expResult = "Hello!\nCan you see me?\nCan you hear me?";
         assertEquals(expResult, result);

@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,8 +27,8 @@ public class Proto1Test {
         DialogueMove move = mapper.readValue(inputFile, DialogueMove.class);
         
         LanguageGenerator generator = new LanguageGenerator();
-        GenerationOutput output = generator.generate(move, ULocale.ENGLISH);
-        String result = output.getText();
+        Pair<GenerationOutput, ULocale> output = generator.generate(move, ULocale.ENGLISH);
+        String result = output.getLeft().getText();
         
         assertEquals(expResult, result);
     }

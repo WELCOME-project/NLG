@@ -45,14 +45,36 @@ public class CannedGenerator {
 		}		
 	}
 	
+	public boolean isGeneratableInLanguage(SpeechAct act, ULocale language) {
+		Map<String, String> languageMap = canned.get(language);
+        if (language != ULocale.ENGLISH && languageMap == null) {
+        	logger.warning("Language not supported for canned text: " + language.getBaseName());
+        	return false;
+        }
+        if (languageMap != null) {
+        	String key = act.label.toString();
+			String cannedText = languageMap.get(key);
+			
+			if (cannedText == null && act.slot != null) {
+                key = BasicTemplateGenerator.cleanCompactedSchema(act.slot.id);				
+	            cannedText = languageMap.get(key);
+			}
+            if (cannedText == null) {
+            	logger.warning("No canned text found for key: " + key + " in " + language.getBaseName());
+                return false;
+            }
+        } 
+        return true;
+	}
+	
     public String getCannedText(SpeechAct act, ULocale language) throws WelcomeException {
         
         Map<String, String> languageMap = canned.get(language);
-        if (language != ULocale.ENGLISH && languageMap == null) {
+        /*if (language != ULocale.ENGLISH && languageMap == null) {
         	logger.warning("Language not supported for canned text: " + language.getBaseName() + "\nDefaulting to English canned text.");
         	language = ULocale.ENGLISH;
         	languageMap = canned.get(language);
-        }
+        }*/
         if (languageMap == null) {
             throw new WelcomeException("Language not supported for canned text: " + language.getBaseName());
 
