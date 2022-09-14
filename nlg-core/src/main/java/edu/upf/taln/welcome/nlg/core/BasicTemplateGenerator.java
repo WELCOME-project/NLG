@@ -30,7 +30,10 @@ public class BasicTemplateGenerator {
 
 	private final Logger logger = Logger.getLogger(BasicTemplateGenerator.class.getName());
 
+	// demo server
     private static final String CONTENTDB_URL = "https://18.224.42.120/welcome/integration/workflow/dispatcher/contentDBCollections";
+    // dev server
+    //private static final String CONTENTDB_URL = "http://3.20.64.60/welcome/integration/workflow/dispatcher/contentDBCollections";
 
 	private static final Pattern placeholder = Pattern.compile("<([^>]+)>"); //
 
