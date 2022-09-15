@@ -257,28 +257,55 @@ public class BasicTemplateGenerator {
 				List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get(variable);
 				if (rdfList != null && !rdfList.isEmpty()) {
 					
-					RDFContent rdf = null;
+					//get language specific rdf's
+					List<MutablePair<RDFContent, Boolean>> languageList = new ArrayList<>();
 					if (rdfList.size() > 1) {
-						Iterator<MutablePair<RDFContent, Boolean>> listIterator = rdfList.iterator();
-						while (rdf == null && listIterator.hasNext()) {
-							MutablePair<RDFContent, Boolean> tempPair = listIterator.next();
-							Boolean used = tempPair.getRight();
-							if (!used) {
-								rdf = tempPair.getLeft();
-								tempPair.right = true;
+						for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+							RDFContent rdf = rdfPair.getLeft();
+							if (rdf.object != null && rdf.object.language != null 
+									&& rdf.object.language.equalsIgnoreCase(language.getISO3Language())) {
+								languageList.add(rdfPair);
 							}
 						}
 					}
-					if (rdf == null) {
-						rdf = rdfList.get(0).getLeft();
-						rdfList.get(0).right = true;
+					//If there are not rdf for the specific language get the English ones
+					if (languageList.isEmpty()) {
+						for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+							RDFContent rdf = rdfPair.getLeft();
+							if (rdf.object != null 
+									&& ((rdf.object.language != null && rdf.object.language.equalsIgnoreCase(ULocale.ENGLISH.getISO3Language())) 
+									|| rdf.object.language == null)) {
+								languageList.add(rdfPair);
+							}
+						}
 					}
-
-					if (rdf.object != null && rdf.object.value != null) {
-						replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
-						
-					} else if (rdf.object != null && rdf.object.id != null) {
-						replacement = cleanCompactedSchema(rdf.object.id);
+					rdfList = languageList;
+					
+					if(!rdfList.isEmpty()) {
+						//get one unused rdf
+						RDFContent rdf = null;
+						if (rdfList.size() > 1) {
+							Iterator<MutablePair<RDFContent, Boolean>> listIterator = rdfList.iterator();
+							while (rdf == null && listIterator.hasNext()) {
+								MutablePair<RDFContent, Boolean> tempPair = listIterator.next();
+								Boolean used = tempPair.getRight();
+								if (!used) {
+									rdf = tempPair.getLeft();
+									tempPair.right = true;
+								}
+							}
+						}
+						if (rdf == null) {
+							rdf = rdfList.get(0).getLeft();
+							rdfList.get(0).right = true;
+						}
+	
+						if (rdf.object != null && rdf.object.value != null) {
+							replacement = /*cleanCompactedSchema(*/rdf.object.value/*)*/;
+							
+						} else if (rdf.object != null && rdf.object.id != null) {
+							replacement = cleanCompactedSchema(rdf.object.id);
+						}
 					}
 				}
 

@@ -1,0 +1,6 @@
+{
+  "text" : "Please, say \"yes\" or \"no\".\n\nWhere are you living in Greece?",
+  "displayChunks" : [ "Please, say \"yes\" or \"no\".", "Where are you living in Greece?" ],
+  "chunks" : [ "Please, say \"yes\" or \"no\".", "Where are you living in Greece?" ],
+  "chunkType" : "Slot"
+}
