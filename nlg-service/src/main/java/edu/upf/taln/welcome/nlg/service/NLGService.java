@@ -293,11 +293,16 @@ public class NLGService {
 
 	public NLGService() throws WelcomeException {
         try {
-            generator = new LanguageGenerator();
-            
             contextFile = NLGService.class.getResource("/welcome-nlg-context.jsonld");
             if (contextFile == null) {
                 throw new WelcomeException("JSONLD context file not found!");
+            }
+            
+            String templatesUrl = System.getenv("CONTENTDB_URL");
+            if (templatesUrl != null) {
+            	generator = new LanguageGenerator(templatesUrl);
+            } else {
+            	generator = new LanguageGenerator();
             }
         
 		} catch (Exception ex) {

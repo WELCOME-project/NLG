@@ -59,6 +59,10 @@ public class BasicTemplateGenerator {
 		contentClient = new ContentDBClient(CONTENTDB_URL);		
 	}
 	
+	public BasicTemplateGenerator(String templatesURL) throws WelcomeException {
+		contentClient = new ContentDBClient(templatesURL);		
+	}
+	
 	public boolean isLanguageTemplate(String templateId, ULocale language, String collectionId) {
 
         String template = null;

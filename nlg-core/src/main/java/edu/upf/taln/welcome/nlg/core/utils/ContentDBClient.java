@@ -44,6 +44,7 @@ public class ContentDBClient {
 
             errorHandler = initErrorHandler();
             
+            logger.info("Using content DB from: " + url);
         } catch (NoSuchAlgorithmException | KeyManagementException ex) {
             throw new WelcomeException("Failed to initialize the ContentDB client!", ex);
         }            

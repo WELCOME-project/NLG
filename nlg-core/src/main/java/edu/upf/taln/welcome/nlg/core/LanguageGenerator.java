@@ -57,6 +57,20 @@ public class LanguageGenerator {
         }
     }
     
+    public LanguageGenerator(String templatesUrl) throws WelcomeException {
+		
+		cannedGenerator = new CannedGenerator("/canned.json");
+		templateGenerator = new BasicTemplateGenerator(templatesUrl);
+		
+        try {
+			ENProto2Configuration config = new ENProto2Configuration();
+			forgeGenerator = new ForgeBasedGenerator(config);
+
+        } catch (ForgeException  ex) {
+			throw new WelcomeException("Forge-based generator initialization failed!", ex);
+        }
+    }
+    
     protected boolean isSingleTextGeneratableInLanguage(SpeechAct act, ULocale language) throws WelcomeException {
     	if (language == ULocale.ENGLISH) return true;
     	
