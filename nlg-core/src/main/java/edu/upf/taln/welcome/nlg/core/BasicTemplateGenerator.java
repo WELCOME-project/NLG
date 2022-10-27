@@ -399,6 +399,26 @@ public class BasicTemplateGenerator {
 					newTemplateId = "TInformAppCallAccountIDOneLanguage";
 				}
 				break;
+			case "informScenarioIntroduction":
+				String defaultTemplate = slot.templateId;
+				int numRdfs = rdfMap.size();
+				if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionCARITAS")) {
+					if (numRdfs <= 2) {
+						newTemplateId = "TInformSchoolingScenarioIntroductionCARITAS" + (numRdfs - 1);
+					}
+				} else if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionDIFE")) {
+					if (numRdfs <= 3) {
+						newTemplateId = "TInformSchoolingScenarioIntroductionDIFE" + (numRdfs - 1);
+					}
+				}
+				break;
+			case "obtainSubtopic":
+				if (rdfMap.size() > 2) {
+					newTemplateId = "TObtainSubtopicMany";
+				} else {
+					newTemplateId = "TObtainSubtopicOne";
+				}
+				break;
 			default: 
 				break;
 		}
