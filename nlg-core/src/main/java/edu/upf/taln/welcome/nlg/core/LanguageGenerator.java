@@ -27,10 +27,10 @@ public class LanguageGenerator {
         
     private final Logger logger = Logger.getLogger(LanguageGenerator.class.getName());
 
-    protected static final String DEFAULT_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototype";
-    protected static final String DEFAULT_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototype";
-    protected static final String TTS_TEMPLATE_COLLECTION = "UtteranceTemplatesSecondPrototypeTTS";
-    protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesSecondPrototypeTTS";
+    protected static final String DEFAULT_TEMPLATE_COLLECTION = "UtteranceTemplatesThirdPrototype";
+    protected static final String DEFAULT_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesThirdPrototype";
+    protected static final String TTS_TEMPLATE_COLLECTION = "UtteranceTemplatesThirdPrototypeTTS";
+    protected static final String TTS_SUBTEMPLATE_COLLECTION = "ConstantSubtemplatesThirdPrototypeTTS";
 	
 	private CannedGenerator cannedGenerator;
 	private BasicTemplateGenerator templateGenerator;
