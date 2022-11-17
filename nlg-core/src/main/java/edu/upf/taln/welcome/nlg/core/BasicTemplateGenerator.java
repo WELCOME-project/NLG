@@ -399,7 +399,8 @@ public class BasicTemplateGenerator {
 					newTemplateId = "TInformAppCallAccountIDOneLanguage";
 				}
 				break;
-			case "informScenarioIntroduction":
+			case "schc:informScenarioIntroduction":
+			case "schd:informScenarioIntroduction":
 				String defaultTemplate = slot.templateId;
 				int numRdfs = rdfMap.size();
 				if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionCARITAS")) {
@@ -412,7 +413,8 @@ public class BasicTemplateGenerator {
 					}
 				}
 				break;
-			case "obtainSubtopic":
+			case "schc:obtainSubtopic":
+			case "schd:obtainSubtopic":
 				if (rdfMap.size() > 2) {
 					newTemplateId = "TObtainSubtopicMany";
 				} else {
