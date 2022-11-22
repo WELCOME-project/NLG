@@ -117,7 +117,7 @@ public class ContentDBClient {
     }
 
     public String getTemplate(String collection, String term, ULocale language) throws WelcomeException {
-        return getTemplate(collection, term, language.toString());
+        return getTemplate(collection, term, language.getISO3Language());
     }
     
     public String getTemplate(String collection, String term, String language) throws WelcomeException {
