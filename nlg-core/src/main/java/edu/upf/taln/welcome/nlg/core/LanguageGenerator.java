@@ -189,11 +189,16 @@ public class LanguageGenerator {
 		
 		Set<RDFContent> rdfContents = null;
 		if (slot.rdf != null) {
+			Set<RDFContent> rdfToRemove = new HashSet<>();
 			rdfContents = new HashSet<RDFContent>(slot.rdf);
 			for (RDFContent rdf : rdfContents) {
 				if (rdf.id != null && rdf.id.equals("welcome:Unknown")) {
-					rdfContents.remove(rdf);
+					rdfToRemove.add(rdf);
 				}
+			}
+			
+			for (RDFContent rdf : rdfToRemove) {
+				rdfContents.remove(rdf);
 			}
 		}
 		return rdfContents;
