@@ -402,20 +402,21 @@ public class BasicTemplateGenerator {
 			case "schc:informScenarioIntroduction":
 			case "schd:informScenarioIntroduction":
 				String defaultTemplate = slot.templateId;
-				int numRdfs = rdfMap.size();
+				rdfResults = rdfMap.get("topicName");
 				if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionCARITAS")) {
-					if (numRdfs <= 2) {
-						newTemplateId = "TInformSchoolingScenarioIntroductionCARITAS" + (numRdfs - 1);
+					if (rdfResults != null && rdfResults.size() < 2) {
+						newTemplateId = "TInformSchoolingScenarioIntroductionCARITAS" + rdfResults.size();
 					}
 				} else if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionDIFE")) {
-					if (numRdfs <= 3) {
-						newTemplateId = "TInformSchoolingScenarioIntroductionDIFE" + (numRdfs - 1);
+					if (rdfResults != null && rdfResults.size() < 3) {
+						newTemplateId = "TInformSchoolingScenarioIntroductionDIFE" + rdfResults.size();
 					}
 				}
 				break;
 			case "schc:obtainSubtopic":
 			case "schd:obtainSubtopic":
-				if (rdfMap.size() > 2) {
+				rdfResults = rdfMap.get("topicName");
+				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TObtainSubtopicMany";
 				} else {
 					newTemplateId = "TObtainSubtopicOne";
