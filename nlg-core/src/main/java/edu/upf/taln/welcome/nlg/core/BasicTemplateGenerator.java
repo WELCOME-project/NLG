@@ -401,6 +401,7 @@ public class BasicTemplateGenerator {
 				break;
 			case "schc:informScenarioIntroduction":
 			case "schd:informScenarioIntroduction":
+			case "hlth:informScenarioIntroduction":
 				String defaultTemplate = slot.templateId;
 				rdfResults = rdfMap.get("topicName");
 				if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionCARITAS")) {
@@ -411,10 +412,15 @@ public class BasicTemplateGenerator {
 					if (rdfResults != null && rdfResults.size() < 3) {
 						newTemplateId = "TInformSchoolingScenarioIntroductionDIFE" + rdfResults.size();
 					}
+				} else if (defaultTemplate.equals("TInformHealthScenarioIntroduction")) {
+					if (rdfResults != null && rdfResults.size() < 2) {
+						newTemplateId = "TInformHealthScenarioIntroduction" + rdfResults.size();
+					}
 				}
 				break;
 			case "schc:obtainSubtopic":
 			case "schd:obtainSubtopic":
+			case "hlth:obtainSubtopic":
 				rdfResults = rdfMap.get("topicName");
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TObtainSubtopicMany";
