@@ -401,7 +401,7 @@ public class NLGService {
 
             ResponseBuilder rBuild = Response
 					.ok(output.getLeft(), MediaType.APPLICATION_JSON)
-					.header("x-language", output.getRight().getISO3Language());
+					.header("X-Language", output.getRight().getISO3Language());
             return rBuild.build();
             
         } catch (WelcomeException ex) {
