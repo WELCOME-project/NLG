@@ -95,8 +95,8 @@ public class LanguageGenerator {
         	availableInLanguage = cannedGenerator.isGeneratableInLanguage(act, language);
 			
 		} else if (templateId != null) {
-			List<Pair<String, String>> requiredTemplatesIds = templateGenerator.getRequiredTemplatesIds(slot, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION);
-			requiredTemplatesIds.addAll(templateGenerator.getRequiredTemplatesIds(slot, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION));
+			List<Pair<String, String>> requiredTemplatesIds = templateGenerator.getRequiredTemplatesIds(slot, DEFAULT_TEMPLATE_COLLECTION, DEFAULT_SUBTEMPLATE_COLLECTION, language);
+			requiredTemplatesIds.addAll(templateGenerator.getRequiredTemplatesIds(slot, TTS_TEMPLATE_COLLECTION, TTS_SUBTEMPLATE_COLLECTION, language));
 			
 			boolean allTemplatesForLanguage = true;
 			int i = 0;

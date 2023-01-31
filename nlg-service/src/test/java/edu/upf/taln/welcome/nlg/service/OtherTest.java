@@ -122,4 +122,18 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "ell");
     }
+	
+	@Test
+    public void languageRdfES() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/nlg_input_multilang_Move.json");
+		
+        testMove(jsonLDInput, "spa");
+    }
+	
+	@Test
+    public void testMultiTemplateWithMultiLanguages() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/nlg_input_multilang_wrong_number_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
 }

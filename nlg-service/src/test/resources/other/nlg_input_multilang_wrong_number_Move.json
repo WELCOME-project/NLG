@@ -1,0 +1,203 @@
+{
+	"@context": {
+		"w3c": "http://www.w3.org/2001/XMLSchema#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"welcome": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#",
+		"daml": "http://www.daml.org/services/owl-s/1.1/ActorDefault.owl#",
+		"rdf:subject": {
+			"@type": "@id"
+		},
+		"rdf:predicate": {
+			"@type": "@id"
+		},
+		"welcome:hasSlot": {
+			"@type": "@id"
+		},
+		"welcome:hasOntologyType": {
+			"@type": "@id"
+		},
+		"welcome:hasStatus": {
+			"@type": "@id"
+		},
+		"welcome:isCurrentDIP": {
+			"@type": "w3c:boolean"
+		},
+		"welcome:hasDIPStatus": {
+			"@type": "@id"
+		},
+		"welcome:hasInputRDFContents": {
+			"@container": "@set"
+		},
+		"welcome:hasTCNAnswer": {
+			"@type": "@id"
+		},
+		"welcome:confidenceScore": {
+			"@type": "w3c:float"
+		},
+		"welcome:hasNumberAttempts": {
+			"@type": "w3c:int"
+		},
+		"welcome:isOptional": {
+			"@type": "w3c:boolean"
+		},
+		"welcome:hasSpeechActs": {
+			"@container": "@list"
+		}
+	},
+	"@id": "move_24",
+	"@type": "welcome:DialogueMove",
+	"welcome:hasSpeechActs": [
+		{
+			"@id": "Statement_non_opinion_40",
+			"@type": "welcome:SpeechAct",
+			"welcome:hasLabel": "Statement_non_opinion",
+			"welcome:hasSlot": {
+				"@id": "schd:informScenarioIntroduction",
+				"rdf:type": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemInfo",
+				"welcome:hasTemplateId": "TInformSchoolingScenarioIntroductionDIFE",
+				"welcome:hasOntologyType": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Template",
+				"welcome:hasInputRDFContents": [
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "foreign master and university degrees",
+							"@language": "eng"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "màster i títols universitaris estrangers",
+							"@language": "cat"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "non-university qualifications",
+							"@language": "eng"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "qualificacions no universitaries",
+							"@language": "cat"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "calificaciones no universitarias",
+							"@language": "spa"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "máster y títulos universitarios extranjeros",
+							"@language": "spa"
+						}
+					}
+				],
+				"welcome:hasStatus": "welcome:Pending",
+				"welcome:hasNumberAttempts": 0,
+				"welcome:confidenceScore": 0.0,
+				"welcome:isOptional": false,
+				"welcome:hasTCNAnswer": [
+					{
+						"@id": "welcome:Unknown"
+					}
+				]
+			}
+		},
+		{
+			"@id": "Statement_non_opinion_41",
+			"@type": "welcome:SpeechAct",
+			"welcome:hasLabel": "Statement_non_opinion",
+			"welcome:hasSlot": {
+				"@id": "schd:obtainSubtopic",
+				"rdf:type": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemDemand",
+				"welcome:hasTemplateId": "TObtainSubtopic",
+				"welcome:hasOntologyType": "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#Boolean",
+				"welcome:hasInputRDFContents": [
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "foreign master and university degrees",
+							"@language": "eng"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "màster i títols universitaris estrangers",
+							"@language": "cat"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "non-university qualifications",
+							"@language": "eng"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "qualificacions no universitaries",
+							"@language": "cat"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "calificaciones no universitarias",
+							"@language": "spa"
+						}
+					},
+					{
+						"@type": "rdf:Statement",
+						"rdf:subject": "welcome:SchoolingTopic",
+						"rdf:predicate": "welcome:topicName",
+						"rdf:object": {
+							"@value": "máster y títulos universitarios extranjeros",
+							"@language": "spa"
+						}
+					}
+				],
+				"welcome:hasStatus": "welcome:Pending",
+				"welcome:hasNumberAttempts": 0,
+				"welcome:confidenceScore": 0.0,
+				"welcome:isOptional": false,
+				"welcome:hasTCNAnswer": [
+					{
+						"@id": "welcome:Unknown"
+					}
+				]
+			}
+		}
+	]
+}

@@ -75,7 +75,7 @@ public class BasicTemplateGenerator {
         return template != null;
 	}
 	
-	public List<Pair<String, String>> getRequiredTemplatesIds(Slot slot, String collectionId, String subCollectionId) {
+	public List<Pair<String, String>> getRequiredTemplatesIds(Slot slot, String collectionId, String subCollectionId, ULocale language) {
 		List<Pair<String, String>> templatesIds = new ArrayList<>();
 		
 		String baseTemplateId = slot.templateId;
@@ -101,7 +101,7 @@ public class BasicTemplateGenerator {
         	}
         }
 	        
-		String newTemplate = getSpecialCasesTemplateId(slot, rdfMap);
+		String newTemplate = getSpecialCasesTemplateId(slot, rdfMap, language);
 		if (newTemplate != null) {
 			templatesIds.add(Pair.of(newTemplate, collectionId));
 		}
@@ -231,6 +231,32 @@ public class BasicTemplateGenerator {
         
         return rdfMap;
     }
+    
+    private List<MutablePair<RDFContent, Boolean>> getSpecificLanguageRdfs(List<MutablePair<RDFContent, Boolean>> rdfList, ULocale language) {
+    	//get language specific rdf's
+		List<MutablePair<RDFContent, Boolean>> languageList = new ArrayList<>();
+		if (rdfList.size() > 1) {
+			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+				RDFContent rdf = rdfPair.getLeft();
+				if (rdf.object != null && rdf.object.language != null 
+						&& rdf.object.language.equalsIgnoreCase(language.getISO3Language())) {
+					languageList.add(rdfPair);
+				}
+			}
+		}
+		//If there are not rdf for the specific language get the English ones
+		if (languageList.isEmpty()) {
+			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+				RDFContent rdf = rdfPair.getLeft();
+				if (rdf.object != null 
+						&& ((rdf.object.language != null && rdf.object.language.equalsIgnoreCase(ULocale.ENGLISH.getISO3Language())) 
+						|| rdf.object.language == null)) {
+					languageList.add(rdfPair);
+				}
+			}
+		}
+		return languageList;
+    }
 
     private String applyTemplate(String template, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, boolean spelloutNumbers) {
         
@@ -261,29 +287,7 @@ public class BasicTemplateGenerator {
 				List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get(variable);
 				if (rdfList != null && !rdfList.isEmpty()) {
 					
-					//get language specific rdf's
-					List<MutablePair<RDFContent, Boolean>> languageList = new ArrayList<>();
-					if (rdfList.size() > 1) {
-						for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
-							RDFContent rdf = rdfPair.getLeft();
-							if (rdf.object != null && rdf.object.language != null 
-									&& rdf.object.language.equalsIgnoreCase(language.getISO3Language())) {
-								languageList.add(rdfPair);
-							}
-						}
-					}
-					//If there are not rdf for the specific language get the English ones
-					if (languageList.isEmpty()) {
-						for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
-							RDFContent rdf = rdfPair.getLeft();
-							if (rdf.object != null 
-									&& ((rdf.object.language != null && rdf.object.language.equalsIgnoreCase(ULocale.ENGLISH.getISO3Language())) 
-									|| rdf.object.language == null)) {
-								languageList.add(rdfPair);
-							}
-						}
-					}
-					rdfList = languageList;
+					rdfList = getSpecificLanguageRdfs(rdfList, language);
 					
 					if(!rdfList.isEmpty()) {
 						//get one unused rdf
@@ -353,13 +357,18 @@ public class BasicTemplateGenerator {
         return text;
     }
     
-    private String getSpecialCasesTemplateId(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap) {
+    private String getSpecialCasesTemplateId(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language) {
     	String newTemplateId = null;
     	List<MutablePair<RDFContent, Boolean>> rdfResults;
 		switch(slot.id) {
 			case "frs:informLanguageModuleHours":
 			case "frs:informSocietyModuleHours":
 				rdfResults = rdfMap.get("dayOfWeek");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TInformModuleHoursTwoDays";
 				} else {
@@ -368,6 +377,11 @@ public class BasicTemplateGenerator {
 				break;
 			case "frs:informLanguageModule":
 				rdfResults = rdfMap.get("hasCourseName");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TInformLanguageModuleTwoCourses";
 				} else {
@@ -377,6 +391,11 @@ public class BasicTemplateGenerator {
 				break;
 			case "frs:obtainNationality":
 				rdfResults = rdfMap.get("IDCountry:hasValue");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 0) {
 					newTemplateId = "TObtainNationalityPassportKnown";
 				} else {
@@ -385,6 +404,11 @@ public class BasicTemplateGenerator {
 				break;
 			case "welcome:obtainRequest":
 				rdfResults = rdfMap.get("availableServices:hasValue");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TObtainMatterConcernChoice";
 				} else {
@@ -393,6 +417,11 @@ public class BasicTemplateGenerator {
 				break;
 			case "pps:informSkypeID":
 				rdfResults = rdfMap.get("Language:hasValue");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TInformAppCallAccountIDTwoLanguages";
 				} else {
@@ -404,6 +433,11 @@ public class BasicTemplateGenerator {
 			case "hlth:informScenarioIntroduction":
 				String defaultTemplate = slot.templateId;
 				rdfResults = rdfMap.get("topicName");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (defaultTemplate.equals("TInformSchoolingScenarioIntroductionCARITAS")) {
 					if (rdfResults != null && rdfResults.size() < 2) {
 						newTemplateId = "TInformSchoolingScenarioIntroductionCARITAS" + rdfResults.size();
@@ -422,6 +456,11 @@ public class BasicTemplateGenerator {
 			case "schd:obtainSubtopic":
 			case "hlth:obtainSubtopic":
 				rdfResults = rdfMap.get("topicName");
+				
+				if (rdfResults != null && !rdfResults.isEmpty()) {
+					rdfResults = getSpecificLanguageRdfs(rdfResults, language);
+				}
+				
 				if (rdfResults != null && rdfResults.size() > 1) {
 					newTemplateId = "TObtainSubtopicMany";
 				} else {
@@ -436,7 +475,7 @@ public class BasicTemplateGenerator {
 	}
     
     private String specialCases(Slot slot, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, String collectionId) throws WelcomeException {
-    	String newTemplateId = getSpecialCasesTemplateId(slot, rdfMap);
+    	String newTemplateId = getSpecialCasesTemplateId(slot, rdfMap, language);
     	
 	    String template = null;
 		
