@@ -136,4 +136,18 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "cat");
     }
+	
+	@Test
+    public void testFailedAnalysis() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/FailedAnalysis_Move.json");
+		
+        testMove(jsonLDInput, "eng");
+    }
+	
+	@Test
+    public void testPreviousSlotFailed() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/PreviousSlotFailed_Move.json");
+		
+        testMove(jsonLDInput, "eng");
+    }
 }

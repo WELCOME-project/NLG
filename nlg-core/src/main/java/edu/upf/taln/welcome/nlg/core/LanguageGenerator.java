@@ -87,7 +87,9 @@ public class LanguageGenerator {
         boolean availableInLanguage;
         if (act.label == SpeechActLabel.Signal_non_understanding ||
 				act.label == SpeechActLabel.Apology_No_Extra_Information ||
-				act.label == SpeechActLabel.NeedsUpdateAnswer) {
+				act.label == SpeechActLabel.NeedsUpdateAnswer ||
+				act.label == SpeechActLabel.SuggestTyping ||
+				act.label == SpeechActLabel.PreviousSlotFailedInfo) {
             
         	availableInLanguage = cannedGenerator.isGeneratableInLanguage(act, language);
 			
@@ -135,7 +137,9 @@ public class LanguageGenerator {
         GenerationResult result = new GenerationResult();
         if (act.label == SpeechActLabel.Signal_non_understanding ||
 				act.label == SpeechActLabel.Apology_No_Extra_Information ||
-				act.label == SpeechActLabel.NeedsUpdateAnswer) {
+				act.label == SpeechActLabel.NeedsUpdateAnswer ||
+				act.label == SpeechActLabel.SuggestTyping ||
+				act.label == SpeechActLabel.PreviousSlotFailedInfo) {
             
             String text = cannedGenerator.getCannedText(act, language);
             

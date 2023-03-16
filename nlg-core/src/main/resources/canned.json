@@ -45,7 +45,9 @@
         "InformSocietyModuleAddress": "Module C is offered at the City Council building",
         "InformSocietyModuleHours": "Module C is given on Wednesdays from 19:00 to 21:00",
         
-        "NeedsUpdateAnswer": "Currently I have stored <TCNAnswer>. Would you like to update it?"
+        "NeedsUpdateAnswer": "Currently I have stored <TCNAnswer>. Would you like to update it?",
+        "PreviousSlotFailedInfo": "I apologize but I am still not able to understand your response. Let's move forward.",
+        "SuggestTyping": "Please type your answer."
     }, 
     "ca": {
         "Acknowledge_Backchannel": "Val",
@@ -92,7 +94,9 @@
         "InformSocietyModuleAddress": "El mòdul C s'ofereix a l'edifici de l'Ajuntament.",
         "InformSocietyModuleHours": "El mòdul C s'imparteix els dimecres de 19:00 a 21:00.",
 
-        "NeedsUpdateAnswer": "Actualment tinc emmagatzemat <TCNAnswer>. Vols actualitzar-lo?"
+        "NeedsUpdateAnswer": "Actualment tinc emmagatzemat <TCNAnswer>. Vols actualitzar-lo?",
+        "PreviousSlotFailedInfo": "Disculpa'm, però segueixo sense aconseguir entendre la teva resposta. Anem endavant.",
+        "SuggestTyping": "Si us plau, escriu la teva resposta."
     },
     "el": {
         "Acknowledge_Backchannel": "Καταλάβα",
@@ -120,7 +124,10 @@
         "confirmCommunication": "Μπορείτε να με ακούσετε;",
         "confirmLanguage": "Μιλάτε αγγλικά, σωστά;",
         "obtainRequest": "Πώς μπορώ να σε βοηθήσω?",
-        "obtainName": "Πως σε λένε?"
+        "obtainName": "Πως σε λένε?",
+        
+        "PreviousSlotFailedInfo": "Ζητώ συγγνώμη αλλά ακόμα δεν μπορώ να καταλάβω την απάντησή σας. Ας προχωρήσουμε.",
+        "SuggestTyping": "Παρακαλώ πληκτρολογήστε την απάντησή σας."
     },
     "de": {
         "Acknowledge_Backchannel": "Ich verstehe.",
@@ -148,6 +155,9 @@
         "confirmCommunication": "Kannst du mich hören?",
         "confirmLanguage": "Du sprichst Englisch, ist das korrekt?",
         "obtainRequest": "Wie kann ich dir helfen?",
-        "obtainName": "Wie ist dein Name?"
+        "obtainName": "Wie ist dein Name?",
+        
+        "PreviousSlotFailedInfo": "Verzeihung, aber ich kann deine Antwort immer noch nicht verstehen. Lass uns weitermachen.",
+        "SuggestTyping": "Bitte schreibe deine Antwort."
     }
 }

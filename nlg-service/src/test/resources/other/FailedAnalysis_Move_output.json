@@ -1,0 +1,6 @@
+{
+  "text" : "Hello!\nCan you see me?\nCan you hear me?\n\nHello!\nCan you see me?\nCan you hear me?",
+  "displayChunks" : [ "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
+  "chunks" : [ "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
+  "chunkType" : "Slot"
+}

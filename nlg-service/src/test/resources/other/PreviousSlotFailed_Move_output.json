@@ -1,0 +1,6 @@
+{
+  "text" : "Please type your answer.\n\nHello!\nCan you see me?\nCan you hear me?\n\nHello!\nCan you see me?\nCan you hear me?",
+  "displayChunks" : [ "Please type your answer.", "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
+  "chunks" : [ "Please type your answer.", "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
+  "chunkType" : "Slot"
+}
