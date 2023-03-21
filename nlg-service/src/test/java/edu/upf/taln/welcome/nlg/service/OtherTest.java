@@ -150,4 +150,11 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "eng");
     }
+	
+	@Test
+    public void testHasAllowedValues() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/HasAllowedValues_Move.json");
+		
+        testMove(jsonLDInput, "eng");
+    }
 }

@@ -194,7 +194,8 @@ public class BasicTemplateGenerator {
                             && (predicate.equals("hasValue")
                                 || predicate.equals("hasName") 
                                 || predicate.equals("hasRole")
-								|| predicate.equals("hasRoleSummary"))) {
+								|| predicate.equals("hasRoleSummary")
+								|| predicate.equals("hasAllowedValues"))) {
                         key = subject + ":" + predicate;
 
                     } else {

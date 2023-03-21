@@ -1,0 +1,6 @@
+{
+  "text" : "What is the type of the school that provided the course? Please, select one of the following options: University, Vocational School, Online School, Private School, Public School, Private Tutor.",
+  "displayChunks" : [ "What is the type of the school that provided the course? Please, select one of the following options: University, Vocational School, Online School, Private School, Public School, Private Tutor." ],
+  "chunks" : [ "What is the type of the school that provided the course?" ],
+  "chunkType" : "Slot"
+}

@@ -126,12 +126,12 @@ public class ContentDBClient {
         
         String template = null;
         if (templates == null || templates.isEmpty()) {
-            String message = "No template found for templateId " + term + " for language " + language + ".";
+            String message = "No template found for templateId " + term + " in collection \"" + collection + "\" for language " + language + ".";
             logger.severe(message);
             
         } else {
             if (templates.size() > 1) {
-                String message = "Multiple templates found for templateId " + term + " for language " + language + ".";
+                String message = "Multiple templates found for templateId " + term + " in collection \"" + collection + "\" for language " + language + ".";
                 logger.warning(message);
                 //throw new WelcomeException(message);
             }
