@@ -1,6 +1,6 @@
 {
-  "text" : "Hello!\nCan you see me?\nCan you hear me?\n\nHello!\nCan you see me?\nCan you hear me?",
-  "displayChunks" : [ "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
-  "chunks" : [ "Hello!\nCan you see me?\nCan you hear me?", "Hello!\nCan you see me?\nCan you hear me?" ],
+  "text" : "I did not understand you, could you please repeat?\n\nPlease type your answer.",
+  "displayChunks" : [ "I did not understand you, could you please repeat?", "Please type your answer." ],
+  "chunks" : [ "I did not understand you, could you please repeat?", "Please type your answer." ],
   "chunkType" : "Slot"
 }

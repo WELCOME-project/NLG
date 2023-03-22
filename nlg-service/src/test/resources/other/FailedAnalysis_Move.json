@@ -47,9 +47,9 @@
   "@id" : "move_0",
   "@type" : "welcome:DialogueMove",
   "welcome:hasSpeechActs" : [ {
-    "@id" : "Yes_No_Question_0",
+    "@id" : "Signal_non_understanding_0",
     "@type" : "welcome:SpeechAct",
-    "welcome:hasLabel" : "Yes_No_Question",
+    "welcome:hasLabel" : "Signal_non_understanding",
     "welcome:hasSlot" : {
       "@id" : "welcome:confirmCommunication",
       "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemDemand",
@@ -70,21 +70,6 @@
     "@id" : "SuggestTyping_1",
     "@type" : "welcome:SpeechAct",
     "welcome:hasLabel" : "SuggestTyping",
-    "welcome:hasSlot" : {
-      "@id" : "welcome:confirmCommunication",
-      "rdf:type" : "https://raw.githubusercontent.com/gtzionis/WelcomeOntology/main/welcome.ttl#SystemDemand",
-      "welcome:hasTemplateId" : "TConfirmCommunication",
-      "welcome:hasOntologyType" : null,
-      "welcome:hasInputRDFContents" : [ {
-        "@id" : "welcome:Unknown"
-      } ],
-      "welcome:hasStatus" : "welcome:FailedAnalysis",
-      "welcome:hasNumberAttempts" : 2,
-      "welcome:confidenceScore" : 1.0,
-      "welcome:isOptional" : false,
-      "welcome:hasTCNAnswer" : [ {
-        "@id" : "welcome:Unknown"
-      } ]
-    }
+    "welcome:hasSlot" : null
   } ]
 }
