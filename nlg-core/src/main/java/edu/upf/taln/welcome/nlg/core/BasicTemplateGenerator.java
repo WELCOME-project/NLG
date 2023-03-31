@@ -63,7 +63,7 @@ public class BasicTemplateGenerator {
 		contentClient = new ContentDBClient(templatesURL);		
 	}
 	
-	public boolean isLanguageTemplate(String templateId, ULocale language, String collectionId) {
+	public String isLanguageTemplate(String templateId, ULocale language, String collectionId) {
 
         String template = null;
 		try {
@@ -72,7 +72,7 @@ public class BasicTemplateGenerator {
 			logger.log(Level.INFO, we.getMessage());
 		}
 
-        return template != null;
+        return template;
 	}
 	
 	public List<Pair<String, String>> getRequiredTemplatesIds(Slot slot, String collectionId, String subCollectionId, ULocale language) {
@@ -233,6 +233,21 @@ public class BasicTemplateGenerator {
         return rdfMap;
     }
     
+    private Boolean isSpecificLanguageRdfs(List<MutablePair<RDFContent, Boolean>> rdfList, ULocale language) {
+		boolean hasLanguage = false;
+		if (rdfList.size() > 1) {
+			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+				RDFContent rdf = rdfPair.getLeft();
+				if (rdf.object != null && rdf.object.language != null 
+						&& rdf.object.language.equalsIgnoreCase(language.getISO3Language())) {
+					return true;
+				}
+			}
+		}
+		
+		return hasLanguage;
+    }
+    
     private List<MutablePair<RDFContent, Boolean>> getSpecificLanguageRdfs(List<MutablePair<RDFContent, Boolean>> rdfList, ULocale language) {
     	//get language specific rdf's
 		List<MutablePair<RDFContent, Boolean>> languageList = new ArrayList<>();
@@ -257,6 +272,54 @@ public class BasicTemplateGenerator {
 			}
 		}
 		return languageList;
+    }
+    
+    protected List<String> getTemplateRequiredRdfs(String template) {
+    	List<String> rdfs = new ArrayList<>();
+    	
+    	Matcher matcher = placeholder.matcher(template);
+    	boolean ignoreNext = false;
+		while (matcher.find()) {
+			String variable = matcher.group(1);
+			if (variable.equals("set") || variable.equals("hasTranslation")) {
+				continue;
+			}
+			if (variable.equals("noTranslation")) {
+				ignoreNext = true;
+				continue;
+			}
+			if (ignoreNext) {
+				ignoreNext = false;
+				continue;
+			}
+			if (!rdfs.contains(variable)) {
+				rdfs.add(variable);
+			}
+		}
+		return rdfs;
+    }
+    
+    protected boolean areRdfAvailableForLang(Slot slot, List<String> templateRdfs, ULocale language) {
+    	boolean rdfsAvailable = true;
+    	
+    	Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap = new HashMap<>();
+        rdfMap = extractRdfData(slot.rdf);
+        
+        for (String templateRdf : templateRdfs) {
+        	templateRdf = removeTemplateBrackets(templateRdf);
+        	templateRdf = cleanCompactedSchema(templateRdf);
+        	
+	        List<MutablePair<RDFContent, Boolean>> rdfList = rdfMap.get(templateRdf);
+			if (rdfList != null && !rdfList.isEmpty()) {
+				if (!isSpecificLanguageRdfs(rdfList, language)) {
+					rdfsAvailable = false;
+				}
+			} else {
+				rdfsAvailable = false;
+			}
+        }
+        
+        return rdfsAvailable;
     }
 
     private String applyTemplate(String template, Map<String, List<MutablePair<RDFContent, Boolean>>> rdfMap, ULocale language, boolean spelloutNumbers) {

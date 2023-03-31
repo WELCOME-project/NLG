@@ -1,0 +1,6 @@
+{
+  "text" : "Do you have basic Crafts skills?\n\nYou speak Catalan, is that correct?",
+  "displayChunks" : [ "Do you have basic Crafts skills?", "You speak Catalan, is that correct?" ],
+  "chunks" : [ "Do you have basic Crafts skills?", "You speak Catalan. Is that correct?" ],
+  "chunkType" : "Slot"
+}

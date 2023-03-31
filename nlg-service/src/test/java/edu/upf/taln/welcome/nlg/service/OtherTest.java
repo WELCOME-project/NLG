@@ -157,4 +157,32 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "eng");
     }
+	
+	@Test
+    public void testHasLanguageRdf_Yes() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/HasLanguageRdf_Yes_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
+	
+	@Test
+    public void testHasLanguageRdf_No1() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/HasLanguageRdf_No1_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
+	
+	@Test
+    public void testHasLanguageRdf_No2() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/HasLanguageRdf_No2_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
+	
+	@Test
+    public void testHasLanguageRdf_NoTranslation() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/HasLanguageRdf_NoTranslate_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
 }

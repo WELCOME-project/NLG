@@ -104,7 +104,12 @@ public class LanguageGenerator {
 			int i = 0;
 			while (allTemplatesForLanguage && i < requiredTemplatesIds.size()) {
 				Pair<String, String> templateInfo = requiredTemplatesIds.get(i);
-				allTemplatesForLanguage = templateGenerator.isLanguageTemplate(templateInfo.getLeft(), language, templateInfo.getRight());
+				String template = templateGenerator.isLanguageTemplate(templateInfo.getLeft(), language, templateInfo.getRight());
+				List<String> requiredRdfs = templateGenerator.getTemplateRequiredRdfs(template);
+				boolean rdfsAvailable = templateGenerator.areRdfAvailableForLang(slot, requiredRdfs, language);
+				//System.out.println(requiredRdfs.toString());
+				
+				allTemplatesForLanguage = template != null && rdfsAvailable;
 				i++;
 			}
 			if (!allTemplatesForLanguage) {
