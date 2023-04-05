@@ -281,7 +281,7 @@ public class BasicTemplateGenerator {
     	boolean ignoreNext = false;
 		while (matcher.find()) {
 			String variable = matcher.group(1);
-			if (variable.equals("set") || variable.equals("hasTranslation")) {
+			if (variable.equals("set") || variable.equals("hasTranslation") || variable.equals("s_end")) {
 				continue;
 			}
 			if (variable.equals("noTranslation")) {

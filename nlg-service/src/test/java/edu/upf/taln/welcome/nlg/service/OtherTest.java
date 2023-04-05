@@ -192,4 +192,11 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "ell");
     }
+	
+	@Test
+    public void testGreekTemplate() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/GreekTemplate_Move.json");
+		
+        testMove(jsonLDInput, "ell");
+    }
 }
