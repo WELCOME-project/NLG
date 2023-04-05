@@ -185,4 +185,11 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "cat");
     }
+	
+	@Test
+    public void testNoGreekTemplate() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/NoGreekTemplate_Move.json");
+		
+        testMove(jsonLDInput, "ell");
+    }
 }
