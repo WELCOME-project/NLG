@@ -1,0 +1,6 @@
+{
+  "text" : "Μιλάτε Greek, σωστά;.",
+  "displayChunks" : [ "Μιλάτε Greek, σωστά;." ],
+  "chunks" : [ "Μιλάτε Greek. Είναι σωστό?" ],
+  "chunkType" : "Slot"
+}

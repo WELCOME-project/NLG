@@ -235,7 +235,7 @@ public class BasicTemplateGenerator {
     
     private Boolean isSpecificLanguageRdfs(List<MutablePair<RDFContent, Boolean>> rdfList, ULocale language) {
 		boolean hasLanguage = false;
-		if (rdfList.size() > 1) {
+		if (!rdfList.isEmpty()) {
 			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
 				RDFContent rdf = rdfPair.getLeft();
 				if (rdf.object != null && rdf.object.language != null 
@@ -251,7 +251,7 @@ public class BasicTemplateGenerator {
     private List<MutablePair<RDFContent, Boolean>> getSpecificLanguageRdfs(List<MutablePair<RDFContent, Boolean>> rdfList, ULocale language) {
     	//get language specific rdf's
 		List<MutablePair<RDFContent, Boolean>> languageList = new ArrayList<>();
-		if (rdfList.size() > 1) {
+		if (!rdfList.isEmpty()) {
 			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
 				RDFContent rdf = rdfPair.getLeft();
 				if (rdf.object != null && rdf.object.language != null 
@@ -267,6 +267,15 @@ public class BasicTemplateGenerator {
 				if (rdf.object != null 
 						&& ((rdf.object.language != null && rdf.object.language.equalsIgnoreCase(ULocale.ENGLISH.getISO3Language())) 
 						|| rdf.object.language == null)) {
+					languageList.add(rdfPair);
+				}
+			}
+		}
+		//If there are not rdf for English then get all that matche in any language
+		if (languageList.isEmpty()) {
+			for (MutablePair<RDFContent, Boolean> rdfPair : rdfList) {
+				RDFContent rdf = rdfPair.getLeft();
+				if (rdf.object != null) {
 					languageList.add(rdfPair);
 				}
 			}

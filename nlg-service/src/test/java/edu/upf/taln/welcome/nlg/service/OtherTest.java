@@ -199,4 +199,25 @@ public class OtherTest {
 		
         testMove(jsonLDInput, "ell");
     }
+	
+	@Test
+    public void oneRdfTest() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/one_rdf_Move.json");
+		
+        testMove(jsonLDInput, "ell");
+    }
+	
+	@Test
+    public void RdfWrongLangNoEnTest() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/rdf_wrong_lang_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
+	
+	@Test
+    public void RdfWrongLangEnTest() throws Exception {
+		File jsonLDInput = new File("src/test/resources/other/rdf_wrong_lang_en_Move.json");
+		
+        testMove(jsonLDInput, "cat");
+    }
 }
