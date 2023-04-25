@@ -2,7 +2,7 @@
 
 ## Introduction
 
-NLG is a natural language generation system implemented as a MAVEN project in JAVA (JDK). The NLG software consists of 3 submodules, namely NLG Commons, NLG Core and NLG Service. These submodules are publicly available on GitHub at https://github.com/WELCOME-project/NLG.
+NLG is a natural language generation module implemented as a MAVEN project in JAVA (JDK). The NLG software consists of 3 submodules, namely NLG Commons, NLG Core and NLG Service. These submodules are publicly available on GitHub at https://github.com/WELCOME-project/NLG.
 
 ## Installation, Deployment, and Execution
 
@@ -11,7 +11,9 @@ NLG is a natural language generation system implemented as a MAVEN project in JA
 #### Software Requirements
 
 The WELCOME NLG installation requires the use of Docker and Docker Compose. Docker is used to package NLG as an image that can be run in a container. The `.yml` configuration file and Docker Compose are used to instantiate Docker images as containers. The `.yml` file specifies the virtual network details and other necessary configurations.
+
 Additionally, a service with a GET endpoint that provides templates in json format is required.
+
 Here is an example of the output format this service must have:
 ```
 {
