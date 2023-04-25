@@ -57,7 +57,7 @@ nlg:
         memory: 4GB
     ports:
       - "8080:8080"
-	environment:
+    environment:
       - CONTENTDB_URL=<url_of_templates_service>
 ```
 
